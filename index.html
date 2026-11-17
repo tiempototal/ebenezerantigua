@@ -1,30 +1,739 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ebenezer Antigua</title>
-  <meta name="description" content="Ebenezer Antigua — Antigua Guatemala. Sitio en construcción.">
-  <style>
-    :root { --ink:#2b2118; --stone:#f4efe8; --accent:#9c5a2c; }
-    * { box-sizing:border-box; margin:0; padding:0; }
-    body {
-      min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center;
-      background:var(--stone); color:var(--ink); font-family:Georgia, "Times New Roman", serif;
-      text-align:center; padding:2rem;
-    }
-    .mark { width:64px; height:64px; border:2px solid var(--accent); border-radius:50% 50% 4px 4px; margin-bottom:1.5rem; }
-    h1 { font-size:clamp(2.2rem,7vw,4rem); letter-spacing:.04em; font-weight:400; }
-    .sub { margin-top:.75rem; font-size:1.1rem; color:var(--accent); letter-spacing:.2em; text-transform:uppercase; }
-    p { margin-top:2rem; max-width:34rem; line-height:1.6; font-size:1.05rem; }
-    footer { margin-top:3rem; font-size:.85rem; opacity:.6; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ebenezer Antigua — Sitio de prueba</title>
+<meta name="description" content="Iglesia de Cristo La Vid Verdadera, Ministerios Ebenezer Antigua Guatemala. Servicios domingo 9:00 am, martes y viernes 7:00 pm. Jocotenango, Sacatepéquez.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#f6efe3; --cream2:#efe5d3; --paper:#fbf7ef;
+  --ink:#2a1d14; --brown:#4a2f1d; --brown2:#6b4630;
+  --gold:#c08a2b; --gold2:#e2b659; --wine:#5b1f2e; --wine2:#7a2a3d; --olive:#5e6b3a;
+  --radius:22px;
+  --serif:'Cormorant Garamond',Georgia,serif; --sans:'Manrope',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.6;overflow-x:hidden}
+img,canvas,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1180px,92vw);margin:0 auto}
+.eyebrow{font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:700}
+h2.title{font-family:var(--serif);font-weight:500;font-size:clamp(2.2rem,5.4vw,4rem);line-height:1.02;color:var(--brown);margin:.5rem 0 1rem}
+h2.title em{color:var(--wine2);font-style:italic}
+.lead{font-size:1.08rem;color:var(--brown2);max-width:58ch}
+section{position:relative}
+.pad{padding:clamp(4rem,9vw,8rem) 0}
+
+/* NAV */
+nav{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:.9rem clamp(1rem,3vw,2.4rem);transition:background .35s,box-shadow .35s,color .35s;color:#fff}
+nav.solid{background:rgba(246,239,227,.96);color:var(--brown);box-shadow:0 1px 0 rgba(74,47,29,.12)}
+.brand{display:flex;align-items:center;gap:.7rem;font-family:var(--serif);font-size:1.35rem;font-weight:600;letter-spacing:.01em}
+.brand svg{width:38px;height:38px}
+.brand small{display:block;font-family:var(--sans);font-size:.58rem;letter-spacing:.24em;text-transform:uppercase;opacity:.8;font-weight:600;margin-top:-3px}
+.links{display:flex;gap:1.7rem;font-size:.86rem;font-weight:600}
+.links a{position:relative;padding:.3rem 0;opacity:.92}
+.links a::after{content:"";position:absolute;left:0;bottom:0;height:1.5px;width:0;background:var(--gold2);transition:width .3s}
+.links a:hover::after{width:100%}
+.btn{display:inline-flex;align-items:center;gap:.55rem;padding:.85rem 1.5rem;border-radius:999px;font-weight:700;font-size:.9rem;border:1.5px solid transparent;transition:transform .25s,background .25s,color .25s,box-shadow .25s;cursor:pointer;font-family:inherit}
+.btn:hover{transform:translateY(-2px)}
+.btn.gold{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#2a1a08;box-shadow:0 8px 26px -8px rgba(192,138,43,.7)}
+.btn.ghost{border-color:rgba(255,255,255,.65);color:#fff;background:rgba(255,255,255,.12)}
+.btn.dark{background:var(--brown);color:var(--cream)}
+.btn.line{border-color:var(--brown);color:var(--brown)}
+.burger{display:none;width:44px;height:44px;border:0;background:transparent;color:inherit;cursor:pointer}
+.burger span{display:block;width:24px;height:2px;background:currentColor;margin:5px auto;transition:.3s}
+.menu{position:fixed;inset:0;z-index:49;background:var(--brown);color:var(--cream);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:1.4rem;font-family:var(--serif);font-size:2.2rem;opacity:0;pointer-events:none;transition:opacity .35s}
+.menu.open{opacity:1;pointer-events:auto}
+@media(max-width:900px){.links,.nav-cta{display:none}.burger{display:block}}
+
+/* HERO SCROLL */
+.abtog{position:fixed;left:12px;bottom:12px;z-index:60;display:flex;gap:4px;background:rgba(20,12,6,.8);border:1px solid rgba(226,182,89,.5);border-radius:99px;padding:4px;font:600 11px/1 Inter,sans-serif}.abtog a{color:#fff;padding:7px 11px;border-radius:99px;text-decoration:none}.abtog a.on{background:#e2b659;color:#1b120b}
+#hero{height:250vh;background:#1b120b}
+@media(max-width:900px){#hero{height:340vh}.stage{background-image:url(hero5m/h000.webp)}}
+.stage{background:#1b120b url(hero5/h000.webp) center/cover no-repeat;position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+#cv{opacity:0;transition:opacity .25s;position:absolute;inset:0;width:100%;height:100%;will-change:transform;transform:translateZ(0)}
+.shade{position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 60%,rgba(20,10,4,0) 25%,rgba(20,10,4,.65) 100%),linear-gradient(180deg,rgba(20,10,4,.55),rgba(20,10,4,0) 30%,rgba(20,10,4,.1) 60%,rgba(20,10,4,.7))}
+.slide{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:max(24vh,140px)!important;text-align:center;padding:0 6vw;color:#fff;opacity:0;transition:opacity .18s ease;pointer-events:none}
+.slide.on{opacity:1;pointer-events:auto;transition:opacity .3s ease .15s}
+.slide .eyebrow{color:#fff;font-size:.9rem;font-weight:700;letter-spacing:.22em;margin-bottom:1.2rem;background:none;border:0;padding:0;text-shadow:0 1px 3px rgba(0,0,0,.9),0 2px 18px rgba(0,0,0,.85),0 0 40px rgba(0,0,0,.6)}
+@media(min-width:901px){.slide .eyebrow{font-size:1.4rem}}
+@media(max-width:900px){.slide .eyebrow{font-size:.8rem;letter-spacing:.16em;max-width:92vw}}
+.slide h1,.slide h2{font-family:var(--serif);font-weight:500;line-height:1;font-size:clamp(3rem,9vw,8rem);min-height:2em;display:flex;flex-direction:column;justify-content:center;text-shadow:0 6px 50px rgba(0,0,0,.45)}
+.slide h1 em,.slide h2 em{font-style:italic;color:var(--gold2)}
+.slide p{max-width:46ch;margin:1.6rem auto 0;font-size:clamp(1rem,1.6vw,1.25rem);opacity:.92;text-shadow:0 2px 20px rgba(0,0,0,.6)}
+.slide .row{display:flex;gap:.8rem;flex-wrap:wrap;justify-content:center;margin-top:2.2rem}
+
+.times{display:grid;grid-template-columns:repeat(3,auto);gap:clamp(1rem,4vw,3.5rem);margin-top:1.6rem}
+.times div b{display:block;font-family:var(--serif);font-size:clamp(2rem,5vw,3.6rem);font-weight:500;color:var(--gold2);line-height:1}
+.times div span{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;opacity:.9}
+.cue{position:absolute;left:50%;bottom:28px;transform:translateX(-50%);color:#fff;display:flex;flex-direction:column;align-items:center;gap:10px;transition:opacity .4s;text-align:center;pointer-events:none;z-index:5}
+.cue span{font-size:.82rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.9),0 2px 16px rgba(0,0,0,.85)}
+.cue .m{display:none}
+.cue .mouse{width:26px;height:42px;border:2px solid #fff;border-radius:14px;position:relative;box-shadow:0 0 14px rgba(0,0,0,.5)}
+.cue .mouse::after{content:"";position:absolute;left:50%;top:8px;width:4px;height:9px;margin-left:-2px;border-radius:3px;background:var(--gold2);animation:wheel 1.6s infinite}
+.cue .chev{width:14px;height:14px;border-right:2.5px solid var(--gold2);border-bottom:2.5px solid var(--gold2);transform:rotate(45deg);animation:nudge 1.4s infinite;margin-top:-4px}
+@keyframes wheel{0%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(14px)}}
+@keyframes nudge{0%,100%{opacity:.35;transform:rotate(45deg) translate(0,0)}50%{opacity:1;transform:rotate(45deg) translate(5px,5px)}}
+@media(max-width:900px){.cue .d{display:none}.cue .m{display:inline}.cue .mouse{display:none}}
+@media(min-width:901px){.slide{padding-top:max(50vh,300px)!important}}
+@media(max-height:720px){.slide{padding-top:max(24vh,120px)!important}.cue{bottom:12px;gap:6px}.cue span{font-size:.7rem}.cue .mouse{display:none}.cue .chev{width:10px;height:10px;margin-top:-2px}}
+@media(min-width:901px) and (max-height:720px){.slide{padding-top:max(41vh,200px)!important}}
+@keyframes drip{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+.bar{position:absolute;right:clamp(.8rem,2vw,2rem);top:50%;transform:translateY(-50%);width:3px;height:120px;background:rgba(255,255,255,.2);border-radius:3px}
+.bar i{display:block;width:100%;height:0;background:var(--gold2);border-radius:3px}
+@media(max-width:640px){.times{grid-template-columns:1fr;gap:.9rem}.bar{display:none}}
+
+/* MARQUEE */
+.marq{background:var(--brown);color:var(--gold2);overflow:hidden;white-space:nowrap;padding:1rem 0;font-family:var(--serif);font-size:1.5rem;font-style:italic}
+.marq div{display:inline-block;animation:mq 38s linear infinite}
+.marq span{margin:0 1.6rem}
+.marq span::after{content:"✦";margin-left:3.2rem;color:var(--cream);opacity:.4;font-style:normal;font-size:.9rem}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* HORARIOS */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.2rem;margin-top:2.6rem}
+.card{background:var(--paper);border-radius:var(--radius);padding:1.8rem;border:1px solid rgba(74,47,29,.1);position:relative;overflow:hidden;transition:transform .35s,box-shadow .35s}
+.card:hover{transform:translateY(-6px);box-shadow:0 24px 50px -24px rgba(74,47,29,.4)}
+.card .day{font-family:var(--serif);font-size:2rem;color:var(--brown);line-height:1}
+.card .hr{font-family:var(--serif);font-size:3rem;font-weight:600;color:var(--wine2);line-height:1.1;margin:.5rem 0}
+.card .hr small{font-size:1.1rem;font-weight:500}
+.card p{color:var(--brown2);font-size:.95rem}
+.card.feat{background:linear-gradient(160deg,var(--wine),var(--brown));color:var(--cream);border:0}
+.card.feat .day,.card.feat .hr{color:var(--gold2)} .card.feat p{color:#e9dcc6}
+.tag{display:inline-block;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;padding:.3rem .7rem;border-radius:99px;background:rgba(192,138,43,.18);color:var(--gold);margin-bottom:1rem}
+.card.feat .tag{background:rgba(226,182,89,.2);color:var(--gold2)}
+.note{margin-top:1.6rem;font-size:.9rem;color:var(--brown2);display:flex;gap:.6rem;align-items:flex-start}
+
+/* TEMA */
+.tema{background:linear-gradient(180deg,var(--wine) 0,#3b1220 100%);color:var(--cream);overflow:hidden}
+.tema .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
+.tema h2.title{color:var(--cream)} .tema h2.title em{color:var(--gold2)} .tema .lead{color:#e8d9c3}
+.vine{position:absolute;right:-60px;top:-40px;width:420px;opacity:.12;pointer-events:none}
+.quote{font-family:var(--serif);font-size:clamp(1.5rem,2.6vw,2.2rem);font-style:italic;line-height:1.25;border-left:2px solid var(--gold2);padding-left:1.4rem;margin-top:1.8rem;color:var(--gold2)}
+.quote small{display:block;font-family:var(--sans);font-style:normal;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:#e8d9c3;margin-top:.7rem}
+.orb{aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 30%,var(--gold2),var(--gold) 38%,#6a3f12 100%);display:grid;place-items:center;box-shadow:0 0 120px -10px rgba(226,182,89,.55),inset 0 -20px 60px rgba(0,0,0,.3);position:relative;max-width:420px;margin:0 auto;width:100%}
+.orb::before{content:"";position:absolute;inset:-18px;border:1px solid rgba(226,182,89,.35);border-radius:50%}
+.orb::after{content:"";position:absolute;inset:-42px;border:1px dashed rgba(226,182,89,.2);border-radius:50%;animation:spin 60s linear infinite}
+.orb div{text-align:center;color:#2a1a08;font-family:var(--serif)}
+.orb b{display:block;font-size:clamp(3.4rem,8vw,6rem);font-weight:600;line-height:.9}
+.orb span{font-size:1.1rem;letter-spacing:.3em;text-transform:uppercase;font-family:var(--sans);font-weight:700}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:860px){.tema .grid{grid-template-columns:1fr}}
+
+/* PASTORES */
+.pastors{display:flex;gap:1.4rem;margin-top:.4rem;overflow-x:auto;overflow-y:hidden;overscroll-behavior-y:auto;scroll-snap-type:x mandatory;padding:10px 0 1rem;scrollbar-width:thin;scrollbar-color:rgba(74,47,29,.35) transparent;-webkit-overflow-scrolling:touch}
+.pastors .pcard{flex:0 0 calc((100% - 4.2rem)/3.3);min-width:250px;scroll-snap-align:start}
+.parrows{display:flex;justify-content:flex-end;gap:.6rem;margin-top:1.6rem}
+.parrows button{width:44px;height:44px;border-radius:50%;border:1px solid rgba(74,47,29,.25);background:var(--paper);color:var(--brown);font-size:1.6rem;line-height:1;cursor:pointer;transition:background .2s}
+.parrows button:hover{background:#eadfc8}
+@media(max-width:700px){.pastors .pcard{flex:0 0 78%}.parrows{display:none}}
+
+.pcard{border-radius:var(--radius);overflow:hidden;background:var(--paper);border:1px solid rgba(74,47,29,.1);transition:transform .35s}
+.pcard:hover{transform:translateY(-6px)}
+.ph{aspect-ratio:4/4.4;display:grid;place-items:center;position:relative;overflow:hidden}
+.ph svg{width:46%;opacity:.9}
+@media(max-width:700px){.ph{aspect-ratio:16/7}.ph svg{width:22%}.pcard:has(.ph img) .ph{aspect-ratio:4/4.4}}
+.ph.a{background:linear-gradient(160deg,#6b4630,#3b2416)} .ph.b{background:linear-gradient(160deg,#7a2a3d,#3b1220)} .ph.c{background:linear-gradient(160deg,#5e6b3a,#2f381b)}
+.ph em{position:absolute;bottom:10px;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.55);font-style:normal}
+.pcard .tx{padding:1.4rem 1.5rem 1.7rem}
+.pcard h3{font-family:var(--serif);font-size:1.8rem;font-weight:600;color:var(--brown);line-height:1.05}
+.pcard .rol{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:700;margin:.4rem 0 .7rem}
+.pcard p{font-size:.93rem;color:var(--brown2)}
+.cover{margin-top:2rem;padding:1.6rem 2rem;border-radius:var(--radius);background:var(--cream2);display:flex;gap:1.4rem;align-items:center;flex-wrap:wrap}
+.cover b{font-family:var(--serif);font-size:1.5rem;color:var(--brown)}
+
+/* ENSEÑANZA */
+.ens{background:var(--cream2)}
+.sw{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.6rem 4vw 1.6rem;margin:0 -4vw;scrollbar-width:none}
+.sw::-webkit-scrollbar{display:none}
+.msg{flex:0 0 min(78vw,340px);scroll-snap-align:start;border-radius:var(--radius);padding:1.7rem;background:var(--paper);border:1px solid rgba(74,47,29,.1);display:flex;flex-direction:column;min-height:300px;position:relative}
+.msg .n{font-family:var(--serif);font-size:4.4rem;color:var(--gold);opacity:.35;line-height:.8;font-weight:600}
+.msg h3{font-family:var(--serif);font-size:1.7rem;color:var(--brown);line-height:1.05;margin:.8rem 0 .4rem}
+.msg .by{font-size:.78rem;color:var(--wine2);font-weight:700;letter-spacing:.06em}
+.msg p{font-size:.92rem;color:var(--brown2);margin-top:.8rem;flex:1}
+.msg .ref{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-top:1rem}
+.msg.dark{background:var(--brown);color:var(--cream)} .msg.dark h3{color:var(--gold2)} .msg.dark p,.msg.dark .by{color:#e5d6bf}
+.chan{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1rem}
+
+/* DISCIPULADOS / TIMELINE */
+.zones{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:.9rem;margin-top:2.2rem}
+.zone{padding:1.2rem 1.3rem;border-radius:16px;background:var(--paper);border:1px solid rgba(74,47,29,.1);display:flex;gap:.9rem;align-items:center}
+.zone i{flex:0 0 40px;height:40px;border-radius:50%;background:var(--wine);color:var(--gold2);display:grid;place-items:center;font-family:var(--serif);font-style:normal;font-weight:600;font-size:1.2rem}
+.zone b{display:block;font-size:.98rem;color:var(--brown)} .zone span{font-size:.8rem;color:var(--brown2)}
+@media(min-width:901px){
+#casas{zoom:.8}
+#casas .wrap{width:calc(107vw/.8);display:grid;grid-template-columns:1fr 1.9fr;gap:3.5rem;align-items:start}
+#casas .zones{grid-template-columns:repeat(3,1fr);grid-auto-rows:1fr;gap:1.1rem;margin-top:0;align-self:stretch}
+#casas .zone{padding:1.7rem 1.5rem;border-radius:20px;gap:1.1rem;min-height:130px;flex-direction:column;align-items:flex-start;justify-content:center}
+#casas .zone i{flex:0 0 auto;width:54px;height:54px;font-size:1.6rem;margin-bottom:.9rem}
+#casas .zone b{font-size:1.2rem;line-height:1.2}
+#casas .zone span{font-size:.98rem}
+#casas .note{grid-column:1/-1;margin-top:.5rem}
+#casas .when{margin-top:2rem;background:linear-gradient(160deg,var(--wine),var(--brown));color:var(--cream);border-radius:22px;padding:1.8rem 1.8rem 2rem}
+#casas .when .tag{background:rgba(226,182,89,.2);color:var(--gold2)}
+#casas .when .day{font-family:var(--serif);font-size:1.9rem;color:var(--gold2);line-height:1;margin-top:.8rem}
+#casas .when .hr{font-family:var(--serif);font-size:2.8rem;font-weight:600;color:var(--gold2);line-height:1.1;margin:.5rem 0}
+#casas .when .hr small{font-size:1.1rem;font-weight:500}
+#casas .when p{color:#e9dcc6;font-size:1.02rem}
+}
+@media(max-width:900px){.when{display:none}}
+
+/* EVENTOS */
+.ev{background:#241810;color:var(--cream)}
+.ev h2.title{color:var(--cream)} .ev h2.title em{color:var(--gold2)}
+.evl{margin-top:2.4rem;border-top:1px solid rgba(255,255,255,.14)}
+.evr{display:grid;grid-template-columns:130px 1fr auto;gap:1.6rem;align-items:center;padding:1.7rem 0;border-bottom:1px solid rgba(255,255,255,.14);transition:padding .3s,background .3s}
+.evr:hover{padding-left:1rem;background:rgba(255,255,255,.03)}
+.evr .d{font-family:var(--serif);font-size:2.6rem;color:var(--gold2);line-height:1}
+.evr .d small{display:block;font-family:var(--sans);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:#cdb998}
+.evr h3{font-family:var(--serif);font-size:1.9rem;font-weight:500}
+.evr p{color:#cdb998;font-size:.92rem}
+.evr .go{font-size:1.6rem;color:var(--gold2)}
+@media(max-width:640px){.evr{grid-template-columns:1fr;gap:.4rem}.evr .go{display:none}}
+
+/* JOVENES / PRINCIPIOS */
+.pill{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.4rem;margin-top:2.4rem}
+.pill div{padding:1.6rem;border-radius:var(--radius);background:var(--paper);border:1px solid rgba(74,47,29,.1)}
+.pill h3{font-family:var(--serif);font-size:1.6rem;color:var(--brown);margin:.6rem 0 .3rem}
+.pill p{font-size:.92rem;color:var(--brown2)}
+.pill svg{width:34px;height:34px;color:var(--gold)}
+
+/* VISITANOS */
+.visit{background:linear-gradient(180deg,var(--cream) 0,var(--cream2) 100%)}
+.vg{display:grid;grid-template-columns:1fr 1.1fr;gap:3rem;align-items:stretch}
+.info{display:grid;gap:1rem;margin-top:1.8rem}
+.info div{display:flex;gap:1rem;align-items:flex-start;padding:1.1rem 1.3rem;border-radius:16px;background:var(--paper);border:1px solid rgba(74,47,29,.1)}
+.info svg{flex:0 0 26px;width:26px;height:26px;color:var(--wine2);margin-top:3px}
+.info b{display:block;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.info span{color:var(--brown);font-weight:500}
+.map{border-radius:var(--radius);overflow:hidden;min-height:420px;position:relative;background:
+  radial-gradient(circle at 30% 30%,rgba(94,107,58,.35),transparent 45%),
+  radial-gradient(circle at 75% 70%,rgba(192,138,43,.3),transparent 50%),#e4d8c0;display:grid;place-items:center;text-align:center;padding:2rem;border:1px solid rgba(74,47,29,.12)}
+.map::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(74,47,29,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(74,47,29,.07) 1px,transparent 1px);background-size:44px 44px}
+.map>div{position:relative}
+.pin{width:64px;height:64px;margin:0 auto 1rem;color:var(--wine2);filter:drop-shadow(0 10px 14px rgba(91,31,46,.4));animation:bob 2.4s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-8px)}}
+.map h3{font-family:var(--serif);font-size:2rem;color:var(--brown)}
+.map p{color:var(--brown2);margin:.3rem 0 1.3rem}
+@media(max-width:860px){.vg{grid-template-columns:1fr}.map{min-height:320px}}
+
+/* TESTIMONIOS */
+.rev{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem;margin-top:2.4rem}
+.rev blockquote{padding:1.7rem;border-radius:var(--radius);background:var(--paper);border:1px solid rgba(74,47,29,.1);font-family:var(--serif);font-size:1.4rem;line-height:1.3;color:var(--brown)}
+.rev cite{display:block;font-family:var(--sans);font-style:normal;font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-top:1rem;font-weight:700}
+.stars{color:var(--gold);letter-spacing:.2em;font-size:1rem;margin-bottom:.6rem}
+.score{display:flex;align-items:baseline;gap:.8rem;margin-top:1rem}
+.score b{font-family:var(--serif);font-size:4.4rem;color:var(--wine2);line-height:1}
+
+/* ZOOM 70% */
+@media(min-width:901px){.marq,section:not(#hero),footer{zoom:.7}.slide{zoom:.64}}
+@media(min-width:901px){#horarios .wrap{width:min(1560px,94vw)}#horarios .cards{grid-template-columns:repeat(6,1fr);gap:.9rem}#horarios .card{padding:1.4rem 1.2rem}#horarios .card .day{font-size:1.55rem}#horarios .card .hr{font-size:2.5rem}#horarios .card .hr small{font-size:.95rem}#horarios .card p{font-size:.86rem}}
+@media(min-width:901px){
+#horarios{zoom:.8}
+#horarios .wrap{width:calc(107vw/.8)}
+#horarios .cards{display:flex;grid-template-columns:none;gap:1.1rem;margin-top:.4rem;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;padding:10px 0 1rem;scrollbar-width:thin;scrollbar-color:rgba(74,47,29,.35) transparent}
+#horarios .card{flex:0 0 calc((100% - 4.4rem)/4.3);min-width:250px;scroll-snap-align:start;padding:1.8rem 1.6rem}
+#horarios .card .day{font-size:1.9rem}
+#horarios .card .hr{font-size:3rem}
+#horarios .card .hr small{font-size:1.1rem}
+#horarios .card p{font-size:1.02rem}
+#horarios .card .tag{font-size:.72rem}
+}
+@media(max-width:900px){.harrows{display:none}}
+/* FOTOS */
+.deleite{border-radius:var(--radius);overflow:hidden;box-shadow:0 30px 80px -20px rgba(0,0,0,.6),0 0 0 1px rgba(226,182,89,.4);aspect-ratio:16/9}
+.deleite img{width:100%;height:100%;object-fit:cover}
+.ph img,.pcard .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.mos{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:clamp(90px,13vw,170px);gap:.8rem;margin-top:2.4rem}
+.mos figure{position:relative;overflow:hidden;border-radius:var(--radius);background:#d9cbb0}
+.mos img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.mos figure:hover img{transform:scale(1.06)}
+.mos figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.4rem .9rem .7rem;color:#fff;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;background:linear-gradient(transparent,rgba(20,10,4,.72))}
+.m1{grid-column:span 5;grid-row:span 3}.m2{grid-column:span 4;grid-row:span 2}.m3{grid-column:span 3;grid-row:span 2}.m4{grid-column:span 3;grid-row:span 1}.m5{grid-column:span 4;grid-row:span 1}
+.m6{grid-column:span 3;grid-row:span 2}.m7{grid-column:span 3;grid-row:span 2}.m8{grid-column:span 3;grid-row:span 2}.m9{grid-column:span 3;grid-row:span 2}
+@media(max-width:700px){.mos{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}.mos figure{grid-column:span 1!important;grid-row:span 1!important}.m1{grid-column:span 2!important;grid-row:span 2!important}}
+.visitimg{border-radius:var(--radius);overflow:hidden;margin-top:1.8rem;aspect-ratio:16/9}
+.visitimg img{width:100%;height:100%;object-fit:cover}
+/* FOOTER */
+footer{background:#1b120b;color:#d8c7ac;padding:4.5rem 0 2rem}
+.fg{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2.4rem}
+footer h4{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold2);margin-bottom:1rem}
+footer a{display:block;padding:.2rem 0;opacity:.85;transition:opacity .2s,color .2s} footer a:hover{opacity:1;color:var(--gold2)}
+footer .big{font-family:var(--serif);font-size:2.4rem;color:var(--cream);line-height:1}
+footer .big em{color:var(--gold2)}
+.copy{margin-top:3rem;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.12);font-size:.8rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;opacity:.75}
+@media(max-width:860px){.fg{grid-template-columns:1fr 1fr}.fg>div:first-child{grid-column:1/-1}}
+
+/* FLOATING + REVEAL */
+.fab{position:fixed;right:16px;bottom:16px;z-index:40;display:none}
+.fab a{display:flex;align-items:center;gap:.5rem;padding:.9rem 1.2rem;border-radius:99px;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#2a1a08;font-weight:800;font-size:.85rem;box-shadow:0 12px 30px -8px rgba(0,0,0,.5)}
+@media(max-width:900px){.fab.show{display:block}}
+.rv{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}.marq div,.orb::after,.pin,.cue .mouse::after,.cue .chev{animation:none}}
+</style>
+<link rel="preload" as="image" href="hero5/h000.webp" media="(min-width:901px)">
+<link rel="preload" as="image" href="hero5m/h000.webp" media="(max-width:900px)">
+<style>.lg{display:block;height:40px;width:auto;max-width:none}nav .lc{display:none}nav.solid .lc{display:block}nav.solid .lw{display:none}.cover .lg{height:62px}.pcard .ph img.lg{width:38%;height:auto;object-fit:contain;max-width:38%}@media(max-width:700px){.brand .lg{height:34px}.brand{font-size:1.05rem;gap:.5rem}}@media(max-width:700px){#ensenanza .chan{display:flex!important;flex-wrap:nowrap!important;justify-content:center;gap:.45rem!important}#ensenanza .chan .btn{flex:1 1 0;min-width:0;padding:.8rem .4rem!important;font-size:.82rem!important;white-space:nowrap;text-align:center}}@media(min-width:901px){#horarios .harrows{display:none!important}#horarios .cards{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:1.2rem!important;overflow:visible!important;scroll-snap-type:none!important;padding:0!important;margin:0!important}#horarios .cards .card{width:auto!important;min-width:0!important;max-width:none!important;flex:none!important;margin:0!important;min-height:0!important;height:auto!important;padding:2rem 1.8rem!important}#horarios .card .tag{font-size:1rem!important;letter-spacing:.14em!important}#horarios .card .day{font-size:2.5rem!important;line-height:1.1!important}#horarios .card .hr{font-size:4.2rem!important;line-height:1.05!important}#horarios .card .hr small{font-size:1.7rem!important}#horarios .card .hr[style]{font-size:2.6rem!important}#horarios .card p{font-size:1.45rem!important;line-height:1.5!important}#horarios .note{font-size:1.3rem!important;line-height:1.55!important;max-width:none!important}}.tema{overflow:hidden}.tema .wrap{position:relative;z-index:1}.vn{position:absolute;left:-3%;top:0;height:100%;width:34%;pointer-events:none;z-index:0;opacity:.55}.stm{stroke-dasharray:1;stroke-dashoffset:1;animation:vdraw 3.2s ease-out forwards}@keyframes vdraw{to{stroke-dashoffset:0}}.vn .sw{transform-box:fill-box;transform-origin:50% 0;animation:vswing 5s ease-in-out infinite alternate}@keyframes vswing{from{transform:rotate(-4deg)}to{transform:rotate(4deg)}}.lf{transform-box:fill-box;transform-origin:0 50%;animation:vlf 4.5s ease-in-out infinite alternate}@keyframes vlf{from{transform:rotate(-5deg)}to{transform:rotate(6deg)}}.gp{transform-box:fill-box;transform-origin:center;animation:vgp 3.6s ease-in-out infinite}@keyframes vgp{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}.td{transform-box:fill-box;transform-origin:0 100%;animation:vtd 4s ease-in-out infinite alternate}@keyframes vtd{from{transform:rotate(-6deg)}to{transform:rotate(8deg)}}@media(max-width:700px){.vn{width:52%;opacity:.3}}@media(prefers-reduced-motion:reduce){.vn *{animation:none!important}.stm{stroke-dashoffset:0}}</style>
 </head>
 <body>
-  <div class="mark" aria-hidden="true"></div>
-  <h1>Ebenezer Antigua</h1>
-  <div class="sub">Antigua Guatemala</div>
-  <p>Estamos preparando nuestro sitio web. Muy pronto encontrarás aquí toda la información.</p>
-  <footer>&copy; 2026 Ebenezer Antigua</footer>
+
+
+
+<!-- SVG sprites -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="dove" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="currentColor" stroke-width="2"/><path d="M14 36c6-1 9-4 12-8 2-3 6-6 12-6-2 3-2 6 0 8 3-1 6-3 8-6 0 8-4 14-11 17-4 2-8 3-13 2 2-2 3-4 3-6-4 1-8 0-11-1z" fill="currentColor"/><circle cx="43" cy="25" r="1.4" fill="#1b120b"/></symbol>
+    <symbol id="grape" viewBox="0 0 64 64"><g fill="currentColor"><circle cx="24" cy="30" r="6"/><circle cx="36" cy="30" r="6"/><circle cx="18" cy="42" r="6"/><circle cx="30" cy="42" r="6"/><circle cx="42" cy="42" r="6"/><circle cx="24" cy="54" r="6"/><circle cx="36" cy="54" r="6"/></g><path d="M30 24c0-8 4-12 12-14-1 7-4 11-12 14z" fill="currentColor" opacity=".6"/></symbol>
+    <symbol id="user" viewBox="0 0 64 64"><circle cx="32" cy="22" r="11" fill="currentColor"/><path d="M10 58c2-14 12-20 22-20s20 6 22 20z" fill="currentColor"/></symbol>
+    <symbol id="pin" viewBox="0 0 64 64"><path d="M32 4C20 4 12 13 12 24c0 15 20 36 20 36s20-21 20-36C52 13 44 4 32 4z" fill="currentColor"/><circle cx="32" cy="24" r="8" fill="#fbf7ef"/></symbol>
+  </defs>
+</svg>
+
+<nav id="nav">
+  <a href="#top" class="brand"><img class="lg lw" src="fotos/logo-paloma.png" alt="Ministerios Ebenezer"><img class="lg lc" src="fotos/logo-paloma-cafe.png" alt="Ministerios Ebenezer"><span>Ebenezer Antigua<small>La Vid Verdadera</small></span></a>
+  <div class="links">
+    <a href="#horarios">Horarios</a><a href="#ensenanza">Enseñanza</a><a href="#casas">Discipulados</a><a href="#eventos">Eventos</a><a href="#visitanos">Visítanos</a>
+  </div>
+  <a href="https://www.youtube.com/@ebenezerantigua" class="btn gold nav-cta" target="_blank" rel="noopener">● Ver en vivo</a>
+  <button class="burger" id="burger" aria-label="Menú"><span></span><span></span></button>
+</nav>
+<div class="menu" id="menu">
+  <a href="#horarios">Horarios</a><a href="#ensenanza">Enseñanza</a><a href="#casas">Discipulados</a><a href="#eventos">Eventos</a><a href="#visitanos">Visítanos</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="stage" id="top">
+    <canvas id="cv"></canvas>
+    <div class="shade"></div>
+    <div class="slide s1 on" data-s="0">
+      <div class="eyebrow">Iglesia de Cristo · Jocotenango, Sacatepéquez</div>
+      <h1>Ebenezer<br><em>Antigua</em></h1>
+      <p>Gracias por acompañarnos en nuestros servicios desde La Antigua Guatemala.</p>
+    </div>
+    <div class="slide s3" data-s="1">
+      <div class="eyebrow">Únete este domingo</div>
+      <h2>Te esperamos con<br><em>toda tu familia</em></h2>
+      <div class="row"><a href="#visitanos" class="btn gold">Cómo llegar</a><a href="https://www.youtube.com/@ebenezerantigua" target="_blank" rel="noopener" class="btn ghost">Ver transmisión</a></div>
+    </div>
+    <div class="bar"><i id="barfill"></i></div>
+    <div class="cue" id="cue"><span><b class="d">Desliza hacia abajo para continuar</b><b class="m">Desliza hacia arriba para continuar</b></span><div class="chev"></div></div>
+  </div>
+</section>
+
+<div class="marq" aria-hidden="true"><div id="mq"></div></div>
+
+<!-- HORARIOS -->
+<section id="horarios" class="pad">
+  <div class="wrap">
+    <div class="rv"><div class="eyebrow">Reuniones</div>
+    <h2 class="title">Horarios de <em>reuniones</em></h2></div>
+    <div class="parrows harrows"><button type="button" id="hPrev" aria-label="Anterior">&#8249;</button><button type="button" id="hNext" aria-label="Siguiente">&#8250;</button></div>
+    <div class="cards" id="hRow">
+      <div class="card feat rv"><span class="tag">Servicio general</span><div class="day">Domingo</div><div class="hr">9:00 <small>am</small></div><p>Oración a las 8:30 am. Santa Cena el primer domingo de cada mes.</p></div>
+      <div class="card rv"><span class="tag">Servicio general</span><div class="day">Martes</div><div class="hr">7:00 <small>pm</small></div><p>Servicio general. Transmisión en vivo.</p></div>
+      <div class="card rv"><span class="tag">Servicio general</span><div class="day">Viernes</div><div class="hr">7:00 <small>pm</small></div><p>Servicio general. Transmisión en vivo.</p></div>
+      <div class="card rv"><span class="tag">Jóvenes</span><div class="day">Sábado</div><div class="hr">5:30 <small>pm</small></div><p>Te esperamos en nuestra reunión de jóvenes.</p></div>
+      <div class="card rv"><span class="tag">En casas</span><div class="day">Jueves</div><div class="hr">7:00 <small>pm</small></div><p>Discipulados por zonas, de 7:00 a 8:00 pm. Mira tu zona más abajo.</p></div>
+      <div class="card rv"><span class="tag">Oración</span><div class="day">Lun · Mié · Jue</div><div class="hr" style="font-size:1.9rem;line-height:1.3;margin:.9rem 0">Telegram y Zoom</div><p>Tiempos de oración en línea durante la semana.</p></div>
+    </div>
+    <p class="note rv">Te esperamos. Horarios vigentes desde el 1 de noviembre. Para confirmar cualquier cambio, escríbenos.</p>
+  </div>
+</section>
+
+<!-- TEMA -->
+<section id="tema" class="tema pad">
+<svg class="vn" viewBox="0 0 560 820" preserveAspectRatio="xMinYMid meet" aria-hidden="true"><defs><radialGradient id="gG" cx=".35" cy=".3" r=".85"><stop offset="0" stop-color="#b56a8e"/><stop offset=".55" stop-color="#7a2a52"/><stop offset="1" stop-color="#3f1230"/></radialGradient><linearGradient id="gL" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8fa04f"/><stop offset="1" stop-color="#4d5f26"/></linearGradient><g id="gr"><circle r="15" fill="url(#gG)"/><circle cx="-5" cy="-5.7" r="3.9" fill="#fff" opacity=".45"/></g><g id="lf"><path d="M0 0C20-34 62-38 86-6 62 24 24 30 0 0Z" fill="url(#gL)"/><path d="M4 0C30-6 56-8 80-6" stroke="#2f3a18" stroke-opacity=".45" stroke-width="2" fill="none"/></g></defs><path class="stm" d="M300-20C330 120 120 200 190 340 250 460 380 480 330 620 300 710 230 760 260 830" stroke="#5a4326" stroke-width="9" fill="none" stroke-linecap="round" pathLength="1"/><g transform="translate(220 115) rotate(-28) scale(1.1)"><use href="#lf" class="lf" style="animation-delay:0s"/></g><g transform="translate(330 250) rotate(160) scale(1)"><use href="#lf" class="lf" style="animation-delay:0.6s"/></g><g transform="translate(150 390) rotate(-12) scale(1.05)"><use href="#lf" class="lf" style="animation-delay:1.2s"/></g><g transform="translate(360 470) rotate(170) scale(0.95)"><use href="#lf" class="lf" style="animation-delay:0.3s"/></g><g transform="translate(300 600) rotate(-20) scale(1)"><use href="#lf" class="lf" style="animation-delay:0.9s"/></g><g transform="translate(250 730) rotate(150) scale(0.9)"><use href="#lf" class="lf" style="animation-delay:1.5s"/></g><path class="td" transform="translate(190 340) rotate(-20)" d="M0 0C18-6 26 10 12 16 2 20 4 8 12 8" stroke="#6f7f3a" stroke-width="2.2" fill="none"/><path class="td" transform="translate(330 620) rotate(200)" d="M0 0C18-6 26 10 12 16 2 20 4 8 12 8" stroke="#6f7f3a" stroke-width="2.2" fill="none"/><path class="td" transform="translate(300 20) rotate(10)" d="M0 0C18-6 26 10 12 16 2 20 4 8 12 8" stroke="#6f7f3a" stroke-width="2.2" fill="none"/><g transform="translate(238 212)"><g class="sw" style="animation-delay:0s"><path d="M0 -38C-3 -20 3 -10 0 0" stroke="#4d5a2c" stroke-width="3" fill="none"/><use href="#gr" class="gp" x="-43" y="0" style="animation-delay:0.0s"/><use href="#gr" class="gp" x="-14" y="0" style="animation-delay:0.1s"/><use href="#gr" class="gp" x="14" y="0" style="animation-delay:0.3s"/><use href="#gr" class="gp" x="43" y="0" style="animation-delay:0.4s"/><use href="#gr" class="gp" x="-28" y="25" style="animation-delay:0.2s"/><use href="#gr" class="gp" x="0" y="25" style="animation-delay:0.4s"/><use href="#gr" class="gp" x="28" y="25" style="animation-delay:0.6s"/><use href="#gr" class="gp" x="-28" y="50" style="animation-delay:0.5s"/><use href="#gr" class="gp" x="0" y="50" style="animation-delay:0.7s"/><use href="#gr" class="gp" x="28" y="50" style="animation-delay:0.8s"/><use href="#gr" class="gp" x="-14" y="74" style="animation-delay:0.8s"/><use href="#gr" class="gp" x="14" y="74" style="animation-delay:0.9s"/><use href="#gr" class="gp" x="0" y="99" style="animation-delay:1.0s"/></g></g><g transform="translate(236 418)"><g class="sw" style="animation-delay:0.8s"><path d="M0 -38C-3 -20 3 -10 0 0" stroke="#4d5a2c" stroke-width="3" fill="none"/><use href="#gr" class="gp" x="-40" y="0" style="animation-delay:0.8s"/><use href="#gr" class="gp" x="-13" y="0" style="animation-delay:1.0s"/><use href="#gr" class="gp" x="13" y="0" style="animation-delay:1.1s"/><use href="#gr" class="gp" x="40" y="0" style="animation-delay:1.2s"/><use href="#gr" class="gp" x="-27" y="23" style="animation-delay:1.1s"/><use href="#gr" class="gp" x="0" y="23" style="animation-delay:1.2s"/><use href="#gr" class="gp" x="27" y="23" style="animation-delay:1.4s"/><use href="#gr" class="gp" x="-13" y="46" style="animation-delay:1.3s"/><use href="#gr" class="gp" x="13" y="46" style="animation-delay:1.5s"/><use href="#gr" class="gp" x="0" y="69" style="animation-delay:1.6s"/></g></g><g transform="translate(324 652)"><g class="sw" style="animation-delay:1.6s"><path d="M0 -38C-3 -20 3 -10 0 0" stroke="#4d5a2c" stroke-width="3" fill="none"/><use href="#gr" class="gp" x="-57" y="0" style="animation-delay:1.6s"/><use href="#gr" class="gp" x="-28" y="0" style="animation-delay:1.8s"/><use href="#gr" class="gp" x="0" y="0" style="animation-delay:1.9s"/><use href="#gr" class="gp" x="28" y="0" style="animation-delay:2.0s"/><use href="#gr" class="gp" x="57" y="0" style="animation-delay:2.2s"/><use href="#gr" class="gp" x="-43" y="25" style="animation-delay:1.9s"/><use href="#gr" class="gp" x="-14" y="25" style="animation-delay:2.0s"/><use href="#gr" class="gp" x="14" y="25" style="animation-delay:2.2s"/><use href="#gr" class="gp" x="43" y="25" style="animation-delay:2.3s"/><use href="#gr" class="gp" x="-28" y="50" style="animation-delay:2.1s"/><use href="#gr" class="gp" x="0" y="50" style="animation-delay:2.2s"/><use href="#gr" class="gp" x="28" y="50" style="animation-delay:2.4s"/><use href="#gr" class="gp" x="-14" y="74" style="animation-delay:2.4s"/><use href="#gr" class="gp" x="14" y="74" style="animation-delay:2.5s"/><use href="#gr" class="gp" x="0" y="99" style="animation-delay:2.6s"/></g></g></svg>
+  <div class="wrap grid">
+    <div class="rv">
+      <div class="eyebrow">Tema del año</div>
+      <h2 class="title">2026, Año del <em>Deleite</em></h2>
+      <p class="lead">Año del Deleite 2026. Cada semana compartimos el tema, los puntos y los versículos de la enseñanza.</p>
+      <div class="quote">“¿A quién tengo yo en los cielos, sino a ti? Y fuera de ti, nada deseo en la tierra.”<small>Salmo 73:25</small></div>
+    </div>
+    <div class="rv"><div class="deleite"><img src="fotos/deleite.jpg" alt="2026 Año del Deleite" loading="lazy"></div></div>
+  </div>
+</section>
+
+<!-- PASTORES -->
+<section id="pastores" class="pad">
+  <div class="wrap">
+    <div class="rv"><div class="eyebrow">Equipo ministerial</div>
+    <h2 class="title">Pastores que te <em>acompañan</em></h2>
+    <p class="lead">Un equipo de pastores y ancianos que sirve a la congregación, bajo la cobertura del Apóstol Sergio Enríquez.</p></div>
+    <div class="parrows"><button type="button" id="pPrev" aria-label="Anterior">&#8249;</button><button type="button" id="pNext" aria-label="Siguiente">&#8250;</button></div>
+    <div class="pastors" id="pastorsRow">
+      <div class="pcard rv"><div class="ph a"><img src="fotos/hugo-azul.jpg" alt="Profeta Hugo García"></div><div class="tx"><h3>Hugo García</h3><div class="rol">Profeta</div><p>“Cada mañana son nuevas sus misericordias.”<br><small style="color:var(--gold);font-weight:700;letter-spacing:.08em">Tiempo final de fructificar · 8 nov 2026</small></p></div></div>
+      <div class="pcard rv"><div class="ph b"><img src="fotos/debora-hd.jpg" alt="Pastora Débora de García" style="object-position:50% 12%"></div><div class="tx"><h3>Débora de García</h3><div class="rol">Pastora</div><p>“La palabra se expone, no se impone.”<br><small style="color:var(--gold);font-weight:700;letter-spacing:.08em">Los desiertos · 11 oct 2026</small></p></div></div>
+      <div class="pcard rv"><div class="ph c"><img src="fotos/rodrigo-hd.jpg" alt="Pastor Rodrigo Ordóñez" style="object-position:50% 20%"></div><div class="tx"><h3>Rodrigo Ordóñez</h3><div class="rol">Pastor</div><p>“Dios no quiere una religión aprendida de hombres, quiere una relación.”<br><small style="color:var(--gold);font-weight:700;letter-spacing:.08em">Tiempos difíciles · 30 oct 2026</small></p></div></div>
+      <div class="pcard rv"><div class="ph a"><img src="fotos/cruz-hd.jpg" alt="Anciano Estuardo Cruz" style="object-position:30% 12%" loading="lazy"></div><div class="tx"><h3>Estuardo Cruz</h3><div class="rol">Anciano</div><p>“No nos afanemos, Dios cuida de nosotros. Busquemos su reino y confiemos plenamente en Él.”</p></div></div>
+      <div class="pcard rv"><div class="ph b"><img src="fotos/valle-hd.jpg" alt="Anciano José Valle" loading="lazy"></div><div class="tx"><h3>José Valle</h3><div class="rol">Anciano</div><p>“Retorna a la casa del Padre con un corazón humilde, contrito y humillado.”</p></div></div>
+      <div class="pcard rv"><div class="ph c"><img src="fotos/mendez-hd.jpg" alt="Anciano José Carlos Méndez" style="object-position:50% 15%" loading="lazy"></div><div class="tx"><h3>José Carlos Méndez</h3><div class="rol">Anciano</div><p>“Rindamos nuestra voluntad, para que el Señor haga su voluntad.”</p></div></div>
+      <div class="pcard rv"><div class="ph a"><img class="lg" src="fotos/logo-paloma.png" alt="Ministerios Ebenezer"></div><div class="tx"><h3>Gustavo Hernández</h3><div class="rol">Pastor</div><p>Predica en los servicios de Ebenezer Antigua.</p></div></div>
+      <div class="pcard rv"><div class="ph b"><img class="lg" src="fotos/logo-paloma.png" alt="Ministerios Ebenezer"></div><div class="tx"><h3>Jorge Jaenz</h3><div class="rol">Pastor</div><p>Predica en los servicios de Ebenezer Antigua.</p></div></div>
+      <div class="pcard rv"><div class="ph c"><img class="lg" src="fotos/logo-paloma.png" alt="Ministerios Ebenezer"></div><div class="tx"><h3>Analí García</h3><div class="rol">Contacto de la iglesia</div><p>Para integrarte al canal de comunicación de la iglesia.</p></div></div>
+      <div class="pcard rv"><div class="ph a"><img class="lg" src="fotos/logo-paloma.png" alt="Ministerios Ebenezer"></div><div class="tx"><h3>Alan Sagche</h3><div class="rol">Discipulados en casas</div><p>Información de los discipulados de los jueves por zonas.</p></div></div>
+    </div>
+    <div class="cover rv"><img class="lg" src="fotos/logo-central-cafe.png" alt="Ministerios Ebenezer Central"><div><b>Bajo la cobertura de Ministerios Ebenezer Central</b><br><span style="color:var(--brown2)">Apóstol Sergio Enríquez · Zona 5, Ciudad de Guatemala</span></div></div>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section id="galeria" class="pad">
+  <div class="wrap">
+    <div class="rv"><div class="eyebrow">Salmo 122:1</div><h2 class="title">Hay un lugar <em>preparado para ti</em></h2>
+    <p class="lead">Alabanza, Palabra y Santa Cena en Jocotenango.</p></div>
+    <div class="mos">
+      <figure class="m1 rv"><img src="fotos/oracion.jpg" alt="Hermana adorando" loading="lazy"><figcaption>Adoración</figcaption></figure>
+      <figure class="m2 rv"><img src="fotos/gal-iglesia.jpg" alt="Servicio en Ebenezer Antigua con la congregación y el equipo de alabanza" loading="lazy"><figcaption>Nuestra iglesia</figcaption></figure>
+      <figure class="m3 rv"><img src="fotos/alabanza.jpg" alt="Equipo de alabanza" loading="lazy"><figcaption>Alabanza</figcaption></figure>
+      <figure class="m4 rv"><img src="fotos/gal-ninos.jpg" alt="Área de niños" loading="lazy"><figcaption>Niños</figcaption></figure>
+      <figure class="m5 rv"><img src="fotos/gal-congregacion.jpg" alt="Congregación adorando" loading="lazy"><figcaption>Congregación</figcaption></figure>
+      <figure class="m6 rv"><img src="fotos/santa-cena.jpg" alt="Santa Cena" loading="lazy"><figcaption>Santa Cena</figcaption></figure>
+      <figure class="m7 rv"><img src="fotos/gal-gozo.jpg" alt="Congregación en alabanza" loading="lazy"><figcaption>Congregación</figcaption></figure>
+      <figure class="m8 rv"><img src="fotos/biblia.jpg" alt="Biblia" loading="lazy"><figcaption>La Palabra</figcaption></figure>
+      <figure class="m9 rv"><img src="fotos/hermanas.jpg" alt="Estudiando la Palabra" loading="lazy"><figcaption>Discipulado</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ENSEÑANZA -->
+<section id="ensenanza" class="ens pad">
+  <div class="wrap">
+    <div class="rv"><div class="eyebrow">Enseñanza reciente</div>
+    <h2 class="title">La Palabra que <em>transforma</em></h2>
+    <p class="lead">Cada semana publicamos el tema con sus puntos y versículos. Aquí algunas de las series de este año.</p></div>
+  </div>
+  <div class="wrap"><div class="sw">
+    <div class="msg dark"><div class="n">01</div><h3>La Oración</h3><div class="by">Profeta Hugo García · 15 nov</div><p>01 Comunión con el Padre · 02 Para qué oramos · 03 Cómo oramos · 04 Tipos de oración · 05 Perseverar en oración.</p><div class="ref">Lucas 11:1-4</div><a href="https://www.youtube.com/@ebenezerantigua/streams" target="_blank" rel="noopener" style="display:inline-block;margin-top:.9rem;font-weight:700;color:inherit;text-decoration:underline">▶ Ver en YouTube</a></div>
+    <div class="msg"><div class="n">02</div><h3>El Engaño</h3><div class="by">Profeta Hugo García · serie I–III</div><p>Serie en tres partes. Mateo 13:22 · Hechos 17:30 · 2 Tesalonicenses 2:9-12.</p><div class="ref">Efesios 4:17-24</div><a href="https://www.youtube.com/watch?v=obZM3E6dQX4" target="_blank" rel="noopener" style="display:inline-block;margin-top:.9rem;font-weight:700;color:inherit;text-decoration:underline">▶ Ver la prédica (III)</a></div>
+    <div class="msg"><div class="n">03</div><h3>Tiempo final de fructificar</h3><div class="by">Profeta Hugo García · 8 nov</div><p>Mateo 21:18-22 · Juan 12:24 · 1 Timoteo 4:12.</p><div class="ref">Mateo 21 · Juan 12:24</div><a href="https://www.youtube.com/watch?v=97w-LXf5Jy8" target="_blank" rel="noopener" style="display:inline-block;margin-top:.9rem;font-weight:700;color:inherit;text-decoration:underline">▶ Ver la prédica</a></div>
+    <div class="msg"><div class="n">04</div><h3>Tiempos difíciles</h3><div class="by">Pastor Rodrigo Ordóñez · 30 oct</div><p>2 Timoteo 3:1-5 · Juan 3:19-21 · Isaías 60:1-2.</p><div class="ref">2 Timoteo 3:1-5</div><a href="https://www.youtube.com/watch?v=GCU2gBQwgfM" target="_blank" rel="noopener" style="display:inline-block;margin-top:.9rem;font-weight:700;color:inherit;text-decoration:underline">▶ Ver la prédica</a></div>
+    <div class="msg"><div class="n">05</div><h3>Los desiertos</h3><div class="by">Pastora Débora de García · 11 oct</div><p>Santiago 1:2-5 · Oseas 2:14 · Deuteronomio 8:2.</p><div class="ref">Oseas 2:14</div><a href="https://www.youtube.com/watch?v=ygsn5uHVHrA" target="_blank" rel="noopener" style="display:inline-block;margin-top:.9rem;font-weight:700;color:inherit;text-decoration:underline">▶ Ver la prédica</a></div>
+    <div class="msg"><div class="n">06</div><h3>La Paz para este tiempo</h3><div class="by">Serie · agosto</div><p>Serie en cuatro partes, publicada en agosto.</p><div class="ref">Serie 2026</div><a href="https://www.youtube.com/watch?v=dPS_rXiRvXQ" target="_blank" rel="noopener" style="display:inline-block;margin-top:.9rem;font-weight:700;color:inherit;text-decoration:underline">▶ Ver la prédica (I)</a></div>
+  </div></div>
+  <div class="wrap rv"><div class="chan">
+    <a class="btn dark" href="https://www.youtube.com/@ebenezerantigua" target="_blank" rel="noopener">▶ YouTube</a>
+    <a class="btn line" href="https://www.facebook.com/ebenezerantiguagt/" target="_blank" rel="noopener">Facebook</a>
+    <a class="btn line" href="https://www.instagram.com/ebenezerantigua/" target="_blank" rel="noopener">Instagram</a>
+  </div></div>
+</section>
+
+<!-- DISCIPULADOS -->
+<section id="casas" class="pad">
+  <div class="wrap">
+    <div class="dleft"><div class="rv"><div class="eyebrow">Jueves · 7:00 a 8:00 pm</div>
+    <h2 class="title">Discipulados <em>en tu zona</em></h2>
+    <p class="lead">Discipulados en casas, jueves de 7:00 a 8:00 pm. Información con Alan Sagche.</p></div>
+    <div class="when rv"><span class="tag">En casas</span><div class="day">Jueves</div><div class="hr">7:00 – 8:00 <small>pm</small></div><p>Seis zonas. Elige la más cercana a ti.</p></div></div>
+    <div class="zones">
+      <div class="zone rv"><i>1</i><div><b>Pastores</b><span>Fam. Buchan</span></div></div>
+      <div class="zone rv"><i>2</i><div><b>Jocotenango</b><span>Fam. Izeppi</span></div></div>
+      <div class="zone rv"><i>3</i><div><b>San Antonio Aguas Calientes</b><span>Fam. López</span></div></div>
+      <div class="zone rv"><i>4</i><div><b>Santa Catarina</b><span>Fam. Sagche</span></div></div>
+      <div class="zone rv"><i>5</i><div><b>Ciudad Vieja</b><span>Fam. Quiñónez</span></div></div>
+      <div class="zone rv"><i>6</i><div><b>Ruta 14 · Alotenango</b><span>Fam. Yagüt</span></div></div>
+    </div>
+    <p class="note rv">ⓘ Confirma con la iglesia que tu zona siga activa antes de asistir.</p>
+  </div>
+</section>
+
+<!-- SEMANA -->
+<section class="pad" style="background:var(--cream2)">
+  <div class="wrap">
+    <div class="rv"><div class="eyebrow">Cada semana</div><h2 class="title">Lo que <em>vivimos</em> juntos</h2></div>
+    <div class="pill">
+      <div class="rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5h11a3 3 0 013 3v11H7a3 3 0 01-3-3z"/><path d="M8 9h6M8 13h6"/></svg><h3>Enseñanza</h3><p>Martes, viernes y domingo. Cada tema se publica con sus puntos y versículos.</p></div>
+      <div class="rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 3h10v5a5 5 0 01-10 0z"/><path d="M12 13v6M8 21h8"/></svg><h3>Santa Cena</h3><p>Ven y reafirmemos juntos el pacto con nuestro Dios.</p></div>
+      <div class="rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h3>Oración</h3><p>Lunes, miércoles y jueves, por Telegram y Zoom.</p></div>
+      <div class="rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-4.4-9-9a5 5 0 019-3 5 5 0 019 3c-2 4.6-9 9-9 9z"/></svg><h3>Discipulado</h3><p>Jueves de 7:00 a 8:00 pm, en casas, por zonas.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTOS -->
+<section id="eventos" class="ev pad">
+  <div class="wrap">
+    <div class="rv"><div class="eyebrow">Próximamente</div><h2 class="title">Eventos que <em>marcan</em> el año</h2></div>
+    <div class="evl">
+      <div class="evr rv"><div class="d">2026<small>Próximamente</small></div><div><h3>Pre Proclama Profética</h3><p>Más información en nuestras redes.</p></div><div class="go">→</div></div>
+      <div class="evr rv"><div class="d">31<small>Diciembre</small></div><div><h3>Proclama Profética</h3><p>Encuentro de fin de año de Ministerios Ebenezer.</p></div><div class="go">→</div></div>
+      <div class="evr rv"><div class="d">Mensual<small>1.er domingo</small></div><div><h3>Santa Cena</h3><p>Ven y reafirmemos juntos el pacto con nuestro Dios.</p></div><div class="go">→</div></div>
+      <div class="evr rv"><div class="d">Sábados<small>5:30 pm</small></div><div><h3>Reunión de jóvenes</h3><p>Te esperamos en nuestra reunión de jóvenes.</p></div><div class="go">→</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- VISITANOS -->
+<section id="visitanos" class="visit pad">
+  <div class="wrap vg">
+    <div class="rv">
+      <div class="eyebrow">Visítanos</div>
+      <h2 class="title">Cómo <em>llegar</em></h2>
+      <p class="lead">Te esperamos con toda tu familia. Contamos con parqueo y sala cuna.</p>
+      <div class="visitimg"><img src="fotos/fachada.jpg" alt="Entrada a Ebenezer Antigua" loading="lazy"></div>
+      <div class="info">
+        <div><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 00-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg><p><b>Dirección</b><span>El Jícaro, Callejón Tampiscal y Callejón Bolaños, Zona 4, Jocotenango, Sacatepéquez</span></p></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg><p><b>Teléfono</b><span>4028-7989</span></p></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><p><b>Correo</b><span>oficina.lvv@gmail.com</span></p></div>
+      </div>
+    </div>
+    <div class="map rv"><div>
+      <svg class="pin"><use href="#pin"/></svg>
+      <h3>Ebenezer Antigua</h3>
+      <p>Jocotenango, Sacatepéquez · junto a La Antigua Guatemala</p>
+      <a class="btn dark" href="https://www.google.com/maps/search/?api=1&query=Ebenezer+Antigua+Jocotenango" target="_blank" rel="noopener">Abrir en Google Maps</a>
+    </div></div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="pad">
+  <div class="wrap">
+    <div class="rv"><div class="eyebrow">Comunidad</div><h2 class="title">Lo que dicen en <em>Google</em></h2>
+    <div class="score"><b>5.0</b><div><div class="stars">★★★★★</div><span style="color:var(--brown2)">39 reseñas en Google</span></div></div></div>
+    <div class="rev">
+      <blockquote class="rv">Siempre quise asistir a una iglesia así, donde uno puede adorar a nuestro único Dios vivo y verdadero, con mucho gozo y exaltación, y donde no hay discriminación hacia ninguno.<cite>Gary De León · Reseña en Google</cite></blockquote>
+      <blockquote class="rv">Es una de las mejores bendiciones, muy bueno tener la iglesia cerca y poder asistir con toda la familia.<cite>Janet De Rodriguez · Reseña en Google</cite></blockquote>
+      <blockquote class="rv">Hermosa y bendecida experiencia en un lugar muy agradable para alabar a Dios.<cite>Hugo Medio · Reseña en Google</cite></blockquote>
+      <blockquote class="rv">Todo el que tenga sed y hambre de amor y perdón, le dice el Señor… Eres bienvenido.<cite>marcoamdres perez · Reseña en Google</cite></blockquote>
+    </div>
+    <div class="chan rv" style="margin-top:2rem"><a class="btn dark" href="https://www.google.com/maps/search/?api=1&query=Ebenezer+Antigua+Jocotenango" target="_blank" rel="noopener">Ver reseñas en Google</a></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fg">
+      <div><div class="big">Ebenezer <em>Antigua</em></div><p style="margin-top:.8rem;max-width:36ch">Iglesia de Cristo La Vid Verdadera. Bajo la cobertura de Ministerios Ebenezer, Apóstol Sergio Enríquez.</p></div>
+      <div><h4>Visita</h4><a href="#horarios">Horarios</a><a href="#casas">Discipulados</a><a href="#eventos">Eventos</a><a href="#visitanos">Cómo llegar</a></div>
+      <div><h4>Síguenos</h4><a href="https://www.youtube.com/@ebenezerantigua" target="_blank" rel="noopener">YouTube</a><a href="https://t.me/EbenezerAntigua" target="_blank" rel="noopener">Telegram</a><a href="https://www.facebook.com/ebenezerantiguagt/" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/ebenezerantigua/" target="_blank" rel="noopener">Instagram</a></div>
+      <div><h4>Contacto</h4><a>4028-7989</a><a>oficina.lvv@gmail.com</a><a>Jocotenango, Sacatepéquez</a></div>
+    </div>
+    <div class="copy"><span>© 2026 Ebenezer Antigua · La Vid Verdadera</span><span>ebenezerantigua.com</span></div>
+  </div>
+</footer>
+
+<div class="fab" id="fab"><a href="#horarios">Horarios</a></div>
+
+<script>
+(function(){
+  var MB=false; /* Hero B (fotos) desactivado: queda el video del viñedo */
+  var N=121, frames=new Array(N), loaded=0, cv=document.getElementById('cv'), ctx=cv.getContext('2d',{alpha:false});
+  var hero=document.getElementById('hero'), slides=[].slice.call(document.querySelectorAll('.slide'));
+  var cue=document.getElementById('cue'), bar=document.getElementById('barfill');
+  var nav=document.getElementById('nav'), fab=document.getElementById('fab');
+  var target=0, cur=0, lastKey=-1, lastSlide=-1, ticking=false, vh=innerHeight, heroH=0, scrollTop=0;
+  ctx.imageSmoothingQuality='medium';
+
+  function measure(){
+    vh=innerHeight; heroH=hero.offsetHeight-vh;
+    var w=Math.min(innerWidth*(window.devicePixelRatio||1),1920);
+    cv.width=Math.round(w); cv.height=Math.round(w*vh/innerWidth); lastKey=-1; render();
+  }
+  function cover(img){
+    var cw=cv.width,ch=cv.height,iw=img.width,ih=img.height;
+    var s=Math.max(cw/iw,ch/ih), w=iw*s, h=ih*s;
+    return [(cw-w)/2,(ch-h)/2,w,h];
+  }
+  var PH=[['oracion','salon1','jardin'],['mano-alzada','altar','hermanas'],['congregacion','fachada','flores'],['jardin','oracion','altar']], PI={}, PN=0, PT=12;
+  var CROP={fachada:.9,jardin:.9,altar:.92,salon1:.92,congregacion:.95,hermanas:.95};
+  function loadB(){PH.forEach(function(c){c.forEach(function(n){var im=new Image();im.onload=function(){PI[n]=im;PN++;renderB(true);if(PN>=PT)ready()};im.onerror=function(){PN++};im.src='fotos/'+n+'.jpg'})})}
+  function rr(c,x,y,w,h,r){c.beginPath();c.moveTo(x+r,y);c.arcTo(x+w,y,x+w,y+h,r);c.arcTo(x+w,y+h,x,y+h,r);c.arcTo(x,y+h,x,y,r);c.arcTo(x,y,x+w,y,r);c.closePath()}
+  function drawCover(im,n,x,y,w,h,a){var cr=CROP[n]||1,sw=im.width,sh=im.height*cr,sc=Math.max(w/sw,h/sh),dw=sw*sc,dh=sh*sc;ctx.globalAlpha=a;ctx.drawImage(im,0,0,sw,sh,x+(w-dw)/2,y+(h-dh)/2,dw,dh)}
+  function renderB(force){
+    var W=cv.width,H=cv.height,p=cur,key=Math.round(p*400)+W+PN; if(!force&&key===lastKey)return; lastKey=key;
+    ctx.globalAlpha=1; ctx.fillStyle='#1b120b'; ctx.fillRect(0,0,W,H);
+    var g=ctx.createRadialGradient(W*.5,H*.4,0,W*.5,H*.4,W*.7); g.addColorStop(0,'#5a1f1a'); g.addColorStop(1,'#1b120b'); ctx.fillStyle=g; ctx.fillRect(0,0,W,H);
+    var mob=W<H*1.1, cw=mob?W*.22:Math.min(W*.15,H*.3), ch=cw*1.5, gap=cw*.12, ncol=4, spread=cw*1.12;
+    var pos=mob?[-1.65,-.55,.55,1.65]:[-2.5,-1.5,1.5,2.5], sp=[-1,1,-1,1];
+    for(var c=0;c<ncol;c++){
+      var cx=W/2+pos[c]*spread-cw/2, n=PH[c].length, per=ch+gap, tot=per*n;
+      var off=(((p*per*n*.9*sp[c]+c*per*.6)%tot)+tot)%tot;
+      for(var k=-1;k<=n;k++){
+        var idx=((k%n)+n)%n, nm=PH[c][idx], im=PI[nm]; if(!im)continue;
+        var y=H*.5-ch/2+k*per-off+((c%2)?per*.35:0);
+        for(var rep=-1;rep<=1;rep++){var yy=y+rep*tot; if(yy>H||yy+ch<0)continue;
+          ctx.save(); rr(ctx,cx,yy,cw,ch,cw*.07); ctx.clip(); drawCover(im,nm,cx,yy,cw,ch,1); ctx.restore();}
+      }
+    }
+    ctx.globalAlpha=mob?.62:.4; ctx.fillStyle='#140a04'; ctx.fillRect(0,0,W,H); ctx.globalAlpha=1;
+  }
+  function render(){
+    var f=Math.round(cur*(N-1));
+    var key=f+'_'+cv.width+'_'+loaded; if(key===lastKey)return; lastKey=key;
+    var A=frames[f]; if(!A){for(var q=1;q<N&&!A;q++){A=frames[f-q]||frames[f+q]}} if(!A)return;
+    var r=cover(A);
+    ctx.drawImage(A,r[0],r[1],r[2],r[3]); if(cv.style.opacity!=='1')cv.style.opacity='1';
+  }
+  function measure(){
+    vh=innerHeight; heroH=hero.offsetHeight-vh;
+    var w=Math.min(innerWidth*(window.devicePixelRatio||1),1920);
+    cv.width=Math.round(w); cv.height=Math.round(w*vh/innerWidth); lastKey=-1; render();
+  }
+  function cover(img){
+    var cw=cv.width,ch=cv.height,iw=img.width,ih=img.height;
+    var s=Math.max(cw/iw,ch/ih), w=iw*s, h=ih*s;
+    return [(cw-w)/2,(ch-h)/2,w,h];
+  }
+  var PH=[['oracion','salon1','jardin'],['mano-alzada','altar','hermanas'],['congregacion','fachada','flores'],['jardin','oracion','altar']], PI={}, PN=0, PT=12;
+  var CROP={fachada:.9,jardin:.9,altar:.92,salon1:.92,congregacion:.95,hermanas:.95};
+  function loadB(){PH.forEach(function(c){c.forEach(function(n){var im=new Image();im.onload=function(){PI[n]=im;PN++;renderB(true);if(PN>=PT)ready()};im.onerror=function(){PN++};im.src='fotos/'+n+'.jpg'})})}
+  function rr(c,x,y,w,h,r){c.beginPath();c.moveTo(x+r,y);c.arcTo(x+w,y,x+w,y+h,r);c.arcTo(x+w,y+h,x,y+h,r);c.arcTo(x,y+h,x,y,r);c.arcTo(x,y,x+w,y,r);c.closePath()}
+  function drawCover(im,n,x,y,w,h,a){var cr=CROP[n]||1,sw=im.width,sh=im.height*cr,sc=Math.max(w/sw,h/sh),dw=sw*sc,dh=sh*sc;ctx.globalAlpha=a;ctx.drawImage(im,0,0,sw,sh,x+(w-dw)/2,y+(h-dh)/2,dw,dh)}
+  function renderB(force){
+    var W=cv.width,H=cv.height,p=cur,key=Math.round(p*400)+W+PN; if(!force&&key===lastKey)return; lastKey=key;
+    ctx.globalAlpha=1; ctx.fillStyle='#1b120b'; ctx.fillRect(0,0,W,H);
+    var g=ctx.createRadialGradient(W*.5,H*.4,0,W*.5,H*.4,W*.7); g.addColorStop(0,'#5a1f1a'); g.addColorStop(1,'#1b120b'); ctx.fillStyle=g; ctx.fillRect(0,0,W,H);
+    var mob=W<H*1.1, cw=mob?W*.22:Math.min(W*.15,H*.3), ch=cw*1.5, gap=cw*.12, ncol=4, spread=cw*1.12;
+    var pos=mob?[-1.65,-.55,.55,1.65]:[-2.5,-1.5,1.5,2.5], sp=[-1,1,-1,1];
+    for(var c=0;c<ncol;c++){
+      var cx=W/2+pos[c]*spread-cw/2, n=PH[c].length, per=ch+gap, tot=per*n;
+      var off=(((p*per*n*.9*sp[c]+c*per*.6)%tot)+tot)%tot;
+      for(var k=-1;k<=n;k++){
+        var idx=((k%n)+n)%n, nm=PH[c][idx], im=PI[nm]; if(!im)continue;
+        var y=H*.5-ch/2+k*per-off+((c%2)?per*.35:0);
+        for(var rep=-1;rep<=1;rep++){var yy=y+rep*tot; if(yy>H||yy+ch<0)continue;
+          ctx.save(); rr(ctx,cx,yy,cw,ch,cw*.07); ctx.clip(); drawCover(im,nm,cx,yy,cw,ch,1); ctx.restore();}
+      }
+    }
+    ctx.globalAlpha=mob?.62:.4; ctx.fillStyle='#140a04'; ctx.fillRect(0,0,W,H); ctx.globalAlpha=1;
+  }
+  function render(){
+    if(MB){return renderB()}
+    var f=cur*(N-1), a=Math.floor(f), b=Math.min(N-1,a+1), t=f-a;
+    var key=Math.round(f*50)+cv.width; if(key===lastKey)return; lastKey=key;
+    var A=frames[a]; if(!A){for(var q=1;q<N&&!A;q++){A=frames[a-q]||frames[a+q]} } if(!A)return;
+    var r=cover(A);
+    ctx.globalAlpha=1; ctx.drawImage(A,r[0],r[1],r[2],r[3]); if(cv.style.opacity!=='1')cv.style.opacity='1';
+    var B=frames[b]; if(frames[a]&&B&&t>.01&&b!==a){ctx.globalAlpha=t; ctx.drawImage(B,r[0],r[1],r[2],r[3]); ctx.globalAlpha=1}
+  }
+  function setSlide(p){
+    var px=Math.max(0,-hero.getBoundingClientRect().top), thr=(innerWidth<=900)?heroH/1.5:Math.min(heroH*.5,vh*.28);
+    var i=px>thr?1:0; 
+    
+    if(i!==lastSlide){lastSlide=i; slides.forEach(function(s,k){s.classList.toggle('on',k===i)})}
+    cue.style.opacity=(innerWidth<=900)?1:(i?0:1); bar.style.height=(p*100)+'%';
+  }
+  var lastT=0;
+  function tick(t){
+    var dt=Math.min(64,Math.max(4,t-(lastT||t-16))); lastT=t;
+    var d=target-cur;
+    if(Math.abs(d)<.0008){cur=target; render(); ticking=false; lastT=0; return}
+    cur+=d*(1-Math.exp(-dt/70)); render(); requestAnimationFrame(tick);
+  }
+  function onScroll(){
+    var y=window.pageYOffset||document.documentElement.scrollTop;
+    var r=hero.getBoundingClientRect();
+    target=heroH>0?Math.min(1,Math.max(0,-r.top/heroH)):0;
+    setSlide(target);
+    var solid=r.bottom<vh*.3;
+    if(solid!==nav._s){nav._s=solid;nav.classList.toggle('solid',solid)}
+    var show=r.bottom<-vh*.2; if(show!==fab._s){fab._s=show;fab.classList.toggle('show',show)}
+    cur=target; if(!ticking){ticking=true;requestAnimationFrame(function(){ticking=false;render()})}
+  }
+  function ready(){}
+  var DIR=innerWidth<=900?'hero5m/':'hero5/', order=[], seen={};
+  [24,12,6,3,1].forEach(function(st){for(var k=0;k<N;k+=st){if(!seen[k]){seen[k]=1;order.push(k)}}});
+  if(!seen[N-1]){order.splice(1,0,N-1)}
+  var qi=0, CONC=6;
+  function pump(){
+    while(CONC>0&&qi<order.length){
+      (function(i){CONC--;
+        var im=new Image();im.decoding='async';
+        var fin=function(){CONC++;pump()};
+        im.onload=function(){
+          var done=function(b){frames[i]=b||im; loaded++; lastKey=-1; render(); fin()};
+          if(window.createImageBitmap){createImageBitmap(im).then(done,function(){done(null)})}else{done(null)}
+        };
+        im.onerror=function(){loaded++;fin()};
+        im.src=DIR+'h'+String(i).padStart(3,'0')+'.webp';
+      })(order[qi++]);
+    }
+  }
+  if(document.readyState==='complete')pump(); else addEventListener('load',pump);
+  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="#"]');if(!a)return;var id=a.getAttribute('href');if(id.length<2)return;var el=document.querySelector(id);if(!el)return;e.preventDefault();el.scrollIntoView({behavior:'smooth',block:'start'})});
+  var lastW=innerWidth; addEventListener('resize',function(){ if(innerWidth===lastW&&Math.abs(innerHeight-vh)<160)return; lastW=innerWidth; measure(); }); addEventListener('scroll',onScroll,{passive:true});
+  /* Móvil: lienzo liviano y sin mezcla de fotogramas para que el scroll fluya */
+  var MOB=innerWidth<=900;
+  measure=function(){
+    vh=innerHeight; heroH=hero.offsetHeight-vh;
+    var dpr=window.devicePixelRatio||1;
+    var w=MOB?Math.min(innerWidth*Math.min(dpr,1.25),640):Math.min(innerWidth*dpr,1920);
+    cv.width=Math.round(w); cv.height=Math.round(w*vh/innerWidth); lastKey=-1; render();
+  };
+  render=function(){
+    var f=cur*(N-1), a=MOB?Math.round(f):Math.floor(f), b=Math.min(N-1,a+1), t=f-a;
+    var key=(MOB?a:Math.round(f*50))+'_'+cv.width; if(key===lastKey)return; lastKey=key;
+    var A=frames[a]; if(!A){for(var q=1;q<N&&!A;q++){A=frames[a-q]||frames[a+q]}} if(!A)return;
+    var r=cover(A);
+    ctx.globalAlpha=1; ctx.drawImage(A,r[0],r[1],r[2],r[3]); if(cv.style.opacity!=='1')cv.style.opacity='1';
+    if(!MOB){var B=frames[b]; if(frames[a]&&B&&t>.01&&b!==a){ctx.globalAlpha=t; ctx.drawImage(B,r[0],r[1],r[2],r[3]); ctx.globalAlpha=1}}
+  };
+  /* Móvil: un deslizamiento dispara todo el efecto (fondo 0→1) y al terminar entra el slide 2 */
+  /* Móvil: encuadre desplazado a la izquierda para que se vean más las uvas */
+  cover=function(img){
+    var cw=cv.width,ch=cv.height,iw=img.width,ih=img.height;
+    var s=Math.max(cw/iw,ch/ih), w=iw*s, h=ih*s, fx=.5;
+    return [(cw-w)*fx,(ch-h)/2,w,h];
+  };
+  /* Mientras el logo oficial no esté incluido en el sitio, si no carga se muestra la paloma */
+  [].forEach.call([],function(im){
+    function fb(){ if(!im.parentNode||im._fb)return; im._fb=1; var p=im.parentNode, ph=p.classList&&p.classList.contains('ph'), cv2=p.classList&&p.classList.contains('cover');
+      var s=document.createElementNS('http://www.w3.org/2000/svg','svg'); s.setAttribute('width',ph?'':(cv2?'46':'38')); s.setAttribute('height',ph?'':(cv2?'46':'38')); if(ph){s.style.width='38%'} s.style.color=ph?'#e2b659':(cv2?'var(--wine2)':'inherit');
+      var u=document.createElementNS('http://www.w3.org/2000/svg','use'); u.setAttribute('href','#dove'); s.appendChild(u); p.replaceChild(s,im); }
+    im.addEventListener('error',fb); if(im.complete&&im.naturalWidth===0)fb();
+    setTimeout(function(){ if(im.naturalWidth===0)fb() },2500);
+  });
+  var STG=0, ANIM=0, ANIMATING=false, ty=0, tdy=0, DUR=380;
+  function play(to){
+    if(ANIMATING)return; ANIMATING=true; var from=ANIM, t0=performance.now(); STG=to; setSlide(to);
+    function st(now){
+      var k=Math.min(1,(now-t0)/DUR); k=k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2;
+      ANIM=from+(to-from)*k; cur=target=ANIM; render();
+      if(now-t0<DUR){requestAnimationFrame(st)} else {ANIM=to; cur=target=to; STG=to; lastKey=-1; render(); setSlide(to); ANIMATING=false;}
+    }
+    requestAnimationFrame(st);
+  }
+  if(false){
+    addEventListener('touchstart',function(e){ty=e.touches[0].clientY;tdy=0},{passive:true});
+    addEventListener('touchmove',function(e){
+      var y=window.pageYOffset||0; tdy=ty-e.touches[0].clientY;
+      if(ANIMATING){if(e.cancelable)e.preventDefault();return}
+      if(STG===0&&y<=2){ if(e.cancelable)e.preventDefault(); if(tdy>8)play(1); }
+      else if(STG===1&&y<=2&&tdy<0){ if(e.cancelable)e.preventDefault(); if(tdy<-8)play(0); }
+    },{passive:false});
+  }
+  var LEFT=false;
+  if(MOB){addEventListener('scroll',function(){var y=window.pageYOffset||0;
+    if(STG===1&&!ANIMATING){ if(y>40)LEFT=true; else if(y<=2&&LEFT){LEFT=false;play(0)} } else if(STG===0){LEFT=false}
+  },{passive:true});}
+  measure(); onScroll();
+
+  // marquee
+  var words=['Año del Deleite','La Vid Verdadera','Ebenezer Antigua','Domingo 9:00 am','Martes y viernes 7:00 pm','Te esperamos'];
+  var h='';for(var k=0;k<2;k++)words.forEach(function(w){h+='<span>'+w+'</span>'});
+  document.getElementById('mq').innerHTML=h+h;
+
+  // menu
+  var menu=document.getElementById('menu'), burger=document.getElementById('burger');
+  burger.onclick=function(){menu.classList.toggle('open');nav.style.color=menu.classList.contains('open')?'#f6efe3':''};
+  [].forEach.call(menu.querySelectorAll('a'),function(a){a.onclick=function(){menu.classList.remove('open');nav.style.color=''}});
+
+  // reveal
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  [].forEach.call(document.querySelectorAll('.rv'),function(el,i){el.style.transitionDelay=((i%4)*90)+'ms';io.observe(el)});
+})();
+</script>
+<script>(function(){var r=document.getElementById('pastorsRow');if(!r)return;function step(){var c=r.querySelector('.pcard');return c?c.getBoundingClientRect().width+22:300}
+var a=document.getElementById('pPrev'),b=document.getElementById('pNext');if(a)a.onclick=function(){r.scrollBy({left:-step(),behavior:'smooth'})};if(b)b.onclick=function(){r.scrollBy({left:step(),behavior:'smooth'})}})();</script>
+<script>(function(){var r=document.getElementById('hRow');if(!r)return;function step(){var c=r.querySelector('.card');return c?c.getBoundingClientRect().width+18:300}
+var a=document.getElementById('hPrev'),b=document.getElementById('hNext');if(a)a.onclick=function(){r.scrollBy({left:-step(),behavior:'smooth'})};if(b)b.onclick=function(){r.scrollBy({left:step(),behavior:'smooth'})}})();</script>
 </body>
 </html>

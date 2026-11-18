@@ -268,6 +268,34 @@ nav.solid{background:rgba(246,239,227,.96);color:var(--brown);box-shadow:0 1px 0
 .m1{grid-column:span 5;grid-row:span 3}.m2{grid-column:span 4;grid-row:span 2}.m3{grid-column:span 3;grid-row:span 2}.m4{grid-column:span 3;grid-row:span 1}.m5{grid-column:span 4;grid-row:span 1}
 .m6{grid-column:span 3;grid-row:span 2}.m7{grid-column:span 3;grid-row:span 2}.m8{grid-column:span 3;grid-row:span 2}.m9{grid-column:span 3;grid-row:span 2}
 @media(max-width:700px){.mos{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}.mos figure{grid-column:span 1!important;grid-row:span 1!important}.m1{grid-column:span 2!important;grid-row:span 2!important}}
+.mos figure{cursor:zoom-in}
+.mos figure img{position:absolute;inset:0}
+.mos figure img.b{opacity:0;transition:opacity .6s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.mos figure:hover img.b,.mos figure:focus-visible img.b{opacity:1}
+.mos figure:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.mos figcaption{z-index:2}
+.mos .zi{position:absolute;top:.7rem;right:.7rem;z-index:2;width:34px;height:34px;border-radius:50%;background:rgba(20,10,4,.55);color:#fff;display:grid;place-items:center;font-size:1rem;opacity:0;transition:opacity .3s}
+.mos figure:hover .zi,.mos figure:focus-visible .zi{opacity:1}
+#lb{position:fixed;inset:0;z-index:300;background:rgba(20,10,4,.96);display:none;flex-direction:column;color:#fff;font-family:inherit}
+#lb.on{display:flex}
+.lb-top{display:flex;align-items:center;gap:.8rem;padding:.8rem 1rem}
+.lb-cats{display:flex;gap:.4rem;overflow-x:auto;flex:1;scrollbar-width:none}
+.lb-cats::-webkit-scrollbar{display:none}
+.lb-cats button{flex:0 0 auto;border:1px solid rgba(255,255,255,.28);background:transparent;color:#fff;border-radius:99px;padding:.45rem .95rem;font:inherit;font-size:.8rem;letter-spacing:.06em;cursor:pointer}
+.lb-cats button.on{background:var(--gold);border-color:var(--gold);color:#2a1a0e;font-weight:700}
+.lb-count{font-size:.8rem;opacity:.7;white-space:nowrap}
+.lb-x{flex:0 0 auto;width:42px;height:42px;border-radius:50%;border:0;background:rgba(255,255,255,.14);color:#fff;font-size:1.3rem;cursor:pointer}
+.lb-main{flex:1;min-height:0;position:relative;display:grid;place-items:center;padding:0 4rem}
+.lb-main img{max-width:100%;max-height:100%;object-fit:contain;border-radius:8px;display:block}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;border:0;background:rgba(255,255,255,.14);color:#fff;font-size:1.6rem;cursor:pointer;line-height:1}
+.lb-nav:hover,.lb-x:hover{background:rgba(255,255,255,.28)}
+.lb-prev{left:.8rem}.lb-next{right:.8rem}
+.lb-cap{text-align:center;padding:.6rem;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;opacity:.85}
+.lb-th{display:flex;gap:.5rem;overflow-x:auto;padding:.4rem 1rem 1rem;scrollbar-width:thin}
+.lb-th button{flex:0 0 auto;width:78px;height:78px;border-radius:10px;overflow:hidden;border:2px solid transparent;padding:0;opacity:.55;background:#000;cursor:pointer}
+.lb-th button.on{border-color:var(--gold);opacity:1}
+.lb-th img{width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:700px){.lb-main{padding:0 .4rem}.lb-nav{width:38px;height:38px}.lb-th button{width:60px;height:60px}.lb-count{display:none}}
 .visitimg{border-radius:var(--radius);overflow:hidden;margin-top:1.8rem;aspect-ratio:16/9}
 .visitimg img{width:100%;height:100%;object-fit:cover}
 .info a{color:inherit;text-decoration:underline}
@@ -499,15 +527,15 @@ footer .big em{color:var(--gold2)}
   <div class="wrap">
     <div class="rv"><h2 class="title">Hay un lugar <em>preparado para ti</em></h2></div>
     <div class="mos">
-      <figure class="m1 rv"><img src="fotos/oracion.jpg" alt="Hermana adorando" loading="lazy"><figcaption>Adoración</figcaption></figure>
-      <figure class="m2 rv"><img src="fotos/gal-iglesia.jpg" alt="Servicio en Ebenezer Antigua con la congregación y el equipo de alabanza" loading="lazy"><figcaption>Nuestra iglesia</figcaption></figure>
-      <figure class="m3 rv"><img src="fotos/alabanza.jpg" alt="Equipo de alabanza" loading="lazy"><figcaption>Alabanza</figcaption></figure>
-      <figure class="m4 rv"><img src="fotos/gal-ninos.jpg" alt="Área de niños" loading="lazy"><figcaption>Niños</figcaption></figure>
-      <figure class="m5 rv"><img src="fotos/gal-congregacion.jpg" alt="Congregación adorando" loading="lazy"><figcaption>Congregación</figcaption></figure>
-      <figure class="m6 rv"><img src="fotos/santa-cena.jpg" alt="Santa Cena" loading="lazy"><figcaption>Santa Cena</figcaption></figure>
-      <figure class="m7 rv"><img src="fotos/gal-gozo.jpg" alt="Congregación en alabanza" loading="lazy"><figcaption>Congregación</figcaption></figure>
-      <figure class="m8 rv"><img src="fotos/biblia.jpg" alt="Biblia" loading="lazy"><figcaption>La Palabra</figcaption></figure>
-      <figure class="m9 rv"><img src="fotos/hermanas.jpg" alt="Estudiando la Palabra" loading="lazy"><figcaption>Discipulado</figcaption></figure>
+      <figure class="m1 rv" tabindex="0" role="button" aria-label="Abrir galería: Adoración"><img class="a" src="fotos/oracion.jpg" alt="Hermana adorando" loading="lazy"><img class="b" src="fotos/fb/fb-hermana-oracion-velo-vino.jpg" alt="" loading="lazy"><span class="zi">⤢</span><figcaption>Adoración</figcaption></figure>
+      <figure class="m2 rv" tabindex="0" role="button" aria-label="Abrir galería: Nuestra iglesia"><img class="a" src="fotos/jardin.jpg" alt="Jardín de la iglesia con el volcán al fondo" loading="lazy"><img class="b" src="fotos/gal-iglesia.jpg" alt="" loading="lazy"><span class="zi">⤢</span><figcaption>Nuestra iglesia</figcaption></figure>
+      <figure class="m3 rv" tabindex="0" role="button" aria-label="Abrir galería: Alabanza"><img class="a" src="fotos/alabanza.jpg" alt="Equipo de alabanza" loading="lazy"><img class="b" src="fotos/metales.jpg" alt="" loading="lazy"><span class="zi">⤢</span><figcaption>Alabanza</figcaption></figure>
+      <figure class="m4 rv" tabindex="0" role="button" aria-label="Abrir galería: Niños"><img class="a" src="fotos/gal-ninos.jpg" alt="Área de niños" loading="lazy"><img class="b" src="fotos/fb/fb-hermana-danza-verde.jpg" alt="" loading="lazy"><span class="zi">⤢</span><figcaption>Niños</figcaption></figure>
+      <figure class="m5 rv" tabindex="0" role="button" aria-label="Abrir galería: Congregación"><img class="a" src="fotos/gal-congregacion.jpg" alt="Congregación adorando" loading="lazy"><img class="b" src="fotos/congregacion.jpg" alt="" loading="lazy"><span class="zi">⤢</span><figcaption>Congregación</figcaption></figure>
+      <figure class="m6 rv" tabindex="0" role="button" aria-label="Abrir galería: Santa Cena"><img class="a" src="fotos/santa-cena.jpg" alt="Santa Cena" loading="lazy"><img class="b" src="fotos/gal-santa-cena.jpg" alt="" loading="lazy"><span class="zi">⤢</span><figcaption>Santa Cena</figcaption></figure>
+      <figure class="m7 rv" tabindex="0" role="button" aria-label="Abrir galería: Congregación"><img class="a" src="fotos/gal-gozo.jpg" alt="Congregación en alabanza" loading="lazy"><img class="b" src="fotos/mano-alzada.jpg" alt="" loading="lazy"><span class="zi">⤢</span><figcaption>Congregación</figcaption></figure>
+      <figure class="m8 rv" tabindex="0" role="button" aria-label="Abrir galería: La Palabra"><img class="a" src="fotos/biblia.jpg" alt="Biblia" loading="lazy"><img class="b" src="fotos/adoracion.jpg" alt="" loading="lazy"><span class="zi">⤢</span><figcaption>La Palabra</figcaption></figure>
+      <figure class="m9 rv" tabindex="0" role="button" aria-label="Abrir galería: Discipulado"><img class="a" src="fotos/hermanas.jpg" alt="Estudiando la Palabra" loading="lazy"><img class="b" src="fotos/fb/fb-hermanas-tomando-notas.jpg" alt="" loading="lazy"><span class="zi">⤢</span><figcaption>Discipulado</figcaption></figure>
     </div>
   </div>
 </section>
@@ -705,5 +733,43 @@ footer .big em{color:var(--gold2)}
 var a=document.getElementById('pPrev'),b=document.getElementById('pNext');if(a)a.onclick=function(){r.scrollBy({left:-step(),behavior:'smooth'})};if(b)b.onclick=function(){r.scrollBy({left:step(),behavior:'smooth'})}})();</script>
 <script>(function(){var r=document.getElementById('hRow');if(!r)return;function step(){var c=r.querySelector('.card');return c?c.getBoundingClientRect().width+18:300}
 var a=document.getElementById('hPrev'),b=document.getElementById('hNext');if(a)a.onclick=function(){r.scrollBy({left:-step(),behavior:'smooth'})};if(b)b.onclick=function(){r.scrollBy({left:step(),behavior:'smooth'})}})();</script>
+<div id="lb" role="dialog" aria-modal="true" aria-label="Galería de fotos">
+  <div class="lb-top"><div class="lb-cats" id="lbCats"></div><span class="lb-count" id="lbCount"></span><button class="lb-x" id="lbX" aria-label="Cerrar">✕</button></div>
+  <div class="lb-main" id="lbMain"><button class="lb-nav lb-prev" id="lbPrev" aria-label="Anterior">‹</button><img id="lbImg" alt=""><button class="lb-nav lb-next" id="lbNext" aria-label="Siguiente">›</button></div>
+  <div class="lb-cap" id="lbCap"></div>
+  <div class="lb-th" id="lbTh"></div>
+</div>
+<script>
+(function(){
+  var ALL=[["fotos/oracion.jpg", "Adoración", "Adoración"], ["fotos/adoracion.jpg", "Adoración", "Adoración"], ["fotos/mano-alzada.jpg", "Adoración", "Adoración"], ["fotos/gal-adoracion.jpg", "Adoración", "Adoración"], ["fotos/fb/fb-hermana-oracion-velo-vino.jpg", "Adoración", "Oración"], ["fotos/fb/fb-hermana-espalda-velo-crema.jpg", "Adoración", "Adoración"], ["fotos/fb/fb-hermana-danza-verde.jpg", "Adoración", "Danza"], ["fotos/fb/fb-hermana-pandero-verde.jpg", "Adoración", "Pandero"], ["fotos/alabanza.jpg", "Alabanza", "Alabanza"], ["fotos/gal-alabanza.jpg", "Alabanza", "Alabanza"], ["fotos/metales.jpg", "Alabanza", "Metales"], ["fotos/cantantes.jpg", "Alabanza", "Cantantes"], ["fotos/fb/fb-cantante-alabanza-chal-crema.jpg", "Alabanza", "Alabanza"], ["fotos/gal-congregacion.jpg", "Congregación", "Congregación"], ["fotos/gal-gozo.jpg", "Congregación", "Congregación"], ["fotos/congregacion.jpg", "Congregación", "Congregación"], ["fotos/jardin.jpg", "Iglesia", "Nuestra iglesia"], ["fotos/fachada.jpg", "Iglesia", "Nuestra iglesia"], ["fotos/gal-iglesia.jpg", "Iglesia", "Nuestra iglesia"], ["fotos/altar.jpg", "Iglesia", "Nuestra iglesia"], ["fotos/iglesia-salon.jpg", "Iglesia", "Nuestra iglesia"], ["fotos/salon1.jpg", "Iglesia", "Nuestra iglesia"], ["fotos/biblia.jpg", "La Palabra", "La Palabra"], ["fotos/gal-biblia.jpg", "La Palabra", "La Palabra"], ["fotos/estudio.jpg", "La Palabra", "Discipulado"], ["fotos/hermanas.jpg", "La Palabra", "Discipulado"], ["fotos/fb/fb-hermanas-tomando-notas.jpg", "La Palabra", "Discipulado"], ["fotos/santa-cena.jpg", "Santa Cena", "Santa Cena"], ["fotos/gal-santa-cena.jpg", "Santa Cena", "Santa Cena"], ["fotos/gal-ninos.jpg", "Niños", "Niños"]];
+  var CATS=['Todas'];ALL.forEach(function(p){if(CATS.indexOf(p[1])<0)CATS.push(p[1])});
+  var lb=document.getElementById('lb'),img=document.getElementById('lbImg'),cap=document.getElementById('lbCap'),cnt=document.getElementById('lbCount'),th=document.getElementById('lbTh'),cats=document.getElementById('lbCats');
+  var list=ALL,i=0,cat='Todas',y=0,pushed=false;
+  function chips(){cats.innerHTML='';CATS.forEach(function(c){var b=document.createElement('button');b.textContent=c;if(c===cat)b.className='on';b.onclick=function(){setCat(c)};cats.appendChild(b)})}
+  function thumbs(){th.innerHTML='';list.forEach(function(p,k){var b=document.createElement('button');b.setAttribute('aria-label','Foto '+(k+1));var t=document.createElement('img');t.src=p[0];t.alt='';t.loading='lazy';b.appendChild(t);b.onclick=function(){show(k)};th.appendChild(b)})}
+  function show(k){var n=list.length;i=(k+n)%n;var p=list[i];img.src=p[0];img.alt=p[2];cap.textContent=p[2]+(p[1]!==p[2]?' · '+p[1]:'');cnt.textContent=(i+1)+' / '+n;
+    var bs=th.children;for(var j=0;j<bs.length;j++)bs[j].className=j===i?'on':'';
+    var b=bs[i];if(b)th.scrollTo({left:b.offsetLeft-th.clientWidth/2+b.offsetWidth/2,behavior:'smooth'});
+    [1,-1].forEach(function(d){var q=list[(i+d+n)%n];if(q){var pi=new Image();pi.src=q[0]}})}
+  function setCat(c){var cur=list[i]&&list[i][0];cat=c;list=c==='Todas'?ALL:ALL.filter(function(p){return p[1]===c});chips();thumbs();var k=0;for(var j=0;j<list.length;j++)if(list[j][0]===cur)k=j;show(k)}
+  function open(src){y=window.pageYOffset;cat='Todas';list=ALL;chips();thumbs();var k=0;for(var j=0;j<ALL.length;j++)if(ALL[j][0]===src)k=j;lb.classList.add('on');document.documentElement.style.overflow='hidden';
+    try{history.pushState({gal:1},'',location.pathname+location.search+'#galeria');pushed=true}catch(e){pushed=false}
+    show(k);document.getElementById('lbX').focus()}
+  function close(fromPop){if(!lb.classList.contains('on'))return;lb.classList.remove('on');document.documentElement.style.overflow='';
+    if(pushed&&!fromPop){pushed=false;try{history.back()}catch(e){}}pushed=false;
+    window.scrollTo({top:y,behavior:'instant'});setTimeout(function(){window.scrollTo({top:y,behavior:'instant'})},60)}
+  window.addEventListener('popstate',function(){if(lb.classList.contains('on'))close(true)});
+  document.getElementById('lbX').onclick=function(){close()};
+  document.getElementById('lbPrev').onclick=function(){show(i-1)};
+  document.getElementById('lbNext').onclick=function(){show(i+1)};
+  document.getElementById('lbMain').addEventListener('click',function(e){if(e.target===this)close()});
+  document.addEventListener('keydown',function(e){if(!lb.classList.contains('on'))return;if(e.key==='Escape')close();else if(e.key==='ArrowLeft')show(i-1);else if(e.key==='ArrowRight')show(i+1)});
+  var sx=null;lb.addEventListener('touchstart',function(e){sx=e.touches[0].clientX},{passive:true});
+  lb.addEventListener('touchend',function(e){if(sx===null)return;var dx=e.changedTouches[0].clientX-sx;sx=null;if(Math.abs(dx)>50)show(i+(dx<0?1:-1))},{passive:true});
+  document.querySelectorAll('.mos figure').forEach(function(f){var a=f.querySelector('img.a');
+    function go(){open(a.getAttribute('src'))}
+    f.addEventListener('click',go);f.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();go()}})});
+})();
+</script>
 </body>
 </html>

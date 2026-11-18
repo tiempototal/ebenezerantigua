@@ -313,6 +313,72 @@ footer .big em{color:var(--gold2)}
 /* Móvil: "Antigua" del título principal más legible sobre la neblina */
 @media(max-width:900px){.slide.s1 h1,.slide.s1 h1 em,.slide.s3 h2,.slide.s3 h2 em{text-shadow:0 1px 2px rgba(20,10,4,.7),0 2px 12px rgba(20,10,4,.55),0 0 30px rgba(20,10,4,.4)}.slide.s1 h1 em,.slide.s3 h2 em{color:#f2cf78}}
 </style>
+<style>
+/* Horarios: en la iglesia vs. fuera de la iglesia */
+.card.ch:not(.feat){background:#fffdf7;border:1px solid rgba(192,138,43,.5);box-shadow:0 16px 34px -22px rgba(74,47,29,.5)}
+.card.ch::before{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:linear-gradient(90deg,var(--gold),var(--gold2))}
+.card.out{background:transparent;border:1.5px dashed rgba(74,47,29,.28);box-shadow:none}
+.card.out:hover{box-shadow:none}
+.card.out .tag{background:rgba(74,47,29,.07);color:var(--brown2)}
+.card.out .hr{color:var(--brown2)}
+.card .where{display:flex;align-items:center;gap:.5rem;margin-top:1rem;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--gold)}
+.card .where::before{content:"";width:.6em;height:.6em;border-radius:50%;background:currentColor}
+.card.feat .where{color:var(--gold2)}
+.card.out .where{color:#8a7561;font-weight:600}
+.card.out .where::before{background:none;border:1.5px solid currentColor;box-sizing:border-box}
+.card .tl{display:inline-block;margin-top:.7rem;font-weight:700;color:var(--wine2);text-decoration:none;border-bottom:1.5px solid rgba(192,138,43,.6);padding-bottom:1px}
+.card .tl:hover{color:var(--gold)}
+@media(min-width:901px){
+#horarios .cards{grid-template-columns:repeat(12,minmax(0,1fr))!important}
+#horarios .cards .card{grid-column:span 3}
+#horarios .cards .card.out{grid-column:span 6;padding:1.5rem 1.8rem!important}
+#horarios .cards .card.ch{padding:1.8rem 1.5rem!important}
+#horarios .cards .card.ch .day{font-size:2.2rem!important}
+#horarios .cards .card.ch .hr{font-size:3.5rem!important}
+#horarios .cards .card.ch .hr small{font-size:1.4rem!important}
+#horarios .cards .card.ch p{font-size:1.2rem!important}
+#horarios .cards .card.ch .tag{font-size:.85rem!important}
+#horarios .cards .card.out .day{font-size:2.1rem!important}
+#horarios .cards .card.out .hr{font-size:2.8rem!important}
+#horarios .cards .card.out .hr small{font-size:1.3rem!important}
+#horarios .cards .card.out .hr[style]{font-size:2.2rem!important}
+#horarios .cards .card.out p{font-size:1.2rem!important}
+#horarios .cards .card.out .tag{font-size:.85rem!important}
+#horarios .card .where{font-size:.9rem}
+#horarios .card .tl{font-size:1.2rem}
+}
+/* Semana: móvil en dos columnas */
+@media(max-width:900px){.pill{grid-template-columns:repeat(2,1fr);gap:.8rem}.pill div{padding:1rem .95rem}.pill svg{width:28px;height:28px}.pill h3{font-size:1.25rem}.pill p{font-size:.84rem}}
+/* Eventos: línea de tiempo, sin aspecto de botón */
+.evl{position:relative;margin-top:2.6rem;border-top:0}
+.evr{grid-template-columns:230px 1fr;gap:0 3rem;padding:1.9rem 0;border-bottom:0;position:relative}
+.evr:hover{padding-left:0;background:none}
+.evr .d{display:flex;flex-direction:column-reverse;align-items:flex-end;text-align:right;font-size:2.5rem;font-style:italic;letter-spacing:.01em}
+.evr .d.n{font-size:4.2rem;font-style:normal;font-weight:500}
+.evr .d small{margin-bottom:.45rem;color:var(--gold2);opacity:.85;font-style:normal;font-weight:700;letter-spacing:.24em}
+.evr h3{transition:color .3s,transform .3s}
+.evr:hover h3{color:var(--gold2);transform:translateX(6px)}
+.evr::before{content:"";position:absolute;left:calc(230px + 1.5rem - .5px);top:0;bottom:0;width:1px;background:linear-gradient(180deg,rgba(226,182,89,.15),rgba(226,182,89,.55) 50%,rgba(226,182,89,.15))}
+.evr:first-child::before{top:50%}
+.evr:last-child::before{bottom:50%}
+.evr::after{content:"";position:absolute;left:calc(230px + 1.5rem - 7px);top:50%;margin-top:-7px;width:14px;height:14px;border-radius:50%;background:#241810;border:2px solid var(--gold2);transform:scale(0);transition:transform .6s cubic-bezier(.3,1.6,.5,1) .35s,background .3s}
+.evr.in::after{transform:scale(1)}
+.evr:hover::after{background:var(--gold2)}
+.evr.in:first-child::after{animation:evp 2.6s ease-out 1.2s infinite}
+@keyframes evp{0%{box-shadow:0 0 0 0 rgba(226,182,89,.55)}70%,100%{box-shadow:0 0 0 14px rgba(226,182,89,0)}}
+@media(prefers-reduced-motion:reduce){.evr::after{transform:scale(1)}.evr.in:first-child::after{animation:none}}
+@media(max-width:640px){
+.evr{grid-template-columns:1fr;gap:.5rem;padding:1.5rem 0 1.5rem 2.1rem}
+.evr .d{align-items:flex-start;text-align:left;font-size:1.9rem}
+.evr .d.n{font-size:3rem}
+.evr .d small{margin-bottom:.3rem;font-size:.66rem}
+.evr h3{font-size:1.55rem}
+.evr::before{left:.5rem}
+.evr::after{left:calc(.5rem - 6.5px);top:2.3rem;margin-top:0}
+.evr:first-child::before{top:2.3rem}
+.evr:last-child::before{bottom:auto;height:2.3rem}
+}
+</style>
 </head>
 <body>
 
@@ -368,14 +434,14 @@ footer .big em{color:var(--gold2)}
     <div class="rv"><h2 class="title">Horarios de <em>reuniones</em></h2></div>
     <div class="parrows harrows"><button type="button" id="hPrev" aria-label="Anterior">&#8249;</button><button type="button" id="hNext" aria-label="Siguiente">&#8250;</button></div>
     <div class="cards" id="hRow">
-      <div class="card feat rv"><span class="tag">Servicio general</span><div class="day">Domingo</div><div class="hr">9:00 <small>am</small></div><p>Oración a las 8:30 am. Santa Cena el primer domingo de cada mes.</p></div>
-      <div class="card rv"><span class="tag">Servicio general</span><div class="day">Martes</div><div class="hr">7:00 <small>pm</small></div><p>Servicio general. Transmisión en vivo.</p></div>
-      <div class="card rv"><span class="tag">Servicio general</span><div class="day">Viernes</div><div class="hr">7:00 <small>pm</small></div><p>Servicio general. Transmisión en vivo.</p></div>
-      <div class="card rv"><span class="tag">Jóvenes</span><div class="day">Sábado</div><div class="hr">5:30 <small>pm</small></div><p>Te esperamos en nuestra reunión de jóvenes.</p></div>
-      <div class="card rv"><span class="tag">En casas</span><div class="day">Jueves</div><div class="hr">7:00 <small>pm</small></div><p>Discipulados por zonas, de 7:00 a 8:00 pm. Mira tu zona más abajo.</p></div>
-      <div class="card rv"><span class="tag">Oración</span><div class="day">Lun · Mié · Jue</div><div class="hr" style="font-size:1.9rem;line-height:1.3;margin:.9rem 0">Telegram y Zoom</div><p>Tiempos de oración en línea durante la semana.</p></div>
+      <div class="card feat ch rv"><span class="tag">Servicio general</span><div class="day">Domingo</div><div class="hr">9:00 <small>am</small></div><p>Oración a las 8:30 am. Santa Cena el primer domingo de cada mes.</p><div class="where">En la iglesia</div></div>
+      <div class="card ch rv"><span class="tag">Servicio general</span><div class="day">Martes</div><div class="hr">7:00 <small>pm</small></div><p>Servicio general. Transmisión en vivo.</p><div class="where">En la iglesia</div></div>
+      <div class="card ch rv"><span class="tag">Servicio general</span><div class="day">Viernes</div><div class="hr">7:00 <small>pm</small></div><p>Servicio general. Transmisión en vivo.</p><div class="where">En la iglesia</div></div>
+      <div class="card ch rv"><span class="tag">Jóvenes</span><div class="day">Sábado</div><div class="hr">5:30 <small>pm</small></div><p>Te esperamos en nuestra reunión de jóvenes.</p><div class="where">En la iglesia</div></div>
+      <div class="card out rv"><span class="tag">En casas</span><div class="day">Jueves</div><div class="hr">7:00 <small>pm</small></div><p>Discipulados por zonas, de 7:00 a 8:00 pm. Mira tu zona más abajo.</p><div class="where">En casas</div></div>
+      <div class="card out rv"><span class="tag">Oración</span><div class="day">Lun · Mié · Jue</div><div class="hr" style="font-size:1.9rem;line-height:1.3;margin:.9rem 0">Telegram y Zoom</div><p>Tiempos de oración en línea durante la semana.</p><a class="tl" href="https://t.me/EbenezerAntigua" target="_blank" rel="noopener">Unirme a Telegram →</a><div class="where">En línea</div></div>
     </div>
-    <p class="note rv">Te esperamos. Horarios vigentes desde el 1 de noviembre. Para confirmar cualquier cambio, escríbenos.</p>
+    <p class="note rv">Horarios vigentes desde el 1 de noviembre. Para confirmar cualquier cambio, escríbenos.</p>
   </div>
 </section>
 
@@ -471,7 +537,6 @@ footer .big em{color:var(--gold2)}
       <div class="zone rv"><i>5</i><div><b>Ciudad Vieja</b><span>Fam. Quiñónez</span></div></div>
       <div class="zone rv"><i>6</i><div><b>Ruta 14 · Alotenango</b><span>Fam. Yagüt</span></div></div>
     </div>
-    <p class="note rv">ⓘ Confirma con la iglesia que tu zona siga activa antes de asistir.</p>
   </div>
 </section>
 
@@ -481,7 +546,7 @@ footer .big em{color:var(--gold2)}
     <div class="rv"><div class="eyebrow">Cada semana</div><h2 class="title">Lo que <em>vivimos</em> juntos</h2></div>
     <div class="pill">
       <div class="rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5h11a3 3 0 013 3v11H7a3 3 0 01-3-3z"/><path d="M8 9h6M8 13h6"/></svg><h3>Enseñanza</h3><p>Martes, viernes y domingo. Cada tema se publica con sus puntos y versículos.</p></div>
-      <div class="rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 3h10v5a5 5 0 01-10 0z"/><path d="M12 13v6M8 21h8"/></svg><h3>Santa Cena</h3><p>Ven y reafirmemos juntos el pacto con nuestro Dios.</p></div>
+      <div class="rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 3h10v5a5 5 0 01-10 0z"/><path d="M12 13v6M8 21h8"/></svg><h3>Santa Cena</h3><p>Primer domingo de cada mes. Ven y reafirmemos juntos el pacto con nuestro Dios.</p></div>
       <div class="rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h3>Oración</h3><p>Lunes, miércoles y jueves, por Telegram y Zoom.</p></div>
       <div class="rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-4.4-9-9a5 5 0 019-3 5 5 0 019 3c-2 4.6-9 9-9 9z"/></svg><h3>Discipulado</h3><p>Jueves de 7:00 a 8:00 pm, en casas, por zonas.</p></div>
     </div>
@@ -493,10 +558,10 @@ footer .big em{color:var(--gold2)}
   <div class="wrap">
     <div class="rv"><div class="eyebrow">Próximamente</div><h2 class="title">Eventos que <em>marcan</em> el año</h2></div>
     <div class="evl">
-      <div class="evr rv"><div class="d">2026<small>Próximamente</small></div><div><h3>Pre Proclama Profética</h3><p>Más información en nuestras redes.</p></div><div class="go">→</div></div>
-      <div class="evr rv"><div class="d">31<small>Diciembre</small></div><div><h3>Proclama Profética</h3><p>Encuentro de fin de año de Ministerios Ebenezer.</p></div><div class="go">→</div></div>
-      <div class="evr rv"><div class="d">Mensual<small>1.er domingo</small></div><div><h3>Santa Cena</h3><p>Ven y reafirmemos juntos el pacto con nuestro Dios.</p></div><div class="go">→</div></div>
-      <div class="evr rv"><div class="d">Sábados<small>5:30 pm</small></div><div><h3>Reunión de jóvenes</h3><p>Te esperamos en nuestra reunión de jóvenes.</p></div><div class="go">→</div></div>
+      <div class="evr rv"><div class="d n">2026<small>Próximamente</small></div><div><h3>Pre Proclama Profética</h3><p>Más información en nuestras redes.</p></div></div>
+      <div class="evr rv"><div class="d n">31<small>Diciembre</small></div><div><h3>Proclama Profética</h3><p>Encuentro de fin de año de Ministerios Ebenezer.</p></div></div>
+      <div class="evr rv"><div class="d">Mensual<small>1.er domingo</small></div><div><h3>Santa Cena</h3><p>Ven y reafirmemos juntos el pacto con nuestro Dios.</p></div></div>
+      <div class="evr rv"><div class="d">Sábados<small>5:30 pm</small></div><div><h3>Reunión de jóvenes</h3><p>Te esperamos en nuestra reunión de jóvenes.</p></div></div>
     </div>
   </div>
 </section>

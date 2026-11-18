@@ -271,7 +271,9 @@ footer h4{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:v
 footer a{display:block;padding:.2rem 0;opacity:.85;transition:opacity .2s,color .2s} footer a:hover{opacity:1;color:var(--gold2)}
 footer .big{font-family:var(--serif);font-size:2.4rem;color:var(--cream);line-height:1}
 footer .big em{color:var(--gold2)}
-.copy{margin-top:3rem;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.12);font-size:.8rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;opacity:.75}
+.copy{margin-top:3rem;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.12);font-size:.8rem;display:flex;justify-content:space-between;flex-wrap:nowrap;white-space:nowrap;gap:.5rem;opacity:.75}
+.copy a{display:inline}
+@media(max-width:640px){.copy{font-size:clamp(.5rem,2.55vw,.8rem);gap:.3rem}}
 @media(max-width:860px){.fg{grid-template-columns:1fr 1fr}.fg>div:first-child{grid-column:1/-1}}
 
 /* FLOATING + REVEAL */
@@ -599,7 +601,7 @@ footer .big em{color:var(--gold2)}
       <div><h4>Síguenos</h4><a href="https://www.youtube.com/@ebenezerantigua" target="_blank" rel="noopener">YouTube</a><a href="https://t.me/EbenezerAntigua" target="_blank" rel="noopener">Telegram</a><a href="https://www.facebook.com/ebenezerantiguagt/" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/ebenezerantigua/" target="_blank" rel="noopener">Instagram</a></div>
       <div><h4>Contacto</h4><a>4028-7989</a><a>oficina.lvv@gmail.com</a><a>Jocotenango, Sacatepéquez</a></div>
     </div>
-    <div class="copy"><span>© 2026 Ebenezer Antigua · La Vid Verdadera</span><span>ebenezerantigua.com</span></div>
+    <div class="copy"><span>© 2026 Ebenezer Antigua · La Vid Verdadera<a href="blog/" style="color:inherit;opacity:1;text-decoration:none;font:inherit"> · Blog</a></span><span>ebenezerantigua.com</span></div>
   </div>
 </footer>
 

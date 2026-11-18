@@ -162,6 +162,10 @@ nav.solid{background:rgba(246,239,227,.96);color:var(--brown);box-shadow:0 1px 0
 .msg .n{font-family:var(--serif);font-size:4.4rem;color:var(--gold);opacity:.35;line-height:.8;font-weight:600}
 .msg h3{font-family:var(--serif);font-size:1.7rem;color:var(--brown);line-height:1.05;margin:.8rem 0 .4rem}
 .msg .by{font-size:.78rem;color:var(--wine2);font-weight:700;letter-spacing:.06em}
+.msg .thumb{display:block;position:relative;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:var(--brown)}
+.msg .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.msg .thumb .play{position:absolute;inset:0;display:grid;place-items:center;color:#fff;font-size:1.7rem;background:rgba(0,0,0,.22);transition:background .2s}
+.msg .thumb:hover .play{background:rgba(0,0,0,.4)}
 .msg p{font-size:.92rem;color:var(--brown2);margin-top:.8rem;flex:1}
 .msg .ref{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-top:1rem}
 .msg.dark{background:var(--brown);color:var(--cream)} .msg.dark h3{color:var(--gold2)} .msg.dark p,.msg.dark .by{color:#e5d6bf}
@@ -266,6 +270,8 @@ nav.solid{background:rgba(246,239,227,.96);color:var(--brown);box-shadow:0 1px 0
 @media(max-width:700px){.mos{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}.mos figure{grid-column:span 1!important;grid-row:span 1!important}.m1{grid-column:span 2!important;grid-row:span 2!important}}
 .visitimg{border-radius:var(--radius);overflow:hidden;margin-top:1.8rem;aspect-ratio:16/9}
 .visitimg img{width:100%;height:100%;object-fit:cover}
+.info a{color:inherit;text-decoration:underline}
+@media(min-width:901px){#visitanos.pad{padding-top:2.6rem;padding-bottom:2.6rem}#visitanos .vg{gap:2rem}#visitanos .visitimg{aspect-ratio:21/8;margin-top:1rem}#visitanos .info{gap:.55rem;margin-top:1rem}#visitanos .info div{padding:.65rem 1rem}#visitanos .lead{margin-top:.4rem}#visitanos .map{min-height:240px}#visitanos .pin{width:48px;height:48px;margin-bottom:.6rem}#visitanos .map h3{font-size:1.6rem}#visitanos .map p{margin-bottom:1rem}}
 /* FOOTER */
 footer{background:#1b120b;color:#d8c7ac;padding:4.5rem 0 2rem}
 .fg{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2.4rem}
@@ -514,18 +520,18 @@ footer .big em{color:var(--gold2)}
     <p class="lead">Cada semana publicamos el tema con sus puntos y versículos. Aquí algunas de las series de este año.</p></div>
   </div>
   <div class="wrap"><div class="sw">
-    <div class="msg dark"><div class="n">01</div><h3>La Oración</h3><div class="by">Profeta Hugo García · 15 nov</div><p>01 Comunión con el Padre · 02 Para qué oramos · 03 Cómo oramos · 04 Tipos de oración · 05 Perseverar en oración.</p><div class="ref">Lucas 11:1-4</div><a href="https://www.youtube.com/@ebenezerantigua/streams" target="_blank" rel="noopener" style="display:inline-block;margin-top:.9rem;font-weight:700;color:inherit;text-decoration:underline">▶ Ver en YouTube</a></div>
-    <div class="msg"><div class="n">02</div><h3>El Engaño</h3><div class="by">Profeta Hugo García · serie I–III</div><p>Serie en tres partes. Mateo 13:22 · Hechos 17:30 · 2 Tesalonicenses 2:9-12.</p><div class="ref">Efesios 4:17-24</div><a href="https://www.youtube.com/watch?v=obZM3E6dQX4" target="_blank" rel="noopener" style="display:inline-block;margin-top:.9rem;font-weight:700;color:inherit;text-decoration:underline">▶ Ver la prédica (III)</a></div>
-    <div class="msg"><div class="n">03</div><h3>Tiempo final de fructificar</h3><div class="by">Profeta Hugo García · 8 nov</div><p>Mateo 21:18-22 · Juan 12:24 · 1 Timoteo 4:12.</p><div class="ref">Mateo 21 · Juan 12:24</div><a href="https://www.youtube.com/watch?v=97w-LXf5Jy8" target="_blank" rel="noopener" style="display:inline-block;margin-top:.9rem;font-weight:700;color:inherit;text-decoration:underline">▶ Ver la prédica</a></div>
-    <div class="msg"><div class="n">04</div><h3>Tiempos difíciles</h3><div class="by">Pastor Rodrigo Ordóñez · 30 oct</div><p>2 Timoteo 3:1-5 · Juan 3:19-21 · Isaías 60:1-2.</p><div class="ref">2 Timoteo 3:1-5</div><a href="https://www.youtube.com/watch?v=GCU2gBQwgfM" target="_blank" rel="noopener" style="display:inline-block;margin-top:.9rem;font-weight:700;color:inherit;text-decoration:underline">▶ Ver la prédica</a></div>
-    <div class="msg"><div class="n">05</div><h3>Los desiertos</h3><div class="by">Pastora Débora de García · 11 oct</div><p>Santiago 1:2-5 · Oseas 2:14 · Deuteronomio 8:2.</p><div class="ref">Oseas 2:14</div><a href="https://www.youtube.com/watch?v=ygsn5uHVHrA" target="_blank" rel="noopener" style="display:inline-block;margin-top:.9rem;font-weight:700;color:inherit;text-decoration:underline">▶ Ver la prédica</a></div>
-    <div class="msg"><div class="n">06</div><h3>La Paz para este tiempo</h3><div class="by">Serie · agosto</div><p>Serie en cuatro partes, publicada en agosto.</p><div class="ref">Serie 2026</div><a href="https://www.youtube.com/watch?v=dPS_rXiRvXQ" target="_blank" rel="noopener" style="display:inline-block;margin-top:.9rem;font-weight:700;color:inherit;text-decoration:underline">▶ Ver la prédica (I)</a></div>
+    <div class="msg dark"><a class="thumb" href="https://t.me/EbenezerAntigua" target="_blank" rel="noopener" aria-label="Ver La Oración en Telegram"><img src="fotos/jardin.jpg" alt="Jardín de la iglesia Ebenezer Antigua con el volcán al fondo" loading="lazy"></a><h3>La Oración</h3><div class="by">Profeta Hugo García · 15 nov</div><p>01 Comunión con el Padre · 02 Para qué oramos · 03 Cómo oramos · 04 Tipos de oración · 05 Perseverar en oración.</p><div class="ref">Lucas 11:1-4</div><a href="https://t.me/EbenezerAntigua" target="_blank" rel="noopener" style="display:inline-block;margin-top:.9rem;font-weight:700;color:inherit;text-decoration:underline">Ver en Telegram →</a></div>
+    <div class="msg"><a class="thumb" href="https://www.youtube.com/watch?v=obZM3E6dQX4" target="_blank" rel="noopener" aria-label="Ver El Engaño en YouTube"><img src="https://i.ytimg.com/vi/obZM3E6dQX4/mqdefault.jpg" alt="El Engaño" loading="lazy"><span class="play">▶</span></a><h3>El Engaño</h3><div class="by">Profeta Hugo García · serie I–III</div><p>Serie en tres partes. Mateo 13:22 · Hechos 17:30 · 2 Tesalonicenses 2:9-12.</p><div class="ref">Efesios 4:17-24</div><a href="https://www.youtube.com/watch?v=obZM3E6dQX4" target="_blank" rel="noopener" style="display:inline-block;margin-top:.9rem;font-weight:700;color:inherit;text-decoration:underline">▶ Ver la prédica (III)</a></div>
+    <div class="msg"><a class="thumb" href="https://www.youtube.com/watch?v=97w-LXf5Jy8" target="_blank" rel="noopener" aria-label="Ver Tiempo final de fructificar en YouTube"><img src="https://i.ytimg.com/vi/97w-LXf5Jy8/mqdefault.jpg" alt="Tiempo final de fructificar" loading="lazy"><span class="play">▶</span></a><h3>Tiempo final de fructificar</h3><div class="by">Profeta Hugo García · 8 nov</div><p>Mateo 21:18-22 · Juan 12:24 · 1 Timoteo 4:12.</p><div class="ref">Mateo 21 · Juan 12:24</div><a href="https://www.youtube.com/watch?v=97w-LXf5Jy8" target="_blank" rel="noopener" style="display:inline-block;margin-top:.9rem;font-weight:700;color:inherit;text-decoration:underline">▶ Ver la prédica</a></div>
+    <div class="msg"><a class="thumb" href="https://www.youtube.com/watch?v=GCU2gBQwgfM" target="_blank" rel="noopener" aria-label="Ver Tiempos difíciles en YouTube"><img src="https://i.ytimg.com/vi/GCU2gBQwgfM/mqdefault.jpg" alt="Tiempos difíciles" loading="lazy"><span class="play">▶</span></a><h3>Tiempos difíciles</h3><div class="by">Pastor Rodrigo Ordóñez · 30 oct</div><p>2 Timoteo 3:1-5 · Juan 3:19-21 · Isaías 60:1-2.</p><div class="ref">2 Timoteo 3:1-5</div><a href="https://www.youtube.com/watch?v=GCU2gBQwgfM" target="_blank" rel="noopener" style="display:inline-block;margin-top:.9rem;font-weight:700;color:inherit;text-decoration:underline">▶ Ver la prédica</a></div>
+    <div class="msg"><a class="thumb" href="https://www.youtube.com/watch?v=ygsn5uHVHrA" target="_blank" rel="noopener" aria-label="Ver Los desiertos en YouTube"><img src="https://i.ytimg.com/vi/ygsn5uHVHrA/mqdefault.jpg" alt="Los desiertos" loading="lazy"><span class="play">▶</span></a><h3>Los desiertos</h3><div class="by">Pastora Débora de García · 11 oct</div><p>Santiago 1:2-5 · Oseas 2:14 · Deuteronomio 8:2.</p><div class="ref">Oseas 2:14</div><a href="https://www.youtube.com/watch?v=ygsn5uHVHrA" target="_blank" rel="noopener" style="display:inline-block;margin-top:.9rem;font-weight:700;color:inherit;text-decoration:underline">▶ Ver la prédica</a></div>
+    <div class="msg"><a class="thumb" href="https://www.youtube.com/watch?v=dPS_rXiRvXQ" target="_blank" rel="noopener" aria-label="Ver La Paz para este tiempo en YouTube"><img src="https://i.ytimg.com/vi/dPS_rXiRvXQ/mqdefault.jpg" alt="La Paz para este tiempo" loading="lazy"><span class="play">▶</span></a><h3>La Paz para este tiempo</h3><div class="by">Serie · agosto</div><p>Serie en cuatro partes, publicada en agosto.</p><div class="ref">Serie 2026</div><a href="https://www.youtube.com/watch?v=dPS_rXiRvXQ" target="_blank" rel="noopener" style="display:inline-block;margin-top:.9rem;font-weight:700;color:inherit;text-decoration:underline">▶ Ver la prédica (I)</a></div>
   </div></div>
   <div class="wrap rv"><div class="chan">
     <a class="btn dark" href="https://www.youtube.com/@ebenezerantigua" target="_blank" rel="noopener">▶ YouTube</a>
     <a class="btn line" href="https://www.facebook.com/ebenezerantiguagt/" target="_blank" rel="noopener">Facebook</a>
     <a class="btn line" href="https://www.instagram.com/ebenezerantigua/" target="_blank" rel="noopener">Instagram</a>
-    <a class="btn line" href="https://www.whatsapp.com/channel/0029VaFmyKf1dAwAdlDJ7e1H" target="_blank" rel="noopener">WhatsApp</a>
+    <a class="btn line" href="https://t.me/EbenezerAntigua" target="_blank" rel="noopener">Telegram</a>
   </div></div>
 </section>
 
@@ -570,7 +576,7 @@ footer .big em{color:var(--gold2)}
       <div class="visitimg"><img src="fotos/fachada.jpg" alt="Entrada a Ebenezer Antigua" loading="lazy"></div>
       <div class="info">
         <div><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 00-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg><p><b>Dirección</b><span>El Jícaro, Callejón Tampiscal y Callejón Bolaños, Zona 4, Jocotenango, Sacatepéquez</span></p></div>
-        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg><p><b>Teléfono</b><span>4028-7989</span></p></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg><p><b>Teléfono</b><span><a href="https://www.whatsapp.com/channel/0029VaFmyKf1dAwAdlDJ7e1H" target="_blank" rel="noopener">4028-7989</a></span></p></div>
         <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><p><b>Correo</b><span>oficina.lvv@gmail.com</span></p></div>
       </div>
     </div>
@@ -604,7 +610,7 @@ footer .big em{color:var(--gold2)}
       <div><div class="big">Ebenezer <em>Antigua</em></div><p style="margin-top:.8rem;max-width:36ch">Iglesia de Cristo La Vid Verdadera. Bajo la cobertura de Ministerios Ebenezer, Apóstol Sergio Enríquez.</p></div>
       <div><h4>Visita</h4><a href="#horarios">Horarios</a><a href="#casas">Discipulados</a><a href="#eventos">Eventos</a><a href="#visitanos">Cómo llegar</a></div>
       <div><h4>Síguenos</h4><a href="https://www.youtube.com/@ebenezerantigua" target="_blank" rel="noopener">YouTube</a><a href="https://t.me/EbenezerAntigua" target="_blank" rel="noopener">Telegram</a><a href="https://www.whatsapp.com/channel/0029VaFmyKf1dAwAdlDJ7e1H" target="_blank" rel="noopener">WhatsApp</a><a href="https://www.facebook.com/ebenezerantiguagt/" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/ebenezerantigua/" target="_blank" rel="noopener">Instagram</a></div>
-      <div><h4>Contacto</h4><a>4028-7989</a><a>oficina.lvv@gmail.com</a><a>Jocotenango, Sacatepéquez</a></div>
+      <div><h4>Contacto</h4><a href="https://www.whatsapp.com/channel/0029VaFmyKf1dAwAdlDJ7e1H" target="_blank" rel="noopener">4028-7989</a><a>oficina.lvv@gmail.com</a><a>Jocotenango, Sacatepéquez</a></div>
     </div>
     <div class="copy"><span>© 2026 Ebenezer Antigua · La Vid Verdadera<a href="blog/" style="color:inherit;opacity:1;text-decoration:none;font:inherit"> · Blog</a></span><span>ebenezerantigua.com</span></div>
   </div>

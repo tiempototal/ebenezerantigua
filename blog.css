@@ -9,7 +9,7 @@ a{color:var(--wine2)}.w{width:min(1080px,92vw);margin:0 auto}
 .nav .live{background:linear-gradient(135deg,var(--gold2),var(--gold));padding:.55rem 1.1rem;border-radius:99px;color:#2a1d14}
 .hero{background:linear-gradient(150deg,var(--wine),#3b1220 70%);color:var(--cream);padding:4rem 0 3.4rem;position:relative;overflow:hidden}
 .hero::after{content:"";position:absolute;right:-8%;top:-30%;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(226,182,89,.22),transparent 65%)}
-.hero .w{position:relative;z-index:1;max-width:860px}
+.hero .w{position:relative;z-index:1;max-width:860px}.hero .hw{max-width:1080px;display:grid;grid-template-columns:1fr 310px;gap:2.6rem;align-items:center}.hf img{width:100%;height:auto;display:block;border-radius:22px;border:3px solid rgba(226,182,89,.55);box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
 .bc{font-size:.8rem;margin-bottom:1.4rem;color:#d9c7a8}.bc a{color:#e9dcc6;text-decoration:none}.bc a::after{content:" / ";color:#a89270}.bc span{color:var(--gold2)}
 .eyebrow{font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;font-weight:700;color:var(--gold2);margin-bottom:.9rem}
 h1{font-family:var(--serif);font-weight:600;font-size:clamp(2.2rem,5.4vw,3.8rem);line-height:1.08;letter-spacing:-.01em}
@@ -38,5 +38,5 @@ details p{padding:0 1.3rem 1.1rem;margin:0}
 .ft{background:#1b120b;color:#cdb998;padding:3rem 0 1.5rem;font-size:.92rem;line-height:1.7;margin-top:2rem}.ft .w{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:2rem;max-width:1080px}
 .ft b{font-family:var(--serif);font-size:1.6rem;color:var(--cream)}.ft em{color:var(--gold2)}.ft h4{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold2);margin-bottom:.6rem}
 .ft a,.ft span{display:block;color:#cdb998;text-decoration:none}.ft a:hover{color:var(--gold2)}.ft .cp{text-align:center;margin-top:2rem;font-size:.8rem;color:#8a7561}
-@media(max-width:800px){.nav nav a:not(.live){display:none}.cta{grid-template-columns:1fr;padding:1.6rem}.ft .w{grid-template-columns:1fr 1fr}.hero{padding:3rem 0 2.6rem}.art{padding-top:2rem}}
+@media(max-width:800px){.hero .hw{grid-template-columns:1fr;gap:1.6rem}.hf{max-width:300px}.nav nav a:not(.live){display:none}.cta{grid-template-columns:1fr;padding:1.6rem}.ft .w{grid-template-columns:1fr 1fr}.hero{padding:3rem 0 2.6rem}.art{padding-top:2rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rc{transition:none}}

@@ -114,7 +114,7 @@ article ul.vs li{padding-left:2.6rem}article ul.vs b{color:var(--wine2);font-wei
  html{scroll-padding-top:128px}
  .art.two{display:block;max-width:780px}
  .art.two>article{max-width:none}
- .tocs{position:sticky;top:78px;z-index:40;margin:0 0 1.4rem;padding:.5rem .6rem;border-radius:16px;background:rgba(246,239,227,.97);backdrop-filter:blur(10px);border:1px solid rgba(74,47,29,.12);box-shadow:0 10px 22px -16px rgba(74,47,29,.45)}
+ .tocs{position:sticky;top:72px;z-index:40;margin:0 0 .9rem;padding:.3rem .45rem;border-radius:14px;background:rgba(246,239,227,.97);backdrop-filter:blur(10px);border:1px solid rgba(74,47,29,.12);box-shadow:0 10px 22px -16px rgba(74,47,29,.45)}
  .tocs .toc{padding:0;border:0;border-radius:0;background:none;box-shadow:none;max-height:none;overflow:visible}
  .tocs .toc>b,.tocs .toc ol::before{display:none}
  .tocs .toc ol{display:flex;gap:.45rem;overflow-x:auto;padding:0 0 .15rem;scrollbar-width:none;scroll-snap-type:x proximity}
@@ -146,3 +146,5 @@ article .sum-l p{margin:0;line-height:1.55;font-size:.98rem;color:#3b2a1d}
 @keyframes sumup{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 @media(max-width:600px){.sum{padding:1.2rem 1rem 1.1rem 1.3rem}.sum-m{margin-left:0;width:100%}article .sum-l li{grid-template-columns:2rem 1fr;gap:.7rem;padding:.7rem .8rem .7rem .7rem}.sum-l .n{width:2rem;height:2rem;font-size:1rem}}
 @media(prefers-reduced-motion:reduce){article .sum-l li{animation:none}.tocs .toc li a,.tocs .toc li a::before{transition:none}}
+
+@media(max-width:900px){.art.two{padding-top:.5rem}.tocs .tp{margin-top:.3rem}}

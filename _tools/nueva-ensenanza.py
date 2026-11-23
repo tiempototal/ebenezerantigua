@@ -38,7 +38,7 @@ TODAY = os.environ.get('HOY', '2026-11-23')
 CATS = {'discipulado': dict(label='Discipulados', slug='discipulados', one='Discipulado', lead='Mensajes de los discipulados de Ebenezer Antigua: video, resumen y versículos citados.'),
         'otro': dict(label='Otros mensajes', slug='otros', one='Mensaje', lead='Otros mensajes compartidos en Ebenezer Antigua: video, resumen y versículos citados.')}
 PHOTOS = {'hugo-garcia': ('hugo-azul.jpg', '50% 20%'), 'debora-de-garcia': ('debora-hd.jpg', '50% 12%'), 'rodrigo-ordonez': ('rodrigo-hd.jpg', '50% 20%'),
-          'jose-carlos-mendez': ('mendez-hd.jpg', '50% 15%'), 'gustavo-hernandez': ('gustavo-hd.jpg', '48% 22%')}
+          'jose-carlos-mendez': ('mendez-hd.jpg', '50% 15%'), 'estuardo-cruz': ('cruz-hd.jpg', '30% 12%'), 'gustavo-hernandez': ('gustavo-hd.jpg', '48% 22%')}
 specs = {}
 for f in sys.argv[1:]:
     s = json.load(open(f, encoding='utf-8')); s.setdefault('cat', 'ensenanza'); specs[s['slug']] = s

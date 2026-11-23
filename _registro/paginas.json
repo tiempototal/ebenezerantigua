@@ -74,7 +74,7 @@
   "card_tag": "Heridas",
   "thumb": "https://i.ytimg.com/vi/p3UnUhwv_50/mqdefault.jpg",
   "ex": "El Profeta Hugo García desarrolla su mensaje a partir de las heridas de Jesús, detallando sufrimientos físicos y espirituales que Cristo padeció para…",
-  "id": ""
+  "id": "p3UnUhwv_50"
  },
  {
   "slug": "las-heridas-de-jesus-ii",
@@ -85,7 +85,7 @@
   "card_tag": "Heridas",
   "thumb": "https://i.ytimg.com/vi/a4Qi-GvIWa8/mqdefault.jpg",
   "ex": "El Profeta Hugo García desarrolla en «Las heridas de Jesús II» temas sobre la vida espiritual: la santidad, el cambio de mentalidad y la obediencia…",
-  "id": ""
+  "id": "a4Qi-GvIWa8"
  },
  {
   "slug": "las-heridas-de-jesus",
@@ -96,7 +96,7 @@
   "card_tag": "Heridas",
   "thumb": "https://i.ytimg.com/vi/6AtkGhauEfE/mqdefault.jpg",
   "ex": "El Profeta Hugo García inicia la serie «Las heridas de Jesús» enfocándose en los padecimientos del Señor para traer salvación y bendición, con la…",
-  "id": ""
+  "id": "6AtkGhauEfE"
  },
  {
   "slug": "tiempos-dificiles",
@@ -107,7 +107,7 @@
   "card_tag": "Tiempos difíciles",
   "thumb": "https://i.ytimg.com/vi/GCU2gBQwgfM/mqdefault.jpg",
   "ex": "El Pastor Rodrigo Ordóñez reflexiona sobre vivir en los últimos días y los retos que esto conlleva, con un mensaje central: renovar el pacto con Dios…",
-  "id": ""
+  "id": "GCU2gBQwgfM"
  },
  {
   "slug": "el-engano-ii",
@@ -118,7 +118,7 @@
   "card_tag": "El Engaño",
   "thumb": "https://i.ytimg.com/vi/5R1ixysN2Vw/mqdefault.jpg",
   "ex": "El Profeta Hugo García enseña sobre el engaño del pecado y la importancia de mantener un corazón sensible ante la Palabra de Dios.",
-  "id": ""
+  "id": "5R1ixysN2Vw"
  },
  {
   "slug": "el-engano",
@@ -129,7 +129,7 @@
   "card_tag": "El Engaño",
   "thumb": "https://i.ytimg.com/vi/o-ojJVOu8Zs/mqdefault.jpg",
   "ex": "El Profeta Hugo García aborda el tema «El Engaño» y cómo afecta la vida cristiana, con Natanael como ejemplo de un verdadero israelita en quien no…",
-  "id": ""
+  "id": "o-ojJVOu8Zs"
  },
  {
   "slug": "los-ojos-del-interior",
@@ -140,7 +140,7 @@
   "card_tag": "Vida interior",
   "thumb": "https://i.ytimg.com/vi/KZBax7fHwK8/mqdefault.jpg",
   "ex": "El Anciano Estuardo Soto enseña sobre «Los ojos del interior»: enfocarnos en el corazón y la vida interior en lugar de solo las apariencias externas…",
-  "id": ""
+  "id": "KZBax7fHwK8"
  },
  {
   "slug": "profetas-menores-miqueas-ii",
@@ -151,7 +151,7 @@
   "card_tag": "Miqueas",
   "thumb": "https://i.ytimg.com/vi/wIjMdkcseFo/mqdefault.jpg",
   "ex": "En «Profetas Menores – Miqueas II», el Profeta Hugo García se centra en la reflexión espiritual y la rectitud ante Dios.",
-  "id": ""
+  "id": "wIjMdkcseFo"
  },
  {
   "slug": "escalando-los-muros",
@@ -162,7 +162,18 @@
   "card_tag": "Muros",
   "thumb": "https://i.ytimg.com/vi/6TWqFIKktR8/mqdefault.jpg",
   "ex": "El Pastor Gustavo Hernández ministra sobre cómo superar obstáculos espirituales y personales, con el mensaje central de que con la ayuda de Dios los…",
-  "id": ""
+  "id": "6TWqFIKktR8"
+ },
+ {
+  "slug": "la-mansedumbre",
+  "title": "La mansedumbre",
+  "speaker": "Pastor Rodrigo Ordóñez",
+  "date": "2026-10-16",
+  "cat": "ensenanza",
+  "card_tag": "Mansedumbre",
+  "thumb": "https://i.ytimg.com/vi/edHgvjR8YEI/mqdefault.jpg",
+  "ex": "El Pastor Rodrigo Ordóñez centra su prédica en la mansedumbre como fruto del Espíritu, que permite a los creyentes someter su carácter a la voluntad…",
+  "id": "edHgvjR8YEI"
  },
  {
   "slug": "profetas-menores-miqueas",
@@ -173,6 +184,270 @@
   "card_tag": "Miqueas",
   "thumb": "https://i.ytimg.com/vi/0h85sr2YDQk/mqdefault.jpg",
   "ex": "El Profeta Hugo García ofrece una enseñanza sobre el libro de Miqueas, destacando temas de restauración, obediencia y justicia divina dentro del…",
-  "id": ""
+  "id": "0h85sr2YDQk"
+ },
+ {
+  "slug": "los-desiertos",
+  "title": "Los desiertos",
+  "speaker": "Pastora Débora de García",
+  "date": "2026-10-11",
+  "cat": "ensenanza",
+  "card_tag": "Desiertos",
+  "thumb": "https://i.ytimg.com/vi/ygsn5uHVHrA/mqdefault.jpg",
+  "ex": "La Pastora Débora de García enseña sobre el significado y el propósito de los desiertos en la vida cristiana: pruebas necesarias para alcanzar la…",
+  "id": "ygsn5uHVHrA"
+ },
+ {
+  "slug": "camino-a-la-obediencia",
+  "title": "Camino a la obediencia",
+  "speaker": "Profeta Hugo García",
+  "date": "2026-10-06",
+  "cat": "ensenanza",
+  "card_tag": "Obediencia",
+  "thumb": "https://i.ytimg.com/vi/PO9XpNccMTM/mqdefault.jpg",
+  "ex": "El Profeta Hugo García predica sobre la importancia espiritual de la obediencia como un proceso continuo y necesario para el crecimiento del creyente.",
+  "id": "PO9XpNccMTM"
+ },
+ {
+  "slug": "venciendo-las-maldiciones",
+  "title": "Venciendo las Maldiciones",
+  "speaker": "Profeta Hugo García",
+  "date": "2026-10-04",
+  "cat": "ensenanza",
+  "card_tag": "Maldiciones",
+  "thumb": "https://i.ytimg.com/vi/u3PaMZU1uFA/mqdefault.jpg",
+  "ex": "El Profeta Hugo García predica sobre cómo vencer las maldiciones, destacando la Santa Cena tomada dignamente como una de las formas clave de lograr…",
+  "id": "u3PaMZU1uFA"
+ },
+ {
+  "slug": "amortizando-el-alma",
+  "title": "Amortizando el alma",
+  "speaker": "Pastor Rodrigo Ordóñez",
+  "date": "2026-10-02",
+  "cat": "ensenanza",
+  "card_tag": "Alma",
+  "thumb": "https://i.ytimg.com/vi/WE4RrPcDA4U/mqdefault.jpg",
+  "ex": "El Pastor Rodrigo Ordóñez aborda el concepto de amortizar el alma: someter los deseos y la voluntad a Dios para que el Espíritu Santo gobierne la…",
+  "id": "WE4RrPcDA4U"
+ },
+ {
+  "slug": "la-perfeccion-del-hombre",
+  "title": "La perfección del hombre",
+  "speaker": "Profeta Hugo García",
+  "date": "2026-09-29",
+  "cat": "ensenanza",
+  "card_tag": "Perfección",
+  "thumb": "https://i.ytimg.com/vi/S1g-gvLbCu4/mqdefault.jpg",
+  "ex": "El Profeta Hugo García aborda «La perfección del hombre» desde una perspectiva espiritual: los creyentes son perfeccionados por el Espíritu Santo, la…",
+  "id": "S1g-gvLbCu4"
+ },
+ {
+  "slug": "agradecimiento",
+  "title": "Agradecimiento",
+  "speaker": "Pastor Rodrigo Ordóñez",
+  "date": "2026-09-25",
+  "cat": "ensenanza",
+  "card_tag": "Gratitud",
+  "thumb": "https://i.ytimg.com/vi/XZrwWkNTsyM/mqdefault.jpg",
+  "ex": "El Pastor Rodrigo Ordóñez ofrece un mensaje sobre la importancia de ejercitar el agradecimiento como una llave espiritual que abre la perspectiva y…",
+  "id": "XZrwWkNTsyM"
+ },
+ {
+  "slug": "de-la-escasez-a-la-sobreabundancia",
+  "title": "De la Escasez a la Sobreabundancia",
+  "speaker": "Pastor Rodrigo Ordóñez",
+  "date": "2026-09-22",
+  "cat": "ensenanza",
+  "card_tag": "Provisión",
+  "thumb": "https://i.ytimg.com/vi/AkdM48wNCjY/mqdefault.jpg",
+  "ex": "El Pastor Rodrigo Ordóñez aborda cómo vivir bajo la provisión y el plan de Dios en tiempos de crisis económica y global.",
+  "id": "AkdM48wNCjY"
+ },
+ {
+  "slug": "la-senal-para-la-decision",
+  "title": "La señal para la decisión",
+  "speaker": "Pastora Débora de García",
+  "date": "2026-09-20",
+  "cat": "ensenanza",
+  "card_tag": "Decisiones",
+  "thumb": "https://i.ytimg.com/vi/M9ldw9SKJgU/mqdefault.jpg",
+  "ex": "La Pastora Débora de García enseña cómo los cristianos pueden buscar la guía de Dios al enfrentar encrucijadas y tomar decisiones trascendentales en…",
+  "id": "M9ldw9SKJgU"
+ },
+ {
+  "slug": "un-nombre-nuevo",
+  "title": "Un nombre nuevo",
+  "speaker": "Pastora Débora de García",
+  "date": "2026-09-18",
+  "cat": "ensenanza",
+  "card_tag": "Identidad",
+  "thumb": "https://i.ytimg.com/vi/-PBfBb-U0bg/mqdefault.jpg",
+  "ex": "La Pastora Débora de García expone el tema «Un nombre nuevo», a partir de la promesa de Apocalipsis 2:17 sobre la piedrecita blanca y el nombre nuevo…",
+  "id": "-PBfBb-U0bg"
+ },
+ {
+  "slug": "sanando-lo-interno",
+  "title": "Sanando lo Interno",
+  "speaker": "Anciano Estuardo Cruz",
+  "date": "2026-09-15",
+  "cat": "ensenanza",
+  "card_tag": "Sanidad interior",
+  "thumb": "https://i.ytimg.com/vi/8y2kB_Ake9E/mqdefault.jpg",
+  "ex": "El Anciano Estuardo Cruz enfatiza la importancia de buscar una sanidad integral que comience en el interior, en el espíritu y el alma, para que sus…",
+  "id": "8y2kB_Ake9E"
+ },
+ {
+  "slug": "el-reconocimiento",
+  "title": "El Reconocimiento",
+  "speaker": "Pastora Débora de García",
+  "date": "2026-09-13",
+  "cat": "ensenanza",
+  "card_tag": "Honra",
+  "thumb": "https://i.ytimg.com/vi/gV9a1DHRmQ8/mqdefault.jpg",
+  "ex": "La Pastora Débora de García explica la importancia bíblica de recibir y otorgar honra, y advierte sobre el equilibrio necesario para no caer en la…",
+  "id": "gV9a1DHRmQ8"
+ },
+ {
+  "slug": "la-santidad-ii",
+  "title": "La Santidad II",
+  "speaker": "Profeta Hugo García",
+  "date": "2026-09-11",
+  "cat": "ensenanza",
+  "card_tag": "Santidad",
+  "thumb": "https://i.ytimg.com/vi/sp1-CBVFyK0/mqdefault.jpg",
+  "ex": "El Profeta Hugo García continúa el tema de la santidad: el camino de santidad, la mente de Cristo y el llamado a servir a Dios con alegría…",
+  "id": "sp1-CBVFyK0"
+ },
+ {
+  "slug": "la-santidad",
+  "title": "La Santidad",
+  "speaker": "Profeta Hugo García",
+  "date": "2026-09-08",
+  "cat": "ensenanza",
+  "card_tag": "Santidad",
+  "thumb": "https://i.ytimg.com/vi/7JXQwm-9GB8/mqdefault.jpg",
+  "ex": "El Profeta Hugo García predica sobre la santidad en el Año del Deleite: su significado, el peligro del fuego extraño y la necesidad de discernir…",
+  "id": "7JXQwm-9GB8"
+ },
+ {
+  "slug": "la-cruz",
+  "title": "La Cruz",
+  "speaker": "Profeta Hugo García",
+  "date": "2026-09-06",
+  "cat": "ensenanza",
+  "card_tag": "Redención",
+  "thumb": "https://i.ytimg.com/vi/Yv0PISlBnsY/mqdefault.jpg",
+  "ex": "El Profeta Hugo García enfatiza la importancia central de la crucifixión de Jesucristo para la redención y la transformación del creyente, y ministra…",
+  "id": "Yv0PISlBnsY"
+ },
+ {
+  "slug": "la-perfeccion-ii",
+  "title": "La Perfección II",
+  "speaker": "Profeta Hugo García",
+  "date": "2026-09-04",
+  "cat": "ensenanza",
+  "card_tag": "Perfección",
+  "thumb": "https://i.ytimg.com/vi/j0BUmihrcEk/mqdefault.jpg",
+  "ex": "El Profeta Hugo García continúa su enseñanza sobre el proceso de perfeccionamiento espiritual del creyente, a través de la fidelidad, la justicia y…",
+  "id": "j0BUmihrcEk"
+ },
+ {
+  "slug": "la-perfeccion",
+  "title": "La Perfección",
+  "speaker": "Profeta Hugo García",
+  "date": "2026-09-01",
+  "cat": "ensenanza",
+  "card_tag": "Perfección",
+  "thumb": "https://i.ytimg.com/vi/bmsBcPQz1wI/mqdefault.jpg",
+  "ex": "El Profeta Hugo García enseña sobre la necesidad de que los creyentes busquen la excelencia y la perfección espiritual para agradar a Dios.",
+  "id": "bmsBcPQz1wI"
+ },
+ {
+  "slug": "la-paz-para-este-tiempo-iv",
+  "title": "La paz para este tiempo IV",
+  "speaker": "Profeta Hugo García",
+  "date": "2026-08-30",
+  "cat": "ensenanza",
+  "card_tag": "Paz",
+  "thumb": "https://i.ytimg.com/vi/CeHtryzIzAs/mqdefault.jpg",
+  "ex": "El Profeta Hugo García comparte un mensaje centrado en la paz de Dios: cómo alcanzar paz interior y en el hogar, aun ante las dificultades.",
+  "id": "CeHtryzIzAs"
+ },
+ {
+  "slug": "discipulado-de-servidores-carencias-de-paternidad",
+  "title": "Discipulado de Servidores: carencias de paternidad y maternidad",
+  "speaker": "Ebenezer Antigua",
+  "date": "2026-11-16",
+  "cat": "discipulado",
+  "card_tag": "Servidores",
+  "thumb": "https://i.ytimg.com/vi/V2lMJRSWTsU/mqdefault.jpg",
+  "ex": "En este discipulado de servidores se trata la falta de paternidad y de maternidad espiritual en la vida del creyente, analizando patrones bíblicos…",
+  "id": "V2lMJRSWTsU"
+ },
+ {
+  "slug": "discipulado-de-servidores-no-prejuiciar-a-dios",
+  "title": "Discipulado de Servidores: no prejuiciar a Dios",
+  "speaker": "Ebenezer Antigua",
+  "date": "2026-11-09",
+  "cat": "discipulado",
+  "card_tag": "Servidores",
+  "thumb": "https://i.ytimg.com/vi/2lEYybJR8ws/mqdefault.jpg",
+  "ex": "Este discipulado de servidores trata los peligros de prejuiciar a Dios y la importancia de verificar las cosas a través de su Palabra: las…",
+  "id": "2lEYybJR8ws"
+ },
+ {
+  "slug": "discipulado-de-servidores-luz-y-conviccion-en-los-tiempos-finales",
+  "title": "Discipulado de Servidores: luz y convicción en los tiempos finales",
+  "speaker": "Ebenezer Antigua",
+  "date": "2026-11-02",
+  "cat": "discipulado",
+  "card_tag": "Servidores",
+  "thumb": "https://i.ytimg.com/vi/yMNLvcMfdbE/mqdefault.jpg",
+  "ex": "Este discipulado de servidores se enfoca en la necesidad de que la iglesia mantenga su luz y sus convicciones en los tiempos finales, descritos como…",
+  "id": "yMNLvcMfdbE"
+ },
+ {
+  "slug": "discipulado-de-servidores-sacrificios-espirituales",
+  "title": "Discipulado de Servidores: sacrificios espirituales",
+  "speaker": "Ebenezer Antigua",
+  "date": "2026-10-25",
+  "cat": "discipulado",
+  "card_tag": "Servidores",
+  "thumb": "https://i.ytimg.com/vi/uSVdUUGXNhk/mqdefault.jpg",
+  "ex": "En este discipulado de servidores se enseña sobre la importancia de vivir y ofrecer sacrificios espirituales a Dios, diferenciándolos de las acciones…",
+  "id": "uSVdUUGXNhk"
+ },
+ {
+  "slug": "discipulado-de-servidores-la-armadura-de-dios",
+  "title": "Discipulado de Servidores: la armadura de Dios",
+  "speaker": "Ebenezer Antigua",
+  "date": "2026-10-11",
+  "cat": "discipulado",
+  "card_tag": "Servidores",
+  "thumb": "https://i.ytimg.com/vi/gzwGbrN3UX0/mqdefault.jpg",
+  "ex": "Este discipulado de servidores enseña sobre la armadura de Dios descrita en Efesios 6, exhortando a los creyentes a vestirse con toda ella para…",
+  "id": "gzwGbrN3UX0"
+ },
+ {
+  "slug": "discipulado-de-servidores-adorar-y-servir",
+  "title": "Discipulado de Servidores: adorar y servir",
+  "speaker": "Ebenezer Antigua",
+  "date": "2026-09-27",
+  "cat": "discipulado",
+  "card_tag": "Servidores",
+  "thumb": "https://i.ytimg.com/vi/ip7u9C-f_H0/mqdefault.jpg",
+  "ex": "En este discipulado de servidores se enfatiza que la adoración y el servicio son complementos inseparables en la vida del creyente.",
+  "id": "ip7u9C-f_H0"
+ },
+ {
+  "slug": "discipulado-de-servidores-renovar-el-entendimiento",
+  "title": "Discipulado de Servidores: renovar el entendimiento",
+  "speaker": "Ebenezer Antigua",
+  "date": "2026-09-13",
+  "cat": "discipulado",
+  "card_tag": "Servidores",
+  "thumb": "https://i.ytimg.com/vi/2j-TDH2k0pA/mqdefault.jpg",
+  "ex": "Este discipulado de servidores trata sobre cómo los cristianos deben renovar su entendimiento con la Palabra de Dios y sobre la batalla que se libra…",
+  "id": "2j-TDH2k0pA"
  }
 ]

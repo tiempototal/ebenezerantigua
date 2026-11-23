@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://ebenezerantigua.com/sitemap.xml
+Sitemap: https://ebenezerantigua.com/video-sitemap.xml

@@ -71,3 +71,4 @@ article ul.vs li{padding-left:2.6rem}article ul.vs b{color:var(--wine2);font-wei
 @media(max-width:800px){.pn{grid-template-columns:1fr}.pn a.r{text-align:left}.lam{padding:1.5rem 1.2rem}}
 .toc li{padding:.1rem 0;background:none;border:0;border-radius:0}.toc li::before{display:none}
 .hero .w.wide{max-width:1080px}
+.byp{margin:1rem 0 2rem}.byp h3{font-family:var(--serif);font-size:1.4rem;color:var(--wine2);margin:1.4rem 0 .4rem}.byp ul{list-style:none;padding:0;display:grid;gap:.4rem}.byp li{padding:.55rem 1rem;background:var(--paper);border:1px solid rgba(74,47,29,.1);border-radius:12px}.byp li::before{display:none}.byp a{font-weight:600;color:var(--brown);text-decoration:none}.byp small{color:var(--brown2);margin-left:.4rem}

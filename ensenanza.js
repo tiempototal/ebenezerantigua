@@ -26,3 +26,6 @@
   items.forEach(function(it,k){it.a.addEventListener('click',function(){activate(k)})});
   update();
 })();
+
+/* móvil: el índice se pega justo debajo del header, sea cual sea su alto */
+(function(){var n=document.querySelector(".nav");if(!n)return;function s(){document.documentElement.style.setProperty("--navh",n.offsetHeight+"px")}s();addEventListener("resize",s);addEventListener("load",s)})();

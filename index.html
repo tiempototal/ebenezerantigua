@@ -435,7 +435,10 @@ footer .big em{color:var(--gold2)}
 .cover>div{font-size:.84rem;line-height:1.35}.cover b{font-size:.9rem!important;display:inline}.cover>div br{display:none}.cover>div span{font-size:.84rem;display:inline-block}
 }</style>
 <style id="mt1">.msg h3 a.mt{color:inherit;text-decoration:none}.msg h3 a.mt:hover,.msg h3 a.mt:focus-visible{color:var(--gold2);text-decoration:underline;text-underline-offset:4px}</style>
-</head>
+<style id="mob4">.pcard{display:block;color:inherit;text-decoration:none}a.pcard:focus-visible{outline:3px solid var(--gold2);outline-offset:3px}
+@media(max-width:860px){#visitanos{padding-top:.9rem;scroll-margin-top:62px}#visitanos .vg{display:flex;flex-direction:column;gap:1.6rem}#visitanos .vg>.map{order:-1;margin-top:0}}
+.ev{position:relative;overflow:hidden}.ev .wrap{position:relative;z-index:1}#fw{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:.95}
+@media(prefers-reduced-motion:reduce){#fw{display:none}}</style></head>
 <body>
 
 
@@ -524,13 +527,13 @@ footer .big em{color:var(--gold2)}
     <h2 class="title">Nuestro equipo de <em>servicio</em></h2></div>
     <div class="parrows"><button type="button" id="pPrev" aria-label="Anterior">&#8249;</button><button type="button" id="pNext" aria-label="Siguiente">&#8250;</button></div>
     <div class="pastors" id="pastorsRow">
-      <div class="pcard rv"><div class="ph a"><img src="fotos/hugo-azul.jpg" loading="eager" fetchpriority="high" alt="Profeta Hugo García"></div><div class="tx"><h3>Hugo García</h3><div class="rol">Profeta</div><p>“Cada mañana son nuevas sus misericordias.”<br><small style="color:var(--gold);font-weight:700;letter-spacing:.08em">Tiempo final de fructificar · 8 nov 2026</small></p></div></div>
-      <div class="pcard rv"><div class="ph b"><img src="fotos/debora-hd.jpg" loading="eager" fetchpriority="high" alt="Pastora Débora de García" style="object-position:50% 12%"></div><div class="tx"><h3>Débora de García</h3><div class="rol">Pastora</div><p>“La palabra se expone, no se impone.”<br><small style="color:var(--gold);font-weight:700;letter-spacing:.08em">Los desiertos · 11 oct 2026</small></p></div></div>
-      <div class="pcard rv"><div class="ph c"><img src="fotos/rodrigo-hd.jpg" loading="eager" fetchpriority="high" alt="Pastor Rodrigo Ordóñez" style="object-position:50% 20%"></div><div class="tx"><h3>Rodrigo Ordóñez</h3><div class="rol">Pastor</div><p>“Dios no quiere una religión aprendida de hombres, quiere una relación.”<br><small style="color:var(--gold);font-weight:700;letter-spacing:.08em">Tiempos difíciles · 30 oct 2026</small></p></div></div>
+      <a class="pcard rv" href="predicadores/hugo-garcia/" aria-label="Ver las enseñanzas de Hugo García"><div class="ph a"><img src="fotos/hugo-azul.jpg" loading="eager" fetchpriority="high" alt="Profeta Hugo García"></div><div class="tx"><h3>Hugo García</h3><div class="rol">Profeta</div><p>“Cada mañana son nuevas sus misericordias.”<br><small style="color:var(--gold);font-weight:700;letter-spacing:.08em">Tiempo final de fructificar · 8 nov 2026</small></p></div></a>
+      <a class="pcard rv" href="predicadores/debora-de-garcia/" aria-label="Ver las enseñanzas de Débora de García"><div class="ph b"><img src="fotos/debora-hd.jpg" loading="eager" fetchpriority="high" alt="Pastora Débora de García" style="object-position:50% 12%"></div><div class="tx"><h3>Débora de García</h3><div class="rol">Pastora</div><p>“La palabra se expone, no se impone.”<br><small style="color:var(--gold);font-weight:700;letter-spacing:.08em">Los desiertos · 11 oct 2026</small></p></div></a>
+      <a class="pcard rv" href="predicadores/rodrigo-ordonez/" aria-label="Ver las enseñanzas de Rodrigo Ordóñez"><div class="ph c"><img src="fotos/rodrigo-hd.jpg" loading="eager" fetchpriority="high" alt="Pastor Rodrigo Ordóñez" style="object-position:50% 20%"></div><div class="tx"><h3>Rodrigo Ordóñez</h3><div class="rol">Pastor</div><p>“Dios no quiere una religión aprendida de hombres, quiere una relación.”<br><small style="color:var(--gold);font-weight:700;letter-spacing:.08em">Tiempos difíciles · 30 oct 2026</small></p></div></a>
       <div class="pcard rv"><div class="ph a"><img src="fotos/cruz-hd.jpg" alt="Anciano Estuardo Cruz" style="object-position:30% 12%" loading="lazy"></div><div class="tx"><h3>Estuardo Cruz</h3><div class="rol">Anciano</div><p>“No nos afanemos, Dios cuida de nosotros. Busquemos su reino y confiemos plenamente en Él.”</p></div></div>
       <div class="pcard rv"><div class="ph b"><img src="fotos/valle-hd.jpg" alt="Anciano José Valle" loading="lazy"></div><div class="tx"><h3>José Valle</h3><div class="rol">Anciano</div><p>“Retorna a la casa del Padre con un corazón humilde, contrito y humillado.”</p></div></div>
-      <div class="pcard rv"><div class="ph c"><img src="fotos/mendez-hd.jpg" alt="Anciano José Carlos Méndez" style="object-position:50% 15%" loading="lazy"></div><div class="tx"><h3>José Carlos Méndez</h3><div class="rol">Anciano</div><p>“Rindamos nuestra voluntad, para que el Señor haga su voluntad.”</p></div></div>
-      <div class="pcard rv"><div class="ph a"><img src="fotos/gustavo-hd.jpg" alt="Pastor Gustavo Hernández" style="object-position:48% 22%" loading="lazy"></div><div class="tx"><h3>Gustavo Hernández</h3><div class="rol">Pastor</div><p>Predica en los servicios de Ebenezer Antigua.</p></div></div>
+      <a class="pcard rv" href="predicadores/jose-carlos-mendez/" aria-label="Ver las enseñanzas de José Carlos Méndez"><div class="ph c"><img src="fotos/mendez-hd.jpg" alt="Anciano José Carlos Méndez" style="object-position:50% 15%" loading="lazy"></div><div class="tx"><h3>José Carlos Méndez</h3><div class="rol">Anciano</div><p>“Rindamos nuestra voluntad, para que el Señor haga su voluntad.”</p></div></a>
+      <a class="pcard rv" href="predicadores/gustavo-hernandez/" aria-label="Ver las enseñanzas de Gustavo Hernández"><div class="ph a"><img src="fotos/gustavo-hd.jpg" alt="Pastor Gustavo Hernández" style="object-position:48% 22%" loading="lazy"></div><div class="tx"><h3>Gustavo Hernández</h3><div class="rol">Pastor</div><p>Predica en los servicios de Ebenezer Antigua.</p></div></a>
       <div class="pcard rv"><div class="ph a"><img src="fotos/sagche-hd.jpg" alt="Alan Sagche" style="object-position:49% 28%" loading="lazy"></div><div class="tx"><h3>Alan Sagche</h3><div class="rol">Discipulados en casas</div><p>Información de los discipulados de los jueves por zonas.</p></div></div>
     </div>
 <script>(function(){var r=document.getElementById('pastorsRow');if(!r)return;var k=[].slice.call(r.children),last=['Gustavo Hernández','Jorge Jaenz','Analí García'].map(function(n){return k.filter(function(c){return c.textContent.indexOf(n)>-1})[0]}).filter(Boolean),head=['Hugo García','Débora de García','Rodrigo Ordóñez'].map(function(n){return k.filter(function(c){return c.querySelector('h3')&&c.querySelector('h3').textContent.indexOf(n)>-1})[0]}).filter(Boolean),rest=k.filter(function(c){return last.indexOf(c)<0&&head.indexOf(c)<0});for(var i=rest.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=rest[i];rest[i]=rest[j];rest[j]=t}head.concat(rest,last).forEach(function(c){r.appendChild(c)})})();</script>
@@ -569,7 +572,7 @@ footer .big em{color:var(--gold2)}
   <div class="wrap">
     <div class="dleft"><div class="rv"><div class="eyebrow">Jueves · 7:00 a 8:00 pm</div>
     <h2 class="title">Discipulados <em>en tu zona</em></h2>
-    <p class="lead">Discipulados en casas, jueves de 7:00 a 8:00 pm. <span class="nl" style="display:block">Información con <a href="https://www.whatsapp.com/channel/0029VaFmyKf1dAwAdlDJ7e1H" target="_blank" rel="noopener" style="text-decoration:underline;text-underline-offset:3px;font-weight:700;color:var(--wine2)">Alan Sagche</a>.</span></p></div>
+    <p class="lead">Discipulados en casas, jueves de 7:00 a 8:00 pm. <span class="nl" style="display:block"><a href="https://www.whatsapp.com/channel/0029VaFmyKf1dAwAdlDJ7e1H" target="_blank" rel="noopener" style="text-decoration:underline;text-underline-offset:3px;font-weight:700;color:var(--wine2)">Información con Alan Sagche</a>.</span></p></div>
     <div class="when rv"><span class="tag">En casas</span><div class="day">Jueves</div><div class="hr">7:00 – 8:00 <small>pm</small></div><p>Seis zonas. Elige la más cercana a ti.</p></div></div>
     <div class="zones">
       <div class="zone rv"><i>1</i><div><b>Pastores</b><span>Fam. Buchan</span></div></div>
@@ -583,7 +586,7 @@ footer .big em{color:var(--gold2)}
 </section>
 
 <!-- EVENTOS -->
-<section id="eventos" class="ev pad">
+<section id="eventos" class="ev pad"><canvas id="fw" aria-hidden="true"></canvas>
   <div class="wrap">
     <div class="rv"><div class="eyebrow">Próximamente</div><h2 class="title">Eventos que <em>marcan</em> el año</h2></div>
     <div class="evl">
@@ -788,5 +791,13 @@ var a=document.getElementById('hPrev'),b=document.getElementById('hNext');if(a)a
 })();
 </script>
 
-</body>
+<script>(function(){var s=document.getElementById('eventos'),c=document.getElementById('fw');if(!s||!c||matchMedia('(prefers-reduced-motion:reduce)').matches)return;var x=c.getContext('2d'),W=0,H=0,P=[],R=[],run=false,t0=0,nx=0,dpr=Math.min(devicePixelRatio||1,2);
+function size(){W=s.clientWidth;H=s.clientHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+var cols=['255,226,150','226,182,89','255,240,200','240,200,110'];
+function burst(){var cx=W*(.08+Math.random()*.84),cy=H*(.12+Math.random()*.5),col=cols[Math.floor(Math.random()*cols.length)],n=W<700?26:42,sp=(W<700?1.1:1.6)+Math.random()*.9;for(var i=0;i<n;i++){var a=Math.PI*2*i/n+Math.random()*.08,v=sp*(.55+Math.random()*.6);P.push({x:cx,y:cy,vx:Math.cos(a)*v,vy:Math.sin(a)*v,l:0,m:70+Math.random()*34,c:col})}R.push({x:cx,y:cy,l:0,m:26,c:col})}
+function tick(t){if(!run)return;if(t>nx){burst();nx=t+2600+Math.random()*2800}x.clearRect(0,0,W,H);
+for(var i=R.length-1;i>=0;i--){var r=R[i];r.l++;var k=r.l/r.m;if(k>=1){R.splice(i,1);continue}x.beginPath();x.arc(r.x,r.y,4+k*30,0,7);x.strokeStyle='rgba('+r.c+','+(.35*(1-k))+')';x.lineWidth=1;x.stroke()}
+for(var j=P.length-1;j>=0;j--){var p=P[j];p.l++;if(p.l>p.m){P.splice(j,1);continue}p.vx*=.972;p.vy=p.vy*.972+.012;p.x+=p.vx;p.y+=p.vy;var f=1-p.l/p.m,g=x.createRadialGradient(p.x,p.y,0,p.x,p.y,5);g.addColorStop(0,'rgba('+p.c+','+(.85*f)+')');g.addColorStop(1,'rgba('+p.c+',0)');x.fillStyle=g;x.fillRect(p.x-5,p.y-5,10,10)}
+requestAnimationFrame(tick)}
+size();addEventListener('resize',size);new IntersectionObserver(function(e){var v=e[0].isIntersecting;if(v&&!run){run=true;nx=0;requestAnimationFrame(tick)}else if(!v){run=false}},{threshold:.15}).observe(s)})();</script></body>
 </html>

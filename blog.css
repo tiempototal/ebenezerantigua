@@ -72,3 +72,15 @@ article ul.vs li{padding-left:2.6rem}article ul.vs b{color:var(--wine2);font-wei
 .toc li{padding:.1rem 0;background:none;border:0;border-radius:0}.toc li::before{display:none}
 .hero .w.wide{max-width:1080px}
 .byp{margin:1rem 0 2rem}.byp h3{font-family:var(--serif);font-size:1.4rem;color:var(--wine2);margin:1.4rem 0 .4rem}.byp ul{list-style:none;padding:0;display:grid;gap:.4rem}.byp li{padding:.55rem 1rem;background:var(--paper);border:1px solid rgba(74,47,29,.1);border-radius:12px}.byp li::before{display:none}.byp a{font-weight:600;color:var(--brown);text-decoration:none}.byp small{color:var(--brown2);margin-left:.4rem}
+
+/* v2 */
+.hero .hw.yt{grid-template-columns:1fr 380px;gap:2.4rem}
+.hf.yt{position:relative;display:block;text-decoration:none}.hf.yt img{aspect-ratio:16/9;object-fit:cover;background:#1b120b}
+.hf .play{position:absolute;inset:0;margin:auto;width:60px;height:60px;border-radius:50%;background:rgba(59,18,32,.85);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.3rem;padding-left:4px;border:2px solid var(--gold2);transition:transform .3s}.hf.yt:hover .play{transform:scale(1.1)}
+.pl{color:inherit;text-decoration:underline;text-underline-offset:3px}.pl2{font-weight:700;color:var(--wine2)}
+.hero.sm{padding:2rem 0 1.7rem}.hero.sm h1{font-size:clamp(2rem,4.4vw,2.7rem)}.hero.sm .eyebrow{margin-bottom:.2rem}.hero.sm .meta{margin-top:.6rem}.hero.sm .bc{margin-bottom:.6rem}
+.lead.sm{font-size:1rem;line-height:1.55;padding:.5rem 1rem;max-width:700px;margin-bottom:1.4rem}
+.byp h3 a{color:inherit;text-decoration:none}.byp h3 a:hover{text-decoration:underline}
+.pc{padding-top:1.3rem}.pc b{font-size:1.6rem}
+.cta li{background:rgba(246,239,227,.1);border:1px solid rgba(226,182,89,.35);color:#fff7e8;padding:.6rem 1rem;border-radius:12px;font-size:1rem}.cta li::before{display:none}.cta li b{color:var(--gold2)}.cta p{color:#f6efe3}
+@media(max-width:800px){.hero .hw.yt{grid-template-columns:1fr;gap:1.3rem}.hf.yt{max-width:100%}.hero.sm{padding:1.5rem 0 1.3rem}.lead.sm{font-size:.95rem}}

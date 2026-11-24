@@ -92,5 +92,45 @@
  ],
  "closing": [
   "El pastor cierra invitando a la congregación a transformar su perspectiva, enfocándose en la bondad de Dios en lugar de la queja, con un tiempo de oración de gratitud y un llamado a la reconciliación."
+ ],
+ "patron": "C",
+ "momentos": [
+  {
+   "t": 707,
+   "e": 755,
+   "titulo": "Levanta al muchacho",
+   "txt": "Fíjese que lo que hizo el ángel, antes de abrirle la perspectiva a ella, fue decirle: «Levanta al muchacho». Porque lo único que ella tenía era el muchacho. No tenía nada más. Cuando ella levanta al muchacho es como si le hubiera dicho: «Esto es lo que tienes. Esto consagráselo al Señor». Es lo único que tienes, y se lo consagra al Señor. Entonces el ángel le da una promesa y le dice: «Haré de él una gran nación». Ya tenía ella una razón para estar agradecida: que en su hijo había una promesa de parte de Dios."
+  },
+  {
+   "t": 3407,
+   "e": 3455,
+   "titulo": "Tu vida es un milagro",
+   "txt": "«Eso me guardó el Señor». ¿No le ha pasado a usted eso? A veces recuerda y dice: «¿Y por qué no me pasó tal cosa? ¿Dónde estaba yo?». Me guardó el Señor. Dígale al hermano que está a la par suya: «Tú eres un milagro, hermano. Tú eres un milagro de parte del Señor. Tu vida es un milagro». Mire, si usted no se convence de eso, lo van a convencer de un montón de cosas que no son ciertas. Por eso andan algunos hermanos diciendo: «Hermano, yo soy una basura», pero no se acuerdan de lo bueno que Dios ha hecho con ellos."
+  },
+  {
+   "t": 4108,
+   "e": 4132,
+   "titulo": "Agradecimiento en el corazón",
+   "txt": "Yo dije: «De veras que es cierto: nosotros escupimos una pepita de jocote y ya tenemos un jocotal ahí en el jardín. Nuestra tierra es bendecida. Dios es bueno con nosotros». Yo tengo agradecimiento en mi corazón. Yo le ruego a Dios, y usted también, que no se enfoque en lo malo."
+  }
+ ],
+ "citas": [
+  {
+   "t": 1229,
+   "txt": "La Biblia dice que es mejor cosa dar que recibir."
+  },
+  {
+   "t": 2338,
+   "txt": "El agradecido como que halló más gracia."
+  },
+  {
+   "t": 4130,
+   "txt": "Cosas malas siempre van a haber, pero razones para estar agradecidos hay más."
+  }
+ ],
+ "reflexion": [
+  "Si hoy el Señor te dijera «levanta al muchacho», ¿cuál es lo único que tienes y puedes consagrarle con gratitud?",
+  "¿De qué situación te guardó el Señor sin que te dieras cuenta, y a quién podrías decirle hoy que su vida es un milagro?",
+  "Cosas malas siempre habrá, pero razones para agradecer hay más: ¿cuáles tres razones podrías agradecer esta noche?"
  ]
 }

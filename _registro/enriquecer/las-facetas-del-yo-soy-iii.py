@@ -1,0 +1,12 @@
+import sys; sys.path.insert(0, '_tools'); from spec import enrich
+enrich('las-facetas-del-yo-soy-iii', 'A',
+ [dict(t=2572, e=2610, titulo='Yo soy la puerta', txt='Y él, cuando se fue, dijo: «Yo soy la puerta.» Mire qué lindo. Yo soy la puerta: la puerta de salvación, la puerta de bendición, la puerta de cambio del Antiguo Testamento al Nuevo Testamento, de pobreza a riqueza, de 613 preceptos que nadie cumplió, solo el Señor Jesucristo, que entró a la ley espiritual. Mire qué tremendo el Señor. Y ahí estamos nosotros en la ley espiritual, cuando hay gente que no quiere cumplirla.'),
+  dict(t=2875, e=2932, titulo='Entrar al corazón de Dios', txt='Por eso la gente se va a quedar en salvo, porque cuando él toca la puerta, entra, perdona tus pecados, te apuntan en el libro de la vida y, hermano, tú eres salvo. Pero si tú vienes y te das cuenta de que a través del conocimiento, a través de la revelación y el entendimiento, tú entras al corazón de él, entras dentro de él. Ahora, ¿por qué tenemos que entrar dentro de él? Porque primero él entra en nosotros. La segunda faceta: nosotros entramos en el corazón de él y ya dentro, él es el que nos entra, a través de lo que sabe de su Padre, adentro del corazón […]'),
+  dict(t=3457, e=3510, titulo='Tu aposento y la puerta cerrada', txt='«Más tú, cuando ores, entra en tu aposento», donde hay una cama, donde hay una silla, donde hay una mesa, donde hay un candelabro, donde hay luz, «y cerrando la puerta». Eso quiere decir: voy a tener comunión con Cristo. «Ora a tu Padre en lo secreto, y tu Padre que ve en lo secreto te lo devolverá en lo público.» Por eso, cuando usted ora por alguien que sane, él te va a devolver esa sanidad en público.')],
+ [dict(t=2940, txt='Siempre voy a ser salvo, pero ahorita estoy entendiendo que hay algo más: cuando yo entro a la puerta, que es él, hay pastos, hay revelación, hay entendimiento.'),
+  dict(t=3705, txt='Hay que saber a qué puerta estás entrando.'),
+  dict(t=3911, txt='Nosotros, cuando estamos en la puerta, hay sanidades. Cuando estamos en la puerta, hermano, se van las enfermedades.')],
+ ['Jesús dijo «Yo soy la puerta». ¿Has entrado solo para ser salvo o también para comer los pastos de revelación y entendimiento que hay del otro lado?',
+  'El predicador habla de buscar, tocar y pedir. ¿Qué estás buscando hoy en Dios con más hambre que antes?',
+  'Cuando oras en lo secreto con la puerta cerrada, ¿qué le estás pidiendo a tu Padre y qué le entregas?'],
+ inicio=2429)

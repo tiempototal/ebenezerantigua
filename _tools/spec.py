@@ -20,8 +20,9 @@ def mk(slug, title, id, date, speaker, tag, dur, lead, items, sections, verses, 
     if speaker_slug: s['speaker_slug'] = speaker_slug
     json.dump(s, open(f'_registro/datos/{slug}.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 
-def enrich(slug, patron, momentos, citas, reflexion):
+def enrich(slug, patron, momentos, citas, reflexion, inicio=None):
     """Añade a un spec existente: momentos [{t,e,titulo,txt}] (transcripción literal), citas [{t,txt}] (2-5), reflexion [preguntas], patron 'A'|'B'|'C'."""
     p = f'_registro/datos/{slug}.json'; s = json.load(open(p, encoding='utf-8'))
     s.update(patron=patron, momentos=momentos, citas=citas, reflexion=reflexion)
+    if inicio: s['inicio'] = int(inicio)  # segundo donde empieza la prédica (salta alabanza/oración); el embed usa &start=
     json.dump(s, open(p, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)

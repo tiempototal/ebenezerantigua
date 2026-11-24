@@ -81,5 +81,46 @@
  ],
  "closing": [
   "El mensaje concluye con una invitación a abrir el corazón y el entendimiento para que Dios ilumine la vida de cada uno."
- ]
+ ],
+ "patron": "A",
+ "momentos": [
+  {
+   "t": 1009,
+   "e": 1062,
+   "titulo": "La vara y el panal de miel",
+   "txt": "En Primera de Samuel 14:27 dice: «Pero Jonatán no había oído cuando su padre puso al pueblo bajo juramento, por lo cual extendió la punta de la vara.» Tenía autoridad. La punta de la vara es que tenía autoridad. Hoy el Señor te viene a decir: «Toma autoridad. Toma autoridad de tu casa. Toma autoridad de tu vida para que el enemigo no te esté fregando. Toma autoridad.» Y entonces dice que extendió la punta de la vara y, al tomar autoridad, la vara que llevaba en su mano —cinco ministerios— la metió en un panal de miel: revelación. Y se llevó la mano […]"
+  },
+  {
+   "t": 2966,
+   "e": 3012,
+   "titulo": "Ana y la revelación",
+   "txt": "Cuando usted se da cuenta de su error, empieza a crecer espiritualmente y se empieza a llenar del Espíritu. Cuando usted solo está quejándose y señalando —que aquí en la alabanza, que aquí en esto, que aquí en los servidores—, ay, ay, ay. Ana, necesitas que te caiga la gracia de Dios. Entonces viene Ana y le dice al Señor: «Bueno, ya entendí.» Al fin le cayó la revelación después de diez años […] al templo a adorar una vez al año. «Si tú me das un hijo, te lo regreso», para que mires que ya me cayó la revelación. Ya entendí."
+  },
+  {
+   "t": 4192,
+   "e": 4244,
+   "titulo": "Dios te abra los ojos",
+   "txt": "Yo quiero esta noche que en la misericordia de Dios, Dios te abra los ojos a ti y a mí para que sepamos en dónde estamos parados, a qué nos llamaron. Y fue hacer algo grande. No importa tu edad, no importa si eres chiquito, grande, Dios tiene un propósito en tu vida por el cual hay gente allá afuera que no lo conoce. Y a veces tiene mejor actitud que nosotros. Hay gente que tiene una fe humana que no viene de Dios, que viene del alma, y logra más cosas que alguien que sabe que con la fe de Dios puede mover montañas."
+  }
+ ],
+ "citas": [
+  {
+   "t": 1192,
+   "txt": "Si no agarra autoridad, va a seguir viviendo como siempre: o triste, o enojado, o amargado, o menospreciado."
+  },
+  {
+   "t": 1991,
+   "txt": "¿Para qué sirve el aguijón? Para abofetearte, para que des la talla y no te creas lo que no eres."
+  },
+  {
+   "t": 3575,
+   "txt": "Si va avanzando, entrémosle, porque lo que lo va a hacer brincar a usted es la revelación de Dios, para que sepa qué está haciendo aquí y no esté perdiendo su tiempo."
+  }
+ ],
+ "reflexion": [
+  "Jonatán extendió la vara y tomó autoridad. ¿En qué área de tu casa o de tu vida necesitas tomar autoridad en lugar de seguir viviendo «como siempre»?",
+  "Ana pasó de la queja a la entrega. ¿Hay algo que estés señalando en otros y que Dios quiere tratar primero en ti?",
+  "¿Qué «aguijón» o debilidad te mantiene humilde, y cómo podrías dejar que el poder de Cristo repose en ella?"
+ ],
+ "inicio": 1009
 }

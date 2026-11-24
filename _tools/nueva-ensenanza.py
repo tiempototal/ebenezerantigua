@@ -283,7 +283,7 @@ def build_page(s):
     cap = (f'Video de la enseñanza, {sl}. ' if not ci else 'Video del mensaje. ')
     hero = (f'<main><section class="hero"><div class="w wide"><div class="hw yt"><div class="ht"><nav class="bc" aria-label="Migas de pan">{bc}</nav>'
             f'<div class="eyebrow">{esc(s["tag"])} · {ci["one"] if ci else "Enseñanza"}</div><h1>{esc(s["title"])}</h1><div class="meta">{meta}</div></div>'
-            f'<figure class="hf yt vid" id="video"><iframe src="https://www.youtube-nocookie.com/embed/{s["id"]}?enablejsapi=1&origin=https://ebenezerantigua.com" title="{esc(full)}" allow="accelerometer; encrypted-media; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+            f'<figure class="hf yt vid" id="video"><iframe src="https://www.youtube-nocookie.com/embed/{s["id"]}?enablejsapi=1&origin=https://ebenezerantigua.com{("&start=%d" % int(s["inicio"])) if s.get("inicio") else ""}" title="{esc(full)}" allow="accelerometer; encrypted-media; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
             f'<figcaption>{cap}<a href="https://www.youtube.com/watch?v={s["id"]}" target="_blank" rel="noopener">Ver en YouTube</a></figcaption></figure></div></div></section>'+SEEK_JS+'\n')
     tocs = ('<div class="w art two"><aside class="tocs" aria-label="Índice de la enseñanza"><nav class="toc" aria-label="Contenido"><b>En esta página</b><ol>'
             + ''.join(f'<li><a href="#{a}">{esc(b)}</a></li>' for a, b in toc)

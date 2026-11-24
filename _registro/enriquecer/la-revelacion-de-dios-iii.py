@@ -1,0 +1,12 @@
+import sys; sys.path.insert(0, '_tools'); from spec import enrich
+enrich('la-revelacion-de-dios-iii', 'C',
+ [dict(t=3157, e=3203, titulo='De maldecido a bendecido', txt='Pero el Señor Jesucristo cambia lo que es destruido, lo que es maldecido, por bendición, porque de ahí salió Rut, la iglesia. Entonces, no importa que te hayan maldecido. Hoy el Señor te bendice. Hoy el Señor te levanta para que te vayas con todos los honores. Por favor, pon atención. […] Dile al Señor: «Yo te creo.» Y te vas a ir. […] Lo que el Señor quiere es tu corazón, tu vida.'),
+  dict(t=3261, e=3306, titulo='Lo que le entregas a Dios', txt='Entonces dice: «Acordaos de la mujer de Lot», que le faltó santidad. «Todo el que procure preservar su vida», entonces tenga cuidado, hermano, «la perderá.» Mire qué terrible. «Y todo el que la pierda la conservará para vida eterna.» Quiere decir que lo que tú le entregues a Dios, y el sacrificio de morir a eso, te va a dar vida. Lo que retengas, eso te va a hundir o te va a elevar. Acuérdate lo que te digo.'),
+  dict(t=4033, e=4075, titulo='La creación será liberada', txt='«[…] la creación misma también será liberada.» Es lo que le digo: nosotros tenemos que ir a liberar con el Señor a esta creación. Por eso esto no ha terminado. ¿Usted cree que en la eternidad usted va a estar rascando la panza? No, lo van a poner a chambear y usted va a estar feliz, porque usted va a poder ir a orar por otra creación […] y decirle: «Mirá qué ojo te duele», para que usted ore por él. No, ese va a estar sano, para ir a decirle que Cristo es Dios, que Cristo es el Mesías.')],
+ [dict(t=3104, txt='Acordaos de la mujer de Lot. ¿Qué le faltó a la mujer de Lot? Santidad.'),
+  dict(t=3991, txt='A ti y a mí, a los que le arranquen virtud a Dios, está el brazo extendido de Dios para usted y para su familia: un brazo de revelación para que usted sepa quién es.'),
+  dict(t=4254, txt='Usted sabe que usted y yo somos lumínicos, que tenemos que regresar a como estaba Adán en el principio, que era lumínico.')],
+ ['«Lo que retengas, eso te va a hundir o te va a elevar.» ¿Qué estás reteniendo que Dios te pide entregar?',
+  'Si el Señor cambia lo maldecido por bendición, ¿qué historia o herida de tu familia le quieres presentar hoy?',
+  'El predicador dice que la eternidad no será «rascar la panza» sino servir. ¿Cómo podrías empezar a servir hoy a Dios y a otros con alegría?'],
+ inicio=2939)

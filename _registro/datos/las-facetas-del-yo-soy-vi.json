@@ -76,5 +76,46 @@
  ],
  "closing": [
   "El servicio concluye con un tiempo de oración intercesora por las necesidades de los demás."
- ]
+ ],
+ "patron": "C",
+ "momentos": [
+  {
+   "t": 1785,
+   "e": 1835,
+   "titulo": "Yo soy el pan vivo",
+   "txt": "Hoy nos toca ver: «Yo soy el pan vivo, mi carne es verdadera comida.» Él dijo: «Yo soy el pan.» Pero él dice que yo soy el pan vivo. Era un pan de muerte, pero para nosotros era un pan vivo, porque al comer su carne nosotros íbamos a ser salvos. Entonces miramos cómo el Señor nos dice: «Esta es la verdadera comida. Este es el pan vivo. Yo soy ese pan, y todo el que me coma ya se rayó, hermano.»"
+  },
+  {
+   "t": 2373,
+   "e": 2431,
+   "titulo": "Entra en tu aposento",
+   "txt": "«Cuando ores, entra en tu aposento.» Si usted mira, aquí hay algo bien importante. Para poder orar tiene que tener […] un cuarto específico en el cual usted va a orar, donde va a tener una cama, donde va a tener un candelabro, va a tener una mesa, va a tener una silla. Todos estos tienen un significado. ¿Qué es lo que quiere decir? Que el Señor le está dando armas en el aposento alto para que cuando usted ore se le cumpla lo que está pidiendo, […] que no sea para un deleite, sino que sea para bendición de su familia."
+  },
+  {
+   "t": 3456,
+   "e": 3516,
+   "titulo": "Entrar al lugar santísimo",
+   "txt": "Dice Hebreos 10:19: «Entonces, hermanos, puesto que tenemos confianza para entrar al lugar santísimo por la sangre de Jesús […]». Ya se dio cuenta, pero ahí usted tiene la facilidad […]. Hay gente que solo termina de alabar y se sienta y a mascar chicle. […] Enamorarse de Dios, hablarle, que salgan palabras de lo profundo de su corazón, que usted sienta que lo envuelve, que usted lo abraza, que usted lo ama, y cuando siente, ahí va para el lugar santísimo, hermano. Entonces, hay gente que no conoce el lugar santísimo, y lo peor, que dice que está el arca del pacto, y el arca del pacto nos habla de su presencia."
+  }
+ ],
+ "citas": [
+  {
+   "t": 2183,
+   "txt": "Cuando yo vengo y le doy mi vida a Dios, me está dando vida eterna."
+  },
+  {
+   "t": 2557,
+   "txt": "Cuando oras hay una conexión, hay un cortocircuito para que haya una reacción, para que haya un fuego, para que haya un milagro […] poder de Dios."
+  },
+  {
+   "t": 3715,
+   "txt": "Desde que aceptamos al Señor fuimos sellados por el Espíritu Santo."
+  }
+ ],
+ "reflexion": [
+  "Si Jesús es el pan vivo que da vida, ¿de qué te alimentas cada día para sostener tu vida espiritual?",
+  "El predicador habla de un lugar concreto para orar, con su cama, su mesa y su silla. ¿Dónde y cuándo podrías apartar tu propio «aposento» esta semana?",
+  "Cuando terminas de alabar, ¿te quedas en la puerta o entras al lugar santísimo? ¿Qué cambiaría si hablaras con Dios desde lo profundo del corazón?"
+ ],
+ "inicio": 1691
 }

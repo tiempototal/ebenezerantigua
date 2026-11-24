@@ -1,28 +1,128 @@
 {
-"slug":"escalando-los-muros","title":"Escalando los muros","id":"6TWqFIKktR8","date":"2026-10-18","speaker":"Pastor Gustavo Hernández","speaker_slug":"gustavo-hernandez",
-"tag":"Superación","card_tag":"Muros","dur":5158,
-"desc":"Resumen de la enseñanza «Escalando los muros» del Pastor Gustavo Hernández: cómo superar obstáculos espirituales con la ayuda de Dios, basado en el Salmo 18. Ebenezer Antigua.",
-"keywords":"escalando los muros, Salmo 18, muros ancestrales, muro de Babilonia, pecado oculto, Gustavo Hernández",
-"lead":"El Pastor Gustavo Hernández ministra sobre cómo superar obstáculos espirituales y personales, con el mensaje central de que con la ayuda de Dios los creyentes pueden escalar cualquier muro que detenga su crecimiento.",
-"items":[
-"<b>La luz de Dios contra las tinieblas:</b> la clave para vencer hábitos negativos es acercarse a Dios, la luz verdadera (Salmo 18:28).",
-"<b>No es por nuestras fuerzas:</b> las victorias no se logran por capacidad propia ni por jactarse de disciplinas espirituales, sino por dependencia absoluta en Cristo.",
-"<b>Muros ancestrales:</b> herencias negativas o costumbres familiares que se deben cortar espiritualmente.",
-"<b>Muros de Babilonia:</b> la confusión causada por mezclarse con el mundo.",
-"<b>Muros de pecado oculto:</b> lo que se guarda en el corazón y nadie más conoce.",
-"<b>Llamado a avanzar:</b> Dios es quien da la fuerza para superar cualquier obstáculo."],
-"chips":["Salmo 18:28","Salmo 18:34","Génesis 49:22","1 Corintios 10:13","2 Reyes 3:26-27","Jeremías 51:44","2 Samuel 11:19"],
-"sections":[
-["La luz de Dios contra las tinieblas",["Basado en el Salmo 18:28, el pastor explica que, aunque todos podemos tener tinieblas en el corazón, la clave para vencer hábitos o costumbres negativas es acercarse a Dios, quien es la luz."]],
-["No es por nuestras fuerzas",["Enfatiza que las victorias cristianas no se logran por capacidad propia o por jactarse de disciplinas espirituales, sino por dependencia absoluta en Cristo. Con el Salmo 18:34 construye la premisa central: con Dios se escalan murallas."]],
-["Escalando los muros",["Con Génesis 49:22 identifica a José como figura de Cristo y explica que la iglesia está diseñada para trepar o pasar por encima de cualquier obstáculo que limite su avance. Con 1 Corintios 10:13 lo presenta como promesa para quienes enfrentan pruebas difíciles: Dios no permite cargas mayores a nuestra capacidad de soportarlas con su ayuda.","Identifica varios tipos de muros que los creyentes enfrentan:","<b>Muros ancestrales:</b> herencias negativas o costumbres familiares que se deben cortar espiritualmente; usa como ejemplo 2 Reyes 3:26-27.","<b>Muros de Babilonia:</b> la confusión por mezclas entre la iglesia y el mundo; con Jeremías 51:44 llama a desechar toda impureza.","<b>Muros de pecado oculto:</b> cosas que se guardan en el corazón y nadie más conoce; con el ejemplo de David y Urías (2 Samuel 11:19) señala cómo David intentó ocultar su falta, y que Dios invita a escalar ese muro mediante el arrepentimiento y la transparencia."]]],
-"verses":[
-["Salmo 18:28","Dios alumbra mis tinieblas: acercarse a Él, que es la luz."],
-["Salmo 18:34","Con mi Dios escalaré murallas: la victoria depende de Dios y no de nuestras capacidades."],
-["Génesis 49:22","José como figura de Cristo; sus renuevos treparon murallas."],
-["1 Corintios 10:13","Dios no permite una prueba mayor de la que se pueda soportar."],
-["2 Reyes 3:26-27","Usado para hablar de los muros ancestrales."],
-["Jeremías 51:44","La muralla de Babilonia caerá."],
-["2 Samuel 11:19","David y Urías: el muro del pecado oculto."]],
-"closing":["Concluye con un llamado a la congregación a confiar en la promesa de Dios de que Él es quien da la fuerza para superar cualquier obstáculo que impida el caminar."]
+ "slug": "escalando-los-muros",
+ "title": "Escalando los muros",
+ "id": "6TWqFIKktR8",
+ "date": "2026-10-18",
+ "speaker": "Pastor Gustavo Hernández",
+ "speaker_slug": "gustavo-hernandez",
+ "tag": "Superación",
+ "card_tag": "Muros",
+ "dur": 5158,
+ "desc": "Resumen de la enseñanza «Escalando los muros» del Pastor Gustavo Hernández: cómo superar obstáculos espirituales con la ayuda de Dios, basado en el Salmo 18. Ebenezer Antigua.",
+ "keywords": "escalando los muros, Salmo 18, muros ancestrales, muro de Babilonia, pecado oculto, Gustavo Hernández",
+ "lead": "El Pastor Gustavo Hernández ministra sobre cómo superar obstáculos espirituales y personales, con el mensaje central de que con la ayuda de Dios los creyentes pueden escalar cualquier muro que detenga su crecimiento.",
+ "items": [
+  "<b>La luz de Dios contra las tinieblas:</b> la clave para vencer hábitos negativos es acercarse a Dios, la luz verdadera (Salmo 18:28).",
+  "<b>No es por nuestras fuerzas:</b> las victorias no se logran por capacidad propia ni por jactarse de disciplinas espirituales, sino por dependencia absoluta en Cristo.",
+  "<b>Muros ancestrales:</b> herencias negativas o costumbres familiares que se deben cortar espiritualmente.",
+  "<b>Muros de Babilonia:</b> la confusión causada por mezclarse con el mundo.",
+  "<b>Muros de pecado oculto:</b> lo que se guarda en el corazón y nadie más conoce.",
+  "<b>Llamado a avanzar:</b> Dios es quien da la fuerza para superar cualquier obstáculo."
+ ],
+ "chips": [
+  "Salmo 18:28",
+  "Salmo 18:34",
+  "Génesis 49:22",
+  "1 Corintios 10:13",
+  "2 Reyes 3:26-27",
+  "Jeremías 51:44",
+  "2 Samuel 11:19"
+ ],
+ "sections": [
+  [
+   "La luz de Dios contra las tinieblas",
+   [
+    "Basado en el Salmo 18:28, el pastor explica que, aunque todos podemos tener tinieblas en el corazón, la clave para vencer hábitos o costumbres negativas es acercarse a Dios, quien es la luz."
+   ]
+  ],
+  [
+   "No es por nuestras fuerzas",
+   [
+    "Enfatiza que las victorias cristianas no se logran por capacidad propia o por jactarse de disciplinas espirituales, sino por dependencia absoluta en Cristo. Con el Salmo 18:34 construye la premisa central: con Dios se escalan murallas."
+   ]
+  ],
+  [
+   "Escalando los muros",
+   [
+    "Con Génesis 49:22 identifica a José como figura de Cristo y explica que la iglesia está diseñada para trepar o pasar por encima de cualquier obstáculo que limite su avance. Con 1 Corintios 10:13 lo presenta como promesa para quienes enfrentan pruebas difíciles: Dios no permite cargas mayores a nuestra capacidad de soportarlas con su ayuda.",
+    "Identifica varios tipos de muros que los creyentes enfrentan:",
+    "<b>Muros ancestrales:</b> herencias negativas o costumbres familiares que se deben cortar espiritualmente; usa como ejemplo 2 Reyes 3:26-27.",
+    "<b>Muros de Babilonia:</b> la confusión por mezclas entre la iglesia y el mundo; con Jeremías 51:44 llama a desechar toda impureza.",
+    "<b>Muros de pecado oculto:</b> cosas que se guardan en el corazón y nadie más conoce; con el ejemplo de David y Urías (2 Samuel 11:19) señala cómo David intentó ocultar su falta, y que Dios invita a escalar ese muro mediante el arrepentimiento y la transparencia."
+   ]
+  ]
+ ],
+ "verses": [
+  [
+   "Salmo 18:28",
+   "Dios alumbra mis tinieblas: acercarse a Él, que es la luz."
+  ],
+  [
+   "Salmo 18:34",
+   "Con mi Dios escalaré murallas: la victoria depende de Dios y no de nuestras capacidades."
+  ],
+  [
+   "Génesis 49:22",
+   "José como figura de Cristo; sus renuevos treparon murallas."
+  ],
+  [
+   "1 Corintios 10:13",
+   "Dios no permite una prueba mayor de la que se pueda soportar."
+  ],
+  [
+   "2 Reyes 3:26-27",
+   "Usado para hablar de los muros ancestrales."
+  ],
+  [
+   "Jeremías 51:44",
+   "La muralla de Babilonia caerá."
+  ],
+  [
+   "2 Samuel 11:19",
+   "David y Urías: el muro del pecado oculto."
+  ]
+ ],
+ "closing": [
+  "Concluye con un llamado a la congregación a confiar en la promesa de Dios de que Él es quien da la fuerza para superar cualquier obstáculo que impida el caminar."
+ ],
+ "patron": "C",
+ "momentos": [
+  {
+   "t": 1397,
+   "e": 1450,
+   "titulo": "Un muro que te detiene",
+   "txt": "Un muro es algo que te pone un límite. Yo quiero verlo en este momento como aquello que puede traer oposición a tu vida. Habrá algo que tú vas campeón, hermano, que tú vas adelante y de repente topas con un muro que no te deja seguir adelante. Pues esta mañana, en el nombre de Jesús, Dios te va a hacer que lo puedas escalar. Vamos a romper, hermano amado, con todo aquello que detiene nuestro caminar, sea lo que sea."
+  },
+  {
+   "t": 2905,
+   "e": 2945,
+   "titulo": "Muros ancestrales",
+   "txt": "Y esos son problemas ancestrales que podemos traer en nuestra vida, y nosotros tenemos la capacidad de escalar ese muro y decir: «Esto aquí termina. No lo quiero ni para mi vida, ni lo quiero para los míos»."
+  },
+  {
+   "t": 3936,
+   "e": 3992,
+   "titulo": "El pecado oculto",
+   "txt": "La gente, cuando piensa en pecado oculto, solo piensa en […]. Pero, si no estoy mal, la murmuración también es pecado. Y es de los pecados más ocultos que hay, a veces, porque normalmente el murmurador no dice las cosas en público; las dice así. Es un pecado oculto. Pero yo no te estoy hablando de algo específico. Eso cada quien tiene que examinar su corazón."
+  }
+ ],
+ "citas": [
+  {
+   "t": 435,
+   "txt": "Todos vamos en esa luz que debe ir progresiva en nuestro corazón. […] En mi corazón pueden haber todavía tinieblas."
+  },
+  {
+   "t": 2755,
+   "txt": "Hay gente que no puede dejar ciertos hábitos porque tal vez en su corazón ancestralmente se lo heredaron."
+  },
+  {
+   "t": 5005,
+   "txt": "Si alguien quiere recibir al Señor en su corazón o alguien quiere reconciliar, este es el momento para poder entregarle su vida al Señor."
+  }
+ ],
+ "reflexion": [
+  "¿Qué «muro» te ha detenido últimamente, y qué parte de él depende de ti derribar con la ayuda de Dios?",
+  "¿Hay un hábito o una costumbre que viene de tu familia y que hoy quieres decir: «Esto aquí termina»?",
+  "Sin señalar a nadie, ¿qué pecado «escondido» te pediría Dios que examines esta semana en tu corazón?"
+ ]
 }

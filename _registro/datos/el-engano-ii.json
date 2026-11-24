@@ -1,26 +1,113 @@
 {
-"slug":"el-engano-ii","title":"El Engaño II","id":"5R1ixysN2Vw","date":"2026-10-27","speaker":"Profeta Hugo García","speaker_slug":"hugo-garcia",
-"tag":"El Engaño","card_tag":"El Engaño",
-"dur":4612,
-"desc":"Resumen de la enseñanza «El Engaño II» del Profeta Hugo García: el engaño del pecado, el corazón sensible a la Palabra y la renovación de la mente. Ebenezer Antigua.",
-"keywords":"engaño del pecado, Hebreos 3:13, parábola del sembrador, renovación de la mente, Hugo García",
-"lead":"El Profeta Hugo García enseña sobre el engaño del pecado y la importancia de mantener un corazón sensible ante la Palabra de Dios.",
-"items":[
-"<b>El peligro del endurecimiento:</b> cuidarse de que el corazón no se endurezca por el engaño del pecado, con exhortación mutua diaria (Hebreos 3:13).",
-"<b>La persona endurecida:</b> orgullosa, insensible o sin temor a Dios; el engaño puede llevar a creer mentiras propias o ajenas.",
-"<b>Ser hacedores de la Palabra:</b> las preocupaciones del mundo y el engaño de las riquezas ahogan la fe (Mateo 13:22).",
-"<b>Renovación de la mente:</b> despojarse del viejo hombre y ser renovados en el espíritu de la mente (Efesios 4:17-20).",
-"<b>Oración de liberación</b> frente al engaño, y por la bendición de las familias y los trabajos."],
-"chips":["Hebreos 3:13","Mateo 13:22","Efesios 4:17-20"],
-"sections":[
-["El peligro del endurecimiento",["Basado en Hebreos 3:13, el predicador exhorta a la congregación a cuidarse de que el corazón no se endurezca por el engaño del pecado, y subraya la importancia de la exhortación mutua cada día."]],
-["La inestabilidad y el engaño",["Explora qué significa una persona endurecida: orgullosa, insensible o sin temor a Dios, y cómo el engaño puede llevar a las personas a creer mentiras propias o ajenas. Comparte anécdotas personales sobre errores de su juventud y cómo el Señor corrigió su vida."]],
-["La importancia de ser hacedores de la Palabra",["Con la parábola del sembrador (Mateo 13:22) señala cómo las preocupaciones del mundo y el engaño de las riquezas ahogan la Palabra e impiden dar fruto. Llama a la audiencia a ser tierra fértil que produce fruto al treinta, sesenta y cien por uno."]],
-["Renovación de la mente",["Con Efesios 4:17-20 destaca la necesidad de despojarse del viejo hombre, que se corrompe por deseos engañosos, y ser renovado en el espíritu de la mente mediante la verdad que está en Jesús."]]],
-"verses":[
-["Hebreos 3:13","Exhortarse unos a otros cada día para que nadie sea endurecido por el engaño del pecado."],
-["Mateo 13:22","La semilla entre espinos: las preocupaciones del mundo y el engaño de las riquezas ahogan la Palabra."],
-["Efesios 4:17","No andar como los gentiles, en la vanidad de su mente."],
-["Efesios 4:20","Los creyentes no han aprendido a Cristo de esa manera; la verdad que está en Jesús."]],
-"closing":["El servicio concluye con un momento de ministración donde el profeta ora por la libertad de la congregación frente al engaño y por la bendición de sus familias y trabajos."]
+ "slug": "el-engano-ii",
+ "title": "El Engaño II",
+ "id": "5R1ixysN2Vw",
+ "date": "2026-10-27",
+ "speaker": "Profeta Hugo García",
+ "speaker_slug": "hugo-garcia",
+ "tag": "El Engaño",
+ "card_tag": "El Engaño",
+ "dur": 4612,
+ "desc": "Resumen de la enseñanza «El Engaño II» del Profeta Hugo García: el engaño del pecado, el corazón sensible a la Palabra y la renovación de la mente. Ebenezer Antigua.",
+ "keywords": "engaño del pecado, Hebreos 3:13, parábola del sembrador, renovación de la mente, Hugo García",
+ "lead": "El Profeta Hugo García enseña sobre el engaño del pecado y la importancia de mantener un corazón sensible ante la Palabra de Dios.",
+ "items": [
+  "<b>El peligro del endurecimiento:</b> cuidarse de que el corazón no se endurezca por el engaño del pecado, con exhortación mutua diaria (Hebreos 3:13).",
+  "<b>La persona endurecida:</b> orgullosa, insensible o sin temor a Dios; el engaño puede llevar a creer mentiras propias o ajenas.",
+  "<b>Ser hacedores de la Palabra:</b> las preocupaciones del mundo y el engaño de las riquezas ahogan la fe (Mateo 13:22).",
+  "<b>Renovación de la mente:</b> despojarse del viejo hombre y ser renovados en el espíritu de la mente (Efesios 4:17-20).",
+  "<b>Oración de liberación</b> frente al engaño, y por la bendición de las familias y los trabajos."
+ ],
+ "chips": [
+  "Hebreos 3:13",
+  "Mateo 13:22",
+  "Efesios 4:17-20"
+ ],
+ "sections": [
+  [
+   "El peligro del endurecimiento",
+   [
+    "Basado en Hebreos 3:13, el predicador exhorta a la congregación a cuidarse de que el corazón no se endurezca por el engaño del pecado, y subraya la importancia de la exhortación mutua cada día."
+   ]
+  ],
+  [
+   "La inestabilidad y el engaño",
+   [
+    "Explora qué significa una persona endurecida: orgullosa, insensible o sin temor a Dios, y cómo el engaño puede llevar a las personas a creer mentiras propias o ajenas. Comparte anécdotas personales sobre errores de su juventud y cómo el Señor corrigió su vida."
+   ]
+  ],
+  [
+   "La importancia de ser hacedores de la Palabra",
+   [
+    "Con la parábola del sembrador (Mateo 13:22) señala cómo las preocupaciones del mundo y el engaño de las riquezas ahogan la Palabra e impiden dar fruto. Llama a la audiencia a ser tierra fértil que produce fruto al treinta, sesenta y cien por uno."
+   ]
+  ],
+  [
+   "Renovación de la mente",
+   [
+    "Con Efesios 4:17-20 destaca la necesidad de despojarse del viejo hombre, que se corrompe por deseos engañosos, y ser renovado en el espíritu de la mente mediante la verdad que está en Jesús."
+   ]
+  ]
+ ],
+ "verses": [
+  [
+   "Hebreos 3:13",
+   "Exhortarse unos a otros cada día para que nadie sea endurecido por el engaño del pecado."
+  ],
+  [
+   "Mateo 13:22",
+   "La semilla entre espinos: las preocupaciones del mundo y el engaño de las riquezas ahogan la Palabra."
+  ],
+  [
+   "Efesios 4:17",
+   "No andar como los gentiles, en la vanidad de su mente."
+  ],
+  [
+   "Efesios 4:20",
+   "Los creyentes no han aprendido a Cristo de esa manera; la verdad que está en Jesús."
+  ]
+ ],
+ "closing": [
+  "El servicio concluye con un momento de ministración donde el profeta ora por la libertad de la congregación frente al engaño y por la bendición de sus familias y trabajos."
+ ],
+ "patron": "B",
+ "momentos": [
+  {
+   "t": 1289,
+   "e": 1345,
+   "titulo": "La persona endurecida",
+   "txt": "«No sea que alguno de vosotros sea endurecido». ¿Cómo es una persona endurecida? Sin temor a Dios, dice el hermano. […] Una persona que no es sensible, no tiene misericordia con los demás, y él quiere que lo traten bien, pero él trata mal a los demás."
+  },
+  {
+   "t": 3600,
+   "e": 3650,
+   "titulo": "Creerle a Dios",
+   "txt": "«No sea que en alguno de vosotros haya un corazón malo de incredulidad». ¿Cómo puede empezar un corazón malo? No creyendo, hermano. Si usted le cree a Dios, le van a empezar a salir bien las cosas. […] A un corazón incrédulo le va a empezar a entrar la maldad para apartarse del Dios vivo. Quiere decir que aquí la base para que nosotros podamos seguir adelante es creerle a Dios. ¿Cuántos le creen a Dios?"
+  },
+  {
+   "t": 4146,
+   "e": 4205,
+   "titulo": "Despojarse del hombre viejo",
+   "txt": "«En cuanto a vuestra anterior manera de vivir, os despojéis del viejo hombre». El viejo hombre nos engaña, hermano, «que se corrompe según los deseos engañosos, y que seáis renovados en el espíritu de vuestra mente». Cuando usted es renovado en el espíritu de la mente del Señor, el hombre viejo se va muriendo y usted lo va matando, porque el hombre nuevo se va rejuveneciendo, rejuveneciendo, hasta que usted desintegra el hombre viejo."
+  }
+ ],
+ "citas": [
+  {
+   "t": 1500,
+   "txt": "Hay gente que cree que está bien, pero bien mal, hermano, que está metida en un pecado mortal y no hay ningún problema."
+  },
+  {
+   "t": 2702,
+   "txt": "Exhorte a sus hijos para que sean mejores, para que un día que ustedes no estén se defiendan."
+  },
+  {
+   "t": 4325,
+   "txt": "Señor, he pasado por cosas terribles, pero ahora estoy entendiendo que tú tienes un plan donde solo entra tu verdad, donde todo engaño se tiene que ir de mi vida."
+  }
+ ],
+ "reflexion": [
+  "¿En qué área de tu vida notas que el corazón se está endureciendo, y qué haría falta para ablandarlo esta semana?",
+  "Si el hombre viejo nos engaña con deseos engañosos, ¿cuál es hoy el que más te engaña y cómo lo vas a renovar con la Palabra?",
+  "¿Qué significa, en lo práctico, creerle a Dios esta semana?"
+ ]
 }

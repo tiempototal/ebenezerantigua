@@ -1,31 +1,138 @@
 {
-"slug":"el-engano","title":"El Engaño","id":"o-ojJVOu8Zs","date":"2026-10-25","speaker":"Profeta Hugo García","speaker_slug":"hugo-garcia",
-"tag":"El Engaño","card_tag":"El Engaño","dur":5247,
-"desc":"Resumen de la enseñanza «El Engaño» del Profeta Hugo García: vivir en la verdad como Natanael, la raíz del engaño y la misericordia para volver a empezar. Ebenezer Antigua.",
-"keywords":"engaño, Natanael, Juan 1:43-46, Jeremías 17:9, Hebreos 3:13, Hugo García",
-"lead":"El Profeta Hugo García aborda el tema «El Engaño» y cómo afecta la vida cristiana, con Natanael como ejemplo de un verdadero israelita en quien no hay engaño.",
-"items":[
-"<b>Natanael:</b> la iglesia llamada a ser una comunidad de personas transparentes y sin falsedad (Juan 1:43-46).",
-"<b>La naturaleza del engaño:</b> es un proceso que comienza con la maldad y la iniquidad; hay que extirpar la raíz (Salmo 7:14).",
-"<b>Dios ve los caminos de todos</b> (Job 31:4); manos limpias y corazón puro (Salmo 24:4).",
-"<b>La historia de Jacob:</b> el encuentro con Dios transforma a un engañador en un hombre bendecido.",
-"<b>El corazón es engañoso</b> (Jeremías 17:9): necesitamos que el Espíritu Santo nos guíe a toda verdad.",
-"<b>Honestidad en la vida diaria,</b> incluyendo la tecnología y las relaciones (Hebreos 3:12-13).",
-"<b>Misericordia y nuevos comienzos:</b> Pablo la recibió (1 Timoteo 1:13) y cada creyente puede ser restaurado."],
-"chips":["Juan 1:43-46","Job 31:4","Salmo 7:14","Salmo 24:4","Jeremías 17:9","Hebreos 3:12-13","1 Timoteo 1:13"],
-"sections":[
-["Vivir en la verdad: Natanael",["A través de Juan 1:43-46, el predicador enfatiza la importancia de vivir en la verdad, libre de falsedades e hipocresías, tomando a Natanael como ejemplo de un «verdadero israelita en quien no hay engaño». Explica que Jesús conoce profundamente el corazón de las personas y llama a la iglesia a ser una comunidad de «natanaeles», transparentes y sin falsedad.","Con Job 31:4 advierte que Dios es el único que ve los caminos de las personas, y que nadie debe intentar engañarle."]],
-["La naturaleza del engaño",["Explica que la palabra «mentira» (shav en hebreo) denota algo destructivo, vanidad e idolatría. Advierte que el engaño es un proceso que comienza con la maldad y la iniquidad (Salmo 7:14) y exhorta a extirpar esas raíces para vivir una vida diáfana y cristalina ante Dios. Con el Salmo 24:4 destaca las manos limpias y el corazón puro."]],
-["La transformación a través de la búsqueda de Dios",["Usa la historia de Jacob para ilustrar cómo el encuentro con Dios transforma a un engañador en un hombre bendecido. Llama a la congregación a dejar de vivir con «esquirlas de engaño» y a buscar a Dios sinceramente, pues solo su Espíritu Santo puede revelar y limpiar las áreas ocultas del corazón. Con Jeremías 17:9 recuerda que el corazón es engañoso y que el Espíritu guía a toda verdad."]],
-["Las apariencias y las relaciones",["Con Hebreos 3:12-13 exhorta a la iglesia a ser honesta en todos los aspectos de su vida, incluyendo el uso de la tecnología (como claves secretas en celulares o filtros en redes sociales) y las relaciones interpersonales, evitando la falsedad y los celos enfermizos."]],
-["Misericordia y nuevos comienzos",["Recuerda que, así como Pablo recibió misericordia a pesar de sus actos pasados (1 Timoteo 1:13), cada creyente puede ser restaurado."]]],
-"verses":[
-["Juan 1:43-46","Jesús encuentra a Felipe; Natanael, un verdadero israelita en quien no hay engaño."],
-["Job 31:4","Dios ve los caminos de las personas y cada paso."],
-["Salmo 7:14","La iniquidad como un proceso que da a luz el engaño."],
-["Salmo 24:4","Manos limpias y corazón puro; no alzar el alma a la falsedad."],
-["Jeremías 17:9","El corazón es más engañoso que todo; necesidad de que el Espíritu guíe a la verdad."],
-["Hebreos 3:12-13","Cuidarse unos a otros para que ninguno sea endurecido por el engaño del pecado."],
-["1 Timoteo 1:13","Pablo recibió misericordia por su ignorancia e incredulidad."]],
-"closing":["El mensaje concluye con un llamado a la congregación a pasar al frente y pedir a Dios que rompa toda iniquidad y engaño generacional, para ser perfeccionados por su Palabra."]
+ "slug": "el-engano",
+ "title": "El Engaño",
+ "id": "o-ojJVOu8Zs",
+ "date": "2026-10-25",
+ "speaker": "Profeta Hugo García",
+ "speaker_slug": "hugo-garcia",
+ "tag": "El Engaño",
+ "card_tag": "El Engaño",
+ "dur": 5247,
+ "desc": "Resumen de la enseñanza «El Engaño» del Profeta Hugo García: vivir en la verdad como Natanael, la raíz del engaño y la misericordia para volver a empezar. Ebenezer Antigua.",
+ "keywords": "engaño, Natanael, Juan 1:43-46, Jeremías 17:9, Hebreos 3:13, Hugo García",
+ "lead": "El Profeta Hugo García aborda el tema «El Engaño» y cómo afecta la vida cristiana, con Natanael como ejemplo de un verdadero israelita en quien no hay engaño.",
+ "items": [
+  "<b>Natanael:</b> la iglesia llamada a ser una comunidad de personas transparentes y sin falsedad (Juan 1:43-46).",
+  "<b>La naturaleza del engaño:</b> es un proceso que comienza con la maldad y la iniquidad; hay que extirpar la raíz (Salmo 7:14).",
+  "<b>Dios ve los caminos de todos</b> (Job 31:4); manos limpias y corazón puro (Salmo 24:4).",
+  "<b>La historia de Jacob:</b> el encuentro con Dios transforma a un engañador en un hombre bendecido.",
+  "<b>El corazón es engañoso</b> (Jeremías 17:9): necesitamos que el Espíritu Santo nos guíe a toda verdad.",
+  "<b>Honestidad en la vida diaria,</b> incluyendo la tecnología y las relaciones (Hebreos 3:12-13).",
+  "<b>Misericordia y nuevos comienzos:</b> Pablo la recibió (1 Timoteo 1:13) y cada creyente puede ser restaurado."
+ ],
+ "chips": [
+  "Juan 1:43-46",
+  "Job 31:4",
+  "Salmo 7:14",
+  "Salmo 24:4",
+  "Jeremías 17:9",
+  "Hebreos 3:12-13",
+  "1 Timoteo 1:13"
+ ],
+ "sections": [
+  [
+   "Vivir en la verdad: Natanael",
+   [
+    "A través de Juan 1:43-46, el predicador enfatiza la importancia de vivir en la verdad, libre de falsedades e hipocresías, tomando a Natanael como ejemplo de un «verdadero israelita en quien no hay engaño». Explica que Jesús conoce profundamente el corazón de las personas y llama a la iglesia a ser una comunidad de «natanaeles», transparentes y sin falsedad.",
+    "Con Job 31:4 advierte que Dios es el único que ve los caminos de las personas, y que nadie debe intentar engañarle."
+   ]
+  ],
+  [
+   "La naturaleza del engaño",
+   [
+    "Explica que la palabra «mentira» (shav en hebreo) denota algo destructivo, vanidad e idolatría. Advierte que el engaño es un proceso que comienza con la maldad y la iniquidad (Salmo 7:14) y exhorta a extirpar esas raíces para vivir una vida diáfana y cristalina ante Dios. Con el Salmo 24:4 destaca las manos limpias y el corazón puro."
+   ]
+  ],
+  [
+   "La transformación a través de la búsqueda de Dios",
+   [
+    "Usa la historia de Jacob para ilustrar cómo el encuentro con Dios transforma a un engañador en un hombre bendecido. Llama a la congregación a dejar de vivir con «esquirlas de engaño» y a buscar a Dios sinceramente, pues solo su Espíritu Santo puede revelar y limpiar las áreas ocultas del corazón. Con Jeremías 17:9 recuerda que el corazón es engañoso y que el Espíritu guía a toda verdad."
+   ]
+  ],
+  [
+   "Las apariencias y las relaciones",
+   [
+    "Con Hebreos 3:12-13 exhorta a la iglesia a ser honesta en todos los aspectos de su vida, incluyendo el uso de la tecnología (como claves secretas en celulares o filtros en redes sociales) y las relaciones interpersonales, evitando la falsedad y los celos enfermizos."
+   ]
+  ],
+  [
+   "Misericordia y nuevos comienzos",
+   [
+    "Recuerda que, así como Pablo recibió misericordia a pesar de sus actos pasados (1 Timoteo 1:13), cada creyente puede ser restaurado."
+   ]
+  ]
+ ],
+ "verses": [
+  [
+   "Juan 1:43-46",
+   "Jesús encuentra a Felipe; Natanael, un verdadero israelita en quien no hay engaño."
+  ],
+  [
+   "Job 31:4",
+   "Dios ve los caminos de las personas y cada paso."
+  ],
+  [
+   "Salmo 7:14",
+   "La iniquidad como un proceso que da a luz el engaño."
+  ],
+  [
+   "Salmo 24:4",
+   "Manos limpias y corazón puro; no alzar el alma a la falsedad."
+  ],
+  [
+   "Jeremías 17:9",
+   "El corazón es más engañoso que todo; necesidad de que el Espíritu guíe a la verdad."
+  ],
+  [
+   "Hebreos 3:12-13",
+   "Cuidarse unos a otros para que ninguno sea endurecido por el engaño del pecado."
+  ],
+  [
+   "1 Timoteo 1:13",
+   "Pablo recibió misericordia por su ignorancia e incredulidad."
+  ]
+ ],
+ "closing": [
+  "El mensaje concluye con un llamado a la congregación a pasar al frente y pedir a Dios que rompa toda iniquidad y engaño generacional, para ser perfeccionados por su Palabra."
+ ],
+ "patron": "C",
+ "momentos": [
+  {
+   "t": 1735,
+   "e": 1790,
+   "titulo": "Una iglesia de Natanaeles",
+   "txt": "Yo vengo diciéndole a esta iglesia que va a ser un prototipo de Natanaeles, que vamos a dar de qué hablar, pero para bien. Que cuando la gente mire esta iglesia diga: «Yo quiero estar aquí. Algo tienen estos que no tienen los demás, algo le hicieron». Y eso se llama Espíritu Santo, del poder de la promesa que Dios tiene para nosotros. No ha terminado nada. Todo empieza hoy. Todas las cosas viejas pasaron; hoy son hechas nuevas."
+  },
+  {
+   "t": 3509,
+   "e": 3560,
+   "titulo": "Jacob, el engañador",
+   "txt": "Si hubieran llamado a Jacob, no Israel, ¿cómo le hubieran dicho? A gran voz: «Jacob, tienes cara de engañador en la ficha». Y era engañador. Engañó a todos, hermano. Solo a Dios, no, pero a todos. […] Lo engañó en las lentejas también. […] Pero lo engañó y se quedó solo. Ah, eso de quedarse solo no es tan fácil, hermano."
+  },
+  {
+   "t": 3896,
+   "e": 3945,
+   "titulo": "El corazón es engañoso",
+   "txt": "Jeremías 17:9: «Más engañoso que todo es el corazón». Por eso tenemos que tener mucho cuidado, y el Espíritu Santo, que nos guía a toda verdad, es el que te va a señalar el engaño. Porque hay cosas que parecen buenas, pero son malas, y malas que parecen buenas. Ten cuidado con engañarte con eso: la persona cree que está en la verdad y está equivocada. «Y sin remedio, ¿quién lo comprenderá?». Solo el Espíritu Santo."
+  }
+ ],
+ "citas": [
+  {
+   "t": 1655,
+   "txt": "¿Qué dijo Jesús? «Sígueme». Entonces, sigue a Jesús y vas a ver."
+  },
+  {
+   "t": 2525,
+   "txt": "Hermano, engañamos de muchas maneras, y el Señor lo que quiere es que seamos diáfanos, cristalinos, que haya un Natanael en usted."
+  },
+  {
+   "t": 4920,
+   "txt": "Hay gente que ya no aguanta por estar engañando, engañando, engañando, pero hoy el Señor te hace libre en el nombre de Jesús."
+  }
+ ],
+ "reflexion": [
+  "¿Qué significa para ti seguir a Jesús con una acción concreta, como el «ven y ve» que Felipe le dijo a Natanael?",
+  "¿En qué cosas pequeñas de tu día hay una diferencia entre lo que dices ser y lo que haces?",
+  "Si el Espíritu Santo te señalara hoy un engaño en tu corazón, ¿estarías dispuesto a escucharlo?"
+ ]
 }

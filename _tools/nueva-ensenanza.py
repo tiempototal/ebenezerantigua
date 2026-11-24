@@ -117,6 +117,7 @@ def series_of(p):
     tot = max([CSV_MAX.get(k, 0)] + [num(q) for q in mem])
     if len(mem) < 2 and tot < 2: return None
     mem.sort(key=lambda q: (num(q), q['date'])); return mem, num(p), tot, split_title(p['title'])[0]
+SEEK_JS = ('<script>(function(){var f=document.querySelector("#video iframe");if(!f)return;var last=null;window.addEventListener("message",function(e){if(e.source!==f.contentWindow)return;try{var d=typeof e.data==="string"?JSON.parse(e.data):e.data;if(d&&d.info&&typeof d.info.currentTime==="number")last=d.info.currentTime}catch(x){}});function post(o){try{f.contentWindow.postMessage(JSON.stringify(o),"*")}catch(x){}}f.addEventListener("load",function(){post({event:"listening",id:1})});post({event:"listening",id:1});document.addEventListener("click",function(e){var a=e.target.closest("a[data-t]");if(!a)return;e.preventDefault();var t=+a.getAttribute("data-t");post({event:"listening",id:1});post({event:"command",func:"seekTo",args:[t,true]});post({event:"command",func:"playVideo",args:[]});document.getElementById("video").scrollIntoView({behavior:"smooth",block:"center"});setTimeout(function(){if(last===null||Math.abs(last-t)>12)window.open(a.href,"_blank","noopener")},1800)});})();</script>')
 def mmss(t):
     t = int(t); h, m, s_ = t // 3600, t % 3600 // 60, t % 60
     return f'{h}:{m:02d}:{s_:02d}' if h else f'{m}:{s_:02d}'
@@ -227,12 +228,12 @@ def build_page(s):
     def b_mom_i(i):
         if i >= len(mom): return ''
         m_ = mom[i]; v = ['m1', 'm2', 'm3'][i % 3]; secs_ = max(1, int(m_['e']) - int(m_['t']))
-        fig = (f'<figure class="mq {v}"><span class="mq-n">{i+1} / {len(mom)}</span><blockquote>' + ''.join(f'<p>{esc(x)}</p>' for x in paras(m_['txt'])) + f'</blockquote><figcaption><a href="{yt(m_["t"])}" target="_blank" rel="noopener">▶ Escúchalo desde el minuto {mmss(m_["t"])}</a>'
+        fig = (f'<figure class="mq {v}"><blockquote>' + ''.join(f'<p>{esc(x)}</p>' for x in paras(m_['txt'])) + f'</blockquote><figcaption><a href="{yt(m_["t"])}" data-t="{int(m_["t"])}" target="_blank" rel="noopener">▶ Escúchalo desde el minuto {mmss(m_["t"])}</a>'
                + (f'<span class="mt">{esc(m_["titulo"])}</span>' if m_.get('titulo') else '') + f'<span>{esc(s["speaker"])} · ≈ {max(1, round(secs_/60))} min</span></figcaption></figure>')
         if i == 0:
             return f'<section id="momentos" class="mom"><div class="mom-h"><span class="sum-k">Palabra por palabra</span><h2>{PT["mh"]}</h2><p class="mom-i">{PT["mi"]}</p></div>{fig}</section>'
         return f'<section id="momento-{i+1}" class="mom mom-n"><span class="mom-k">Palabra por palabra</span>{fig}</section>'
-    def pq(c, v=''): return f'<aside class="pq {v}"><p>“{esc(c["txt"])}”</p><footer>— {esc(s["speaker"])} · <a href="{yt(c["t"])}" target="_blank" rel="noopener">minuto {mmss(c["t"])}</a></footer></aside>'
+    def pq(c, v=''): return f'<aside class="pq {v}"><p>“{esc(c["txt"])}”</p><footer>— {esc(s["speaker"])} · <a href="{yt(c["t"])}" data-t="{int(c["t"])}" target="_blank" rel="noopener">minuto {mmss(c["t"])}</a></footer></aside>'
     def b_sum():
         chips = s['chips']; shown = chips[:6]
         sumv = '<div class="sum-v"><small>Pasajes citados</small>' + ''.join(f'<a href="#versiculos">{esc(c)}</a>' for c in shown) + (f'<a class="mas" href="#versiculos">+{len(chips)-6} más</a>' if len(chips) > 6 else '') + '</div>'
@@ -282,8 +283,8 @@ def build_page(s):
     cap = (f'Video de la enseñanza, {sl}. ' if not ci else 'Video del mensaje. ')
     hero = (f'<main><section class="hero"><div class="w wide"><div class="hw yt"><div class="ht"><nav class="bc" aria-label="Migas de pan">{bc}</nav>'
             f'<div class="eyebrow">{esc(s["tag"])} · {ci["one"] if ci else "Enseñanza"}</div><h1>{esc(s["title"])}</h1><div class="meta">{meta}</div></div>'
-            f'<figure class="hf yt vid" id="video"><iframe src="https://www.youtube-nocookie.com/embed/{s["id"]}" title="{esc(full)}" allow="accelerometer; encrypted-media; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
-            f'<figcaption>{cap}<a href="https://www.youtube.com/watch?v={s["id"]}" target="_blank" rel="noopener">Ver en YouTube</a></figcaption></figure></div></div></section>\n')
+            f'<figure class="hf yt vid" id="video"><iframe src="https://www.youtube-nocookie.com/embed/{s["id"]}?enablejsapi=1&origin=https://ebenezerantigua.com" title="{esc(full)}" allow="accelerometer; encrypted-media; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+            f'<figcaption>{cap}<a href="https://www.youtube.com/watch?v={s["id"]}" target="_blank" rel="noopener">Ver en YouTube</a></figcaption></figure></div></div></section>'+SEEK_JS+'\n')
     tocs = ('<div class="w art two"><aside class="tocs" aria-label="Índice de la enseñanza"><nav class="toc" aria-label="Contenido"><b>En esta página</b><ol>'
             + ''.join(f'<li><a href="#{a}">{esc(b)}</a></li>' for a, b in toc)
             + '</ol><div class="tp" aria-hidden="true"><span><i></i></span><small>Leído <em>0%</em></small></div></nav></aside>')

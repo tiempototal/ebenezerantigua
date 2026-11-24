@@ -144,11 +144,17 @@ def ctx_html(p):
                 f'<a href="../../predicadores/{sp["slug"]}/">Ver todas sus enseñanzas →</a></div></div>')
     return out
 V2_CSS = ('<style id="v2">.mom,.refl,.cx{margin:2.4rem 0}.mom-h{margin-bottom:1rem}.mom-h h2{margin:.5rem 0 .3rem}.mom-i{font-size:.95rem;color:var(--brown2);margin:0 0 .4rem}'
- '.mq{margin:1.1rem 0;padding:1.4rem 1.5rem 1.1rem 1.7rem;background:linear-gradient(160deg,#fffdf8,var(--paper));border:1px solid rgba(192,138,43,.35);border-left:6px solid var(--gold2);border-radius:20px;box-shadow:0 22px 44px -36px rgba(91,31,46,.55);position:relative}'
+ '.mq{margin:2rem 0;padding:1.6rem 1.7rem 1.3rem 1.9rem;background:linear-gradient(160deg,#fffdf8,var(--paper));border:1px solid rgba(192,138,43,.35);border-left:6px solid var(--gold2);border-radius:20px;box-shadow:0 22px 44px -36px rgba(91,31,46,.55);position:relative}'
  '.mq::before{content:"“";position:absolute;right:1.1rem;top:-.35rem;font-family:var(--serif);font-size:5rem;line-height:1;color:rgba(192,138,43,.28)}'
- '.mq blockquote{margin:0}.mq blockquote p{font-family:var(--serif);font-size:1.28rem;line-height:1.62;color:var(--ink);margin:.1rem 0 .7rem}'
- '.mq figcaption{display:flex;flex-wrap:wrap;gap:.4rem .9rem;align-items:center;font-size:.8rem;color:var(--brown2)}.mq figcaption a{display:inline-flex;align-items:center;gap:.4rem;background:var(--wine);color:#fff!important;padding:.32rem .8rem;border-radius:99px;font-weight:600;text-decoration:none}'
+ '.mq-n{position:absolute;left:1.6rem;top:-.75rem;background:var(--wine);color:#f6efe3;font-size:.68rem;letter-spacing:.14em;font-weight:700;padding:.22rem .7rem;border-radius:99px}'
+ '.mq blockquote{margin:.4rem 0 0}.mq blockquote p{font-family:var(--serif);font-size:1.26rem;line-height:1.72;color:var(--ink);margin:0 0 1.15rem}'
+ '.mq blockquote p:first-of-type::first-letter{float:left;font-size:3.5rem;line-height:.82;padding:.28rem .5rem 0 0;color:var(--wine);font-weight:700}'
+ '.mq blockquote p:first-of-type::first-line{font-weight:600}'
+ '.mq figcaption{display:flex;flex-wrap:wrap;gap:.4rem .9rem;align-items:center;font-size:.8rem;color:var(--brown2);border-top:1px solid rgba(192,138,43,.3);padding-top:.8rem}.mq figcaption a{display:inline-flex;align-items:center;gap:.4rem;background:var(--wine);color:#fff!important;padding:.32rem .8rem;border-radius:99px;font-weight:600;text-decoration:none}'
  '.mq figcaption a:hover{background:var(--wine2)}.mq .mt{font-weight:700;color:var(--wine);letter-spacing:.04em}'
+ '.mq.m2{margin-left:clamp(0px,4vw,2.5rem);border-left-width:1px;border-right:6px solid var(--wine);background:linear-gradient(200deg,#fffdf8,#f4e8cf)}.mq.m2 .mq-n{left:auto;right:1.6rem}'
+ '.mq.m3{background:linear-gradient(160deg,#4a1827,#2e0f1a);border:0;border-left:6px solid var(--gold2);color:#f6efe3}.mq.m3 blockquote p{color:#f6efe3}.mq.m3 blockquote p:first-of-type::first-letter{color:#f0cf7a}.mq.m3 figcaption{color:#e9d6a8;border-top-color:rgba(240,207,122,.3)}.mq.m3 .mt{color:#f0cf7a}.mq.m3 figcaption a{background:var(--gold2);color:#3b1220!important}.mq.m3::before{color:rgba(240,207,122,.2)}.mq.m3 .mq-n{background:var(--gold2);color:#3b1220}'
+ '.mom-n{margin:3rem 0}.mom-k{display:block;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--wine);margin-bottom:.6rem}'
  '.pq{margin:3.2rem 0;padding:1.9rem 2rem;border-radius:24px;background:linear-gradient(135deg,var(--wine),#3b1220);color:#f6efe3;box-shadow:0 26px 50px -34px rgba(59,18,32,.8);position:relative;overflow:hidden}'
  '.pq p{font-family:var(--serif);font-style:italic;font-size:1.5rem;line-height:1.5;margin:0 0 .8rem;color:#f6efe3;position:relative}.pq footer{font-size:.82rem;color:#f0cf7a;position:relative}.pq footer a{color:#f0cf7a!important;font-weight:700;text-decoration:underline}'
  '.pq::before{content:"“";position:absolute;left:1rem;top:-1.4rem;font-family:var(--serif);font-size:8rem;line-height:1;color:rgba(240,207,122,.14)}'
@@ -158,7 +164,6 @@ V2_CSS = ('<style id="v2">.mom,.refl,.cx{margin:2.4rem 0}.mom-h{margin-bottom:1r
  '.pq.c p{color:#3b1220}.pq.c footer{color:#5b1f2e}.pq.c footer a{color:#5b1f2e!important}'
  '.pq.lead-q{margin-top:2rem}'
  'article section>p{margin:0 0 1.35rem;line-height:1.85}article section>h2{margin-top:.2rem}article>section:not(.sum):not(.mom):not(.refl):not(.cx){margin:2.6rem 0}'
- '.mom .mq:nth-of-type(even){margin-left:clamp(0px,4vw,2.5rem);border-left-width:1px;border-right:6px solid var(--wine);background:linear-gradient(200deg,#fffdf8,#f4e8cf)}.mq{margin:1.8rem 0}'
  '.refl{padding:1.4rem 1.5rem;background:var(--cream2);border-radius:22px;border:1px dashed rgba(74,47,29,.3)}.refl h2{margin-top:0}.refl ol{margin:.6rem 0 0;padding-left:1.3rem}.refl li{margin:.6rem 0;font-size:1.04rem;line-height:1.6}'
  '.refl .ri{color:var(--brown2);font-size:.95rem;margin:0}'
  '.cx{display:grid;gap:1.1rem;grid-template-columns:1fr}@media(min-width:900px){.cx.two{grid-template-columns:1.15fr 1fr}}'
@@ -209,33 +214,52 @@ def build_page(s):
     ctx = ctx_html(reg[s['slug']]) if s['slug'] in reg else ''
     # ----- bloques -----
     yt = lambda tt: f'https://www.youtube.com/watch?v={s["id"]}&t={int(tt)}s'
-    def b_mom():
-        if not mom: return ''
-        o = f'<section id="momentos" class="mom"><div class="mom-h"><span class="sum-k">Palabra por palabra</span><h2>{PT["mh"]}</h2><p class="mom-i">{PT["mi"]}</p></div>'
-        for m_ in mom:
-            o += (f'<figure class="mq"><blockquote><p>{esc(m_["txt"])}</p></blockquote><figcaption><a href="{yt(m_["t"])}" target="_blank" rel="noopener">▶ Escúchalo desde el minuto {mmss(m_["t"])}</a>'
-                  + (f'<span class="mt">{esc(m_["titulo"])}</span>' if m_.get('titulo') else '') + f'<span>{esc(s["speaker"])}</span></figcaption></figure>')
-        return o + '</section>'
+    def paras(txt):
+        sents = [x for x in re.split(r'(?<=[.?!»])\s+(?=[«¿¡"A-ZÁÉÍÓÚÑ\[])', txt.strip()) if x]
+        tot = sum(len(x.split()) for x in sents); n = 1 if tot < 55 else (2 if tot < 115 else 3)
+        if n == 1 or len(sents) < 2: return [txt.strip()]
+        out, cur, w = [], [], 0; goal = tot / n
+        for x in sents:
+            cur.append(x); w += len(x.split())
+            if w >= goal and len(out) < n - 1: out.append(' '.join(cur)); cur = []; w = 0
+        if cur: out.append(' '.join(cur))
+        return out
+    def b_mom_i(i):
+        if i >= len(mom): return ''
+        m_ = mom[i]; v = ['m1', 'm2', 'm3'][i % 3]; secs_ = max(1, int(m_['e']) - int(m_['t']))
+        fig = (f'<figure class="mq {v}"><span class="mq-n">{i+1} / {len(mom)}</span><blockquote>' + ''.join(f'<p>{esc(x)}</p>' for x in paras(m_['txt'])) + f'</blockquote><figcaption><a href="{yt(m_["t"])}" target="_blank" rel="noopener">▶ Escúchalo desde el minuto {mmss(m_["t"])}</a>'
+               + (f'<span class="mt">{esc(m_["titulo"])}</span>' if m_.get('titulo') else '') + f'<span>{esc(s["speaker"])} · ≈ {max(1, round(secs_/60))} min</span></figcaption></figure>')
+        if i == 0:
+            return f'<section id="momentos" class="mom"><div class="mom-h"><span class="sum-k">Palabra por palabra</span><h2>{PT["mh"]}</h2><p class="mom-i">{PT["mi"]}</p></div>{fig}</section>'
+        return f'<section id="momento-{i+1}" class="mom mom-n"><span class="mom-k">Palabra por palabra</span>{fig}</section>'
     def pq(c, v=''): return f'<aside class="pq {v}"><p>“{esc(c["txt"])}”</p><footer>— {esc(s["speaker"])} · <a href="{yt(c["t"])}" target="_blank" rel="noopener">minuto {mmss(c["t"])}</a></footer></aside>'
     def b_sum():
         chips = s['chips']; shown = chips[:6]
         sumv = '<div class="sum-v"><small>Pasajes citados</small>' + ''.join(f'<a href="#versiculos">{esc(c)}</a>' for c in shown) + (f'<a class="mas" href="#versiculos">+{len(chips)-6} más</a>' if len(chips) > 6 else '') + '</div>'
         lis = ''.join(f'<li style="--i:{i}"><span class="n">{i+1:02d}</span><p>{x}</p></li>' for i, x in enumerate(s['items']))
         return f'<section id="en-resumen" class="sum"><div class="sum-h"><span class="sum-k">Lectura rápida</span><h2>En resumen</h2><div class="sum-m"><span>{len(s["items"])} ideas clave</span><span>{mins} min de lectura</span><span>{len(chips)} pasajes citados</span></div></div><ol class="sum-l">{lis}</ol>{sumv}</section>'
-    ns = len(s['sections']); place = {}
-    VAR = ['', 'b', 'c']
+    ns = len(s['sections']); place = {}; placeM = {}
     cit_top = cit_end = None; mids = []
     if cit:
         cit_top = cit[0]
         if len(cit) >= 2: cit_end = cit[-1]
         mids = cit[1:-1] if len(cit) >= 3 else []
+    mi = {}
+    if ns:
+        if len(mom) > 1: mi[1] = max(0, round(ns * 0.5) - 1)
+        if len(mom) > 2: mi[2] = min(ns - 1, max(mi.get(1, 0) + 1, round(ns * 0.85) - 1))
+        for k_, i_ in mi.items(): placeM.setdefault(i_, []).append(b_mom_i(k_))
+    fr = [0.3, 0.7, 0.15, 0.85]; used = set(mi.values())
     for k, c in enumerate(mids):
-        i = max(0, min(ns - 1, round((k + 1) * ns / (len(mids) + 1)) - 1)) if ns else 0
+        i = max(0, round(ns * fr[k % 4]) - 1) if ns else 0
+        if i in used and i > 0: i -= 1
+        if pt == 'C' and i == 0 and ns > 1: i = 1
         while i in place and i < ns - 1: i += 1
-        place.setdefault(i, []).append((c, VAR[1] if k % 2 == 0 else VAR[2]))
+        place.setdefault(i, []).append((c, 'b' if k % 2 == 0 else 'c'))
     secs = []
     for i, (n, ps) in enumerate(s['sections']):
-        h_ = f'<section id="{slugify(n)}"><h2>{esc(n)}</h2>' + ''.join((p if p.lstrip().startswith('<') else f'<p>{p}</p>') for p in ps) + '</section>' + ''.join(pq(c, v) for c, v in place.get(i, []))
+        h_ = (f'<section id="{slugify(n)}"><h2>{esc(n)}</h2>' + ''.join((p if p.lstrip().startswith('<') else f'<p>{p}</p>') for p in ps) + '</section>'
+              + ''.join(pq(c, v) for c, v in place.get(i, [])) + ''.join(placeM.get(i, [])))
         secs.append((slugify(n), n, h_))
     b_ver = '<section id="versiculos"><h2>Versículos citados</h2><ul class="vs">' + ''.join(f'<li><b>{esc(r)}</b> {x}</li>' for r, x in s['verses']) + '</ul></section>'
     b_ref = (f'<section id="reflexion" class="refl"><h2>{PT["rh"]}</h2><p class="ri">Preguntas para pensar a solas o conversar en familia, a partir de lo que se enseñó.</p><ol>' + ''.join(f'<li>{esc(x)}</li>' for x in refl) + '</ol></section>') if refl else ''
@@ -245,7 +269,7 @@ def build_page(s):
     ENDQ = ('citafinal', None, pq(cit_end, 'c')) if cit_end else None
     # orden según patrón: (id, etiqueta del índice, html)
     sec_blocks = [(a, b, h_) for a, b, h_ in secs]
-    M = ('momentos', 'Palabra por palabra', b_mom()); S = ('en-resumen', 'En resumen', b_sum())
+    M = ('momentos', 'Palabra por palabra', b_mom_i(0)); S = ('en-resumen', 'En resumen', b_sum())
     V = ('versiculos', 'Versículos citados', b_ver); RF = ('reflexion', PT['rh'], b_ref); CI = ('cierre', 'Cierre de la reunión', b_cie); SE = ('serie', 'La serie y quién enseña', b_ser)
     EQ = [ENDQ] if ENDQ else []
     if pt == 'A': seq = [M, S] + sec_blocks + [V, RF] + EQ + [CI, SE]

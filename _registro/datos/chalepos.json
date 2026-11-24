@@ -90,5 +90,46 @@
  ],
  "closing": [
   "El mensaje invita a mantener la consagración alta y a despertar."
- ]
+ ],
+ "patron": "A",
+ "momentos": [
+  {
+   "t": 1042,
+   "e": 1110,
+   "titulo": "Nazareos espirituales: consagrar el pensamiento",
+   "txt": "¿Cómo podría yo ser nazareo espiritual? Tengo que consagrarme. ¿Y qué es consagración para nosotros? Antes, en aquella época, era no cortarse el cabello. Ahora, para nosotros, es consagrar nuestra forma de pensamiento. Dice: «Dejará crecer las guedejas del cabello de su cabeza durante todos los días de su nazareato para el Señor». «No se acercará a los muertos, ni por su padre, ni por su madre, ni su hermano, ni su hermana; no se contaminará de ellos cuando mueran, pues su nazareato para Dios está sobre su cabeza». Entonces, ahora nuestra consagración, ¿dónde está? En nuestra cabeza. «Todos los días de su nazareato, él es santo para el Señor»."
+  },
+  {
+   "t": 3049,
+   "e": 3095,
+   "titulo": "El entendimiento es la llave",
+   "txt": "¿Cuántos quisieran tener fuerza de entendimiento? Es que, mire, el que ya lo entendió ya tiene la llave de todo. El entendimiento es la llave de todo. […] ¿Sabe cómo nos vienen todas estas fuerzas? Con la consagración. La consagración es la que nos da fuerza. La falta de consagración nos hace perder fuerzas, y la consagración nos da todo esto. ¿Cuántos quieren llenar su vida espiritual de fuerzas? Hermano, consagre su pensamiento."
+  },
+  {
+   "t": 3485,
+   "e": 3545,
+   "titulo": "Despiértate de entre los muertos",
+   "txt": "Todo el tiempo que se aparte para Jehová, no se acercará a persona muerta, ni aun por su padre, ni su madre, ni su hermano, ni su hermana. No podrá contaminarse cuando mueran, porque la consagración de Dios la tiene sobre su cabeza. Y me llamó la atención porque parte del pacto era que no podían estar cerca de muertos. Por eso le puse la cita bíblica a la par, Efesios 5:14, porque a nosotros nos dice, es decir, a los nuevos nazareos: «Despiértate, tú que duermes, y levántate de entre los muertos, y te alumbrará Cristo»."
+  }
+ ],
+ "citas": [
+  {
+   "t": 1553,
+   "txt": "El problema no es el matrimonio; el problema es uno. Cuando el corazón ya nada lo alegra."
+  },
+  {
+   "t": 2482,
+   "txt": "Se coloca un telar, y al que ande por ahí cerca le amarran sus pensamientos y se los clavan a la tierra."
+  },
+  {
+   "t": 4058,
+   "txt": "Si lo hemos pensado, pidámosle perdón al Señor y digámosle: «Señor, me arrepiento. Consagra mi manera de pensar. Cambia mi pensamiento»."
+  }
+ ],
+ "reflexion": [
+  "Consagrar el pensamiento es apartarse para el Señor: ¿qué pensamientos necesitas entregarle hoy?",
+  "¿Qué cosas o distracciones tienen hoy tus pensamientos amarrados, como al telar, y cómo vas a recuperar tu mente para Dios?",
+  "El entendimiento es la llave y la consagración da fuerza: ¿qué paso de consagración darás esta semana?"
+ ],
+ "inicio": 268
 }

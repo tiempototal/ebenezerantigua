@@ -80,5 +80,46 @@
  ],
  "closing": [
   "La enseñanza invita a dejar los vicios viejos y a mantener las vestiduras limpias."
- ]
+ ],
+ "patron": "C",
+ "momentos": [
+  {
+   "t": 890,
+   "e": 962,
+   "titulo": "Una vida abundante, espiritual y material",
+   "txt": "«El que rescata de la fosa tu vida»: mire de dónde te saca el Señor, hermano. «El que te corona» […] de bondad y compasión. Esta es una mancuerna: bondad y compasión. «El que colma de bienes tus años». Quiere decir que esto es una añadidura para tu vida. Dios no quiere que toda tu vida seas un pobretón. Dios lo que quiere es que tú seas abundante en todas las cosas, espirituales y materiales, porque van de la mano. Mucha gente busca lo espiritual y pobreza, y otros riqueza y nada de lo espiritual. Quiero decirle que estas dos cosas van de la mano. Es una mancuerna donde usted va a tener una vida abundante, espiritual y material."
+  },
+  {
+   "t": 1390,
+   "e": 1450,
+   "titulo": "Escuchar su voz y guardar su pacto",
+   "txt": "Ahora pues, si en verdad escucháis mi voz, una de las claves para que nos lleve en abundante plumaje es que escuchemos la voz de Dios. Hermano, a veces escuchamos más la voz del enemigo que la de Dios. «Y guardáis mi pacto». Entonces, dos cosas: uno, escuchar la voz del Señor, y dos, guardar el pacto de él. […] Nosotros tenemos que guardar el nuevo pacto con nuevas promesas, donde el Señor derramó su sangre preciosa por usted y por mí, y estamos en un nuevo pacto."
+  },
+  {
+   "t": 4303,
+   "e": 4355,
+   "titulo": "Llénate del amor de Dios",
+   "txt": "Qué lindo estar en el parámetro de Dios, no en tu parámetro, en el parámetro de Dios. Porque te voy a decir algo: tú y yo nos van a confrontar por lo que hemos hablado, y lo que hemos dicho, y lo que hemos vivido. Y qué triste que no demos la talla, porque dice la Palabra de Dios que si has entregado tu cuerpo para que lo quemen, pero no tienes amor, de nada sirvió todo lo que hiciste. Llénate del amor de Dios. Llénate de la paz de Dios. Llénate de las cosas espirituales. Pide los siete espíritus de Jehová. […] Pídele a Dios que se activen en tu vida para que seas útil."
+  }
+ ],
+ "citas": [
+  {
+   "t": 514,
+   "txt": "Cada día trae algo nuevo, fresco; algo que usted no conocía o no había entendido, para que su vida cambie."
+  },
+  {
+   "t": 1926,
+   "txt": "Es un crecimiento espiritual que tú y yo necesitamos, una renovación a nuestro ser integral: espíritu, alma y cuerpo."
+  },
+  {
+   "t": 3905,
+   "txt": "Esta noche tenemos la necesidad de decirle a Dios: ayúdame para que todo cambie, para que todo sea diferente."
+  }
+ ],
+ "reflexion": [
+  "Dios quiere que tengas una vida abundante, espiritual y material, que van de la mano: ¿cuál de las dos has descuidado y cómo la equilibrarías?",
+  "¿A qué voz le haces más caso últimamente: a la voz de Dios o a la del enemigo? ¿Qué cambiarías esta semana?",
+  "¿De qué te necesitas llenar hoy: de amor, de paz, de las cosas espirituales? Dedica un momento a pedírselo al Señor."
+ ],
+ "inicio": 506
 }

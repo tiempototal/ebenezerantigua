@@ -93,5 +93,46 @@
  ],
  "closing": [
   "El mensaje invita a buscar su presencia por encima de toda añadidura."
- ]
+ ],
+ "patron": "B",
+ "momentos": [
+  {
+   "t": 1005,
+   "e": 1077,
+   "titulo": "Deleitarse en Dios por lo que él es",
+   "txt": "¿Quién encuentra ese secreto? Aquel que ha encontrado la presencia de Dios y que se deleita en Dios por lo que él es; que no está distraído en las cosas del mundo, que no voltea a ver atrás como la mujer de Lot, sino que está concentrado, puesta su vista en el Señor, en Cristo Jesús, autor y consumador de la fe, y no quita la vista de aquel que dio su vida por nosotros. […] Si Dios le da un trabajo, deléitese en el trabajo. […] Porque aquel que encontró la presencia encuentra la plenitud de gozo y encuentra el deleite de Dios para siempre."
+  },
+  {
+   "t": 1544,
+   "e": 1626,
+   "titulo": "El resto de mis días, en su presencia",
+   "txt": "Es que, mire, eso es impresionante, porque alguien puede decir: «Hermano, pero es que usted no sabe lo que me ha pasado, lo que he hecho, cómo me he portado». Está bien. David lo que dijo es: lo pasado, pasado; pero el resto de mis días, lo que me quede de vida sobre la tierra, hasta el día que el Señor venga o me toque irme antes, ese resto de días yo quiero disfrutarlos; quiero habitar en la presencia de Dios todos los días. No importa si es un año, un día o veinte años: el resto de mi vida quiero vivirlo en la presencia de Dios. […] Podré disfrutar el placer de estar junto al Señor y visitarlo en su templo. Esto es extraordinario, porque David está diciendo que cuando yo encuentro la presencia de Dios, voy a disfrutar estar junto a él; me voy a deleitar en estar cerca de Dios."
+  },
+  {
+   "t": 2490,
+   "e": 2578,
+   "titulo": "Eutico y la ventana hacia el mundo",
+   "txt": "Un joven llamado Eutico, y como Pablo continuaba hablando, Eutico fue cayendo en un sueño profundo hasta que, vencido por el sueño, cayó desde el tercer piso y lo levantaron muerto. Y usted sabe el contexto de la historia: Pablo lo resucita. Pero mire, ¿dónde estaba Eutico? […] Eutico estaba sentado en la iglesia, sentado en el discipulado de Pablo, viendo hacia las cosas de afuera, hacia el mundo. […] ¿Cuánta gente hay en las iglesias viendo hacia afuera, hacia las cosas del mundo, distrayéndose con las cosas de afuera, y empieza a adormecerse? Eso es lo que dice la Escritura: él, viendo hacia afuera, fue cayendo en un sueño profundo."
+  }
+ ],
+ "citas": [
+  {
+   "t": 471,
+   "txt": "¿De qué nos serviría tener un millón de dólares en la cuenta, pero no poder disfrutarlo, no poder deleitarnos?"
+  },
+  {
+   "t": 3001,
+   "txt": "Saúl perdió la presencia a causa de la desobediencia."
+  },
+  {
+   "t": 3505,
+   "txt": "Lo que a mí me da consuelo, hermano, es que estaba en proceso todavía."
+  }
+ ],
+ "reflexion": [
+  "Cuando pierdes la presencia de Dios pierdes la capacidad de deleitarte: ¿cómo cuidas su presencia cada día?",
+  "Con mucho o con poco, Pablo aprendió a deleitarse: ¿qué te ha dado Dios hoy que todavía no estás disfrutando con gratitud?",
+  "Eutico se adormeció mirando por la ventana: ¿qué cosas de afuera te distraen en la iglesia y cómo volverás a poner tu vista en Cristo?"
+ ],
+ "inicio": 212
 }

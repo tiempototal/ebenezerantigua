@@ -89,5 +89,45 @@
  ],
  "closing": [
   "El mensaje cierra con un llamado a renunciar a toda maldición y recibir la bendición de Dios."
+ ],
+ "patron": "A",
+ "momentos": [
+  {
+   "t": 1002,
+   "e": 1058,
+   "titulo": "Recuperar la bendición del Génesis",
+   "txt": "Lo importante de todo esto es que, como Dios está interesado en bendecirnos y, como desgraciadamente, debido a la caída de Adán perdimos esa bendición, en el plan que viene en Cristo Jesús toda maldición quedó en el madero. Gálatas 3:13 dice: «Cristo ya nos libró de la maldición, porque en Cristo Jesús la bendición de Abraham alcanzamos nosotros los gentiles». Entonces, se tiene que ver en nuestra vida. Tenemos que recuperar la bendición del Génesis. Tenemos una nueva oportunidad en Cristo Jesús, porque él ya se llevó nuestras maldiciones."
+  },
+  {
+   "t": 2497,
+   "e": 2551,
+   "titulo": "La lengua: vida o muerte",
+   "txt": "La Biblia dice que lo que hablamos es un poder. Son un instrumento de poder. La muerte y la vida están en poder de la lengua. ¿Quién tiene el poder? La lengua. Y la lengua puede estar ministrando vida o puede estar ministrando muerte. Entonces, ¿qué le dices tú a tu hijo? ¿Le dices cosas que le ministran vida o que le ministran muerte? ¿Qué le dices a tu esposo? ¿Qué le dices a tu esposa? ¿Qué le dices a tus alumnos? ¿Qué le dices a los que trabajan contigo? ¿Qué le dices a aquellos con los que tú sirves en la iglesia? A los que te rodean, ¿los estás bendiciendo? Porque hay un poder. Te dieron un arma cargada y te van a pedir cuentas de la lengua."
+  },
+  {
+   "t": 3750,
+   "e": 3796,
+   "titulo": "Arrepiéntete y sal libre",
+   "txt": "[…] «Señor, aquí está. Yo me despojo de esto y hoy me voy libre de este lugar, sin peso de todas esas cosas, porque sé que fui determinado por ti para bendición». Y si lo que tú estás poniendo delante de Dios no es una palabra que hayas dicho de maldición, sino una acción que atrajo una maldición a tu vida, arrepiéntete hoy, cambia de parecer y dile: «Señor, yo te quiero pedir perdón hoy». Yo misma le pido al Señor: Señor, yo te quiero pedir perdón hoy por toda acción que yo haya hecho que haya abierto una puerta de maldición hacia mi vida."
+  }
+ ],
+ "citas": [
+  {
+   "t": 531,
+   "txt": "Él no nos puede hacer nada si nosotros no lo permitimos."
+  },
+  {
+   "t": 1530,
+   "txt": "Nuestro socorro tiene que venir de Dios, no del hombre."
+  },
+  {
+   "t": 3615,
+   "txt": "Si a ustedes los quisieron maldecir, yo los quiero bendecir. Y el que está en autoridad tiene potestad de bendecirte; y ese personaje es Dios."
+  }
+ ],
+ "reflexion": [
+  "Cristo se llevó toda maldición en el madero: ¿qué maldición o palabra negativa necesitas renunciar hoy en su nombre?",
+  "¿Qué le dices a tu familia y a quienes te rodean: palabras que ministran vida o que ministran muerte?",
+  "¿Hay alguna acción que haya abierto una puerta de maldición en tu vida? ¿Qué pasos darás para arrepentirte y pedirle perdón al Señor?"
  ]
 }

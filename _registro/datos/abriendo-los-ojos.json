@@ -90,5 +90,45 @@
  ],
  "closing": [
   "El servicio concluyó con una oración por un milagro en la perspectiva de los asistentes."
+ ],
+ "patron": "B",
+ "momentos": [
+  {
+   "t": 478,
+   "e": 548,
+   "titulo": "Ver, entrar y heredar",
+   "txt": "En cuestiones del reino son tres: ver, entrar y heredar. ¿Cuál le interesa? Pero usted no puede llegar hasta el lugar santísimo si primero no pasa por […] el lugar santo, y no puede pasar por el lugar santo si primero no pasa por el atrio. Eso es lo mismo: nadie puede heredar si primero no entra, y nadie puede entrar si primero no ve. Ahora, requisitos para ver: ¿cuál sería? Yo lo acabo de leer en Juan, capítulo 3. Mire, nuestras Biblias dicen «nacer de nuevo», pero en los originales y en el contexto bíblico lo más correcto es nacer de arriba o de lo alto."
+  },
+  {
+   "t": 1222,
+   "e": 1305,
+   "titulo": "Que se abran los ojos del entendimiento",
+   "txt": "Conforme nuestros ojos son iluminados, nuestro entendimiento es afectado también. Porque note que ellos, hermano, no entendían: el entendimiento se quedaba estéril porque no tenían los ojos abiertos. […] Hechos 26:18: «Para que abran sus ojos, a fin de que se vuelvan de la oscuridad a la luz y del dominio de Satanás a Dios, para que reciban por la fe en mí el perdón de pecados y herencia entre los que han sido santificados». Pero mire qué tremendo, hermano: el orden de los factores sí altera el producto. Aquí ya está hablando de un asunto de estado espiritual."
+  },
+  {
+   "t": 3506,
+   "e": 3566,
+   "titulo": "Dios no se queda ni con un vaso de agua",
+   "txt": "Abraham fue, tomó el carnero y le ofreció un holocausto en lugar de su hijo. Impresionante. Porque note que Dios le mandó la solución, la provisión, de una manera sobrenatural, hermano. […] Cuando alguien, hermano, está dispuesto a abrir sus ojos para darle al Señor, el Señor le va a dar más. El Señor le va a dar más, porque Dios no se queda ni con un vaso de agua. Todo lo que nosotros demos, tenga usted la seguridad de que lo dio con amor. Tenga la seguridad de que Dios va a abrirle los ojos para darle una provisión más grande de lo que uno se ha despojado."
+  }
+ ],
+ "citas": [
+  {
+   "t": 1018,
+   "txt": "Aunque ya nacimos, todavía seguimos en el proceso de que nuestros ojos sean abiertos."
+  },
+  {
+   "t": 2042,
+   "txt": "Al que Dios le habla en su Palabra, nunca se va a sentir desesperado, nunca se va a sentir desolado."
+  },
+  {
+   "t": 3904,
+   "txt": "Señor, yo quiero que abras mis ojos como lo hiciste con Agar, con Abraham. Muéstrame dónde está la oportunidad."
+  }
+ ],
+ "reflexion": [
+  "Ver, entrar y heredar: ¿en cuál de los tres pasos sientes que el Señor te está llevando hoy?",
+  "¿Qué le pides al Señor que te permita ver, aunque implique ver también lo malo que hay en ti?",
+  "Abraham dio lo más grande que tenía y Dios proveyó: ¿qué estás reteniendo que el Señor te pide que le entregues con amor?"
  ]
 }

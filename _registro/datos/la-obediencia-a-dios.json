@@ -85,5 +85,46 @@
  ],
  "closing": [
   "La enseñanza invita a obedecer a Dios, ordenar la casa y caminar en libertad del pecado."
- ]
+ ],
+ "patron": "C",
+ "momentos": [
+  {
+   "t": 1006,
+   "e": 1062,
+   "titulo": "La obediencia nace del amor",
+   "txt": "Y una de las cosas que nosotros hacemos por amor es la obediencia a Dios. Una de las situaciones que nos cuesta demasiado desobedecer. Somos por naturaleza desobedientes. Pero lo lindo es que, al estar nosotros bajo la cobertura de Dios, bajo la presencia de Dios, la unción cae y rompe el yugo de esclavitud. Te cae la gloria de Dios, te cae su gracia. Por eso es que somos diferentes a los que están afuera. Si nosotros somos igual a los que están afuera, algo no está bien. Y Dios quiere hoy que seamos igual que él, que vayamos hacia una perfección."
+  },
+  {
+   "t": 3010,
+   "e": 3075,
+   "titulo": "La salvación es para el obediente",
+   "txt": "Y aunque era hijo, aprendió. Voy a aprender a ser obediente por lo que padeció, por lo que vivió, por lo que sufrió. Hermano, todo esto, cuando usted lo pasa, atesora lo que Dios es. Y habiendo sido hecho perfecto, entonces quiere decir que el padecimiento te lleva a la perfección y la sangre de Cristo te lleva a la perfección. Y habiendo sido hecho perfecto, vino a ser fuente eterna de salvación para todos los que […] Entonces quiere decir que la salvación no es para los desobedientes. La salvación es para mí, que soy obediente. Se lo estoy diciendo por fe, para que el Señor quite toda desobediencia, toda obstinación, toda necedad, toda terquedad."
+  },
+  {
+   "t": 4503,
+   "e": 4570,
+   "titulo": "La desobediencia, como iniquidad e idolatría",
+   "txt": "[…] y la desobediencia. Imagínese cómo compara la desobediencia el Señor: como iniquidad e idolatría. Quiere decir que la persona que ya es superdesobediente anda en iniquidad y se le volvió una idolatría la desobediencia. «Por cuanto has desechado la palabra del Señor, él también te ha desechado para que no seas rey». Primera de Samuel 15:24: «He pecado, en verdad he quebrantado el mandamiento del Señor y tus palabras, porque temí al pueblo y escuché su voz». Quiere decir: no escuché la voz de Dios, escuché la voz de la gente."
+  }
+ ],
+ "citas": [
+  {
+   "t": 1535,
+   "txt": "Si nuestra autoridad es Dios, a él le vamos a hacer caso."
+  },
+  {
+   "t": 3514,
+   "txt": "Toda desobediencia, pequeña o grande, trae castigo."
+  },
+  {
+   "t": 5002,
+   "txt": "Cuántas personas somos necias a veces y no obedecemos a Dios, y somos tercos, y nos va mal y de todos modos seguimos igual."
+  }
+ ],
+ "reflexion": [
+  "¿En qué área de tu vida te cuesta más obedecer a Dios? ¿Qué paso de obediencia puedes dar esta semana?",
+  "Si la obediencia nace del amor, ¿cómo estás demostrando tu amor a Dios más allá de las palabras?",
+  "¿Hay alguna terquedad u obstinación que necesites entregarle hoy al Señor para caminar en su orden y su bendición?"
+ ],
+ "inicio": 810
 }

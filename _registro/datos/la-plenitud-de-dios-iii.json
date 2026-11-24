@@ -90,5 +90,46 @@
  ],
  "closing": [
   "La enseñanza concluye con la promesa de restitución para el pueblo de Dios."
- ]
+ ],
+ "patron": "C",
+ "momentos": [
+  {
+   "t": 1547,
+   "e": 1594,
+   "titulo": "Anchura, longitud, altura y profundidad",
+   "txt": "Mire qué tremendo lo que quiere Dios que comprendamos para ser abundantes. ¿Qué es lo que quiere que los santos aprendan? A ser abundantes. ¿Con qué? Con la anchura, la longitud, la altura y la profundidad. Cuatro cosas que nos llevan al equilibrio. Y de conocer. Hay gente que desconoce. Nosotros hemos sido llamados a conocer ¿qué? El amor de Cristo. Si usted conoce el amor de Cristo, usted tiene que cambiar. Si usted no conoce el amor de Cristo, sigue con egoísmos, con envidias, con odio, con amargura."
+  },
+  {
+   "t": 2987,
+   "e": 3040,
+   "titulo": "El Espíritu de Dios lo revela",
+   "txt": "Porque entre los hombres, ¿quién conoce los pensamientos de un hombre sino el espíritu del hombre que está en él? Asimismo, nadie conoce los pensamientos de Dios sino el Espíritu de Dios. Entonces, lo revela el Espíritu de Dios. Hay también un receptor que hoy te voy a activar: la mente de Cristo. […] Lo que veo hacer al Padre, eso hago. A través del espíritu te trae la profundidad de Dios y cambia tu vida."
+  },
+  {
+   "t": 3998,
+   "e": 4050,
+   "titulo": "Dios no nos puso a juzgar, sino a bendecir",
+   "txt": "Usted no esté señalando a nadie. […] Dios es un Dios de oportunidades. Siete veces cae el justo y delante de su Señor se levanta nuevamente. Mire, Dios no nos puso a juzgar, Dios nos puso a bendecir. Y si alguien cae, hay que restaurarlo con un espíritu de mansedumbre. ¿Por qué? Porque tienes que tener cuidado de que después no caigas tú en lo mismo. Mejor, cuando uno mire algo en serio, decir: «Señor, guarda mi vida, porque yo puedo caer igual que esta persona, y bendícelo, Señor, porque yo sé que va a aprender de esto»."
+  }
+ ],
+ "citas": [
+  {
+   "t": 1280,
+   "txt": "El que ha comenzado la buena obra la perfeccionará hasta el final."
+  },
+  {
+   "t": 2512,
+   "txt": "El Señor no va a venir por niños; va a venir por una iglesia madura, por una iglesia hermosa, sin tacha, sin mancha, sin arruga."
+  },
+  {
+   "t": 5102,
+   "txt": "Hay caminos que parecen buenos, pero su finalidad es de muerte."
+  }
+ ],
+ "reflexion": [
+  "Si conocer el amor de Cristo nos cambia, ¿qué egoísmo, envidia o amargura necesitas soltar esta semana?",
+  "¿Cómo respondes cuando alguien cae: señalas o restauras con mansedumbre? ¿Qué harías distinto la próxima vez?",
+  "Hay caminos que parecen buenos pero terminan en muerte: ¿qué decisión necesitas poner hoy a la luz de Cristo, el camino correcto?"
+ ],
+ "inicio": 1265
 }

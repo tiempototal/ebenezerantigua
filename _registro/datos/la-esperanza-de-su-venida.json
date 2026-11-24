@@ -108,5 +108,45 @@
  ],
  "closing": [
   "Después de la ministración, el mensaje cierra con un tiempo de oración por las necesidades de los hermanos y por la paz de las naciones."
+ ],
+ "patron": "B",
+ "momentos": [
+  {
+   "t": 384,
+   "e": 432,
+   "titulo": "Nuestra esperanza es que Cristo va a volver",
+   "txt": "Es decir, que nuestra esperanza, hermano, está puesta en que Cristo va a volver. Si nosotros estamos acá, es porque estamos buscando al Señor, esperando su venida. Porque, perdóneme, hermano, pero si alguien está aquí y no cree, no espera que Cristo vuelva, entonces hay que reevaluar las cosas y decirle: «Señor, yo necesito creer que tú vas a volver». Porque usted y yo no creemos en un Dios muerto, creemos en un Dios vivo, en aquel Cristo que les dijo a los discípulos: «Yo me voy, pero les voy a preparar morada y voy a volver por ustedes». Entonces tenemos que guardar la esperanza de su venida."
+  },
+  {
+   "t": 1616,
+   "e": 1650,
+   "titulo": "Creer lo que leo y no lo que veo",
+   "txt": "Él dice: «Yo creo a lo que leo y no a lo que veo». Porque si yo le creo ahorita a lo que veo, digo: «Ah, la cosa está difícil». Pero si yo creo a lo que leo en la palabra, yo voy a tener esperanza. Porque si usted mira el mundo, hermano, va en picada; pero la palabra dice que para nosotros el Señor tiene planes de bienestar y no de calamidad, planes de un futuro y una esperanza buena en Cristo Jesús."
+  },
+  {
+   "t": 2234,
+   "e": 2275,
+   "titulo": "Lo que usted no puede, lo puede Dios",
+   "txt": "[…] hay fe, pero la esperanza es aquello de que tú no sabes qué va a pasar, pero algo nuevo va a hacer el Señor. Esa es la esperanza, y la fe es lo que tú estás esperando. Así que en esta noche es más difícil la esperanza, porque no te han dicho nada, pero sí confías en un Dios que te ama, un Dios que te busca: tú lo encuentras, él te encuentra. Así que empiece ahí a descargarse. Lo que usted no puede, lo puede Dios; lo que no puede arreglar usted, lo arregla Dios."
+  }
+ ],
+ "citas": [
+  {
+   "t": 14,
+   "txt": "La esperanza es el sustantivo que deriva del verbo esperar algo con confianza o deseo, activa y confiadamente, en un futuro positivo."
+  },
+  {
+   "t": 1684,
+   "txt": "La esperanza viene de lo que Dios prometió para usted y para mí, no de lo que el mundo está diciendo."
+  },
+  {
+   "t": 1947,
+   "txt": "Aquel que tiene la esperanza de su venida, aquel que está esperando que Cristo vuelva, ese todos los días va a recibir fuerzas renovadas."
+  }
+ ],
+ "reflexion": [
+  "¿Realmente esperas que Cristo vuelva? ¿Qué cambiaría en tu semana si lo esperaras de verdad?",
+  "Cuando la situación se ve difícil, ¿le crees a lo que ves o a lo que está escrito en la palabra?",
+  "¿Qué carga necesitas descargar hoy ante Dios, confiando en que lo que tú no puedes, él sí lo puede?"
  ]
 }

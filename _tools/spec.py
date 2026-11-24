@@ -19,3 +19,9 @@ def mk(slug, title, id, date, speaker, tag, dur, lead, items, sections, verses, 
              items=[re.sub(r'^([^:]{2,90}):', r'<b>\1:</b>', x, count=1) for x in items], chips=[v[0] for v in verses], sections=sections, verses=verses, closing=closing)
     if speaker_slug: s['speaker_slug'] = speaker_slug
     json.dump(s, open(f'_registro/datos/{slug}.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+
+def enrich(slug, patron, momentos, citas, reflexion):
+    """Añade a un spec existente: momentos [{t,e,titulo,txt}] (transcripción literal), citas [{t,txt}] (2-5), reflexion [preguntas], patron 'A'|'B'|'C'."""
+    p = f'_registro/datos/{slug}.json'; s = json.load(open(p, encoding='utf-8'))
+    s.update(patron=patron, momentos=momentos, citas=citas, reflexion=reflexion)
+    json.dump(s, open(p, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)

@@ -48,7 +48,7 @@ for f in sys.argv[1:]:
 
 feed = rd('ensenanzas/feed.xml')
 idx = rd('ensenanzas/index.html')
-IDX_PRE = re.sub(r'<link rel="(?:prev|next)" href="[^"]*">', '', idx[:idx.index('<main>')]); IDX_POST = idx[idx.index('<aside class="cta">'):].replace('<script src="/ensenanzas/buscar.js" defer></script>', '')
+IDX_PRE = re.sub(r'<style id="hs">.*?</style>', '', re.sub(r'<link rel="(?:prev|next)" href="[^"]*">', '', idx[:idx.index('<main>')]), flags=re.S); IDX_POST = idx[idx.index('<aside class="cta">'):].replace('<script src="/ensenanzas/buscar.js" defer></script>', '')
 
 # ---------- registro de páginas (fuente de verdad) ----------
 REG = os.path.join(R, '_registro/paginas.json')
@@ -94,20 +94,98 @@ def card(p, root):  # root = prefijo hacia la raíz del sitio
     return (f'<a class="ec" href="{root}ensenanzas/{p["slug"]}/"><span class="ect"><img src="{th}" alt="{esc(p["title"])} — {esc(p["speaker"])}" loading="lazy" width="320" height="180"></span>'
             f'<small>{tag}</small><b>{esc(p["title"])}</b><span class="ew">{esc(p["speaker"])}</span><span class="ex">{esc(p["ex"])}</span></a>')
 
+# ---------- contexto: series y predicador ----------
+ROMAN = {'I':1,'II':2,'III':3,'IV':4,'V':5,'VI':6,'VII':7,'VIII':8,'IX':9,'X':10,'XI':11,'XII':12,'XIII':13,'XIV':14,'XV':15}
+def split_title(t):
+    m = re.search(r'\s+(XV|XIV|XIII|XII|XI|X|IX|VIII|VII|VI|V|IV|III|II|I)$', t.strip())
+    return (t.strip()[:m.start()].strip(), ROMAN[m.group(1)]) if m else (t.strip(), 0)
+def skey(t): return slugify(split_title(t)[0])
+CSV_MAX = {}
+if os.path.exists(os.path.join(R, '_registro/streams.csv')):
+    import csv
+    for r_ in csv.DictReader(open(os.path.join(R, '_registro/streams.csv'), encoding='utf-8')):
+        b_, n_ = split_title(r_['titulo']); CSV_MAX[slugify(b_)] = max(CSV_MAX.get(slugify(b_), 0), n_)
+HOME_QUOTES = {'hugo-garcia': '“Cada mañana son nuevas sus misericordias.”', 'debora-de-garcia': '“La palabra se expone, no se impone.”',
+               'rodrigo-ordonez': '“Dios no quiere una religión aprendida de hombres, quiere una relación.”',
+               'jose-carlos-mendez': '“Rindamos nuestra voluntad, para que el Señor haga su voluntad.”'}
+BIOS = json.load(open(os.path.join(R, '_registro/predicadores.json'), encoding='utf-8')) if os.path.exists(os.path.join(R, '_registro/predicadores.json')) else {}
+def series_of(p):
+    """(miembros ordenados, parte de este, total conocido) o None si no es serie."""
+    if p['cat'] != 'ensenanza': return None
+    k = skey(p['title']); mem = [q for q in reg.values() if q['cat'] == 'ensenanza' and skey(q['title']) == k and q['speaker'] == p['speaker']]
+    def num(q): return split_title(q['title'])[1] or 1
+    tot = max([CSV_MAX.get(k, 0)] + [num(q) for q in mem])
+    if len(mem) < 2 and tot < 2: return None
+    mem.sort(key=lambda q: (num(q), q['date'])); return mem, num(p), tot, split_title(p['title'])[0]
+def mmss(t):
+    t = int(t); h, m, s_ = t // 3600, t % 3600 // 60, t % 60
+    return f'{h}:{m:02d}:{s_:02d}' if h else f'{m}:{s_:02d}'
+def ctx_html(p):
+    out = ''
+    ser = series_of(p)
+    if ser:
+        mem, n, tot, nombre = ser
+        head = f'Esta enseñanza es la <b>parte {n} de {tot}</b> de la serie «{esc(nombre)}».' if tot >= n else f'Esta enseñanza forma parte de la serie «{esc(nombre)}».'
+        lis = ''.join((f'<li class="now"><b>Parte {split_title(q["title"])[1] or 1}</b> · {esc(cut(q["ex"], 120))} <em>(estás aquí)</em></li>' if q['slug'] == p['slug'] else
+                       f'<li><a href="../../ensenanzas/{q["slug"]}/"><b>Parte {split_title(q["title"])[1] or 1}</b> · {esc(q["title"])}</a><span>{esc(cut(q["ex"], 120))}</span></li>') for q in mem)
+        out += f'<div class="cx-s"><small>La serie</small><p>{head}</p><ul>{lis}</ul></div>'
+    sp = speakers.get(p['speaker'])
+    if sp:
+        ph = PHOTOS.get(sp['slug']); mine_n = sum(1 for q in reg.values() if q['speaker'] == p['speaker'] and q['cat'] == 'ensenanza')
+        av = (f'<span class="pav"><img src="../../fotos/{ph[0]}" alt="{esc(sp.get("tit", sp["pre"]) + " " + sp["nom"])}" width="84" height="84" loading="lazy" style="object-position:{ph[1]}"></span>' if ph else f'<span class="pav ini">{"".join(w[0] for w in sp["nom"].split()[:2]).upper()}</span>')
+        sers = {}
+        for q in reg.values():
+            if q['speaker'] == p['speaker'] and q['cat'] == 'ensenanza' and skey(q['title']) != skey(p['title']): sers.setdefault(skey(q['title']), [split_title(q['title'])[0], 0]); sers[skey(q['title'])][1] += 1
+        otras = [v[0] for v in sorted(sers.values(), key=lambda v: -v[1]) if v[1] >= 2][:3]
+        bio = BIOS.get(sp['slug'], '')
+        out += (f'<div class="cx-p">{av}<div><small>Quién enseña</small><b>{esc(sp.get("tit", sp["pre"]) + " " + sp["nom"])}</b><span>Ebenezer Antigua · Jocotenango, Antigua Guatemala</span>'
+                + (f'<p>{esc(bio)}</p>' if bio else '') + (f'<q>{HOME_QUOTES[sp["slug"]][1:-1]}</q>' if sp['slug'] in HOME_QUOTES else '')
+                + f'<p class="st">{mine_n} enseñanza{"s" if mine_n != 1 else ""} publicada{"s" if mine_n != 1 else ""} en este sitio' + (f' · También: {esc(", ".join(otras))}' if otras else '') + '.</p>'
+                f'<a href="../../predicadores/{sp["slug"]}/">Ver todas sus enseñanzas →</a></div></div>')
+    return out
+V2_CSS = ('<style id="v2">.mom,.refl,.cx{margin:2.4rem 0}.mom-h{margin-bottom:1rem}.mom-h h2{margin:.5rem 0 .3rem}.mom-i{font-size:.95rem;color:var(--brown2);margin:0 0 .4rem}'
+ '.mq{margin:1.1rem 0;padding:1.4rem 1.5rem 1.1rem 1.7rem;background:linear-gradient(160deg,#fffdf8,var(--paper));border:1px solid rgba(192,138,43,.35);border-left:6px solid var(--gold2);border-radius:20px;box-shadow:0 22px 44px -36px rgba(91,31,46,.55);position:relative}'
+ '.mq::before{content:"“";position:absolute;right:1.1rem;top:-.35rem;font-family:var(--serif);font-size:5rem;line-height:1;color:rgba(192,138,43,.28)}'
+ '.mq blockquote{margin:0}.mq blockquote p{font-family:var(--serif);font-size:1.28rem;line-height:1.62;color:var(--ink);margin:.1rem 0 .7rem}'
+ '.mq figcaption{display:flex;flex-wrap:wrap;gap:.4rem .9rem;align-items:center;font-size:.8rem;color:var(--brown2)}.mq figcaption a{display:inline-flex;align-items:center;gap:.4rem;background:var(--wine);color:#fff!important;padding:.32rem .8rem;border-radius:99px;font-weight:600;text-decoration:none}'
+ '.mq figcaption a:hover{background:var(--wine2)}.mq .mt{font-weight:700;color:var(--wine);letter-spacing:.04em}'
+ '.pq{margin:2rem 0;padding:1.5rem 1.7rem;border-radius:22px;background:linear-gradient(135deg,var(--wine),#3b1220);color:#f6efe3;box-shadow:0 26px 50px -34px rgba(59,18,32,.8)}'
+ '.pq p{font-family:var(--serif);font-style:italic;font-size:1.45rem;line-height:1.45;margin:0 0 .6rem;color:#f6efe3}.pq footer{font-size:.82rem;color:#f0cf7a}.pq footer a{color:#f0cf7a!important;font-weight:700;text-decoration:underline}'
+ '.pqs{display:grid;gap:1rem;margin:1.6rem 0 2rem}.pqs .pq{margin:0}@media(min-width:900px){.pqs.n2,.pqs.n3{grid-template-columns:repeat(2,1fr)}.pqs.n3 .pq:first-child{grid-column:1/-1}}'
+ '.refl{padding:1.4rem 1.5rem;background:var(--cream2);border-radius:22px;border:1px dashed rgba(74,47,29,.3)}.refl h2{margin-top:0}.refl ol{margin:.6rem 0 0;padding-left:1.3rem}.refl li{margin:.6rem 0;font-size:1.04rem;line-height:1.6}'
+ '.refl .ri{color:var(--brown2);font-size:.95rem;margin:0}'
+ '.cx{display:grid;gap:1.1rem;grid-template-columns:1fr}@media(min-width:900px){.cx.two{grid-template-columns:1.15fr 1fr}}'
+ '.cx>div{background:#fff;border:1px solid rgba(74,47,29,.12);border-radius:20px;padding:1.2rem 1.3rem}.cx small{display:block;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--wine);margin-bottom:.4rem}'
+ '.cx-s ul{list-style:none;margin:.6rem 0 0;padding:0;display:grid;gap:.5rem}.cx-s li{display:block;padding:.55rem .75rem;border-radius:12px;background:var(--paper);font-size:.9rem;line-height:1.45}.cx-s li span{display:block;color:var(--brown2);font-size:.84rem;margin-top:.15rem}.cx-s li.now{border:1px solid var(--gold2);background:#fff6e0}.cx-s li.now em{color:var(--wine);font-style:normal;font-weight:600}'
+ '.cx-p{display:grid;grid-template-columns:auto 1fr;gap:1rem;align-items:start}.cx-p .pav{width:76px;height:76px;border-radius:50%;overflow:hidden;border:3px solid rgba(226,182,89,.75);background:#3b1220;display:grid;place-items:center;color:#f0cf7a;font-family:Georgia,serif;font-size:1.5rem}.cx-p .pav img{width:100%;height:100%;object-fit:cover}'
+ '.cx-p b{display:block;font-size:1.15rem}.cx-p span{display:block;font-size:.84rem;color:var(--brown2)}.cx-p q{display:block;margin:.6rem 0;font-family:var(--serif);font-style:italic;font-size:1.15rem;color:var(--wine)}.cx-p .st{font-size:.85rem;margin:.4rem 0}.cx-p a{font-weight:700;font-size:.88rem}'
+ '@media(max-width:700px){.mq{padding:1.2rem 1.1rem 1rem 1.2rem}.mq blockquote p{font-size:1.12rem}.pq p{font-size:1.22rem}}</style>')
+PAT = {'A': dict(mh='Lo mejor de la prédica, palabra por palabra', mi='Estos fragmentos son transcripción literal de lo que se dijo; la puntuación se añadió para leerlos mejor.', rh='Para pensar esta semana'),
+       'B': dict(mh='Momentos para escuchar con calma', mi='Palabras textuales del predicador, tomadas de los subtítulos del video. Toca el minuto para oírlas en su voz.', rh='Para llevar a casa'),
+       'C': dict(mh='Lo que se dijo desde el púlpito', mi='Fragmentos tal como se pronunciaron (con puntuación añadida) y el minuto exacto del video.', rh='Para conversar en tu casa')}
+def pat_of(s):
+    if s.get('patron') in PAT: return s['patron']
+    return 'ABC'[sum(map(ord, s['slug'])) % 3]
+
 # ---------- página de enseñanza ----------
-T = rd('ensenanzas/la-luz/index.html')
+T = rd('_tools/plantilla-base.html')
 def build_page(s):
-    t = T; cat = s['cat']; ci = CATS.get(cat)
+    t = T; cat = s['cat']; ci = CATS.get(cat); pt = pat_of(s); PT = PAT[pt]
     old_t = 'La Luz — Pastor Rodrigo Ordóñez'
     old_d = 'Resumen y artículo de la enseñanza «La Luz» del Pastor Rodrigo Ordóñez: ser luz en medio de la oscuridad de los tiempos finales. Ebenezer Antigua.'
     full = f'{s["title"]} — {s["speaker"]}'
     t = t.replace(old_t, full).replace(old_d, s['desc']).replace('9Gu2oq3Za-E', s['id']).replace('ensenanzas/la-luz/', f'ensenanzas/{s["slug"]}/')
     m = re.search(r'<script type="application/ld\+json">(.*?)</script>', t, re.S)
     j = json.loads(m.group(1))
+    pub = TODAY; fp = os.path.join(R, f'ensenanzas/{s["slug"]}/index.html')
+    if os.path.exists(fp):
+        mm_ = re.search(r'"datePublished": ?"(\d{4}-\d\d-\d\d)"', open(fp, encoding='utf-8').read())
+        if mm_: pub = mm_.group(1)
+    mom = s.get('momentos') or []; cit = s.get('citas') or []; refl = s.get('reflexion') or []
     for e in j['@graph']:
         ty = e.get('@type')
         if ty == 'Article':
-            e.update(headline=full, name=s['title'], description=s['desc'], datePublished=TODAY, dateModified=TODAY, keywords=s['keywords'], about=s['title'])
+            e.update(headline=full, name=s['title'], description=s['desc'], datePublished=pub, dateModified=TODAY, keywords=s['keywords'], about=s['title'])
         elif ty == 'BreadcrumbList':
             it = e['itemListElement'][:2]
             if ci: it.append({'@type': 'ListItem', 'position': 3, 'name': ci['label'], 'item': f'https://ebenezerantigua.com/ensenanzas/{ci["slug"]}/'})
@@ -115,12 +193,53 @@ def build_page(s):
             e['itemListElement'] = it
         elif ty == 'VideoObject':
             h = s['dur']; e.update(uploadDate=s['date'], duration=f'PT{h//3600}H{h%3600//60}M{h%60}S', description=s['desc'])
+            if mom: e['hasPart'] = [{'@type': 'Clip', 'name': m_.get('titulo') or f'Momento {i+1}', 'startOffset': int(m_['t']), 'endOffset': int(m_['e']), 'url': f'https://www.youtube.com/watch?v={s["id"]}&t={int(m_["t"])}s'} for i, m_ in enumerate(mom)]
     t = t.replace(m.group(1), json.dumps(j, ensure_ascii=False))
-    pre = t[:t.index('<main>')]; post = t[t.index('<footer'):]
-    words = sum(len(plain(x).split()) for x in s['items'] + [p for _, ps in s['sections'] for p in ps] + s['closing'] + [v[1] for v in s['verses']])
+    pre = t[:t.index('<main>')].replace('</head>', V2_CSS + '</head>', 1); post = t[t.index('<footer'):]
+    words = sum(len(plain(x).split()) for x in s['items'] + [p for _, ps in s['sections'] for p in ps] + s['closing'] + [v[1] for v in s['verses']] + [m_['txt'] for m_ in mom])
     mins = max(3, math.ceil(words / 200))
     sl = largo(s['date'])
-    toc = [('en-resumen', 'En resumen')] + [(slugify(n), n) for n, _ in s['sections']] + [('versiculos', 'Versículos citados'), ('cierre', 'Cierre de la reunión')]
+    ctx = ctx_html(reg[s['slug']]) if s['slug'] in reg else ''
+    # ----- bloques -----
+    yt = lambda tt: f'https://www.youtube.com/watch?v={s["id"]}&t={int(tt)}s'
+    def b_mom():
+        if not mom: return ''
+        o = f'<section id="momentos" class="mom"><div class="mom-h"><span class="sum-k">Palabra por palabra</span><h2>{PT["mh"]}</h2><p class="mom-i">{PT["mi"]}</p></div>'
+        for m_ in mom:
+            o += (f'<figure class="mq"><blockquote><p>{esc(m_["txt"])}</p></blockquote><figcaption><a href="{yt(m_["t"])}" target="_blank" rel="noopener">▶ Escúchalo desde el minuto {mmss(m_["t"])}</a>'
+                  + (f'<span class="mt">{esc(m_["titulo"])}</span>' if m_.get('titulo') else '') + f'<span>{esc(s["speaker"])}</span></figcaption></figure>')
+        return o + '</section>'
+    def pq(c): return f'<aside class="pq"><p>“{esc(c["txt"])}”</p><footer>— {esc(s["speaker"])} · <a href="{yt(c["t"])}" target="_blank" rel="noopener">minuto {mmss(c["t"])}</a></footer></aside>'
+    def b_sum():
+        chips = s['chips']; shown = chips[:6]
+        sumv = '<div class="sum-v"><small>Pasajes citados</small>' + ''.join(f'<a href="#versiculos">{esc(c)}</a>' for c in shown) + (f'<a class="mas" href="#versiculos">+{len(chips)-6} más</a>' if len(chips) > 6 else '') + '</div>'
+        lis = ''.join(f'<li style="--i:{i}"><span class="n">{i+1:02d}</span><p>{x}</p></li>' for i, x in enumerate(s['items']))
+        return f'<section id="en-resumen" class="sum"><div class="sum-h"><span class="sum-k">Lectura rápida</span><h2>En resumen</h2><div class="sum-m"><span>{len(s["items"])} ideas clave</span><span>{mins} min de lectura</span><span>{len(chips)} pasajes citados</span></div></div><ol class="sum-l">{lis}</ol>{sumv}</section>'
+    top = []; rest = list(cit)
+    if pt == 'C' and cit: top = rest[:3 if len(rest) >= 3 else len(rest)]; rest = rest[len(top):]
+    place = {}; ns = len(s['sections'])
+    for k, c in enumerate(rest):
+        i = min(ns - 1, k * max(1, ns // max(1, len(rest)))) if ns else 0
+        while i in place and i < ns - 1: i += 1
+        place.setdefault(i, []).append(c)
+    secs = []
+    for i, (n, ps) in enumerate(s['sections']):
+        h_ = f'<section id="{slugify(n)}"><h2>{esc(n)}</h2>' + ''.join((p if p.lstrip().startswith('<') else f'<p>{p}</p>') for p in ps) + '</section>' + ''.join(pq(c) for c in place.get(i, []))
+        secs.append((slugify(n), n, h_))
+    b_ver = '<section id="versiculos"><h2>Versículos citados</h2><ul class="vs">' + ''.join(f'<li><b>{esc(r)}</b> {x}</li>' for r, x in s['verses']) + '</ul></section>'
+    b_ref = (f'<section id="reflexion" class="refl"><h2>{PT["rh"]}</h2><p class="ri">Preguntas para pensar a solas o conversar en familia, a partir de lo que se enseñó.</p><ol>' + ''.join(f'<li>{esc(x)}</li>' for x in refl) + '</ol></section>') if refl else ''
+    b_cie = '<section id="cierre"><h2>Cierre de la reunión</h2>' + ''.join(f'<p>{p}</p>' for p in s['closing']) + '</section>'
+    b_ser = f'<section id="serie" class="cx{" two" if ctx.count("<div class=") >= 2 else ""}" aria-label="Contexto de la serie y del predicador">{ctx}</section>' if ctx else ''
+    top_h = (f'<div class="pqs n{len(top)}">' + ''.join(pq(c) for c in top) + '</div>') if top else ''
+    # orden según patrón: (id, etiqueta del índice, html)
+    sec_blocks = [(a, b, h_) for a, b, h_ in secs]
+    M = ('momentos', 'Palabra por palabra', b_mom()); S = ('en-resumen', 'En resumen', b_sum())
+    V = ('versiculos', 'Versículos citados', b_ver); RF = ('reflexion', PT['rh'], b_ref); CI = ('cierre', 'Cierre de la reunión', b_cie); SE = ('serie', 'La serie y quién enseña', b_ser)
+    if pt == 'A': seq = [M, S] + sec_blocks + [V, RF, CI, SE]
+    elif pt == 'B': seq = [S, M] + sec_blocks + [RF, V, CI, SE]
+    else: seq = [S] + sec_blocks[:1] + [M] + sec_blocks[1:] + [V, CI, RF, SE]
+    seq = [x for x in seq if x[2]]
+    toc = [(a, b) for a, b, _ in seq]
     bc = '<a href="../../">Inicio</a><a href="../../ensenanzas/">Enseñanzas</a>' + (f'<a href="../../ensenanzas/{ci["slug"]}/">{ci["label"]}</a>' if ci else '') + f'<span>{esc(s["title"])}</span>'
     meta = f'<span>{spk_html(s["speaker"])}</span>' + (f'<span>·</span><span>{sl}</span>' if not ci else '') + f'<span>·</span><span>{mins} min de lectura</span>'
     cap = (f'Video de la enseñanza, {sl}. ' if not ci else 'Video del mensaje. ')
@@ -131,14 +250,7 @@ def build_page(s):
     tocs = ('<div class="w art two"><aside class="tocs" aria-label="Índice de la enseñanza"><nav class="toc" aria-label="Contenido"><b>En esta página</b><ol>'
             + ''.join(f'<li><a href="#{a}">{esc(b)}</a></li>' for a, b in toc)
             + '</ol><div class="tp" aria-hidden="true"><span><i></i></span><small>Leído <em>0%</em></small></div></nav></aside>')
-    chips = s['chips']; shown = chips[:6]
-    sumv = '<div class="sum-v"><small>Pasajes citados</small>' + ''.join(f'<a href="#versiculos">{esc(c)}</a>' for c in shown) + (f'<a class="mas" href="#versiculos">+{len(chips)-6} más</a>' if len(chips) > 6 else '') + '</div>'
-    lis = ''.join(f'<li style="--i:{i}"><span class="n">{i+1:02d}</span><p>{x}</p></li>' for i, x in enumerate(s['items']))
-    art = (f'<article><p class="lead">{esc(s["lead"])}</p><section id="en-resumen" class="sum"><div class="sum-h"><span class="sum-k">Lectura rápida</span><h2>En resumen</h2><div class="sum-m"><span>{len(s["items"])} ideas clave</span><span>{mins} min de lectura</span><span>{len(chips)} pasajes citados</span></div></div><ol class="sum-l">{lis}</ol>{sumv}</section>')
-    for n, ps in s['sections']:
-        art += f'<section id="{slugify(n)}"><h2>{esc(n)}</h2>' + ''.join(f'<p>{p}</p>' for p in ps) + '</section>'
-    art += '<section id="versiculos"><h2>Versículos citados</h2><ul class="vs">' + ''.join(f'<li><b>{esc(r)}</b> {x}</li>' for r, x in s['verses']) + '</ul></section>'
-    art += '<section id="cierre"><h2>Cierre de la reunión</h2>' + ''.join(f'<p>{p}</p>' for p in s['closing']) + '</section>'
+    art = f'<article><p class="lead">{esc(s["lead"])}</p>' + top_h + ''.join(h_ for _, _, h_ in seq)
     k = T.index('<p class="nota">'); k2 = T.index('<nav class="pn"')
     art += T[k:k2]
     lst = bycat(cat); i = next(n for n, p in enumerate(lst) if p['slug'] == s['slug'])
@@ -371,4 +483,20 @@ for n in orden_sp:
             if d.isdigit() and int(d) > total_p: shutil.rmtree(os.path.join(pdir, d))
     for k in range(2, total_p + 1): add_sm(base_url + f'pagina/{k}/', '0.5')
 wr('sitemap.xml', sm)
+
+# ---------- páginas sin video (p. ej. La Oración): solo se añade el bloque de contexto ----------
+SIN_VIDEO = ['la-oracion']
+for slug in SIN_VIDEO:
+    path = f'ensenanzas/{slug}/index.html'
+    if not os.path.exists(os.path.join(R, path)) or slug not in reg: continue
+    h = rd(path)
+    h = re.sub(r'<style id="v2">.*?</style>', '', h, flags=re.S); h = re.sub(r'<section id="serie"[^>]*>.*?</section>(?=<p class="nota">)', '', h, flags=re.S)
+    h = h.replace('<li><a href="#serie">La serie y quién enseña</a></li>', '')
+    c = ctx_html(reg[slug])
+    if c:
+        two = ' two' if c.count('<div class=') >= 2 else ''
+        h = h.replace('</head>', V2_CSS + '</head>', 1)
+        h = h.replace('<p class="nota">', f'<section id="serie" class="cx{two}" aria-label="Contexto de la serie y del predicador">{c}</section><p class="nota">', 1)
+        h = h.replace('<li><a href="#cierre">Cierre de la reunión</a></li>', '<li><a href="#cierre">Cierre de la reunión</a></li><li><a href="#serie">La serie y quién enseña</a></li>', 1)
+    wr(path, h)
 print('páginas nuevas:', len(specs), '· predicadores:', len(orden_sp), '· enseñanzas:', len(order), '· discipulados:', len(bycat('discipulado')), '· otros:', len(bycat('otro')), '· páginas de listado:', tots)

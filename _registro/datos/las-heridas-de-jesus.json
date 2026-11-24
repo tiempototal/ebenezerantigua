@@ -1,28 +1,126 @@
 {
-"slug":"las-heridas-de-jesus","title":"Las heridas de Jesús","id":"6AtkGhauEfE","date":"2026-11-01","speaker":"Profeta Hugo García","speaker_slug":"hugo-garcia",
-"tag":"Heridas de Jesús","card_tag":"Heridas","dur":6352,
-"desc":"Resumen y artículo de la enseñanza «Las heridas de Jesús» del Profeta Hugo García: la primera herida, el sudor como gotas de sangre, la oración y el nuevo pacto. Ebenezer Antigua.",
-"keywords":"heridas de Jesús, gotas de sangre, oración, nuevo pacto, Santa Cena, Hugo García",
-"lead":"El Profeta Hugo García inicia la serie «Las heridas de Jesús» enfocándose en los padecimientos del Señor para traer salvación y bendición, con la primera herida: el sudor como gotas de sangre en Getsemaní.",
-"items":[
-"<b>El Señor no vino a pasear:</b> vino a marcar una diferencia a través de sus heridas, sufridas por nosotros para que fuéramos salvos.",
-"<b>La primera herida:</b> las gotas de sudor que cayeron a la tierra como sangre (Lucas 22:44).",
-"<b>Enseñanza sobre la oración:</b> orar para no entrar en tentación y no para forzar a Dios, sino para ver si lo que se pide es su voluntad.",
-"<b>Cambio de maldiciones en bendiciones</b> por la sangre derramada (Gálatas 3:13).",
-"<b>Llamado a la transformación:</b> cambiar la manera de pensar y actuar, y evitar la doble vida.",
-"<b>El nuevo pacto</b> sellado con sangre y con mejores promesas, en la Santa Cena."],
-"chips":["Lucas 22:40","Lucas 22:41-42","Lucas 22:43-45","Gálatas 3:13"],
-"sections":[
-["Introducción y propósito",["El predicador menciona que el Señor Jesucristo no vino a la tierra “a pasear”, sino a marcar una diferencia a través de sus heridas. Indica que el Señor sufrió siete heridas por nosotros, sin necesidad, para que pudiéramos ser salvos y tener vida eterna, vida zoe, vida sobrenatural."]],
-["Primera herida: el sudor como gotas de sangre",["Identifica la primera herida como las gotas de sudor que cayeron a la tierra como sangre (Lucas 22:44). Explica que el Señor estaba en angustia y pidió al Padre que pasara la copa, pero priorizó la voluntad divina."]],
-["Enseñanza sobre la oración",["Basándose en Lucas 22:40, enfatiza que hay lugares específicos para orar y que se debe orar para no entrar en tentación. Explica que el Padre, el Hijo y el Espíritu Santo interceden por nosotros.","El Señor se apartó como a un tiro de piedra para estar a solas y se puso de rodillas. El predicador subraya que no se ora para forzar a Dios, sino para ver si es su voluntad lo que se va a pedir.","Un ángel se le apareció para fortalecerlo y, aunque estaba en agonía, el Señor oraba con mucho fervor."]],
-["Maldiciones cambiadas en bendiciones",["Al caer las gotas de sangre sobre la tierra, explica, se cambiaron las maldiciones en bendiciones. Afirma que el Señor vino a quitar toda iniquidad y maldición a través de su sangre, para que el creyente ya no sea maldito sino hijo de Dios bendecido."]],
-["Llamado a la transformación",["Exhorta a la congregación a cambiar su manera de pensar y actuar. Advierte contra la doble vida y enfatiza que asistir a la iglesia debe reflejarse en un cambio de carácter, incluyendo el amor al prójimo y la eliminación de peleas constantes en el hogar."]],
-["El nuevo pacto y la Santa Cena",["Explica que el Señor partió el pan para mostrar que venía un nuevo pacto sellado con sangre y mejores promesas, y que ahora el Espíritu Santo se tiene adentro."]]],
-"verses":[
-["Lucas 22:40","Jesús dice a sus discípulos que oren para no entrar en tentación."],
-["Lucas 22:41-42","Jesús se aparta como a un tiro de piedra, se pone de rodillas y ora: no se haga mi voluntad, sino la tuya."],
-["Lucas 22:43-45","Un ángel del cielo lo fortalece en la agonía; al levantarse, halla a los discípulos durmiendo por la tristeza."],
-["Gálatas 3:13","Cristo nos redimió de la maldición de la ley al hacerse maldición por nosotros."]],
-"closing":["En los últimos minutos el predicador se enfoca en la ministración de la Santa Cena: enfatiza el poder de la sangre de Jesús, que afirma que se hace genética con el creyente por amor y es suficiente para cambiar la mala genética, y reprende todo espíritu de muerte.","Concluye agradeciendo a Dios por su misericordia, orando para que lo hecho en el servicio no se diluya y bendiciendo a los presentes para enviarlos con paz y amor a sus hogares."]
+ "slug": "las-heridas-de-jesus",
+ "title": "Las heridas de Jesús",
+ "id": "6AtkGhauEfE",
+ "date": "2026-11-01",
+ "speaker": "Profeta Hugo García",
+ "speaker_slug": "hugo-garcia",
+ "tag": "Heridas de Jesús",
+ "card_tag": "Heridas",
+ "dur": 6352,
+ "desc": "Resumen y artículo de la enseñanza «Las heridas de Jesús» del Profeta Hugo García: la primera herida, el sudor como gotas de sangre, la oración y el nuevo pacto. Ebenezer Antigua.",
+ "keywords": "heridas de Jesús, gotas de sangre, oración, nuevo pacto, Santa Cena, Hugo García",
+ "lead": "El Profeta Hugo García inicia la serie «Las heridas de Jesús» enfocándose en los padecimientos del Señor para traer salvación y bendición, con la primera herida: el sudor como gotas de sangre en Getsemaní.",
+ "items": [
+  "<b>El Señor no vino a pasear:</b> vino a marcar una diferencia a través de sus heridas, sufridas por nosotros para que fuéramos salvos.",
+  "<b>La primera herida:</b> las gotas de sudor que cayeron a la tierra como sangre (Lucas 22:44).",
+  "<b>Enseñanza sobre la oración:</b> orar para no entrar en tentación y no para forzar a Dios, sino para ver si lo que se pide es su voluntad.",
+  "<b>Cambio de maldiciones en bendiciones</b> por la sangre derramada (Gálatas 3:13).",
+  "<b>Llamado a la transformación:</b> cambiar la manera de pensar y actuar, y evitar la doble vida.",
+  "<b>El nuevo pacto</b> sellado con sangre y con mejores promesas, en la Santa Cena."
+ ],
+ "chips": [
+  "Lucas 22:40",
+  "Lucas 22:41-42",
+  "Lucas 22:43-45",
+  "Gálatas 3:13"
+ ],
+ "sections": [
+  [
+   "Introducción y propósito",
+   [
+    "El predicador menciona que el Señor Jesucristo no vino a la tierra “a pasear”, sino a marcar una diferencia a través de sus heridas. Indica que el Señor sufrió siete heridas por nosotros, sin necesidad, para que pudiéramos ser salvos y tener vida eterna, vida zoe, vida sobrenatural."
+   ]
+  ],
+  [
+   "Primera herida: el sudor como gotas de sangre",
+   [
+    "Identifica la primera herida como las gotas de sudor que cayeron a la tierra como sangre (Lucas 22:44). Explica que el Señor estaba en angustia y pidió al Padre que pasara la copa, pero priorizó la voluntad divina."
+   ]
+  ],
+  [
+   "Enseñanza sobre la oración",
+   [
+    "Basándose en Lucas 22:40, enfatiza que hay lugares específicos para orar y que se debe orar para no entrar en tentación. Explica que el Padre, el Hijo y el Espíritu Santo interceden por nosotros.",
+    "El Señor se apartó como a un tiro de piedra para estar a solas y se puso de rodillas. El predicador subraya que no se ora para forzar a Dios, sino para ver si es su voluntad lo que se va a pedir.",
+    "Un ángel se le apareció para fortalecerlo y, aunque estaba en agonía, el Señor oraba con mucho fervor."
+   ]
+  ],
+  [
+   "Maldiciones cambiadas en bendiciones",
+   [
+    "Al caer las gotas de sangre sobre la tierra, explica, se cambiaron las maldiciones en bendiciones. Afirma que el Señor vino a quitar toda iniquidad y maldición a través de su sangre, para que el creyente ya no sea maldito sino hijo de Dios bendecido."
+   ]
+  ],
+  [
+   "Llamado a la transformación",
+   [
+    "Exhorta a la congregación a cambiar su manera de pensar y actuar. Advierte contra la doble vida y enfatiza que asistir a la iglesia debe reflejarse en un cambio de carácter, incluyendo el amor al prójimo y la eliminación de peleas constantes en el hogar."
+   ]
+  ],
+  [
+   "El nuevo pacto y la Santa Cena",
+   [
+    "Explica que el Señor partió el pan para mostrar que venía un nuevo pacto sellado con sangre y mejores promesas, y que ahora el Espíritu Santo se tiene adentro."
+   ]
+  ]
+ ],
+ "verses": [
+  [
+   "Lucas 22:40",
+   "Jesús dice a sus discípulos que oren para no entrar en tentación."
+  ],
+  [
+   "Lucas 22:41-42",
+   "Jesús se aparta como a un tiro de piedra, se pone de rodillas y ora: no se haga mi voluntad, sino la tuya."
+  ],
+  [
+   "Lucas 22:43-45",
+   "Un ángel del cielo lo fortalece en la agonía; al levantarse, halla a los discípulos durmiendo por la tristeza."
+  ],
+  [
+   "Gálatas 3:13",
+   "Cristo nos redimió de la maldición de la ley al hacerse maldición por nosotros."
+  ]
+ ],
+ "closing": [
+  "En los últimos minutos el predicador se enfoca en la ministración de la Santa Cena: enfatiza el poder de la sangre de Jesús, que afirma que se hace genética con el creyente por amor y es suficiente para cambiar la mala genética, y reprende todo espíritu de muerte.",
+  "Concluye agradeciendo a Dios por su misericordia, orando para que lo hecho en el servicio no se diluya y bendiciendo a los presentes para enviarlos con paz y amor a sus hogares."
+ ],
+ "patron": "C",
+ "momentos": [
+  {
+   "t": 1698,
+   "e": 1745,
+   "titulo": "El Señor no vino a pasear",
+   "txt": "Él tuvo siete heridas que, por nosotros, sin necesidad, sufrió. La sufrió. No vaya a creer que el Señor Jesucristo vino a pasear en la tierra, ¿no? Tres años y medio, pero por algo: para marcar la diferencia, y que usted y yo pudiéramos. […] Entonces yo le puse «Las heridas de Jesús». Miremos, empecemos, porque si no, el tiempo nos apremia. La primera que encontré es las gotas de sudor que cayeron a la tierra como sangre. Mire qué tremendo. El Señor estaba en angustia."
+  },
+  {
+   "t": 3728,
+   "e": 3784,
+   "titulo": "Yo lo que quiero es que Dios me cambie",
+   "txt": "Dios quiere que resplandezca. ¿Dónde está aquel hombre, aquella mujer que subía a cantar y la miraba? Toda apagada, o todo apagado. No, hermano, ya no hay tiempo. «Ah, hermano, es que perdí la habilidad». Pues practique y regrese con más fuerza, porque todo lo que hacías te lo van a tomar en cuenta. […] Yo lo que quiero es que Dios me hable. Yo lo que quiero es que Dios me cambie."
+  },
+  {
+   "t": 5262,
+   "e": 5304,
+   "titulo": "Vino nuevo en odres nuevos",
+   "txt": "Hoy el Señor ha cambiado tus maldiciones en bendiciones para los que le crean. ¿Cómo nos vamos a dar cuenta? Porque tú y yo vamos a cambiar. Levante la copa, la copa de salvación, la sangre del Señor Jesucristo que nos da gozo. Hoy toda tristeza, todo enojo, toda amargura se va, se va, porque hoy te están dando vino nuevo en odres nuevos. Odres nuevos. Tenías odres rotos, feos, viejos. Hoy el Señor te está dando un odre nuevo."
+  }
+ ],
+ "citas": [
+  {
+   "t": 3312,
+   "txt": "Usted no puede cambiar a la otra persona, ni la otra persona lo puede cambiar a usted, pero Dios sí puede."
+  },
+  {
+   "t": 3569,
+   "txt": "Las cosas no son como tú quieres, las cosas son como Dios quiere. Y ese «Dios quiere» es muy diferente a como tú piensas."
+  }
+ ],
+ "reflexion": [
+  "Jesús pasó por la angustia de Getsemaní por nosotros. ¿Qué tienes hoy en oración que necesitas poner en sus manos?",
+  "«Las cosas no son como tú quieres, son como Dios quiere». ¿En qué situación necesitas soltar tu manera de verla?",
+  "¿Hay alguna doble vida, o algo a medias, que el Señor te está pidiendo cambiar de forma drástica?"
+ ]
 }

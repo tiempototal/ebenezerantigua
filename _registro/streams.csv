@@ -52,8 +52,8 @@ n,id,titulo,detalle,tipo,predicador,estado,slug,commit
 51,ePVLX85c5CA,Forgetfulness,"Prophet Hugo García | Friday, August 14, 2026 | Year of Delight",enseñanza,Prophet Hugo García,hecha,el-olvido,dc962b1
 52,HNnh9woiqKE,Salvation,"Prophet Hugo García | Sunday, August 9, 2026 | Year of Delight",enseñanza,Prophet Hugo García,hecha,la-salvacion,dc962b1
 53,U7C1Xv1YpXU,Servant Discipleship,"Sunday, August 9, 2026 | Year of Delight",discipulado,,hecha,discipulado-de-servidores-la-sabiduria-de-dios-y-el-ministerio-apostolico,dc962b1
-54,Xxa4lIVQ8mc,Live Broadcast from La Antigua Guatemala,"Friday, August 07, 2026 | Year of Delight",otro,,hecha,las-facetas-del-yo-soy-vii-la-puerta-estrecha,
-55,5UIL8v0N-iM,Live Broadcast from La Antigua Guatemala,"Friday, August 07, 2026 | Year of Delight",otro,,hecha,trabajar-por-la-comida-que-permanece,
+54,Xxa4lIVQ8mc,Live Broadcast from La Antigua Guatemala,"Friday, August 07, 2026 | Year of Delight",otro,,hecha,las-facetas-del-yo-soy-vii-la-puerta-estrecha,eabd578
+55,5UIL8v0N-iM,Live Broadcast from La Antigua Guatemala,"Friday, August 07, 2026 | Year of Delight",otro,,hecha,trabajar-por-la-comida-que-permanece,eabd578
 56,9IMMLO01dSw,The Facets of the I Am VII,"Prophet Hugo García | Friday, August 7, 2026 | Year of Delight",enseñanza,Prophet Hugo García,hecha,las-facetas-del-yo-soy-vii,dc962b1
 57,-CwhxPSBLSw,The Hope of His Coming,"Elder José Carlos Méndez | Tuesday, August 4, 2026",enseñanza,Elder José Carlos Méndez,hecha,la-esperanza-de-su-venida,dc962b1
 58,uo5-yqaVAVk,The Hope of His Coming,"Elder José Carlos Méndez | Tuesday, August 4, 2026",enseñanza,Elder José Carlos Méndez,descartada,,duplicado
@@ -71,7 +71,7 @@ n,id,titulo,detalle,tipo,predicador,estado,slug,commit
 70,99NyKwBsDGs,La señal de la novia,"Pastor Rodrigo Ordóñez | Sunday, July 12, 2026 | Year of Delight",enseñanza,Pastor Rodrigo Ordóñez,hecha,la-senal-de-la-novia,c178c65
 71,Nt5IdxCGAgs,Discipulado de Servidores: llenos del Espíritu Santo,"Sunday, July 12, 2026 | Year of Delight",discipulado,Ebenezer Antigua,hecha,discipulado-de-servidores-llenos-del-espiritu-santo,c178c65
 72,JF1sxi3yDw8,Las Facetas del Yo Soy III,"Prophet Hugo García | Friday, July 10, 2026 | Year of Delight",enseñanza,Prophet Hugo García,hecha,las-facetas-del-yo-soy-iii,c178c65
-73,PMzAWCsD1QA,Live Stream from La Antigua Guatemala,"July 7, 2026 | Year of Delight",otro,,descartada,,
+73,PMzAWCsD1QA,Live Stream from La Antigua Guatemala,"July 7, 2026 | Year of Delight",otro,,descartada,,eabd578
 74,PoWma_cQN78,Las Facetas del Yo Soy II,"Prophet Hugo García | Tuesday, July 7, 2026 | Year of Delight",enseñanza,Prophet Hugo García,hecha,las-facetas-del-yo-soy-ii,c178c65
 75,J4Jmcz2wP5c,Las Facetas del Yo Soy,"Prophet Hugo García | Sunday, July 5, 2026 | Year of Delight",enseñanza,Prophet Hugo García,hecha,las-facetas-del-yo-soy,c178c65
 76,As21viXAyf8,La Revelación de Dios V,"Prophet Hugo García | Friday, July 3, 2026 | Year of Delight",enseñanza,Prophet Hugo García,hecha,la-revelacion-de-dios-v,c178c65
@@ -85,36 +85,36 @@ n,id,titulo,detalle,tipo,predicador,estado,slug,commit
 84,6Ggtq7lWRtA,Conocimiento Verdadero IV,Profeta Hugo García | Martes 16 de junio de 2026 | Año del Deleite,enseñanza,Profeta Hugo García,hecha,conocimiento-verdadero-iv,c178c65
 85,qdOQtHafIJI,Conocimiento Verdadero III,"Prophet Hugo García | Sunday, June 14, 2026 | Year of Delight",enseñanza,Prophet Hugo García,hecha,conocimiento-verdadero-iii,c178c65
 86,UuEjXg-kKK8,Discipulado de Servidores: el equilibrio y la plomada,"Sunday, June 14, 2026 | Year of Delight",discipulado,Ebenezer Antigua,hecha,discipulado-de-servidores-el-equilibrio-y-la-plomada,c178c65
-87,XFLSUuBArTQ,True Knowledge II,"Prophet Hugo García | Friday, June 12, 2026 | Year of Delight",enseñanza,Prophet Hugo García,hecha,conocimiento-verdadero-ii,
-88,5uWPDCFkDaw,Balance,"Pastor Rodrigo Ordóñez | Tuesday, June 9, 2026 | Year of Delight",enseñanza,Pastor Rodrigo Ordóñez,hecha,el-equilibrio,
-89,LBZaOWmF5Ak,Holy Communion New Covenant,"Prophet Hugo Garcia | Sunday, June 7, 2026 | Year of Delight",enseñanza,Prophet Hugo Garcia,hecha,santa-cena-nuevo-pacto,
-90,vq7In9zEbak,Conocimiento Verdadero,Profeta Hugo Garcia | Viernes 05 de junio de 2026 | Año del Deleite,enseñanza,Profeta Hugo Garcia,hecha,conocimiento-verdadero,
-91,HLR5wqTkhfE,Spirit of Freedom,"Prophet Hugo Garcia | Tuesday, June 2, 2026 | Year of Delight",enseñanza,Prophet Hugo Garcia,hecha,espiritu-de-libertad,
-92,ZlfpO238C6w,The Integral Delight,"Teacher Jimmy Berganza | Sunday, May 31, 2026 | Year of Delight",enseñanza,Teacher Jimmy Berganza,hecha,el-deleite-integral,
-93,Ok-T6_upN2g,Path of Death,"Pastor Rodrigo Ordóñez | Friday, May 29, 2026 | Year of Delight",enseñanza,Pastor Rodrigo Ordóñez,hecha,camino-de-muerte,
-94,4IOi3IPXEhM,Preparing the Heart,"Pastor Rodrigo Ordóñez | Tuesday, May 26, 2026 | Year of Delight",enseñanza,Pastor Rodrigo Ordóñez,hecha,la-preparacion-del-corazon,
-95,12pgEVczWfA,The Disintegration and Integration of the Body,"Pastor Débora de García | Sunday, May 24, 2026",enseñanza,Pastor Débora de García,hecha,la-desintegracion-e-integracion-del-cuerpo,
-96,vgradEGN_J8,Servant Discipleship,"Sunday, May 24, 2026 | Year of Delight",discipulado,,hecha,discipulado-de-servidores-ocuparse-en-la-salvacion,
-97,oab4-47P7zc,Saved from the perverse generation,"Pastor Rodrigo Ordóñez | Friday, May 22, 2026",enseñanza,Pastor Rodrigo Ordóñez,hecha,salvos-de-la-generacion-perversa,
-98,Fyj6EazCB8I,Obedience to God,"Prophet Hugo García | Tuesday, May 19, 2026 | Year of Delight",enseñanza,Prophet Hugo García,hecha,la-obediencia-a-dios,
-99,-TSnb4EqiSg,Conquering Your Walk,"Prophet Hugo García | Sunday, May 17, 2026 | Year of Delight",enseñanza,Prophet Hugo García,hecha,conquistando-el-caminar,
-100,FtFDV1khg6c,Servant Discipleship,"Sunday, May 17, 2026 | Year of Delight",discipulado,,hecha,discipulado-de-servidores-el-entendimiento,
-101,LUX65yH1yzY,The Eagle's Transformation IV,"Prophet Hugo García | Friday, May 15, 2026 | Year of Delight",enseñanza,Prophet Hugo García,hecha,la-transformacion-del-aguila-iv,
-102,bQcNOJVKRKM,The Transformation of the Eagle III,"Prophet Hugo García | Tuesday, May 12, 2026 | Year of Delight",enseñanza,Prophet Hugo García,hecha,la-transformacion-del-aguila-iii,
-103,j5srauhoE0I,The Transformation of the Eagle II,"Prophet Hugo García | Sunday, May 10, 2026 | Year of Delight",enseñanza,Prophet Hugo García,hecha,la-transformacion-del-aguila-ii,
-104,FwRBPHZWKII,Discipulado de Servidores,Domingo 10 de mayo de 2026 | Año del Deleite,discipulado,,hecha,discipulado-de-servidores-la-parabola-del-sembrador,
-105,R3GHC39JjA8,The Eagle's Transformation,"Prophet Hugo García | Friday, May 8, 2026 | Year of Delight",enseñanza,Prophet Hugo García,hecha,la-transformacion-del-aguila,
-106,8eFgyaXEiNs,The Fullness of God III,"Prophet Hugo García | Tuesday, May 5, 2026 | Year of Delight",enseñanza,Prophet Hugo García,hecha,la-plenitud-de-dios-iii,
-107,x9vs02GQBQ8,By His wounds we were healed (Isaiah 53:5),"Prophet Hugo Garcia | Sunday, May 3, 2026",enseñanza,Prophet Hugo Garcia,hecha,por-su-llaga-fuimos-curados,
-108,x-p27eqjxGs,The Fullness of God II,"Prophet Hugo García | Friday, May 1, 2026 | Year of Delight",enseñanza,Prophet Hugo García,hecha,la-plenitud-de-dios-ii,
-109,CH5dcB27Jc4,The Fullness of God,"Prophet Hugo García | Tuesday, April 28, 2026 | Year of Delight",enseñanza,Prophet Hugo García,hecha,la-plenitud-de-dios,
-110,W8am7VugF2o,De la maldición a la bendición,Pastora Débora de García | Domingo 26 de abril de 2026,enseñanza,Pastora Débora de García,hecha,de-la-maldicion-a-la-bendicion,
-111,j2gbBY7xQ9E,Discipleship of Servants,"Sunday, April 26, 2026 | Year of Delight",discipulado,,hecha,discipulado-de-servidores-la-batalla-contra-la-carne,
-112,fctvDJW5dlM,Opening Our Eyes,"Pastor Rodrigo Ordóñez | Friday, April 24, 2026 | Year of Delight",enseñanza,Pastor Rodrigo Ordóñez,hecha,abriendo-los-ojos,
-113,C1TEZcsDWLc,Renew Your Understanding,"Pastor Débora de García | Tuesday, April 21, 2026 | Year of Delight",enseñanza,Pastor Débora de García,hecha,renueva-lo-que-entiendes,
-114,8-WWKGi-WEc,Chalepos,"Pastor Rodrigo Ordoñez | Sunday, April 19, 2026 | Year of Delight",enseñanza,Pastor Rodrigo Ordoñez,hecha,chalepos,
-115,lHhkIyIXgfw,Discipleship of Servants,"Sunday, April 19, 2026 | Year of Delight",discipulado,,hecha,discipulado-de-servidores-la-unidad-y-el-aceite-de-dios,
-116,SIL6UXqCF1c,Delights Forever,"Elderly José Carlos Méndez | Friday, April 17, 2026 | Year of Delight",enseñanza,Elderly José Carlos Méndez,hecha,delicias-para-siempre,
+87,XFLSUuBArTQ,True Knowledge II,"Prophet Hugo García | Friday, June 12, 2026 | Year of Delight",enseñanza,Prophet Hugo García,hecha,conocimiento-verdadero-ii,eabd578
+88,5uWPDCFkDaw,Balance,"Pastor Rodrigo Ordóñez | Tuesday, June 9, 2026 | Year of Delight",enseñanza,Pastor Rodrigo Ordóñez,hecha,el-equilibrio,eabd578
+89,LBZaOWmF5Ak,Holy Communion New Covenant,"Prophet Hugo Garcia | Sunday, June 7, 2026 | Year of Delight",enseñanza,Prophet Hugo Garcia,hecha,santa-cena-nuevo-pacto,eabd578
+90,vq7In9zEbak,Conocimiento Verdadero,Profeta Hugo Garcia | Viernes 05 de junio de 2026 | Año del Deleite,enseñanza,Profeta Hugo Garcia,hecha,conocimiento-verdadero,eabd578
+91,HLR5wqTkhfE,Spirit of Freedom,"Prophet Hugo Garcia | Tuesday, June 2, 2026 | Year of Delight",enseñanza,Prophet Hugo Garcia,hecha,espiritu-de-libertad,eabd578
+92,ZlfpO238C6w,The Integral Delight,"Teacher Jimmy Berganza | Sunday, May 31, 2026 | Year of Delight",enseñanza,Teacher Jimmy Berganza,hecha,el-deleite-integral,eabd578
+93,Ok-T6_upN2g,Path of Death,"Pastor Rodrigo Ordóñez | Friday, May 29, 2026 | Year of Delight",enseñanza,Pastor Rodrigo Ordóñez,hecha,camino-de-muerte,eabd578
+94,4IOi3IPXEhM,Preparing the Heart,"Pastor Rodrigo Ordóñez | Tuesday, May 26, 2026 | Year of Delight",enseñanza,Pastor Rodrigo Ordóñez,hecha,la-preparacion-del-corazon,eabd578
+95,12pgEVczWfA,The Disintegration and Integration of the Body,"Pastor Débora de García | Sunday, May 24, 2026",enseñanza,Pastor Débora de García,hecha,la-desintegracion-e-integracion-del-cuerpo,eabd578
+96,vgradEGN_J8,Servant Discipleship,"Sunday, May 24, 2026 | Year of Delight",discipulado,,hecha,discipulado-de-servidores-ocuparse-en-la-salvacion,eabd578
+97,oab4-47P7zc,Saved from the perverse generation,"Pastor Rodrigo Ordóñez | Friday, May 22, 2026",enseñanza,Pastor Rodrigo Ordóñez,hecha,salvos-de-la-generacion-perversa,eabd578
+98,Fyj6EazCB8I,Obedience to God,"Prophet Hugo García | Tuesday, May 19, 2026 | Year of Delight",enseñanza,Prophet Hugo García,hecha,la-obediencia-a-dios,eabd578
+99,-TSnb4EqiSg,Conquering Your Walk,"Prophet Hugo García | Sunday, May 17, 2026 | Year of Delight",enseñanza,Prophet Hugo García,hecha,conquistando-el-caminar,eabd578
+100,FtFDV1khg6c,Servant Discipleship,"Sunday, May 17, 2026 | Year of Delight",discipulado,,hecha,discipulado-de-servidores-el-entendimiento,eabd578
+101,LUX65yH1yzY,The Eagle's Transformation IV,"Prophet Hugo García | Friday, May 15, 2026 | Year of Delight",enseñanza,Prophet Hugo García,hecha,la-transformacion-del-aguila-iv,eabd578
+102,bQcNOJVKRKM,The Transformation of the Eagle III,"Prophet Hugo García | Tuesday, May 12, 2026 | Year of Delight",enseñanza,Prophet Hugo García,hecha,la-transformacion-del-aguila-iii,eabd578
+103,j5srauhoE0I,The Transformation of the Eagle II,"Prophet Hugo García | Sunday, May 10, 2026 | Year of Delight",enseñanza,Prophet Hugo García,hecha,la-transformacion-del-aguila-ii,eabd578
+104,FwRBPHZWKII,Discipulado de Servidores,Domingo 10 de mayo de 2026 | Año del Deleite,discipulado,,hecha,discipulado-de-servidores-la-parabola-del-sembrador,eabd578
+105,R3GHC39JjA8,The Eagle's Transformation,"Prophet Hugo García | Friday, May 8, 2026 | Year of Delight",enseñanza,Prophet Hugo García,hecha,la-transformacion-del-aguila,eabd578
+106,8eFgyaXEiNs,The Fullness of God III,"Prophet Hugo García | Tuesday, May 5, 2026 | Year of Delight",enseñanza,Prophet Hugo García,hecha,la-plenitud-de-dios-iii,eabd578
+107,x9vs02GQBQ8,By His wounds we were healed (Isaiah 53:5),"Prophet Hugo Garcia | Sunday, May 3, 2026",enseñanza,Prophet Hugo Garcia,hecha,por-su-llaga-fuimos-curados,eabd578
+108,x-p27eqjxGs,The Fullness of God II,"Prophet Hugo García | Friday, May 1, 2026 | Year of Delight",enseñanza,Prophet Hugo García,hecha,la-plenitud-de-dios-ii,eabd578
+109,CH5dcB27Jc4,The Fullness of God,"Prophet Hugo García | Tuesday, April 28, 2026 | Year of Delight",enseñanza,Prophet Hugo García,hecha,la-plenitud-de-dios,eabd578
+110,W8am7VugF2o,De la maldición a la bendición,Pastora Débora de García | Domingo 26 de abril de 2026,enseñanza,Pastora Débora de García,hecha,de-la-maldicion-a-la-bendicion,eabd578
+111,j2gbBY7xQ9E,Discipleship of Servants,"Sunday, April 26, 2026 | Year of Delight",discipulado,,hecha,discipulado-de-servidores-la-batalla-contra-la-carne,eabd578
+112,fctvDJW5dlM,Opening Our Eyes,"Pastor Rodrigo Ordóñez | Friday, April 24, 2026 | Year of Delight",enseñanza,Pastor Rodrigo Ordóñez,hecha,abriendo-los-ojos,eabd578
+113,C1TEZcsDWLc,Renew Your Understanding,"Pastor Débora de García | Tuesday, April 21, 2026 | Year of Delight",enseñanza,Pastor Débora de García,hecha,renueva-lo-que-entiendes,eabd578
+114,8-WWKGi-WEc,Chalepos,"Pastor Rodrigo Ordoñez | Sunday, April 19, 2026 | Year of Delight",enseñanza,Pastor Rodrigo Ordoñez,hecha,chalepos,eabd578
+115,lHhkIyIXgfw,Discipleship of Servants,"Sunday, April 19, 2026 | Year of Delight",discipulado,,hecha,discipulado-de-servidores-la-unidad-y-el-aceite-de-dios,eabd578
+116,SIL6UXqCF1c,Delights Forever,"Elderly José Carlos Méndez | Friday, April 17, 2026 | Year of Delight",enseñanza,Elderly José Carlos Méndez,hecha,delicias-para-siempre,eabd578
 117,EB2ZTUAn_Xc,Saliendo de la Cueva II,Profeta Hugo García | Martes 14 de abril de 2026 | Año del Deleite,enseñanza,Profeta Hugo García,pendiente,,
 118,NlZYN9zTge8,Emerging from the Cave II,"Prophet Hugo García | Tuesday, April 14, 2026 | Year of Delight",enseñanza,Prophet Hugo García,pendiente,,
 119,m_UtzZOFxp4,Emerging from the Cave,"Prophet Hugo Garcia | Sunday, April 12, 2026 | Year of Delight",enseñanza,Prophet Hugo Garcia,pendiente,,

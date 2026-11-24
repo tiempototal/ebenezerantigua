@@ -108,5 +108,45 @@
  ],
  "closing": [
   "El mensaje concluye con una invitación a reposar en Dios y entregarle las cargas."
+ ],
+ "patron": "B",
+ "momentos": [
+  {
+   "t": 1223,
+   "e": 1296,
+   "titulo": "Un velo que no se ve",
+   "txt": "[…] de ser abolido. Entonces había un velo, y algunos cristianos hoy llevan un velo en su rostro, en su relación con Dios. ¿Y sabe qué es lo más tremendo? Que no lo saben. Ignoran que tienen un estorbo entre ellos y Dios. Ignoran que no han nacido de nuevo, aunque ya aceptaron a Cristo. […] Ellas ya habían aceptado a Cristo, pero no habían nacido de nuevo. Todavía no se les había quitado ese velo del rostro, ese estorbo que había entre ellas y Dios, y no podían tener una comunión directa con el Señor."
+  },
+  {
+   "t": 2443,
+   "e": 2489,
+   "titulo": "Treinta, sesenta o cien",
+   "txt": "Y todavía ese grupo se divide en tres grupos más. Porque dice que hay unos que, siendo buena tierra, dan fruto al treinta por ciento, otros al sesenta, y solo una pequeña parte da el fruto al cien por ciento. O sea, que aman a Dios, son buena tierra, reciben la palabra, dan el fruto de ella, pero no están comprometidos cien por ciento con Dios, sino que le reservan a su vida un porcentaje y no están dando el fruto al cien por ciento."
+  },
+  {
+   "t": 4322,
+   "e": 4372,
+   "titulo": "Dios no se equivoca",
+   "txt": "Y le quiero decir esto, es lo último que le digo: Dios no se equivoca. Esa frase es bien fuerte. Cuando mi esposo y yo la decimos, porque lo hemos aprendido a través del tiempo, es tremendo, porque hemos visto a gente pasar procesos muy fuertes. Pero también me ha pasado a mí que he pasado por procesos duros, y digo: «No, Dios no se equivoca. Por algo está permitiendo eso. ¿Cómo es tu alma?»."
+  }
+ ],
+ "citas": [
+  {
+   "t": 1865,
+   "txt": "Cuando uno es llevado al desierto, la percepción de uno cambia mucho."
+  },
+  {
+   "t": 3657,
+   "txt": "Lo que estás haciendo hoy aquí define tu eternidad y la posición que tú vas a tener en el reino."
+  },
+  {
+   "t": 4388,
+   "txt": "Señor, me voy a rendir a ti, y lo que tú digas, eso se va a hacer."
+  }
+ ],
+ "reflexion": [
+  "Si aceptar a Cristo y nacer de nuevo no son lo mismo, ¿qué «velo» o estorbo sientes que todavía hay entre tú y Dios?",
+  "De los tres frutos que se mencionan (treinta, sesenta o cien por ciento), ¿qué parte de tu vida le estás reservando todavía al Señor?",
+  "Cuando pasas por un proceso duro, ¿qué cambiaría en ti si de verdad dijeras: «Dios no se equivoca»?"
  ]
 }

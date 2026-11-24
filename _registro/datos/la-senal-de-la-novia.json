@@ -106,5 +106,45 @@
  ],
  "closing": [
   "El servicio culmina con un llamado a activarse en las distintas áreas de servicio de la iglesia y una oración por sanidad."
+ ],
+ "patron": "A",
+ "momentos": [
+  {
+   "t": 452,
+   "e": 504,
+   "titulo": "La señal era el servicio",
+   "txt": "La Biblia no especifica cuántos camellos se llevaban a beber, pero si usted hace una investigación rápida en su celular, se va a dar cuenta, hermano, de que los camellos beben una cantidad impresionante de agua. Es decir, solita ella se puso un gran trabajo. Pero esa era la señal. La señal era que ella no era ociosa, sino que era trabajadora, era virtuosa en ese sentido. Y entonces esa era la señal. Eso era lo que se estaba buscando: una mujer que tuviera como característica principal el servicio."
+  },
+  {
+   "t": 903,
+   "e": 934,
+   "titulo": "Dios lo liberó para servir",
+   "txt": "[…] Entonces, hermano, simplemente Dios no lo hubiera liberado. Pero, ¿a cuántos ha liberado el Señor? ¿A cuántos los ha comprado él con su sangre? ¿A cuántos él los ha amado y les ha respondido sus oraciones? ¿Para qué? Para que le hagamos fiesta y para que le sirvamos. Es decir, que la vida de nosotros, todos nosotros, diga conmigo: todos somos útiles en las manos del Señor."
+  },
+  {
+   "t": 1803,
+   "e": 1855,
+   "titulo": "El siervo es el que sirve",
+   "txt": "[…] ¿y dónde vas a servir el otro domingo, hermano? ¿O vas a seguir ahí sentadito? Ahora mire, ¿cuántos quieren ser siervos de Dios aquí, hermano? El siervo de Dios no es el que predica, el siervo de Dios es el que le sirve. Si usted le sirve, quiero recordarle algunas promesas que dice la Biblia que son para sus siervos, y por eso es que nosotros le servimos."
+  }
+ ],
+ "citas": [
+  {
+   "t": 934,
+   "txt": "Aquí no hay nadie que se pueda autodiagnosticar inútil."
+  },
+  {
+   "t": 2262,
+   "txt": "Ante la abundancia de texto bíblico, yo creo que el Señor sí le da mucha importancia al servicio, hermano, porque el servicio muestra lo que somos."
+  },
+  {
+   "t": 3198,
+   "txt": "Sírvale al Señor, hermano. No hay nada más hermoso que uno acostarse en su cama […] sirviendo al Señor. Ahí siente uno la gloria."
+  }
+ ],
+ "reflexion": [
+  "Si Dios te liberó y te compró con su sangre, ¿en qué área concreta de la iglesia o de tu casa puedes servirle esta semana?",
+  "¿Alguna vez te has «autodiagnosticado inútil»? ¿Qué te dice hoy esta enseñanza sobre cómo te ve Dios?",
+  "Si el servicio muestra lo que somos, ¿qué muestra hoy tu manera de servir y qué te gustaría que mostrara?"
  ]
 }

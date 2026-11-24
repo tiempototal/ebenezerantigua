@@ -1,0 +1,11 @@
+import sys; sys.path.insert(0, '_tools'); from spec import enrich
+enrich('la-perfeccion-ii', 'C',
+ [dict(t=1536, e=1593, titulo='Una obra perfecta', txt='Cristo, la Roca: su obra es perfecta. Quiere decir que la obra que está haciendo la Roca en usted es perfecta. Dígale al que tiene a la par: «Es una obra perfecta la que están haciendo contigo, porque todos los caminos del Señor son justos, Dios de fidelidad». Entonces, aquí van dos cosas. ¿Qué nos lleva a ser perfectos? Ser justo y ser fiel; sin injusticia, justo y recto, porque sus caminos son justos, Dios de fidelidad. Tres cosas: fidelidad, justo y recto.'),
+  dict(t=2731, e=2785, titulo='Restaurar el alma', txt='La ley del Señor es perfecta. ¿Cuántos saben que la ley de Dios es perfecta? La ley de los hombres no es perfecta. […] Diga conmigo: me van a restaurar el alma. ¿Qué necesitamos que nos restaure el Señor? El alma. ¿Qué es el alma? Sentimientos, que nos juega rudo, hermano. Las decisiones suyas, ¿son espirituales o «almáticas»? Hay decisiones que usted ha tomado en el pasado que han sido «almáticas», con cólera, con hígado, con sentimiento.'),
+  dict(t=4485, e=4537, titulo='Perfección y madurez', txt='Sin embargo, hablamos sabiduría, diga conmigo: perfección. Entonces, una de las cosas que va a caracterizar a los cristianos es la perfección a través de la sabiduría entre los que han alcanzado madurez. Ay, hermano, si todavía está peleando por charaditas, no es maduro. Madure, hombre, madure. Y si madura, estamos hablando de fruto, porque ¿qué madura? Los frutos. «Pero una sabiduría no de este siglo ni de los gobernantes de este siglo».')],
+ [dict(t=1404, txt='Un imperfecto bendiciendo a un imperfecto.'),
+  dict(t=3941, txt='El Espíritu Santo te va a guiar a toda verdad, para que empieces el ascenso gradual hasta llegar donde está el Padre.'),
+  dict(t=5008, txt='Vamos a ser una iglesia que se está perfeccionando y es poderosa; el crecimiento lo da el Señor.')],
+ ['Si Dios usa a imperfectos para bendecir a imperfectos, ¿qué excusa has estado usando para no recibir o dar bendición?',
+  '¿Qué decisión de tu pasado fue «almática», tomada con cólera o sentimiento, y qué le pedirías hoy al Señor que restaure en tu alma?',
+  'Jesús dijo «sed perfectos»: ¿en qué área de tu vida —fidelidad, justicia, rectitud— quieres crecer con madurez esta semana?'])

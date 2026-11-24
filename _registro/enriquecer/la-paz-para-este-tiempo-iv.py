@@ -1,0 +1,11 @@
+import sys; sys.path.insert(0, '_tools'); from spec import enrich
+enrich('la-paz-para-este-tiempo-iv', 'B',
+ [dict(t=1869, e=1920, titulo='El Dios de paz entra a tu casa', txt='Y el Dios de paz, otra vez: ¿cuántos creen en el Dios de paz? «Hermano, pero yo tengo muchos problemas en mi casa». Deje que el Dios de paz entre a su casa. Si el Dios de paz entra a su casa, arregla lo que usted desarregló. No compita. Uno de los problemas en la casa es que hay mucha competición, y cada quien quiere dictaminar en su casa, y por eso hay un lío y los ambientes se ponen horribles. Los hijos son los que quieren irse de ahí, hermano. ¿Cuántos quieren tener una casa tranquila?'),
+  dict(t=2441, e=2490, titulo='Enemigos en paz o en guerra', txt='Entonces, mire, mi hermano, cuando los caminos del hombre son agradables a Jehová, aun a sus enemigos hace estar en paz con él. Póngalo al revés: cuando los caminos del hombre son desagradables a Jehová, aun a sus enemigos hace estar en guerra con él. ¿No será que necesitamos estar en paz con nuestros enemigos? ¿No será que es desgastante que sus enemigos estén levantándose y levantándose porque no estamos agradando a Dios en nuestros caminos? Hoy tienes que reflexionar en qué posición estás, y por eso están pasando las cosas que están pasando en tu vida.'),
+  dict(t=2837, e=2880, titulo='Ve en paz', txt='Marcos 5:34 dice: «Hija, tu fe te ha hecho salva. Ve en paz». Entonces la fe, hermano: dice que nosotros somos salvos por medio de la fe. Y aquí dice que cuando tú eres salvo, te envían en paz. Y hoy en esta mañana te enviamos en paz. ¿Cuántos salvos hay aquí? ¿Cuántos aceptaron ya al Señor? Ve en paz.')],
+ [dict(t=1790, txt='Esta es la clave: que nos dejemos santificar.'),
+  dict(t=2958, txt='Tú eres un hijo de paz, y como hijo de paz, esa paz está dentro de tu casa.'),
+  dict(t=4132, txt='Acuérdese que las situaciones van a estar igual el lunes, pero usted ya no es el mismo.')],
+ ['Si el Dios de paz arregla lo que nosotros desarreglamos, ¿qué conflicto o competencia en tu casa necesitas entregarle hoy?',
+  '¿Qué cambio en tus caminos podría ayudar a que Dios haga estar en paz contigo hasta a quienes te han tratado como enemigo?',
+  'Si hoy el Señor te dice «ve en paz», ¿qué carga vas a dejar en el altar para volver a tu casa como hijo de paz?'])

@@ -1,0 +1,11 @@
+import sys; sys.path.insert(0, '_tools'); from spec import enrich
+enrich('la-santidad', 'A',
+ [dict(t=2344, e=2400, titulo='Por el camino de santidad', txt='Cuando usted se mete con el Señor, cuando usted se limpia, cuando usted ya no peca… Bueno, todos pecamos, a todos nos alcanza el pecado, pero ya no así practica el pecado. En su vida, en su rostro, se empieza un cambio tremendo. Yo quiero decirle que a esta iglesia Dios la está llevando por el camino de santidad, y que tarde o temprano esa santidad se va a ver en nosotros. No te puedes acomodar; no puedes decir: «Bueno, ya vine hoy y yo me quedo así como estoy». No: eso quiere decir que cuando tú vienes, quieres algo más, algo nuevo que te hace que estés más contento.'),
+  dict(t=3531, e=3580, titulo='Una casa llena de su santidad', txt='Aquí está la casa del Señor, según el Espíritu Santo: somos templo del Espíritu Santo. Y dice otra: «Tus testimonios son muy firmes. Tu casa tiene hermosa santidad para largos días». Quiere decir que esta casa tiene que estar llena de la hermosura de su santidad. ¿Y quién va a lograr eso? Usted, a través del Espíritu de santidad, por el cual estamos cambiando todos los días. Dice que esa santidad será para largos días.'),
+  dict(t=4406, e=4450, titulo='El trono y el camino', txt='Isaías 35:6. Con esto voy a terminar: «Y habrá allí camino y calzada, y se llamará Camino de Santidad». Entonces, primero, ¿qué teníamos? Trono. Ahora tenemos camino. «No pasará por él hombre inmundo, y habrá para ellos quien los acompañe, de tal manera que los insensatos no yerren». Amén.')],
+ [dict(t=2943, txt='La gente que viene después de la alabanza es ingrata, porque está menospreciando a Dios.'),
+  dict(t=3484, txt='¿Qué es la santidad? Un trono. ¿Y para qué sirve un trono? Para que se siente el Rey.'),
+  dict(t=4118, txt='Esto es para poder discernir entre lo santo y lo profano.')],
+ ['Si la santidad se tiene que ver en nosotros «tarde o temprano», ¿qué cambio concreto te gustaría que otros notaran en tu vida y en tu rostro?',
+  'Dios se sienta en el trono de su santidad: ¿qué parte de tu vida le estás cediendo hoy para que él reine?',
+  '¿Cómo puedes llegar a la alabanza desde el principio y no «después», sabiendo que es tiempo de honrar a Dios?'])

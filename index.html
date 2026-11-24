@@ -272,12 +272,15 @@ nav.solid{background:rgba(246,239,227,.96);color:var(--brown);box-shadow:0 1px 0
 .m1{grid-column:span 4;grid-row:span 2}.m2{grid-column:span 4;grid-row:span 2}.m3{grid-column:span 4;grid-row:span 1}.m4{grid-column:span 4;grid-row:span 1}.m1 img{object-position:50% 30%}
 .m5{grid-column:span 3;grid-row:span 2}.m6{grid-column:span 3;grid-row:span 2}.m7{grid-column:span 2;grid-row:span 2}.m8{grid-column:span 2;grid-row:span 2}.m9{grid-column:span 2;grid-row:span 2}
 @media(min-width:981px){
-.mos{width:calc(min(1020px,100vw - 64px)/.7);position:relative;left:50%;transform:translateX(-50%);grid-auto-rows:clamp(150px,calc(20.5vh/.7),270px);gap:.9rem}
-.m1{grid-column:span 5;grid-row:span 1}.m2{grid-column:span 4;grid-row:span 1}.m3{grid-column:span 3;grid-row:span 1}
-.m4{grid-column:span 5;grid-row:span 1}.m5{grid-column:span 3;grid-row:span 1}.m6{grid-column:span 4;grid-row:span 1}
-.m7{grid-column:span 3;grid-row:span 1}.m8{grid-column:span 5;grid-row:span 1}.m9{grid-column:span 4;grid-row:span 1}
-.m3 img{object-position:50% 20%}.m4 img{object-position:50% 55%}
-#galeria .wrap>.rv:first-child{margin-left:calc(50% - min(1020px,100vw - 64px)/1.4)}
+.mos{--g:18px;--W:calc(min(900px,100vw - 64px)/.7);--u:calc((var(--W) - 11*var(--g))/12);width:var(--W);position:relative;left:50%;transform:translateX(-50%);grid-template-columns:repeat(12,1fr);grid-template-rows:repeat(8,var(--u));grid-auto-rows:var(--u);gap:var(--g)}
+.mos figure{box-shadow:0 14px 30px -18px rgba(40,20,8,.55)}
+.m1{grid-area:1/1/6/4}.mos .m1{border-radius:999px 999px 22px 22px}.m1 img{object-position:50% 28%}
+.m8{grid-area:6/1/9/4}.m2{grid-area:1/4/4/9}.m3{grid-area:1/9/5/13}
+.m4{grid-area:4/4/6/6}.mos .m4{border-radius:50%}.m5{grid-area:4/6/6/9}
+.m9{grid-area:6/4/9/7}.m7{grid-area:6/7/9/9}.m6{grid-area:5/9/9/13}
+.m4 figcaption{display:none}.m1 figcaption{text-align:center}
+.m3 img{object-position:50% 20%}.m4 img{object-position:50% 52%}.m6 img{object-position:50% 50%}.m9 img{object-position:60% 40%}
+#galeria .wrap>.rv:first-child{margin-left:calc(50% - min(900px,100vw - 64px)/1.4)}
 }
 }
 @media(max-width:980px) and (min-width:701px){.m5,.m6{grid-column:span 6}.m7,.m8,.m9{grid-column:span 4}}

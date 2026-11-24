@@ -173,3 +173,13 @@ article .sum-l p{margin:0;line-height:1.55;font-size:.98rem;color:#3b2a1d}
 .sbar input{flex:1 1 280px;max-width:560px;height:3rem;padding:0 1.2rem;border-radius:99px;border:1px solid rgba(74,47,29,.22);background:var(--paper);color:var(--ink);font:inherit;font-size:1rem}
 .sbar input:focus{outline:3px solid var(--gold2);outline-offset:2px;border-color:var(--gold)}
 .sbar .sc{font-size:.85rem;color:var(--brown2)}
+/* Hero unificado de /ensenanzas/: título + intro + buscador en una sola franja */
+.hero.hs{padding:1.5rem 0 1.3rem}
+.hero.hs .hg{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,540px);gap:2rem 3rem;align-items:center}
+.hero.hs .hgr .lead.sm{color:rgba(248,238,222,.86);background:none;border:0;padding:0;margin:0 0 .9rem;max-width:none;font-size:.92rem;line-height:1.5}
+.hero.hs .sbar{margin:0}.hero.hs .sbar label{color:var(--gold2)}.hero.hs .sbar input{flex:1 1 100%;max-width:none;height:2.7rem}.hero.hs .sbar .sc{color:rgba(248,238,222,.8)}
+.hero.hs .sbar .sc:empty{display:none}
+@media(max-width:900px){.hero.hs .hg{grid-template-columns:1fr;gap:1rem}}
+.hero.hs + .art.idx{padding-top:0}.hero.hs + .art.idx>section>.eg:first-child,.hero.hs + .art.idx #slist>.eg:first-child{margin-top:1.3rem}
+.hero.hs .meta{flex-wrap:nowrap;white-space:nowrap}.hero.hs .hgr .lead.sm{font-family:inherit}
+@media(max-width:900px){.hero.hs .meta{flex-wrap:wrap;white-space:normal}}

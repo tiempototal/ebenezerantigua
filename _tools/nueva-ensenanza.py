@@ -208,11 +208,19 @@ def list_page(items, n, total, dirp, ext, h1, eyebrow, lead, crumbs, extra, titl
         pre = pre.replace('</head>', extra_links + '</head>', 1)
     pre = shift(pre, e); post = shift(IDX_POST, e)
     bcs = f'<a href="{root}">Inicio</a>' + ''.join(f'<a href="{c[2](e)}">{c[0]}</a>' for c in crumbs[:-1]) + f'<span>{crumbs[-1][0]}</span>'
-    hero = (f'<main><section class="hero sm"><div class="w wide"><nav class="bc" aria-label="Migas de pan">{bcs}</nav><div class="eyebrow">{eyebrow}</div><h1>{h1}{f" — página {n}" if n > 1 else ""}</h1>'
-            f'<div class="meta"><span>{len(items)} publicado{"s" if len(items)!=1 else ""} · video, resumen y versículos de cada uno</span>' + (f'<span>·</span><span><a class="pl" href="{root}predicadores/">Ver por predicador</a></span>' if dirp == 'ensenanzas' else '') + '</div></div></section>\n')
-    busc = ('<form class="sbar" role="search" onsubmit="return false"><label for="q">Buscar en todas las enseñanzas</label><input id="q" type="search" placeholder="Busca por tema, predicador o serie…" autocomplete="off" enterkeyhint="search"><span class="sc" id="sc" aria-live="polite"></span></form>'
-            '<div class="eg" id="sres" hidden></div>') if dirp == 'ensenanzas' else ''
-    body = (f'<div class="w art idx"><section>' + (f'<p class="lead sm">{lead}</p>' if n == 1 else '') + busc + '<div id="slist"><div class="eg">' + ''.join(card(p, root) for p in chunk) + '</div>'
+    hl = (f'<nav class="bc" aria-label="Migas de pan">{bcs}</nav><div class="eyebrow">{eyebrow}</div><h1>{h1}{f" — página {n}" if n > 1 else ""}</h1>'
+          f'<div class="meta"><span>{len(items)} publicado{"s" if len(items)!=1 else ""} · video, resumen y versículos de cada uno</span>' + (f'<span>·</span><span><a class="pl" href="{root}predicadores/">Ver por predicador</a></span>' if dirp == 'ensenanzas' else '') + '</div>')
+    busc = ('<form class="sbar" role="search" onsubmit="return false"><label for="q">Buscar en todas las enseñanzas</label><input id="q" type="search" placeholder="Busca por tema, predicador o serie…" autocomplete="off" enterkeyhint="search"><span class="sc" id="sc" aria-live="polite"></span></form>') if dirp == 'ensenanzas' else ''
+    if dirp == 'ensenanzas':
+        hero = ('<main><section class="hero sm hs"><div class="w wide"><div class="hg"><div class="hgl">' + hl + '</div><div class="hgr">'
+                + (f'<p class="lead sm">{lead}</p>' if n == 1 else '') + busc + '</div></div></div></section>\n')
+        sres = '<div class="eg" id="sres" hidden></div>'
+        lead_html = ''
+    else:
+        hero = f'<main><section class="hero sm"><div class="w wide">{hl}</div></section>\n'
+        sres = ''
+        lead_html = f'<p class="lead sm">{lead}</p>' if n == 1 else ''
+    body = (f'<div class="w art idx"><section>' + lead_html + sres + '<div id="slist"><div class="eg">' + ''.join(card(p, root) for p in chunk) + '</div>'
             + pager(first, n, total) + '</div></section>' + (extra(e, root) if n == 1 else ''))
     if dirp == 'ensenanzas': post = post.replace('</body>', '<script src="/ensenanzas/buscar.js" defer></script></body>')
     return pre + hero + body + post

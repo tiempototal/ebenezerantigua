@@ -8,4 +8,5 @@ enrich('escalando-los-muros', 'C',
   dict(t=5005, txt='Si alguien quiere recibir al Señor en su corazón o alguien quiere reconciliar, este es el momento para poder entregarle su vida al Señor.')],
  ['¿Qué «muro» te ha detenido últimamente, y qué parte de él depende de ti derribar con la ayuda de Dios?',
   '¿Hay un hábito o una costumbre que viene de tu familia y que hoy quieres decir: «Esto aquí termina»?',
-  'Sin señalar a nadie, ¿qué pecado «escondido» te pediría Dios que examines esta semana en tu corazón?'])
+  'Sin señalar a nadie, ¿qué pecado «escondido» te pediría Dios que examines esta semana en tu corazón?'],
+ inicio=95)

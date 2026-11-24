@@ -8,4 +8,5 @@ enrich('la-senal-para-la-decision', 'B',
   dict(t=4738, txt='Enamórese de la palabra para saber qué es lo que a Dios le gusta y no le gusta.')],
  ['¿Qué compañías o conversaciones habituales están influyendo hoy en las decisiones que tomas?',
   'Ante una encrucijada, ¿has preguntado primero al Señor cuál es la decisión que Él quiere, o solo después de decidir?',
-  '¿Qué lugar le das a la oración y a la paz de Dios antes de tomar una decisión importante esta semana?'])
+  '¿Qué lugar le das a la oración y a la paz de Dios antes de tomar una decisión importante esta semana?'],
+ inicio=226)

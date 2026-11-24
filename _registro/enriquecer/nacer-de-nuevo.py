@@ -8,4 +8,5 @@ enrich('nacer-de-nuevo', 'B',
   dict(t=4388, txt='Señor, me voy a rendir a ti, y lo que tú digas, eso se va a hacer.')],
  ['Si aceptar a Cristo y nacer de nuevo no son lo mismo, ¿qué «velo» o estorbo sientes que todavía hay entre tú y Dios?',
   'De los tres frutos que se mencionan (treinta, sesenta o cien por ciento), ¿qué parte de tu vida le estás reservando todavía al Señor?',
-  'Cuando pasas por un proceso duro, ¿qué cambiaría en ti si de verdad dijeras: «Dios no se equivoca»?'])
+  'Cuando pasas por un proceso duro, ¿qué cambiaría en ti si de verdad dijeras: «Dios no se equivoca»?'],
+ inicio=423)

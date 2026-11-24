@@ -8,4 +8,5 @@ enrich('el-olvido', 'C',
   dict(t=5092, txt='Te olvidarás de las maldiciones, porque el Señor esta noche ha cambiado tus maldiciones en bendición.')],
  ['¿Qué parte de tu pasado sigue presente y qué te impide entregárselo hoy a Dios para ser libre?',
   '¿A quién has dejado de ayudar o recordar, y qué favor podrías hacer esta semana?',
-  '¿Qué es lo mejor que puedes dejarles a tus hijos o a quienes te rodean, además de lo material?'])
+  '¿Qué es lo mejor que puedes dejarles a tus hijos o a quienes te rodean, además de lo material?'],
+ inicio=803)

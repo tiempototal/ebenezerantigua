@@ -9,4 +9,5 @@ enrich('gobernados-por-la-paz', 'B',
   dict(t=4206, txt='Si tú dejas que él gobierne tu vida con paz, que él dirija, que él administre tu vida, él se va a encargar de todo.')],
  ['Si le dijeras al Señor «bésame», es decir, «gobiérname», ¿en qué área concreta de tu vida todavía te cuesta soltarle el timón?',
   '¿Qué situación de todos los días, un retraso, un rayón o una mala noticia, te roba la paz con más facilidad? ¿Qué harías distinto esta semana?',
-  '¿Qué puedes agradecerle hoy a Dios, aun en medio de lo que todavía no ves resuelto?'])
+  '¿Qué puedes agradecerle hoy a Dios, aun en medio de lo que todavía no ves resuelto?'],
+ inicio=333)

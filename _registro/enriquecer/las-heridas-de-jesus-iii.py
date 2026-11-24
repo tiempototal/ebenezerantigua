@@ -8,4 +8,5 @@ enrich('las-heridas-de-jesus-iii', 'A',
   dict(t=2932, txt='Hoy tiene que haber un cambio en tu vida, no mañana, no pasado, hoy. Los cambios que van a haber en su vida tienen que ser radicales.')],
  ['La lepra quita la sensibilidad al dolor. ¿Hay algo en tu corazón que se ha vuelto insensible? ¿Qué le pedirías hoy al Señor?',
   'Jacob se cansó de su manera de caminar. ¿Qué parte de tu caminar te gustaría que el Señor limpiara?',
-  '«Hoy tiene que haber un cambio en tu vida». ¿Cuál sería un cambio concreto, no a medias, que podrías empezar hoy?'])
+  '«Hoy tiene que haber un cambio en tu vida». ¿Cuál sería un cambio concreto, no a medias, que podrías empezar hoy?'],
+ inicio=678)

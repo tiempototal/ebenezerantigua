@@ -8,4 +8,5 @@ enrich('los-ojos-del-interior', 'A',
   dict(t=4350, txt='El Señor está tocando a la puerta, y si tú abres, él entra, y tú cenarás con él y él contigo.')],
  ['¿Qué parte de tu vida se ve bien por fuera pero necesita que Dios la toque primero por dentro?',
   'Si tuvieras que rasgar hoy el corazón y no los vestidos, ¿qué le dirías al Señor con sinceridad?',
-  '¿Hay algo que estás haciendo «a medias» delante de Dios y que esta semana puedes entregarle completo?'])
+  '¿Hay algo que estás haciendo «a medias» delante de Dios y que esta semana puedes entregarle completo?'],
+ inicio=463)

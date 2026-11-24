@@ -8,4 +8,5 @@ enrich('la-paz-para-este-tiempo-ii', 'A',
   dict(t=4286, txt='Dios nunca, nunca te va a dejar avergonzado.')],
  ['Si la paz nace de la unidad, ¿qué paso puedes dar esta semana para que haya más unidad en tu casa?',
   '¿Qué situación te tienta a defender tu razón en vez de dejar que Dios obre y te defienda?',
-  '¿Cómo puedes vivir en paz en medio de un mundo sin paz, permaneciendo en las manos de Dios?'])
+  '¿Cómo puedes vivir en paz en medio de un mundo sin paz, permaneciendo en las manos de Dios?'],
+ inicio=464)

@@ -8,4 +8,5 @@ enrich('el-olvido-ii', 'B',
   dict(t=3842, txt='La doctrina básica es básica para que las enseñanzas se queden en su corazón y, cuando resulte la situación, usted camine en ellas.')],
  ['¿En qué momentos —de alegría o de dificultad— sientes la tentación de olvidarte de Dios, y cómo puedes recordarlo?',
   '¿Qué dejaría Dios atrás en tu pasado si le dieras hoy la oportunidad de romper esa cadena?',
-  '¿Cómo puedes mostrar hospitalidad esta semana a quien llega nuevo o a quien es difícil de tratar?'])
+  '¿Cómo puedes mostrar hospitalidad esta semana a quien llega nuevo o a quien es difícil de tratar?'],
+ inicio=236)

@@ -8,4 +8,5 @@ enrich('el-vertiginoso-efecto-del-vino', 'C',
   dict(t=2914, txt='Pidamos gozo. Nos conviene para este tiempo final. Si estamos contentos, ¿qué importa lo de allá afuera?')],
  ['¿Dónde has estado buscando alegría: en lo que ofrece el mundo o en la llenura del Espíritu Santo?',
   '¿Qué inhibiciones o complejos necesitas que el Señor te vaya quitando para adorarlo con libertad y gozo?',
-  'Al acercarte a la mesa de la Santa Cena, ¿qué parte de tu corazón quieres entregarle sinceramente al Señor?'])
+  'Al acercarte a la mesa de la Santa Cena, ¿qué parte de tu corazón quieres entregarle sinceramente al Señor?'],
+ inicio=360)

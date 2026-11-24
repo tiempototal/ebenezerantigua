@@ -8,4 +8,5 @@ enrich('profetas-menores-miqueas', 'B',
   dict(t=4337, txt='Todo miedo, todo temor fuera hoy, porque el perfecto amor, que es Dios, echa fuera todo temor.')],
  ['Si hoy necesitaras «aceite» para romper un yugo en tu vida, ¿cuál sería ese yugo?',
   '¿En qué área de tu vida has estado «probando» hasta dónde llega la paciencia de Dios?',
-  '¿Qué temor quieres entregarle hoy al amor perfecto de Dios?'])
+  '¿Qué temor quieres entregarle hoy al amor perfecto de Dios?'],
+ inicio=461)

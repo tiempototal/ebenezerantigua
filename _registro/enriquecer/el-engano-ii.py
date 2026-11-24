@@ -8,4 +8,5 @@ enrich('el-engano-ii', 'B',
   dict(t=4325, txt='Señor, he pasado por cosas terribles, pero ahora estoy entendiendo que tú tienes un plan donde solo entra tu verdad, donde todo engaño se tiene que ir de mi vida.')],
  ['¿En qué área de tu vida notas que el corazón se está endureciendo, y qué haría falta para ablandarlo esta semana?',
   'Si el hombre viejo nos engaña con deseos engañosos, ¿cuál es hoy el que más te engaña y cómo lo vas a renovar con la Palabra?',
-  '¿Qué significa, en lo práctico, creerle a Dios esta semana?'])
+  '¿Qué significa, en lo práctico, creerle a Dios esta semana?'],
+ inicio=646)

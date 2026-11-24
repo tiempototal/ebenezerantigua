@@ -7,4 +7,5 @@ enrich('las-heridas-de-jesus', 'C',
   dict(t=3569, txt='Las cosas no son como tú quieres, las cosas son como Dios quiere. Y ese «Dios quiere» es muy diferente a como tú piensas.')],
  ['Jesús pasó por la angustia de Getsemaní por nosotros. ¿Qué tienes hoy en oración que necesitas poner en sus manos?',
   '«Las cosas no son como tú quieres, son como Dios quiere». ¿En qué situación necesitas soltar tu manera de verla?',
-  '¿Hay alguna doble vida, o algo a medias, que el Señor te está pidiendo cambiar de forma drástica?'])
+  '¿Hay alguna doble vida, o algo a medias, que el Señor te está pidiendo cambiar de forma drástica?'],
+ inicio=1388)

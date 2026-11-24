@@ -8,4 +8,5 @@ enrich('se-fiel-hasta-la-muerte', 'A',
   dict(t=3553, txt='Seamos fieles en lo poco para que nos den más.')],
  ['¿Hay algo que estás haciendo —o algún lugar al que vas— que Dios no te mandó? ¿Qué límite quiere ponerte hoy para cuidarte?',
   '¿A qué hermano más pequeño en la fe podrías cuidar esta semana, siendo fiel como alguien maduro?',
-  '¿En qué «cosa pequeña» —o en algo que no es tuyo— el Señor te está probando para ver si eres digno de confianza?'])
+  '¿En qué «cosa pequeña» —o en algo que no es tuyo— el Señor te está probando para ver si eres digno de confianza?'],
+ inicio=515)

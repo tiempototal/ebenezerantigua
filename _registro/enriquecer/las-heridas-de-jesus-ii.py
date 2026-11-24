@@ -7,4 +7,5 @@ enrich('las-heridas-de-jesus-ii', 'B',
   dict(t=2203, txt='Dios lo que quiere es que vayas para adelante y que vayas para arriba. ¿Vas para arriba o vas para abajo? ¿O te estancaste? Porque, si te estancaste, vas para regreso.')],
  ['Dios necesita «receptores» en tu vida. ¿Qué hay en ti, en tus actitudes o en tus hábitos, que le estorba para recibir lo que él quiere darte?',
   'Cristo absorbió las maldiciones para volverlas bendiciones. ¿Qué parte de tu historia necesitas entregarle hoy?',
-  '¿Qué pensamientos se repiten más en tu mente: los buenos o los que te llevan a la ira y a la venganza? ¿Qué podrías cambiar esta semana?'])
+  '¿Qué pensamientos se repiten más en tu mente: los buenos o los que te llevan a la ira y a la venganza? ¿Qué podrías cambiar esta semana?'],
+ inicio=497)

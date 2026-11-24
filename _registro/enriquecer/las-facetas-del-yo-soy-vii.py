@@ -8,4 +8,5 @@ enrich('las-facetas-del-yo-soy-vii', 'A',
   dict(t=1269, txt='Este es un tiempo de liberación. Va a haber mucha liberación desde hoy en adelante.')],
  ['¿Quién te guía en el camino y cómo estás recibiendo esa guía del Espíritu Santo a través de los hombres de Dios?',
   '¿Cuál de las frases «este camino no es fácil, pero…» necesitas declarar hoy sobre tu propia situación?',
-  '¿De qué necesitas ser liberado esta semana para seguir en el camino que Jesús marcó?'])
+  '¿De qué necesitas ser liberado esta semana para seguir en el camino que Jesús marcó?'],
+ inicio=553)

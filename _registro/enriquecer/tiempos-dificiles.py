@@ -7,4 +7,5 @@ enrich('tiempos-dificiles', 'A',
   dict(t=2328, txt='La relación con Dios no se arregla con privilegios.')],
  ['El gozo del Señor es nuestra fuerza. ¿Qué te está quitando el gozo, y con él la fuerza, en este tiempo?',
   '¿Hay algo en tu semana que ocupa el lugar que le corresponde al Señor? ¿Cómo lo ordenarías?',
-  '«Lo importante es levantarse». ¿Qué fracaso necesitas dejar atrás para renovar tu pacto con Dios hoy?'])
+  '«Lo importante es levantarse». ¿Qué fracaso necesitas dejar atrás para renovar tu pacto con Dios hoy?'],
+ inicio=170)

@@ -8,4 +8,5 @@ enrich('tiempo-final-de-fructificar', 'C',
   dict(t=2849, txt='Mire lo que le estoy diciendo: la muerte es ganancia.')],
  ['Si miraras tu vida hoy, ¿qué frutos ves y qué hay más bien de hojas, de apariencia? ¿Qué le dirías al Señor sobre eso?',
   '¿A qué necesitas morir, en concreto, para que tu vida dé fruto? ¿Qué paso darías esta semana?',
-  'Si tu vida ha sido igual por mucho tiempo, ¿qué cosa nueva podrías empezar mañana por la mañana?'])
+  'Si tu vida ha sido igual por mucho tiempo, ¿qué cosa nueva podrías empezar mañana por la mañana?'],
+ inicio=634)

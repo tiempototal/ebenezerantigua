@@ -8,4 +8,5 @@ enrich('profetas-menores-miqueas-ii', 'B',
   dict(t=4615, txt='Trae a tus hijos que dejaron de venir, que están ahí en su casa haciendo nada. Tráelos.')],
  ['¿Qué lugar le das hoy a congregarte con constancia, y qué lo ha estado debilitando?',
   'Si nadie es como Dios, ¿qué herida vieja necesitas poner hoy en sus manos para que la sane?',
-  '¿Por quién de tu familia vas a orar esta semana, para que Dios lo traiga con lazos de amor?'])
+  '¿Por quién de tu familia vas a orar esta semana, para que Dios lo traiga con lazos de amor?'],
+ inicio=721)

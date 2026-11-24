@@ -8,4 +8,5 @@ enrich('la-evolucion-o-involucion-de-la-conciencia', 'A',
   dict(t=2694, txt='El que tiene una conciencia fuerte tiene conocimiento, pero si no tiene amor, está envanecido.')],
  ['¿Qué has estado viendo y oyendo últimamente, y qué le está haciendo a tu conciencia: la afina o la endurece?',
   'Si hoy tuvieras que ubicarte en el cuadro de niveles, de neutra a perfecta, ¿dónde dirías que está tu conciencia y qué paso concreto te falta dar?',
-  '¿Hay algo que tú puedes hacer con libertad pero que podría hacer tropezar a un hermano? ¿Cómo lo manejarías por amor?'])
+  '¿Hay algo que tú puedes hacer con libertad pero que podría hacer tropezar a un hermano? ¿Cómo lo manejarías por amor?'],
+ inicio=184)

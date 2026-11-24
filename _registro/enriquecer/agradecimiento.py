@@ -8,4 +8,5 @@ enrich('agradecimiento', 'C',
   dict(t=4130, txt='Cosas malas siempre van a haber, pero razones para estar agradecidos hay más.')],
  ['Si hoy el Señor te dijera «levanta al muchacho», ¿cuál es lo único que tienes y puedes consagrarle con gratitud?',
   '¿De qué situación te guardó el Señor sin que te dieras cuenta, y a quién podrías decirle hoy que su vida es un milagro?',
-  'Cosas malas siempre habrá, pero razones para agradecer hay más: ¿cuáles tres razones podrías agradecer esta noche?'])
+  'Cosas malas siempre habrá, pero razones para agradecer hay más: ¿cuáles tres razones podrías agradecer esta noche?'],
+ inicio=159)

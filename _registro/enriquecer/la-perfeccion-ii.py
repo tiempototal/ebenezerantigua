@@ -8,4 +8,5 @@ enrich('la-perfeccion-ii', 'C',
   dict(t=5008, txt='Vamos a ser una iglesia que se está perfeccionando y es poderosa; el crecimiento lo da el Señor.')],
  ['Si Dios usa a imperfectos para bendecir a imperfectos, ¿qué excusa has estado usando para no recibir o dar bendición?',
   '¿Qué decisión de tu pasado fue «almática», tomada con cólera o sentimiento, y qué le pedirías hoy al Señor que restaure en tu alma?',
-  'Jesús dijo «sed perfectos»: ¿en qué área de tu vida —fidelidad, justicia, rectitud— quieres crecer con madurez esta semana?'])
+  'Jesús dijo «sed perfectos»: ¿en qué área de tu vida —fidelidad, justicia, rectitud— quieres crecer con madurez esta semana?'],
+ inicio=715)

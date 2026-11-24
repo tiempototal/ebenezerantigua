@@ -8,4 +8,5 @@ enrich('activacion-profetica', 'C',
   dict(t=3787, txt='Procurad alcanzar el amor, pero también desead ardientemente los dones espirituales, sobre todo que profeticéis.')],
  ['Si donde está Cristo se crea una atmósfera profética, ¿qué podrías hacer esta semana para crearla en tu casa o en tu trabajo?',
   '¿Cómo estás cuidando de no irte a los extremos, ni al legalismo ni al libertinaje, y mantener a Cristo en el centro?',
-  'De los tres tipos de personas que mencionó (los que no hablan en lenguas, los que hablan en lenguas y los que profetizan), ¿en cuál te ves hoy, y qué paso darías para crecer?'])
+  'De los tres tipos de personas que mencionó (los que no hablan en lenguas, los que hablan en lenguas y los que profetizan), ¿en cuál te ves hoy, y qué paso darías para crecer?'],
+ inicio=1507)

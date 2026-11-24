@@ -8,4 +8,5 @@ enrich('amortizando-el-alma', 'A',
   dict(t=3540, txt='Lo que le dolía era su futuro, sus sueños, sus deseos, sus anhelos, que son válidos.')],
  ['¿Qué «sueño válido» te cuesta más entregarle al Señor, y qué pasaría si le dijeras hoy: «gobierna tú»?',
   'Si cada Santa Cena es un abono para amortizar el alma, ¿cómo te gustaría prepararte la próxima vez que la tomes?',
-  '¿Qué «Saúl» llevas dentro (enojo, depresión, capricho) y qué ayuda concreta le pedirías al Señor esta semana?'])
+  '¿Qué «Saúl» llevas dentro (enojo, depresión, capricho) y qué ayuda concreta le pedirías al Señor esta semana?'],
+ inicio=132)

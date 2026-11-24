@@ -8,4 +8,5 @@ enrich('lo-que-temi', 'C',
   dict(t=3754, txt='Cuando uno ya confía en el Señor, ya sabe cómo es Dios, y las cosas así se arreglan.')],
  ['¿Qué temor sigues dándole vueltas en tu mente y qué paso darías esta semana para entregárselo a Dios?',
   '¿En cuál de estos grupos te encuentras hoy —llamado, escogido o fiel— y qué área de tu vida falta consagrar?',
-  'Cuando tu confianza en Dios se tambalea, ¿qué te ayuda a perseverar en lugar de retroceder?'])
+  'Cuando tu confianza en Dios se tambalea, ¿qué te ayuda a perseverar en lugar de retroceder?'],
+ inicio=455)

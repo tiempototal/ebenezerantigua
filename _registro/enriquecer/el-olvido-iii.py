@@ -8,4 +8,5 @@ enrich('el-olvido-iii', 'A',
   dict(t=3691, txt='Todo lo que ha sufrido, el Señor lo ha tenido a usted en la mano, y por eso no le pasó nada.')],
  ['¿Qué don o llamado que Dios puso en ti has descuidado, y qué harías esta semana para avivarlo?',
   '¿Qué palabra de apóstoles y profetas necesitas recordar para mantenerte firme hoy?',
-  '¿A quién podrías bendecir como una ofrenda memorial, sabiendo que Dios recuerda lo que siembras?'])
+  '¿A quién podrías bendecir como una ofrenda memorial, sabiendo que Dios recuerda lo que siembras?'],
+ inicio=392)

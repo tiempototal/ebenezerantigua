@@ -8,4 +8,5 @@ enrich('el-engano', 'C',
   dict(t=4920, txt='Hay gente que ya no aguanta por estar engañando, engañando, engañando, pero hoy el Señor te hace libre en el nombre de Jesús.')],
  ['¿Qué significa para ti seguir a Jesús con una acción concreta, como el «ven y ve» que Felipe le dijo a Natanael?',
   '¿En qué cosas pequeñas de tu día hay una diferencia entre lo que dices ser y lo que haces?',
-  'Si el Espíritu Santo te señalara hoy un engaño en tu corazón, ¿estarías dispuesto a escucharlo?'])
+  'Si el Espíritu Santo te señalara hoy un engaño en tu corazón, ¿estarías dispuesto a escucharlo?'],
+ inicio=1346)

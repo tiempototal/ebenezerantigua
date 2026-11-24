@@ -8,4 +8,5 @@ enrich('la-perfeccion', 'A',
   dict(t=4653, txt='Estás cayendo en las manos de un Dios que te ama y que perfecciona tu vida a lo máximo.')],
  ['Si Dios hace lo imposible y nosotros lo posible, ¿qué es lo «posible» que te toca hacer hoy en tu camino hacia la perfección?',
   'La perfección tiene niveles —bueno, excelente, perfecto—: ¿en qué área te has conformado con lo bueno o lo excelente?',
-  '¿Qué ataduras o inmundicias le pedirías a Dios que te arranque y te purifique esta semana?'])
+  '¿Qué ataduras o inmundicias le pedirías a Dios que te arranque y te purifique esta semana?'],
+ inicio=1285)

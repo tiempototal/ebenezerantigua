@@ -8,4 +8,5 @@ enrich('la-paz-para-este-tiempo', 'B',
   dict(t=4747, txt='Misericordia del que te puede dar paz, del que te puede arreglar la vida. Él no tiene límites.')],
  ['Si «seguid la paz con todos» incluye a quien te ha ofendido, ¿con quién necesitas ponerte a cuentas esta semana?',
   '¿Qué raíz de amargura podría estar escondida bajo tu enojo y a quién podría estar contaminando primero?',
-  '¿Cómo puedes practicar la hospitalidad con quien llega nuevo o con quien te cae mal?'])
+  '¿Cómo puedes practicar la hospitalidad con quien llega nuevo o con quien te cae mal?'],
+ inicio=659)

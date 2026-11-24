@@ -8,4 +8,5 @@ enrich('la-paz-para-este-tiempo-iii', 'C',
   dict(t=3340, txt='Te vas a dar cuenta que el único que te puede dar paz en tu corazón soy yo.')],
  ['Si Cristo es nuestra paz y derriba la pared intermedia, ¿qué pared sientes que todavía hay entre tú y Dios?',
   '¿Cómo reconoces que Dios está guardando tu corazón y tus pensamientos, y qué haces cuando llegan los malos pensamientos?',
-  '¿De qué cosa seca en tu vida o en tu familia necesitas hoy creer que Dios puede dar vida?'])
+  '¿De qué cosa seca en tu vida o en tu familia necesitas hoy creer que Dios puede dar vida?'],
+ inicio=814)

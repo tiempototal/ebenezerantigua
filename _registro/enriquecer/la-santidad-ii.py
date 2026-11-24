@@ -8,4 +8,5 @@ enrich('la-santidad-ii', 'C',
   dict(t=4137, txt='Si le vamos a servir a Dios, él nos va a dar la capacidad para que seamos santos.')],
  ['Si la santidad es una luz que alumbra el camino, ¿en qué parte de tu vida necesitas hoy que Dios te alumbre para no tropezar?',
   '¿Qué pensamiento feo has dejado «estacionarse» en tu mente, y cómo puedes reprenderlo rápido esta semana y pensar con la mente de Cristo?',
-  'Cada mañana son nuevas sus bendiciones: ¿cómo puedes responderle a Dios con gratitud antes de abrir los ojos al día?'])
+  'Cada mañana son nuevas sus bendiciones: ¿cómo puedes responderle a Dios con gratitud antes de abrir los ojos al día?'],
+ inicio=1070)

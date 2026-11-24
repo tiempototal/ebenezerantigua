@@ -8,4 +8,5 @@ enrich('de-la-escasez-a-la-sobreabundancia', 'A',
   dict(t=3980, txt='No se sienta mal ni avergonzado.')],
  ['Si no sabemos cuántos años nos quedan, ¿qué planes necesitas hacer «sin afán» y cuáles no deberías seguir postergando?',
   '¿Hay alguna palabra de la Biblia que te ha sonado amarga como una medicina, pero que podrías empezar a tomar esta semana?',
-  '¿En qué área de tu economía podrías pedirle hoy al Señor, de manera específica, su intervención sobrenatural?'])
+  '¿En qué área de tu economía podrías pedirle hoy al Señor, de manera específica, su intervención sobrenatural?'],
+ inicio=116)

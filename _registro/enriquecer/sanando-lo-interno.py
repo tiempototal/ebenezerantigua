@@ -8,4 +8,5 @@ enrich('sanando-lo-interno', 'A',
   dict(t=3373, txt='Dios pone las cosas en su lugar en el tiempo que las tiene que poner.')],
  ['¿Hay algún trauma o herida del pasado que todavía te afecta y que nunca le has entregado al Señor para que sane tu alma?',
   'Si hablamos de lo que tenemos en el corazón, ¿qué palabras suelen salir de tu boca cuando estás molesto, y cuál sería una palabra sanadora?',
-  '¿A quién necesitas dejar de «cobrarle» para dejar que Dios ponga las cosas en su lugar en su tiempo?'])
+  '¿A quién necesitas dejar de «cobrarle» para dejar que Dios ponga las cosas en su lugar en su tiempo?'],
+ inicio=263)

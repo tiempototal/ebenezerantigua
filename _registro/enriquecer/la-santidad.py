@@ -8,4 +8,5 @@ enrich('la-santidad', 'A',
   dict(t=4118, txt='Esto es para poder discernir entre lo santo y lo profano.')],
  ['Si la santidad se tiene que ver en nosotros «tarde o temprano», ¿qué cambio concreto te gustaría que otros notaran en tu vida y en tu rostro?',
   'Dios se sienta en el trono de su santidad: ¿qué parte de tu vida le estás cediendo hoy para que él reine?',
-  '¿Cómo puedes llegar a la alabanza desde el principio y no «después», sabiendo que es tiempo de honrar a Dios?'])
+  '¿Cómo puedes llegar a la alabanza desde el principio y no «después», sabiendo que es tiempo de honrar a Dios?'],
+ inicio=743)

@@ -8,4 +8,5 @@ enrich('el-reconocimiento', 'B',
   dict(t=4198, txt='Si tú ofreces gracias a Dios, lo estás honrando, y él te va a honrar a ti.')],
  ['¿De quién has estado esperando el aplauso o el reconocimiento, y qué cambiaría si lo esperaras del Señor «en el tiempo oportuno»?',
   '¿En qué cosas buenas que haces (orar, ayudar, dar) has buscado que te vean, y cómo puedes hacerlas esta semana solo para Dios?',
-  'Como el hermano de la bicicleta, ¿qué situación que hoy te molesta puedes mirar con gratitud?'])
+  'Como el hermano de la bicicleta, ¿qué situación que hoy te molesta puedes mirar con gratitud?'],
+ inicio=228)

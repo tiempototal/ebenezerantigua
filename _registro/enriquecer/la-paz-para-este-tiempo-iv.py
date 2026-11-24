@@ -8,4 +8,5 @@ enrich('la-paz-para-este-tiempo-iv', 'B',
   dict(t=4132, txt='Acuérdese que las situaciones van a estar igual el lunes, pero usted ya no es el mismo.')],
  ['Si el Dios de paz arregla lo que nosotros desarreglamos, ¿qué conflicto o competencia en tu casa necesitas entregarle hoy?',
   '¿Qué cambio en tus caminos podría ayudar a que Dios haga estar en paz contigo hasta a quienes te han tratado como enemigo?',
-  'Si hoy el Señor te dice «ve en paz», ¿qué carga vas a dejar en el altar para volver a tu casa como hijo de paz?'])
+  'Si hoy el Señor te dice «ve en paz», ¿qué carga vas a dejar en el altar para volver a tu casa como hijo de paz?'],
+ inicio=461)

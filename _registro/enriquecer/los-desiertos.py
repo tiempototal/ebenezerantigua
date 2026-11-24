@@ -8,4 +8,5 @@ enrich('los-desiertos', 'C',
   dict(t=4140, txt='Ahora entiendo que los desiertos son necesarios para quitar toda la escoria que yo traía.')],
  ['¿Qué «desierto» estás atravesando y qué crees que Dios te quiere enseñar en él?',
   '¿Hay alguna compañía dentro o fuera de la iglesia que hoy necesitas entregarle a Dios?',
-  'Si la prueba viene para ver cómo reaccionamos, ¿cómo has estado reaccionando tú?'])
+  'Si la prueba viene para ver cómo reaccionamos, ¿cómo has estado reaccionando tú?'],
+ inicio=379)

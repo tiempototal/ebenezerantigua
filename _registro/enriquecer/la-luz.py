@@ -8,4 +8,5 @@ enrich('la-luz', 'C',
   dict(t=4311, txt='Nosotros queremos ser luz, Señor, siendo, actuando, viviendo de forma diferente, no pensando en nuestra necesidad o nuestro interés, sino ayudando.')],
  ['¿En qué lugar de tu semana (el trabajo, la familia, los estudios) te toca ser luz precisamente donde hay tiniebla? ¿Cómo se vería eso en la práctica?',
   '¿Cuándo fue la última vez que te interesaste de verdad por la necesidad de un hermano? ¿Qué podrías hacer esta semana?',
-  '¿Qué lugar tiene hoy la Palabra escrita, como lámpara, para decirte hacia dónde ir?'])
+  '¿Qué lugar tiene hoy la Palabra escrita, como lámpara, para decirte hacia dónde ir?'],
+ inicio=252)

@@ -8,4 +8,5 @@ enrich('la-cruz', 'B',
   dict(t=4413, txt='Es hora de que empieces a ver lo espiritual.')],
  ['Si la cruz es un mensaje de amor, ¿qué te dice hoy que el Padre se «despojó de lo que más amaba» por ti?',
   '¿A qué familiar o amigo te ha puesto el Señor en el corazón para hablarle de la cruz esta semana, aunque te digan que estás loco?',
-  'Si los decretos contra ti fueron clavados en la cruz, ¿qué acusación o culpa sigues cargando que ya fue quitada de en medio?'])
+  'Si los decretos contra ti fueron clavados en la cruz, ¿qué acusación o culpa sigues cargando que ya fue quitada de en medio?'],
+ inicio=475)

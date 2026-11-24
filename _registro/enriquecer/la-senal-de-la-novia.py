@@ -8,4 +8,5 @@ enrich('la-senal-de-la-novia', 'A',
   dict(t=3198, txt='Sírvale al Señor, hermano. No hay nada más hermoso que uno acostarse en su cama […] sirviendo al Señor. Ahí siente uno la gloria.')],
  ['Si Dios te liberó y te compró con su sangre, ¿en qué área concreta de la iglesia o de tu casa puedes servirle esta semana?',
   '¿Alguna vez te has «autodiagnosticado inútil»? ¿Qué te dice hoy esta enseñanza sobre cómo te ve Dios?',
-  'Si el servicio muestra lo que somos, ¿qué muestra hoy tu manera de servir y qué te gustaría que mostrara?'])
+  'Si el servicio muestra lo que somos, ¿qué muestra hoy tu manera de servir y qué te gustaría que mostrara?'],
+ inicio=130)

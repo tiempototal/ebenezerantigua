@@ -8,4 +8,5 @@ enrich('conocimiento-verdadero-v', 'B',
   dict(t=3869, txt='Seamos testigos del evangelio de Dios; seamos oidores inteligentes, que podamos ser testimonio de lo que Dios ha dicho y hemos hecho.')],
  ['Cuando oyes una enseñanza, ¿qué cosa concreta estás tratando de vivir esta semana para no ser «oidor olvidadizo»?',
   '¿Qué misterio o pasaje de la Palabra te gustaría que Dios te revelara, y cómo puedes prepararte para recibirlo?',
-  'Si como Salomón pidieras un corazón con entendimiento, ¿en qué decisión de tu vida lo necesitas hoy?'])
+  'Si como Salomón pidieras un corazón con entendimiento, ¿en qué decisión de tu vida lo necesitas hoy?'],
+ inicio=648)

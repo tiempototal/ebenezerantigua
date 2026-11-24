@@ -8,4 +8,5 @@ enrich('las-facetas-del-yo-soy-v', 'A',
   dict(t=4602, txt='Vosotros sois la luz del mundo. Una ciudad situada sobre un monte no se puede ocultar.')],
  ['Si hay una pelea entre la luz y las tinieblas dentro de nosotros, ¿cuál de las dos estás alimentando más hoy?',
   '¿Cómo te ven en tu familia y en tu trabajo: qué dicen tus palabras y tu forma de vivir sobre a quién sigues?',
-  'Si Jesús es la luz y quien lo sigue no anda en tinieblas, ¿en qué área necesitas volver a dar un paso detrás de Él?'])
+  'Si Jesús es la luz y quien lo sigue no anda en tinieblas, ¿en qué área necesitas volver a dar un paso detrás de Él?'],
+ inicio=748)

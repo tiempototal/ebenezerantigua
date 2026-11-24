@@ -8,4 +8,5 @@ enrich('un-nombre-nuevo', 'C',
   dict(t=4498, txt='Hay un mirto en nosotros que se tiene que volver estrella.')],
  ['Si Dios te cambiara el nombre hoy, ¿qué actitud tendría que reflejar ese cambio en tu manera de tratar a los demás?',
   '¿Hay alguna raíz de amargura que has «podado» muchas veces y que todavía vuelve a crecer? ¿Qué sería entregársela hoy al Señor?',
-  '¿Qué llamado crees que el Señor te dio desde antes de nacer, y qué te distrae de vivirlo?'])
+  '¿Qué llamado crees que el Señor te dio desde antes de nacer, y qué te distrae de vivirlo?'],
+ inicio=276)

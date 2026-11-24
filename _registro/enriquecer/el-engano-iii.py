@@ -8,4 +8,5 @@ enrich('el-engano-iii', 'B',
   dict(t=4793, txt='Dios conoce tu corazón mejor que tu papá, que tu mamá, que el pastor. Dios sí conoce tu corazón.')],
  ['¿Qué preocupaciones del mundo, o qué idea de las riquezas, te están ahogando hoy la Palabra? ¿Qué harías para que el dinero esté en la billetera y no en el corazón?',
   '¿Qué parte de tu pasado sigues mirando hacia atrás? ¿Qué significaría «voltear la página» esta semana?',
-  'Arrepentirse es cambiar la manera de pensar, de actuar y de caminar: ¿en cuál de las tres necesitas dar un paso concreto?'])
+  'Arrepentirse es cambiar la manera de pensar, de actuar y de caminar: ¿en cuál de las tres necesitas dar un paso concreto?'],
+ inicio=894)

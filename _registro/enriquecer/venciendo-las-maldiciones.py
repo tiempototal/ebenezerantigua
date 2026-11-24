@@ -8,4 +8,5 @@ enrich('venciendo-las-maldiciones', 'B',
   dict(t=5237, txt='Vas a conocer la superabundancia desde el día de hoy, porque yo te la desato como profeta.')],
  ['Si cada Santa Cena puede ser un punto de quiebre, ¿qué te gustaría dejar atrás la próxima vez que la tomes?',
   '¿En qué área de tu vida has pedido perdón sin cambiar, y qué paso concreto darías esta semana?',
-  '¿Qué tan estable eres cuando las cosas no salen como esperas, y qué te ayudaría a permanecer firme?'])
+  '¿Qué tan estable eres cuando las cosas no salen como esperas, y qué te ayudaría a permanecer firme?'],
+ inicio=1963)

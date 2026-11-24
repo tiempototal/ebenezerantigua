@@ -8,4 +8,5 @@ enrich('las-facetas-del-yo-soy-iv', 'B',
   dict(t=3707, txt='No den por tardanza mi venida. Yo vengo pronto.')],
  ['Si Jesús es «el que vive» y quiere hacerte viviente, ¿en qué parte de tu vida sientes que apenas estás existiendo?',
   '¿Qué herida o área de tu vida necesita que dejes que el Señor le eche «vino y aceite» esta semana?',
-  'Si no viniste a esta tierra solo a sufrir sino a prepararte para su venida, ¿qué cambiarías hoy en tu forma de vivir?'])
+  'Si no viniste a esta tierra solo a sufrir sino a prepararte para su venida, ¿qué cambiarías hoy en tu forma de vivir?'],
+ inicio=979)

@@ -8,4 +8,5 @@ enrich('camino-a-la-obediencia', 'A',
   dict(t=4290, txt='Mire, ser desobediente es horrible. Paga uno mal, hermano. Paga mal.')],
  ['¿Estás escuchando la voz de Dios con paciencia o con prisa? ¿Qué cambiarías esta semana para oírlo mejor?',
   '¿Hay alguna autoridad a la que te cuesta someterte, y qué propósito podría estar detrás?',
-  'Si David se arrepintió y Saúl no, ¿hay algo por lo que hoy necesitas arrepentirte de verdad?'])
+  'Si David se arrepintió y Saúl no, ¿hay algo por lo que hoy necesitas arrepentirte de verdad?'],
+ inicio=826)

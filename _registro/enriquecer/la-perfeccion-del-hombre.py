@@ -8,4 +8,5 @@ enrich('la-perfeccion-del-hombre', 'B',
   dict(t=3918, txt='Usted tiene que explotar de gozo, tiene que tener alabanza en su corazón.')],
  ['¿Qué cambio en ti podrían notar hoy las personas que viven contigo, y qué cambio te gustaría que notaran dentro de un año?',
   'Oír es lo primero y ponerlo en práctica lo segundo: ¿qué palabra has oído últimamente que todavía no has puesto en práctica?',
-  'Si la gracia se te dio desde la eternidad, ¿qué te dice eso sobre tu valor cuando el enemigo te quiere hacer retroceder?'])
+  'Si la gracia se te dio desde la eternidad, ¿qué te dice eso sobre tu valor cuando el enemigo te quiere hacer retroceder?'],
+ inicio=274)

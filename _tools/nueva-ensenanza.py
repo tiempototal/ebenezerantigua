@@ -180,7 +180,7 @@ def pager(base_rel, n, total):  # base_rel: ruta de la 1.ª página desde la act
     if n < total: out += f'<a rel="next" href="{href(n+1)}">Más antiguas →</a>'
     return out + '</nav>'
 HS_CSS = ('<style id="hs">.hero.hs{padding:1.5rem 0 1.3rem}.hero.hs .hg{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,540px);gap:2rem 3rem;align-items:center}'
-          '.hero.hs .hgr .lead.sm{display:block;color:#f3e6d2!important;background:none!important;border:0!important;box-shadow:none!important;padding:0!important;margin:0 0 .9rem!important;max-width:none!important;font:400 .92rem/1.5 inherit;font-family:inherit}'
+          '.hero.hs .hgr .lead.sm{display:block;color:rgba(243,230,210,.72)!important;background:none!important;border:0!important;box-shadow:none!important;padding:0!important;margin:0 0 .8rem!important;max-width:none!important;font-size:.78rem!important;line-height:1.45!important;font-family:inherit}'
           '.hero.hs .sbar{margin:0}.hero.hs .sbar label{color:#f0cf7a}.hero.hs .sbar input{flex:1 1 100%;max-width:none;height:2.7rem}.hero.hs .sbar .sc{color:#f3e6d2}.hero.hs .sbar .sc:empty{display:none}'
           '.hero.hs .meta{flex-wrap:nowrap;white-space:nowrap}.hero.hs+.art.idx{padding-top:0}.hero.hs+.art.idx #slist>.eg:first-child{margin-top:1.3rem}'
           '@media(max-width:900px){.hero.hs .hg{grid-template-columns:1fr;gap:1rem}.hero.hs .meta{flex-wrap:wrap;white-space:normal}}</style>')

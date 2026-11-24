@@ -79,5 +79,46 @@
  ],
  "closing": [
   "La enseñanza invita a buscar el conocimiento pleno de Dios con obediencia, madurez y fe."
- ]
+ ],
+ "patron": "B",
+ "momentos": [
+  {
+   "t": 959,
+   "e": 1036,
+   "titulo": "Una iglesia llena del conocimiento de Dios",
+   "txt": "«Hasta que todos lleguemos a la unidad de la fe […] del conocimiento pleno del Hijo de Dios, a la condición de un hombre maduro». Dice la Palabra de Dios que usted no se puede quedar como niño, que tiene que crecer espiritualmente. Cuando una persona crece espiritualmente, se está volviendo una persona madura, que ya no hace tonteras, que ya no quiere pecar, que quiere agradar a Dios. ¿Cuántos quieren agradar a Dios? Amén. Pero dice: «A la medida de la estatura de la plenitud de Cristo». Lo que el Padre, el Hijo y el Espíritu Santo quieren es una iglesia plena, una iglesia llena del conocimiento de Dios, de epignosis: que se le revele esa palabra tan dentro del corazón que, aunque la quieran tirar, usted sabe que es verdadera, aunque no sepa muy bien defenderla."
+  },
+  {
+   "t": 1807,
+   "e": 1889,
+   "titulo": "Por qué no nos hacen libres",
+   "txt": "¿Y cuánto les cuesta? ¿Y cuánto han luchado con la misma carnalidad?, y no hay modo de que la dejen. Pero vive Dios, y su poder, su Reino, es suficiente para hacer libre a una persona. Entonces, ¿por qué no nos hacen libres? Porque no queremos. Andamos acariciando el pecado. ¿Cuántas veces te han dicho: «Deja de estar fornicando, busca a Dios, métete con Dios, ahí vas a ver»? Pero quiere las dos cosas. Y dice que usted no puede amar a dos señores, porque va a amar más a uno y va a aborrecer al otro. Tenga cuidado a qué amamos y cómo llevamos nuestro evangelio. Porque no podemos llevar un evangelio de mentira, ni arrancarle las hojas a la Biblia. No: nosotros tenemos que ser espirituales. Y hoy el Señor quiere quitar toda carnalidad que pueda haber en nuestra vida."
+  },
+  {
+   "t": 3603,
+   "e": 3692,
+   "titulo": "Rechazar el conocimiento tiene consecuencias",
+   "txt": "Mire, la Palabra que nos dan es gruesa, pero si usted no tiene conocimiento y no lo pone por práctica, no la va a poder explicar ni la va a poder vivir. «Mi pueblo es destruido por falta de conocimiento». En otra versión dice: «Mi pueblo desfallece por falta de conocimiento». […] «Por cuanto tú has rechazado el conocimiento». Pregunto: ¿tenía conocimiento o no tenía conocimiento? Pero ¿qué hizo con él? Lo rechazó. Entonces hay unos que no tienen conocimiento, y hay otros que sí tienen, pero lo rechazan porque no quieren ser obedientes. Dice: «Por cuanto tú has rechazado el conocimiento, yo también te rechazaré para que no seas mi sacerdote». Mire qué delicado, hermano. «Como has olvidado la ley de tu Dios», quiere decir que se le olvidó aplicar el conocimiento. Lo rechazaron. «Como has olvidado la ley de tu Dios, yo también me olvidaré de tus hijos». Mire qué tremendo."
+  }
+ ],
+ "citas": [
+  {
+   "t": 220,
+   "txt": "Ustedes son los siervos de la última hora. Ya no hay otro momento: ya no podemos estar perdiendo el tiempo."
+  },
+  {
+   "t": 2714,
+   "txt": "Tal vez los dos tienen razón, pero a quien realmente vamos a tomar en cuenta es a Dios, a través del Espíritu."
+  },
+  {
+   "t": 4018,
+   "txt": "Si tú te interesas en lo que realmente está en la Biblia, vas a tener un conocimiento que no solo va a ser para ti: lo vas a saber explicar."
+  }
+ ],
+ "reflexion": [
+  "Si Dios quiere una iglesia plena y madura, ¿en qué área de tu vida espiritual todavía te comportas como niño y qué paso darías esta semana para crecer?",
+  "¿Qué conocimiento de la Palabra ya tienes y todavía no pones en práctica? ¿Qué harías hoy para vivirlo y no solo saberlo?",
+  "¿Hay algo que sigues acariciando aunque Dios quiere hacerte libre? ¿Qué le dirías al Señor sobre eso esta noche?"
+ ],
+ "inicio": 194
 }

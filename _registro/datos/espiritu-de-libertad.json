@@ -69,5 +69,46 @@
  ],
  "closing": [
   "La enseñanza invita a vivir en la libertad del Espíritu, con amor y cuidando el testimonio."
- ]
+ ],
+ "patron": "C",
+ "momentos": [
+  {
+   "t": 935,
+   "e": 1006,
+   "titulo": "Un rostro transformado",
+   "txt": "¿Estará el espíritu de Dios ahí, de libertad? Lo dudo. Pero nosotros todos, con el rostro descubierto, contemplando como en un espejo la gloria del Señor: quiere decir que usted, cuando se mira al espejo, tiene que ver la gloria del Señor en usted. […] Usted se mira al espejo y dice: «Dios me ha […] el rostro». No que tengo cara de amargado, ni de enojado, ni de iracundo, sino que tengo ese rostro que hasta luz me veo. Pero ¿qué ha hecho el Señor conmigo? Cambió; fue transformado a la misma gloria del Señor. Por eso dice que la postrer gloria va a ser mayor que la primera, porque el Señor se está glorificando en ti."
+  },
+  {
+   "t": 2133,
+   "e": 2187,
+   "titulo": "Las palabras llevan vida o muerte",
+   "txt": "Diga conmigo: yo declino toda palabra deshonesta, toda palabra […], toda palabra que no lleva bendición. Acuérdense de que las palabras llevan vida o llevan muerte. No vaya a pensar que lo que usted habla ahí se queda. Si usted a un hijo le dice que es un maldecido, ya lo maldijo, hermano. Por eso trate bien a sus hijos. […] Yo sé que no es fácil. Hay papás a quienes les han dejado a los hijos, pero yo sé que no es fácil, y Dios te tiene que dar un espíritu de libertad."
+  },
+  {
+   "t": 3719,
+   "e": 3805,
+   "titulo": "Hacerlo todo para la gloria de Dios",
+   "txt": "«¿Por qué ha de ser juzgada mi libertad por la conciencia ajena? Si participo con agradecimiento, ¿por qué ser censurado a causa de aquello por lo cual doy gracias? Entonces, ya sea que comáis, que bebáis o que hagáis cualquier otra cosa, póngame atención, hacedlo todo para la gloria de Dios. No seáis motivo de tropiezo ni a judíos, ni a griegos, ni a la iglesia de Dios. Así como también yo procuro agradar a todos en todo, no buscando mi propio beneficio, sino el de muchos, para que sean salvos». Entonces, mi hermano, tu comportamiento puede alcanzar a muchos hermanos, o puedes rechazar a muchos hermanos. […] Esta noche pregúntate si tu manera de ser alcanza a la gente o la rechaza."
+  }
+ ],
+ "citas": [
+  {
+   "t": 541,
+   "txt": "Yo creo que al pueblo de Dios lo que tenemos que estar llevando es a un espíritu de libertad."
+  },
+  {
+   "t": 1735,
+   "txt": "Cuando tú dejas a Dios actuar, tú reposas y él trabaja. Cuando no lo dejas, tú trabajas y él descansa. Nos conviene más que él trabaje en nuestras vidas."
+  },
+  {
+   "t": 4080,
+   "txt": "Pongo ese espíritu de libertad en tu casa y en tu vida, para que te arrepientas, para que seas agradable, para que bendigas a los que conviven contigo."
+  }
+ ],
+ "reflexion": [
+  "Cuando te miras al espejo, ¿qué ves: la gloria del Señor o un rostro cargado de amargura? ¿Qué le entregarías hoy a Dios para ser transformado?",
+  "Las palabras llevan vida o muerte: ¿qué palabras sueltas dices en tu casa que necesitas declinar, y qué bendición dirías esta semana en su lugar?",
+  "¿Qué pasado o qué injusticia te cuesta soltar? ¿Qué cambiaría en ti si dejaras que Dios actúe y tú reposaras?"
+ ],
+ "inicio": 452
 }

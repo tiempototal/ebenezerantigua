@@ -9,4 +9,4 @@ enrich('la-revelacion-de-dios-iii', 'C',
  ['«Lo que retengas, eso te va a hundir o te va a elevar.» ¿Qué estás reteniendo que Dios te pide entregar?',
   'Si el Señor cambia lo maldecido por bendición, ¿qué historia o herida de tu familia le quieres presentar hoy?',
   'El predicador dice que la eternidad no será «rascar la panza» sino servir. ¿Cómo podrías empezar a servir hoy a Dios y a otros con alegría?'],
- inicio=2939)
+ inicio=414)

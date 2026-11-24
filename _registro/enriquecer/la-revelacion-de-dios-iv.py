@@ -9,4 +9,4 @@ enrich('la-revelacion-de-dios-iv', 'B',
  ['La palabra «afirmar» habla de fijar y establecer. ¿En qué área de tu vida necesitas que Dios te afirme esta semana?',
   'El predicador dice que no llegaste aquí por casualidad. ¿Cuál crees que es el propósito por el que Dios te trajo a esta casa?',
   'Si tuvieras que dejarle algo espiritual a tus hijos o a tu familia, ¿qué sería, y qué ven hoy de Cristo en ti?'],
- inicio=1153)
+ inicio=343)

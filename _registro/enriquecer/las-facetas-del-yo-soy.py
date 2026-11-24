@@ -9,4 +9,4 @@ enrich('las-facetas-del-yo-soy', 'C',
  ['El predicador distingue entre oyente, creyente y discípulo. ¿En cuál de esos lugares te encuentras hoy y qué paso darías para avanzar?',
   '«Permanecer es hacer caso, obedecer a la palabra.» ¿Qué parte de la Palabra sabes que Dios te pide obedecer y has ido dejando para después?',
   'Antes de tomar la Santa Cena, ¿qué necesitas confesar y dejar en la sangre de Jesús para recibirla dignamente?'],
- inicio=1197)
+ inicio=931)

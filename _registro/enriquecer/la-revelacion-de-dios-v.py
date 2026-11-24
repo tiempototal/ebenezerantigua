@@ -9,4 +9,4 @@ enrich('la-revelacion-de-dios-v', 'A',
  ['Jonatán extendió la vara y tomó autoridad. ¿En qué área de tu casa o de tu vida necesitas tomar autoridad en lugar de seguir viviendo «como siempre»?',
   'Ana pasó de la queja a la entrega. ¿Hay algo que estés señalando en otros y que Dios quiere tratar primero en ti?',
   '¿Qué «aguijón» o debilidad te mantiene humilde, y cómo podrías dejar que el poder de Cristo repose en ella?'],
- inicio=1009)
+ inicio=750)

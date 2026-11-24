@@ -9,4 +9,4 @@ enrich('las-facetas-del-yo-soy-ii', 'B',
  ['¿Hay algo en tu manera de hablar o de reaccionar que Dios te está pidiendo cambiar, más allá de pedirle que te aguante el pecadito?',
   'El predicador dice que podemos mantener encendida la mente de Cristo. ¿Qué podrías hacer esta semana para escuchar lo que el Padre, el Hijo y el Espíritu te hablan?',
   'Si hoy pusieras en las manos de Dios la injusticia que te hicieron, ¿qué cambiaría en tu actitud?'],
- inicio=544)
+ inicio=373)

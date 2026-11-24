@@ -9,4 +9,4 @@ enrich('las-facetas-del-yo-soy-iii', 'A',
  ['Jesús dijo «Yo soy la puerta». ¿Has entrado solo para ser salvo o también para comer los pastos de revelación y entendimiento que hay del otro lado?',
   'El predicador habla de buscar, tocar y pedir. ¿Qué estás buscando hoy en Dios con más hambre que antes?',
   'Cuando oras en lo secreto con la puerta cerrada, ¿qué le estás pidiendo a tu Padre y qué le entregas?'],
- inicio=2429)
+ inicio=2427)

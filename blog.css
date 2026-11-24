@@ -167,3 +167,9 @@ article .sum-l p{margin:0;line-height:1.55;font-size:.98rem;color:#3b2a1d}
 .lastv small{display:block;margin:.7rem .35rem .15rem;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold2);font-weight:700}
 .lastv b{display:block;margin:0 .35rem;font-family:var(--serif);font-size:1.2rem;line-height:1.2;font-weight:600}
 @media(max-width:800px){.hero.pf .pfg{grid-template-columns:1fr;gap:1.2rem}.pfp{width:88px;height:88px}.pfl{gap:1rem}.lastv{max-width:420px}}
+/* Buscador de /ensenanzas/ */
+.sbar{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem .9rem;margin:0 0 1.4rem}
+.sbar label{flex:0 0 100%;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--gold)}
+.sbar input{flex:1 1 280px;max-width:560px;height:3rem;padding:0 1.2rem;border-radius:99px;border:1px solid rgba(74,47,29,.22);background:var(--paper);color:var(--ink);font:inherit;font-size:1rem}
+.sbar input:focus{outline:3px solid var(--gold2);outline-offset:2px;border-color:var(--gold)}
+.sbar .sc{font-size:.85rem;color:var(--brown2)}

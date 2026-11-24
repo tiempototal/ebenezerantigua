@@ -34,18 +34,21 @@ def cut(t, n=150):
 
 import unicodedata
 PAGE = 12                       # tarjetas por página en listados
+PAGE_P = 18                     # tarjetas por página en la página de cada predicador
 TODAY = os.environ.get('HOY', '2026-11-23')
 CATS = {'discipulado': dict(label='Discipulados', slug='discipulados', one='Discipulado', lead='Mensajes de los discipulados de Ebenezer Antigua: video, resumen y versículos citados.'),
         'otro': dict(label='Otros mensajes', slug='otros', one='Mensaje', lead='Otros mensajes compartidos en Ebenezer Antigua: video, resumen y versículos citados.')}
 PHOTOS = {'hugo-garcia': ('hugo-azul.jpg', '50% 20%'), 'debora-de-garcia': ('debora-hd.jpg', '50% 12%'), 'rodrigo-ordonez': ('rodrigo-hd.jpg', '50% 20%'),
           'jose-carlos-mendez': ('mendez-hd.jpg', '50% 15%'), 'estuardo-soto': ('cruz-hd.jpg', '30% 12%'), 'gustavo-hernandez': ('gustavo-hd.jpg', '48% 22%')}
+# Título que se MUESTRA en tarjetas y encabezados (el nombre guardado en cada enseñanza no cambia)
+TITULOS = {'hugo-garcia': 'Profeta y Pastor', 'rodrigo-ordonez': 'Pastor y Maestro'}
 specs = {}
 for f in sys.argv[1:]:
     s = json.load(open(f, encoding='utf-8')); s.setdefault('cat', 'ensenanza'); specs[s['slug']] = s
 
 feed = rd('ensenanzas/feed.xml')
 idx = rd('ensenanzas/index.html')
-IDX_PRE = idx[:idx.index('<main>')]; IDX_POST = idx[idx.index('<aside class="cta">'):]
+IDX_PRE = re.sub(r'<link rel="(?:prev|next)" href="[^"]*">', '', idx[:idx.index('<main>')]); IDX_POST = idx[idx.index('<aside class="cta">'):].replace('<script src="/ensenanzas/buscar.js" defer></script>', '')
 
 # ---------- registro de páginas (fuente de verdad) ----------
 REG = os.path.join(R, '_registro/paginas.json')
@@ -75,11 +78,11 @@ save_reg()
 pidx = rd('predicadores/index.html')
 speakers = {}
 for m in re.finditer(r'<a class="ec pc" href="([^/]+)/"><small>(.*?)</small><b>(.*?)</b>', pidx):
-    sl, pre, nom = m.groups(); speakers[f'{pre} {nom}'] = dict(slug=sl, pre=pre, nom=nom)
+    sl, pre, nom = m.groups(); pre0 = pre.split(' y ')[0]; speakers[f'{pre0} {nom}'] = dict(slug=sl, pre=pre0, nom=nom, tit=TITULOS.get(sl, pre))
 for s in specs.values():
     if s['cat'] == 'ensenanza' and s['speaker'] not in speakers:
         pre, nom = s['speaker'].split(' ', 1)
-        speakers[s['speaker']] = dict(slug=s.get('speaker_slug') or slugify(nom), pre=pre, nom=nom)
+        speakers[s['speaker']] = dict(slug=s.get('speaker_slug') or slugify(nom), pre=pre, nom=nom, tit=TITULOS.get(s.get('speaker_slug') or slugify(nom), pre))
 def spk_html(name, up=2):
     if name in speakers: return f'<a class="pl" href="{"../"*up}predicadores/{speakers[name]["slug"]}/">{name}</a>'
     return esc(name)
@@ -207,8 +210,11 @@ def list_page(items, n, total, dirp, ext, h1, eyebrow, lead, crumbs, extra, titl
     bcs = f'<a href="{root}">Inicio</a>' + ''.join(f'<a href="{c[2](e)}">{c[0]}</a>' for c in crumbs[:-1]) + f'<span>{crumbs[-1][0]}</span>'
     hero = (f'<main><section class="hero sm"><div class="w wide"><nav class="bc" aria-label="Migas de pan">{bcs}</nav><div class="eyebrow">{eyebrow}</div><h1>{h1}{f" — página {n}" if n > 1 else ""}</h1>'
             f'<div class="meta"><span>{len(items)} publicado{"s" if len(items)!=1 else ""} · video, resumen y versículos de cada uno</span>' + (f'<span>·</span><span><a class="pl" href="{root}predicadores/">Ver por predicador</a></span>' if dirp == 'ensenanzas' else '') + '</div></div></section>\n')
-    body = (f'<div class="w art idx"><section>' + (f'<p class="lead sm">{lead}</p>' if n == 1 else '') + '<div class="eg">' + ''.join(card(p, root) for p in chunk) + '</div>'
-            + pager(first, n, total) + '</section>' + (extra(e, root) if n == 1 else ''))
+    busc = ('<form class="sbar" role="search" onsubmit="return false"><label for="q">Buscar en todas las enseñanzas</label><input id="q" type="search" placeholder="Busca por tema, predicador o serie…" autocomplete="off" enterkeyhint="search"><span class="sc" id="sc" aria-live="polite"></span></form>'
+            '<div class="eg" id="sres" hidden></div>') if dirp == 'ensenanzas' else ''
+    body = (f'<div class="w art idx"><section>' + (f'<p class="lead sm">{lead}</p>' if n == 1 else '') + busc + '<div id="slist"><div class="eg">' + ''.join(card(p, root) for p in chunk) + '</div>'
+            + pager(first, n, total) + '</div></section>' + (extra(e, root) if n == 1 else ''))
+    if dirp == 'ensenanzas': post = post.replace('</body>', '<script src="/ensenanzas/buscar.js" defer></script></body>')
     return pre + hero + body + post
 
 def write_list(items, dirp, ext, h1, eyebrow, lead, crumbs, extra, title, desc):
@@ -250,6 +256,10 @@ for c, ci in CATS.items():
         [('Enseñanzas', E_URL, lambda e: '../' * (e) + ('' if e == 0 else '')), (ci['label'], E_URL + ci['slug'] + '/', None)], lambda e, root: '',
         f'{ci["label"]}: resúmenes y videos | Ebenezer Antigua', f'{ci["lead"]} Ebenezer Antigua, Jocotenango, Antigua Guatemala.')
 
+# ---------- índice de búsqueda (todas las categorías; sin fechas) ----------
+def _abs(t): return t if t.startswith('http') else '/' + t
+wr('ensenanzas/buscar.json', json.dumps([dict(s=p['slug'], t=p['title'], p=p['speaker'], g=p['card_tag'], e=p['ex'], i=_abs(p['thumb'])) for p in sorted(reg.values(), key=lambda p: (p['date'], p['slug']), reverse=True)], ensure_ascii=False, separators=(',', ':')))
+
 # ---------- sitemaps ----------
 sm = rd('sitemap.xml'); vs = rd('video-sitemap.xml')
 def add_sm(u, pr):
@@ -274,17 +284,19 @@ orden_sp = sorted([n for n in speakers if mine(n)], key=lambda n: mine(n)[0]['da
 pc = ''
 for n in orden_sp:
     sp = speakers[n]; ps = mine(n)
-    pc += f'<a class="ec pc" href="{sp["slug"]}/"><small>{sp["pre"]}</small><b>{sp["nom"]}</b><span class="ew">{len(ps)} publicada{"s" if len(ps)!=1 else ""}</span><span class="ex">Última: {esc(ps[0]["title"])}' + (f' · {corto(ps[0]["date"])}' if ps[0]['cat'] == 'ensenanza' else '') + '</span></a>'
+    pc += f'<a class="ec pc" href="{sp["slug"]}/"><small>{sp.get("tit", sp["pre"])}</small><b>{sp["nom"]}</b><span class="ew">{len(ps)} publicada{"s" if len(ps)!=1 else ""}</span><span class="ex">Última: {esc(ps[0]["title"])}' + (f' · {corto(ps[0]["date"])}' if ps[0]['cat'] == 'ensenanza' else '') + '</span></a>'
 wr('predicadores/index.html', sub_eg(pidx, pc))
 TPL = rd('predicadores/rodrigo-ordonez/index.html')
+def dname(n, sp): return f'{sp.get("tit", sp["pre"])} {sp["nom"]}'
 def hero_pf(n, sp, ps):
     ph = PHOTOS.get(sp['slug']); last = ps[0]
     pic = (f'<figure class="pfp"><img src="../../fotos/{ph[0]}" alt="{esc(n)}" width="120" height="120" style="object-position:{ph[1]}"></figure>' if ph else
            f'<figure class="pfp ini" aria-hidden="true"><span>{"".join(w[0] for w in sp["nom"].split()[:2]).upper()}</span></figure>')
     th = last['thumb'] if last['thumb'].startswith('http') else '../../' + last['thumb']
     return (f'<section class="hero sm pf"><div class="w wide"><nav class="bc" aria-label="Migas de pan"><a href="../../">Inicio</a><a href="../">Predicadores</a><span>{esc(n)}</span></nav>'
-            f'<div class="pfg"><div class="pfl">{pic}<div><div class="eyebrow">{sp["pre"]} · Enseñanzas</div><h1>{esc(n)}</h1><div class="meta"><span>{len(ps)} publicada{"s" if len(ps)!=1 else ""} · Ebenezer Antigua, Jocotenango</span></div></div></div>'
+            f'<div class="pfg"><div class="pfl">{pic}<div><div class="eyebrow">{sp.get("tit", sp["pre"])} · Enseñanzas</div><h1>{esc(dname(n, sp))}</h1><div class="meta"><span>{len(ps)} publicada{"s" if len(ps)!=1 else ""} · Ebenezer Antigua, Jocotenango</span></div></div></div>'
             f'<a class="lastv" href="../../ensenanzas/{last["slug"]}/"><span class="lvt"><img src="{th}" alt="{esc(last["title"])}" width="320" height="180" loading="eager"></span><small>Última enseñanza</small><b>{esc(last["title"])}</b></a></div></div></section>')
+def set_url(h, old, new): return h.replace(old, new)
 for n in orden_sp:
     sp = speakers[n]; ps = mine(n)
     path = f'predicadores/{sp["slug"]}/index.html'
@@ -293,13 +305,34 @@ for n in orden_sp:
         h = TPL.replace('rodrigo-ordonez', sp['slug']).replace('Pastor Rodrigo Ordóñez', n).replace('Rodrigo Ordóñez', sp['nom']).replace('el pastor ' + sp['nom'], 'el ' + sp['pre'].lower() + ' ' + sp['nom']).replace('del pastor ' + sp['nom'], 'del ' + sp['pre'].lower() + ' ' + sp['nom'])
         h = h.replace('"honorificPrefix": "Pastor"', f'"honorificPrefix": "{sp["pre"]}"')
     h = re.sub(r'<section class="hero sm[^"]*">.*?</section>', lambda m: hero_pf(n, sp, ps), h, count=1, flags=re.S)
-    h = sub_eg(h, ''.join(card(p, '../../') for p in ps))
-    m = re.search(r'<script type="application/ld\+json">(.*?)</script>', h, re.S); j = json.loads(m.group(1))
-    for e in j['@graph']:
-        if e.get('@type') == 'CollectionPage':
-            e['mainEntity']['itemListElement'] = [dict(zip(['@type', 'position', 'url', 'name'], ['ListItem', i+1, f'https://ebenezerantigua.com/ensenanzas/{p["slug"]}/', p['title']])) for i, p in enumerate(ps)]
-    h = h.replace(m.group(1), json.dumps(j, ensure_ascii=False))
     others = ''.join(f'<li><a href="../{speakers[o]["slug"]}/">{o}</a></li>' for o in orden_sp if o != n)
     h = re.sub(r'(<h2>Otros predicadores</h2><ul>).*?(</ul>)', lambda m: m.group(1) + others + m.group(2), h, count=1, flags=re.S)
-    wr(path, h)
+    h = re.sub(r'<nav class="pager"[^>]*>.*?</nav>', '', h, flags=re.S); h = re.sub(r'<link rel="(?:prev|next)" href="[^"]*">', '', h)
+    total_p = max(1, math.ceil(len(ps) / PAGE_P)); base_url = f'https://ebenezerantigua.com/predicadores/{sp["slug"]}/'
+    for k in range(1, total_p + 1):
+        chunk = ps[(k-1)*PAGE_P:k*PAGE_P]
+        hk = re.sub(r'(<div class="eg">).*?(</div>)', lambda m: m.group(1) + ''.join(card(p, '../../') for p in chunk) + m.group(2) + '<!--PG-->', h, count=1, flags=re.S)
+        m = re.search(r'<script type="application/ld\+json">(.*?)</script>', hk, re.S); j = json.loads(m.group(1))
+        url = base_url + ('' if k == 1 else f'pagina/{k}/')
+        for e in j['@graph']:
+            if e.get('@type') == 'CollectionPage':
+                e['mainEntity']['itemListElement'] = [dict(zip(['@type', 'position', 'url', 'name'], ['ListItem', (k-1)*PAGE_P+i+1, f'https://ebenezerantigua.com/ensenanzas/{p["slug"]}/', p['title']])) for i, p in enumerate(chunk)]
+                if k > 1: e['url'] = url; e['@id'] = url + '#page'
+        hk = hk.replace(m.group(1), json.dumps(j, ensure_ascii=False))
+        hk = hk.replace('</head>', (f'<link rel="prev" href="{base_url}' + ('' if k == 2 else f'pagina/{k-1}/') + '">' if k > 1 else '') + (f'<link rel="next" href="{base_url}pagina/{k+1}/">' if k < total_p else '') + '</head>', 1) if total_p > 1 else hk
+        if k == 1: wr(path, hk.replace('<!--PG-->', pager('./', 1, total_p))); continue
+        hk = hk.replace(f'<link rel="canonical" href="{base_url}">', f'<link rel="canonical" href="{url}">').replace(f'hreflang="es-GT" href="{base_url}"', f'hreflang="es-GT" href="{url}"').replace(f'hreflang="x-default" href="{base_url}"', f'hreflang="x-default" href="{url}"').replace(f'<meta property="og:url" content="{base_url}">', f'<meta property="og:url" content="{url}">')
+        hk = re.sub(r'(<title>)(.*?)( \| Ebenezer Antigua</title>)', lambda m: f'{m.group(1)}{m.group(2)} · página {k}{m.group(3)}', hk, count=1)
+        hk = hk.replace(f'<h1>{esc(dname(n, sp))}</h1>', f'<h1>{esc(dname(n, sp))} — página {k}</h1>', 1)
+        hk = re.sub(r'<p class="lead sm">.*?</p>', '', hk, count=1, flags=re.S)
+        hk = shift(hk, 2).replace('<!--PG-->', pager('../../', k, total_p))
+        hk = hk.replace(f'<span>{esc(dname(n, sp))}</span></nav>', f'<a href="../../">{esc(dname(n, sp))}</a><span>Página {k}</span></nav>', 1)
+        wr(f'predicadores/{sp["slug"]}/pagina/{k}/index.html', hk)
+    pdir = os.path.join(R, 'predicadores', sp['slug'], 'pagina')
+    if os.path.isdir(pdir):
+        import shutil
+        for d in os.listdir(pdir):
+            if d.isdigit() and int(d) > total_p: shutil.rmtree(os.path.join(pdir, d))
+    for k in range(2, total_p + 1): add_sm(base_url + f'pagina/{k}/', '0.5')
+wr('sitemap.xml', sm)
 print('páginas nuevas:', len(specs), '· predicadores:', len(orden_sp), '· enseñanzas:', len(order), '· discipulados:', len(bycat('discipulado')), '· otros:', len(bycat('otro')), '· páginas de listado:', tots)

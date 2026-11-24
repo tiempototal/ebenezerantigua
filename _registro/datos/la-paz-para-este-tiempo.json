@@ -65,5 +65,45 @@
  ],
  "closing": [
   "El mensaje concluye con oración para entregar las aflicciones, romper maldiciones generacionales y recibir una bandera de paz sobre hogares y vidas."
+ ],
+ "patron": "B",
+ "momentos": [
+  {
+   "t": 665,
+   "e": 718,
+   "titulo": "Dios le da paz y en esa paz la salida",
+   "txt": "Yo le decía al Señor: «¿Qué quieres, Señor?». Porque temas hay, pero realmente el único tema que ministra es el de Dios. Puede estar bonito el nombre, puede estar bonito el versículo, pero si no hay un impacto, una revelación de parte de Dios, nos hace falta. Y esta mañana el Señor me dijo que toda aflicción se iba, que toda desesperanza se iba, que él ha puesto su corazón en ti. Y aunque estés pasando cosas terribles, problemas en el trabajo, problemas en la casa, problemas matrimoniales, el Señor hoy te iba a dar paz, y en esa paz te va a dar la salida. Siempre hay una salida de parte de Dios para uno."
+  },
+  {
+   "t": 1940,
+   "e": 2005,
+   "titulo": "La raíz de amargura no se mira",
+   "txt": "[…] de amargura os estorbe y por ella muchos sean contaminados. Entonces, quiere decir, hermano, que es un peligro no alcanzar la gracia de Dios, porque la gracia de Dios es la que nos hace salvos. Pero dice que una raíz de amargura no se mira, está bajo tierra, está dentro de tu cuerpo. Algunos le dicen: «Papá, ¿por qué eres tan amargado? Mamá, ¿por qué siempre andas enojada?». ¿No será que hay una raíz de amargura adentro, que va a brotar y que, cuando brote, va a contaminar a muchos? Ahora yo pregunto: cuando brota, ¿a quién va a contaminar primero? A los hijos, a los que están cercanos."
+  },
+  {
+   "t": 4892,
+   "e": 4940,
+   "titulo": "Toda raíz de amargura se desarraiga",
+   "txt": "Y toda raíz de amargura se quita hoy, se desarraiga. Ya no vas a poder estar enojado. Aquí tengo la raíz de amargura de tu vida […] por el poder del Espíritu Santo. En el nombre de Jesús […] quiero verte feliz. El único que puede hacer feliz al hombre es nada más Dios. Hoy cambia tu carácter, hoy cambia tu vida. Mi voz está llegando hasta tu alma, hasta tu corazón."
+  }
+ ],
+ "citas": [
+  {
+   "t": 1330,
+   "txt": "Aunque usted esté peleando con un familiar, matrimonialmente o con los hijos, eso hay que romperlo hoy."
+  },
+  {
+   "t": 3356,
+   "txt": "Tú vienes a tener un encuentro con Dios, con el Dios de paz, con el que te va a santificar, con el que te va a bendecir."
+  },
+  {
+   "t": 4747,
+   "txt": "Misericordia del que te puede dar paz, del que te puede arreglar la vida. Él no tiene límites."
+  }
+ ],
+ "reflexion": [
+  "Si «seguid la paz con todos» incluye a quien te ha ofendido, ¿con quién necesitas ponerte a cuentas esta semana?",
+  "¿Qué raíz de amargura podría estar escondida bajo tu enojo y a quién podría estar contaminando primero?",
+  "¿Cómo puedes practicar la hospitalidad con quien llega nuevo o con quien te cae mal?"
  ]
 }

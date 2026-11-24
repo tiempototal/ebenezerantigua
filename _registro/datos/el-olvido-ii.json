@@ -82,5 +82,45 @@
  ],
  "closing": [
   "El servicio concluye con ministración para entregar las cargas y desatar bendición y sanidad."
+ ],
+ "patron": "B",
+ "momentos": [
+  {
+   "t": 1323,
+   "e": 1392,
+   "titulo": "Que usted nunca se olvide de Dios",
+   "txt": "[…] que tratan de que mi pueblo se olvide de mi nombre. Quiere decir que una de las características de un profeta falso es que tratan de que el pueblo se olvide de Dios. Imagínese cuando yo lo que tengo que hacer es que usted se acuerde de Dios en cualquier momento, en momentos de felicidad, en momentos difíciles; usted no puede olvidarse de Dios, no puede salir corriendo. Tiene que creer que hay un Dios que existe, que lo ama, que lo va a bendecir, que lo va a levantar, que lo va a restaurar, que lo va a edificar. Ese es el Dios que yo conozco, el que proclamo, el que predico, un Dios verdadero. Ahora, ¿cómo sé que me están haciendo olvidar de Dios? Porque empiezo a hacer cosas que no están agradando a Dios."
+  },
+  {
+   "t": 2941,
+   "e": 3000,
+   "titulo": "Una iglesia con hospitalidad",
+   "txt": "Hermano, tenemos que ser una iglesia que tenga hospitalidad con los que vienen. Hay gente que se ha reportado de que la gente es dura. No puede ser, cuando decimos que es una iglesia de amor. ¿Qué amor va a haber ahí? Por eso tengamos cuidado también con quién ponemos en la entrada. Si es un hombre amargado y dice: «Buenos días. Ah, quítese, pase adelante, hay sillas», no va a volver a venir. Pero si usted viene y le dicen: «Qué bueno que vino, hermano; qué bueno que vino, hermana; véngase, le tengo su lugar precioso», no importa, porque le dije que es precioso."
+  },
+  {
+   "t": 3726,
+   "e": 3768,
+   "titulo": "Él sí puede: toda cadena se rompe",
+   "txt": "¿Cuántos merecen ser felices? ¿Cuánto tiempo ha sido infeliz, hermano, cuando uno viene a Cristo? Uno cree que todo va a ser felicidad. Vienen unos trancazos, pero como él está con uno, lo saca, y usted se mantiene feliz porque lo sacó el Señor, porque usted no puede; él sí puede, tiene poder y mandó a su Espíritu Santo para que usted y yo seamos libres. Toda cadena se rompe hoy."
+  }
+ ],
+ "citas": [
+  {
+   "t": 1607,
+   "txt": "Él solo tiene cosas buenas para ti. Él ha venido a que olvides el pasado."
+  },
+  {
+   "t": 3454,
+   "txt": "Yo quiero lo mejor para mi prójimo. Cuando yo pienso así, el Señor me prospera a mí."
+  },
+  {
+   "t": 3842,
+   "txt": "La doctrina básica es básica para que las enseñanzas se queden en su corazón y, cuando resulte la situación, usted camine en ellas."
+  }
+ ],
+ "reflexion": [
+  "¿En qué momentos —de alegría o de dificultad— sientes la tentación de olvidarte de Dios, y cómo puedes recordarlo?",
+  "¿Qué dejaría Dios atrás en tu pasado si le dieras hoy la oportunidad de romper esa cadena?",
+  "¿Cómo puedes mostrar hospitalidad esta semana a quien llega nuevo o a quien es difícil de tratar?"
  ]
 }

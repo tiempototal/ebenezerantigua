@@ -70,5 +70,45 @@
  ],
  "closing": [
   "El mensaje concluye con un llamado al altar para entregar el dolor a Dios y recibir una nueva vida, prosperidad y restauración."
+ ],
+ "patron": "C",
+ "momentos": [
+  {
+   "t": 1350,
+   "e": 1402,
+   "titulo": "Hoy es el día de olvidar tu pasado",
+   "txt": "[…] esta noche el Señor quiere darte un alivio a tu alma y decirte que hoy es el día en que tienes que olvidar tu pasado, ese pasado que tal vez te abraza, ese pasado que tal vez lo tienes presente cuando deberías de olvidarlo, cuando deberías de decirle: «Ya no quiero este pasado», pero sigue ahí presente. Y esta noche lo que Dios quiere es que tú seas libre. Hay cosas en que tú avanzas y vas avanzando, y ese mismo pasado te regresa al principio, porque, quiera que no, el enemigo es bien astuto para hacerte retroceder de lo que no ha sido libre. Entonces, hoy el Señor, a través de su misericordia y de su gracia, va a extirpar todo pasado que te está haciendo daño."
+  },
+  {
+   "t": 2145,
+   "e": 2203,
+   "titulo": "No te olvides de la gente",
+   "txt": "[…] y el panadero se murió, pero a él lo restituyeron nuevamente para que fuera el copero. Aquí vemos que hay personas que pueden hacerte un favor, pero se hacen los locos, se olvidan. ¿Qué le costaba al copero acordarle al rey que José había dado la palabra, y que a través de la palabra que había dado José lo pusieron al copero? Pero se le olvidó. Quiero decirte en este momento que no te olvides de la gente: cuando tú puedas hacer un favor, hazlo, porque si se te olvida, tú no estás cumpliendo con los mandamientos de Dios."
+  },
+  {
+   "t": 4630,
+   "e": 4720,
+   "titulo": "Que los hijos no se olviden de que son hijos",
+   "txt": "La gente que olvida al Señor es la que se va alejando, la que se está desviando, la que deja de alcanzar la gracia de Dios. Por eso es necesario que hoy Dios te bendiga tu casa y que los que habían estado alejados vuelvan al centro, que es el Señor Jesucristo. […] Que los que son hijos no se olviden de que son hijos. Que vengan, hermano, no importa qué les haya pasado, y que Dios los rescate, los restaure, los edifique, los use para que tengan una nueva experiencia; que lo que les pasó malo, el Señor lo sacó de ahí para bendición."
+  }
+ ],
+ "citas": [
+  {
+   "t": 2034,
+   "txt": "Cuando usted empieza a caminar ya en el amor de Dios, usted va cambiando y la gente se da cuenta."
+  },
+  {
+   "t": 2759,
+   "txt": "Lo mejor es que usted le deje el evangelio."
+  },
+  {
+   "t": 5092,
+   "txt": "Te olvidarás de las maldiciones, porque el Señor esta noche ha cambiado tus maldiciones en bendición."
+  }
+ ],
+ "reflexion": [
+  "¿Qué parte de tu pasado sigue presente y qué te impide entregárselo hoy a Dios para ser libre?",
+  "¿A quién has dejado de ayudar o recordar, y qué favor podrías hacer esta semana?",
+  "¿Qué es lo mejor que puedes dejarles a tus hijos o a quienes te rodean, además de lo material?"
  ]
 }

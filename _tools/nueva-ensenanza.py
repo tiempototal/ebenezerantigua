@@ -261,7 +261,7 @@ def main_extra(e, root):
 
 E_URL = 'https://ebenezerantigua.com/ensenanzas/'
 tot_main = write_list(order, 'ensenanzas', 0, 'Enseñanzas', 'Año del Deleite 2026',
-    'Cada enseñanza que se comparte en Ebenezer Antigua queda aquí: el video para verlo en esta página, un resumen de lo que se expuso y los versículos que se citaron. Se agregan nuevas enseñanzas cada semana y las anteriores permanecen disponibles.',
+    'Aquí encuentras todas nuestras enseñanzas: mira el video, lee el resumen y repasa los versículos. Cada semana subimos nuevas.',
     [('Enseñanzas', E_URL, None)], main_extra, 'Enseñanzas y prédicas: resúmenes y videos | Ebenezer Antigua',
     'Todas las enseñanzas de Ebenezer Antigua (Jocotenango, Antigua Guatemala): video de cada prédica, resumen, puntos principales y versículos citados.')
 # el listado principal enlaza a "Ver por predicador" en su hero original; se mantiene en la lead via predicadores/
@@ -310,8 +310,8 @@ for n in orden_sp:
 PHERO = ('<main><section class="hero sm hs"><div class="w wide"><div class="hg"><div class="hgl"><nav class="bc" aria-label="Migas de pan"><a href="../">Inicio</a><span>Predicadores</span></nav>'
          '<div class="eyebrow">Ebenezer Antigua</div><h1>Predicadores</h1><div class="meta"><span>Las enseñanzas de cada predicador</span><span>·</span><span><a class="pl" href="../ensenanzas/">Ver todas</a></span></div></div>'
          '<div class="hgr"><p class="lead sm">Elige un predicador para leer sus enseñanzas: cada una tiene su video, un resumen y los versículos que se citaron.</p>'
-         '<form class="sbar" role="search" onsubmit="return false"><label for="pq">Buscar predicador</label><input id="pq" type="search" placeholder="Busca por nombre o título…" autocomplete="off" enterkeyhint="search"><span class="sc" id="psc" aria-live="polite"></span></form></div></div></div></section>\n'
-         '<div class="w art idx"><section><p class="pnone" id="pnone" hidden>No encontramos un predicador con ese nombre.</p><div class="eg">')
+         '</div></div></div></section>\n'
+         '<div class="w art idx"><section><div class="eg">')
 PJS = ('<script>(function(){var q=document.getElementById("pq"),c=document.getElementById("psc"),n=document.getElementById("pnone"),L=[].slice.call(document.querySelectorAll(".ec.pc"));'
        'function f(x){return(x||"").toLowerCase().normalize("NFD").replace(/[\\u0300-\\u036f]/g,"")}'
        'q.addEventListener("input",function(){var t=f(q.value.trim()),k=0;L.forEach(function(a){var m=!t||f(a.textContent).indexOf(t)>-1;a.style.display=m?"":"none";if(m)k++});'
@@ -320,7 +320,7 @@ def _pidx_page(h):
     h = re.sub(r'<style id="hs">.*?</style>', '', h, flags=re.S)
     h = re.sub(r'<script>\(function\(\)\{var q=document\.getElementById\("pq"\).*?</script>', '', h, flags=re.S)
     h = re.sub(r'<main>.*?<div class="eg">', lambda m: HS_CSS.replace('</style>', PAV_CSS + '</style>') + PHERO, h, count=1, flags=re.S)
-    return h.replace('</body>', PJS + '</body>', 1)
+    return h
 wr('predicadores/index.html', sub_eg(_pidx_page(pidx), pc))
 TPL = rd('predicadores/rodrigo-ordonez/index.html')
 def dname(n, sp): return f'{sp.get("tit", sp["pre"])} {sp["nom"]}'

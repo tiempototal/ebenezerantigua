@@ -77,7 +77,7 @@ save_reg()
 # ---------- predicadores oficiales ----------
 pidx = rd('predicadores/index.html')
 speakers = {}
-for m in re.finditer(r'<a class="ec pc" href="([^/]+)/"><small>(.*?)</small><b>(.*?)</b>', pidx):
+for m in re.finditer(r'<a class="ec pc(?: pw)?" href="([^/]+)/">(?:(?!</a>).)*?<small>(.*?)</small><b>(.*?)</b>', pidx, flags=re.S):
     sl, pre, nom = m.groups(); pre0 = pre.split(' y ')[0]; speakers[f'{pre0} {nom}'] = dict(slug=sl, pre=pre0, nom=nom, tit=TITULOS.get(sl, pre))
 for s in specs.values():
     if s['cat'] == 'ensenanza' and s['speaker'] not in speakers:
@@ -185,6 +185,9 @@ HS_CSS = ('<style id="hs">.hero.hs{padding:1.5rem 0 1.3rem}.hero.hs .hg{display:
           '.hero.hs .meta{flex-wrap:nowrap;white-space:nowrap}.hero.hs+.art.idx{padding-top:0}.hero.hs+.art.idx #slist>.eg:first-child{margin-top:1.3rem}'
           '@media(max-width:900px){.hero.hs .hg{grid-template-columns:1fr;gap:1rem}.hero.hs .meta{flex-wrap:wrap;white-space:normal}}</style>')
 
+PAV_CSS = ('.ec.pc.pw{display:flex;flex-direction:row;align-items:center;text-align:left;gap:1.1rem;padding:1.1rem 1.2rem}.pav{flex:none;width:84px;height:84px;border-radius:50%;overflow:hidden;border:3px solid rgba(226,182,89,.75);background:#3b1220;display:block}'
+           '.pav img{width:100%;height:100%;object-fit:cover;display:block}.pav.ini{display:grid;place-items:center;font-family:Georgia,serif;font-size:1.7rem;color:#f0cf7a}.ptx{display:block;min-width:0}.ptx>*{display:block;margin-left:0;padding-left:0!important;padding-right:0!important}.ec.pc.pw .ptx b{display:block;font-size:1.35rem}'
+           '.pnone{margin:1.4rem 0;color:#6b4a35}')
 def list_page(items, n, total, dirp, ext, h1, eyebrow, lead, crumbs, extra, title, desc):
     """dirp: carpeta de la 1.ª página (p.ej. 'ensenanzas'); ext: niveles extra de profundidad de ESTA página respecto de ensenanzas/ ."""
     url = f'https://ebenezerantigua.com/{dirp}/' + ('' if n == 1 else f'pagina/{n}/')
@@ -296,10 +299,29 @@ def sub_eg(h, cards_html): return re.sub(r'(<div class="eg">).*?(</div>)', lambd
 def mine(n): return sorted([p for p in reg.values() if p['speaker'] == n], key=lambda p: (p['date'], p['slug']), reverse=True)
 orden_sp = sorted([n for n in speakers if mine(n)], key=lambda n: mine(n)[0]['date'], reverse=True)
 pc = ''
+def _ini(nom): 
+    w = [x for x in nom.split() if x.lower() not in ('de', 'del', 'la')]
+    return (w[0][0] + w[-1][0]).upper() if len(w) > 1 else nom[:2].upper()
 for n in orden_sp:
-    sp = speakers[n]; ps = mine(n)
-    pc += f'<a class="ec pc" href="{sp["slug"]}/"><small>{sp.get("tit", sp["pre"])}</small><b>{sp["nom"]}</b><span class="ew">{len(ps)} publicada{"s" if len(ps)!=1 else ""}</span><span class="ex">Última: {esc(ps[0]["title"])}' + (f' · {corto(ps[0]["date"])}' if ps[0]['cat'] == 'ensenanza' else '') + '</span></a>'
-wr('predicadores/index.html', sub_eg(pidx, pc))
+    sp = speakers[n]; ps = mine(n); ph = PHOTOS.get(sp['slug'])
+    av = (f'<span class="pav"><img src="../fotos/{ph[0]}" alt="{esc(sp.get("tit", sp["pre"]) + " " + sp["nom"])}" width="84" height="84" loading="lazy" style="object-position:{ph[1]}"></span>' if ph else f'<span class="pav ini">{_ini(sp["nom"])}</span>')
+    pc += (f'<a class="ec pc pw" href="{sp["slug"]}/">{av}<span class="ptx"><small>{sp.get("tit", sp["pre"])}</small><b>{sp["nom"]}</b><span class="ew">{len(ps)} publicada{"s" if len(ps)!=1 else ""}</span><span class="ex">Última: {esc(ps[0]["title"])}'
+           + (f' · {corto(ps[0]["date"])}' if ps[0]['cat'] == 'ensenanza' else '') + '</span></span></a>')
+PHERO = ('<main><section class="hero sm hs"><div class="w wide"><div class="hg"><div class="hgl"><nav class="bc" aria-label="Migas de pan"><a href="../">Inicio</a><span>Predicadores</span></nav>'
+         '<div class="eyebrow">Ebenezer Antigua</div><h1>Predicadores</h1><div class="meta"><span>Las enseñanzas de cada predicador</span><span>·</span><span><a class="pl" href="../ensenanzas/">Ver todas</a></span></div></div>'
+         '<div class="hgr"><p class="lead sm">Elige un predicador para leer sus enseñanzas: cada una tiene su video, un resumen y los versículos que se citaron.</p>'
+         '<form class="sbar" role="search" onsubmit="return false"><label for="pq">Buscar predicador</label><input id="pq" type="search" placeholder="Busca por nombre o título…" autocomplete="off" enterkeyhint="search"><span class="sc" id="psc" aria-live="polite"></span></form></div></div></div></section>\n'
+         '<div class="w art idx"><section><p class="pnone" id="pnone" hidden>No encontramos un predicador con ese nombre.</p><div class="eg">')
+PJS = ('<script>(function(){var q=document.getElementById("pq"),c=document.getElementById("psc"),n=document.getElementById("pnone"),L=[].slice.call(document.querySelectorAll(".ec.pc"));'
+       'function f(x){return(x||"").toLowerCase().normalize("NFD").replace(/[\\u0300-\\u036f]/g,"")}'
+       'q.addEventListener("input",function(){var t=f(q.value.trim()),k=0;L.forEach(function(a){var m=!t||f(a.textContent).indexOf(t)>-1;a.style.display=m?"":"none";if(m)k++});'
+       'c.textContent=t?k+(k===1?" resultado":" resultados"):"";n.hidden=k>0})})()</script>')
+def _pidx_page(h):
+    h = re.sub(r'<style id="hs">.*?</style>', '', h, flags=re.S)
+    h = re.sub(r'<script>\(function\(\)\{var q=document\.getElementById\("pq"\).*?</script>', '', h, flags=re.S)
+    h = re.sub(r'<main>.*?<div class="eg">', lambda m: HS_CSS.replace('</style>', PAV_CSS + '</style>') + PHERO, h, count=1, flags=re.S)
+    return h.replace('</body>', PJS + '</body>', 1)
+wr('predicadores/index.html', sub_eg(_pidx_page(pidx), pc))
 TPL = rd('predicadores/rodrigo-ordonez/index.html')
 def dname(n, sp): return f'{sp.get("tit", sp["pre"])} {sp["nom"]}'
 def hero_pf(n, sp, ps):

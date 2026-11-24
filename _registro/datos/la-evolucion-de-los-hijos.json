@@ -111,5 +111,46 @@
  ],
  "closing": [
   "El mensaje cierra con un llamado a seguir creciendo y a no detenerse en la fe."
- ]
+ ],
+ "patron": "C",
+ "momentos": [
+  {
+   "t": 728,
+   "e": 800,
+   "titulo": "La obra pasa por el fuego",
+   "txt": "Cuando yo digo aquí que hay que trabajar en oro, plata y piedras preciosas, me refiero a cosas espirituales; pero hay gente que está trabajando en cosas combustibles, porque la madera se quema, el heno se quema y la hojarasca se quema. Y tenemos un pequeño problema: la Biblia dice que la obra de cada uno se hará manifiesta, porque va a ser revelada por el fuego. Todos vamos a ser evaluados, y lo que nos va a evaluar es la prueba, el fuego. Nadie aquí se ha librado de tener problemas algún día en su vida. La pregunta es: después de que pasa el fuego, ¿tuviste pérdida o tuviste ganancia? ¿Habías edificado sobre el fundamento, que no se puede cambiar, con oro, con piedras preciosas, con plata?"
+  },
+  {
+   "t": 1312,
+   "e": 1360,
+   "titulo": "La lucha entre el espíritu y el alma",
+   "txt": "En esta evolución de los hijos, nosotros empezamos hablando de dos mujeres que eran una misma. Dentro de nosotros hay una lucha entre el espíritu y el alma. El alma es la fea, y el espíritu es el ser interior, el que conecta con Dios, el que se comunica con el Señor en espíritu y en verdad. Y tenemos esa lucha, y tenemos que ir venciendo al hombre viejo, no a su esposo, hermana: al hombre viejo interno que todos tenemos aquí adentro."
+  },
+  {
+   "t": 3098,
+   "e": 3138,
+   "titulo": "Alcanzar aquello para lo cual fui alcanzado",
+   "txt": "[…] dones que no fueron alcanzados. Yo quiero todo lo que el Señor me tenga preparado. ¿Sabe cómo decía el apóstol Pablo? Yo quiero alcanzar aquello por lo cual yo fui alcanzado. ¿Para qué fui alcanzado yo, Señor? Fuiste alcanzado para alcanzar todo esto que está en la bodega. Yo quiero alcanzar todo aquello para lo cual yo fui alcanzado y que no se desperdicie nada."
+  }
+ ],
+ "citas": [
+  {
+   "t": 1301,
+   "txt": "¿Cómo me voy a hacer de piedras preciosas, de oro y de plata? Guardando mi santidad."
+  },
+  {
+   "t": 1916,
+   "txt": "Cuando venimos a los pies de Cristo, veníamos en tinieblas, y la luz de Jesús empezó a alumbrar en nosotros poco a poco, nos hizo ir avanzando y empezó a amanecernos."
+  },
+  {
+   "t": 3139,
+   "txt": "Si de todos modos nos va a costar, entrémosle con todo a esto, y que el Señor nos regale aquello que él tiene para nosotros."
+  }
+ ],
+ "reflexion": [
+  "«La obra de cada uno se hará manifiesta por el fuego.» ¿Con qué materiales estás edificando hoy: oro y piedras preciosas, o madera y paja?",
+  "La pastora habla de una lucha entre el espíritu y el alma. ¿Qué parte del «hombre viejo» te pide Dios rendir esta semana?",
+  "«Quiero alcanzar aquello para lo cual fui alcanzado.» ¿Qué crees que Dios tiene preparado para ti que todavía no has tomado?"
+ ],
+ "inicio": 101
 }

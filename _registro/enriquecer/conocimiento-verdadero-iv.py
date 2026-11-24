@@ -1,0 +1,12 @@
+import sys; sys.path.insert(0, '_tools'); from spec import enrich
+enrich('conocimiento-verdadero-iv', 'B',
+ [dict(t=605, e=648, titulo='Entendimiento: ¿entiende usted la doctrina?', txt='Entendimiento quiere decir que de aquí para acá hubo revelación. ¿Entiende usted la palabra? ¿Entiende usted la doctrina? ¿Por qué la pierde? Entonces no estudió, no se preparó. Prepárese. Lea lo que va a venir del examen de la doctrina. Léalo, vuelva a leerlo, haga sus apuntes. Si usted llega a las clases sin leer, la doctrina aquí no se le va a quedar, hermano.'),
+  dict(t=3401, e=3455, titulo='¿Qué hizo con el conocimiento?', txt='Y vino otro diciendo: «Señor, aquí está tu mina que he tenido guardada en un pañuelo. Te tenía miedo, porque eres hombre exigente, que recoges lo que no depositaste y siegas lo que no sembraste.» Pregunto: esta persona, ¿qué hizo con el conocimiento? ¿Qué hizo con lo que sabía? ¿Conocía a Dios, pero no como para contestar así? Él lo conocía, sí sabía, pero para haber contestado así, no conocía a Dios, que es bondadoso, bueno, hermoso.'),
+  dict(t=4012, e=4060, titulo='Tu vida vale la sangre del Cordero', txt='No te menosprecies. Tu vida vale la sangre del Cordero de Dios. Hay gente que se menosprecia y hace tonteras porque cree que no vale nada. Pero hoy el Señor te va a mostrar lo que tienes que cambiar, y que la sangre de Cristo tiene poder. «En cuanto a vuestra anterior manera de vivir, despojaos del viejo hombre, que se corrompe según los deseos engañosos, y renovaos en el espíritu de vuestra mente.»')],
+ [dict(t=91, txt='La palabra nunca regresa vacía. Eso quiere decir que no importa dónde entra la palabra, algo le deja a usted.'),
+  dict(t=2743, txt='Usted tiene un pacto de sangre con el Señor Jesucristo. Y la noche que él levantó la copa, lo levantó a usted, y esa sangre fue derramada.'),
+  dict(t=4250, txt='La clave para esta noche: «Permaneced en mi amor. Si guardáis mis mandamientos, permaneceréis en mi amor.» Ahí está la clave que le dice cómo permanecer.')],
+ ['«¿Qué hizo con lo que sabía?» ¿Qué conocimiento de la Palabra tienes guardado «en un pañuelo» que Dios quiere que pongas a trabajar?',
+  'El predicador dice que tu vida vale la sangre del Cordero. ¿En qué momento te menosprecias, y cómo cambiaría tu día si recordaras ese valor?',
+  'Jesús dice: «Permaneced en mi amor». ¿Qué mandamiento concreto puedes guardar esta semana para permanecer?'],
+ inicio=75)

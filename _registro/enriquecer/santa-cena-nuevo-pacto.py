@@ -1,0 +1,12 @@
+import sys; sys.path.insert(0, '_tools'); from spec import enrich
+enrich('santa-cena-nuevo-pacto', 'C',
+ [dict(t=581, e=632, titulo='Desde la Santa Cena, nada es igual', txt='Santa Cena. Diga conmigo: nuevo pacto. Si no hubiera habido Santa Cena, no hubiera habido nuevo pacto, porque el Señor no lo hubiera proclamado. Desde que se instaló el nuevo pacto en la Santa Cena, se declaró: «Su vida y la suya ya no es la misma.» Y cada Santa Cena se va instalando el nuevo pacto en su corazón y en su vida. Entonces, mi hermano, hay una revolución para sacar todo lo que no sirve en usted, y el Señor va a ir creciendo, va a ir bendiciéndolo, lo va a ir ungiendo. Ya no va a ser el mismo.'),
+  dict(t=2173, e=2210, titulo='Pedir perdón antes de tomar la copa', txt='«[…] del nuevo pacto, que es derramada por muchos para el perdón de los pecados.» Quiere decir que, antes de tomar la Santa Cena, usted tiene que pedirle perdón al Señor, para que cuando tome el vino, que es la sangre, lo restaure, lo bendiga. «Y os digo que desde ahora no beberé más de este fruto de la vid hasta aquel día cuando lo beba de nuevo con vosotros.»'),
+  dict(t=2706, e=2760, titulo='Un corazón nuevo, odres nuevos', txt='Viene un tiempo mejor para su vida, con un corazón nuevo. Es como los odres: no se puede echar vino nuevo en odres viejos, porque el odre no aguanta con todas esas cosas feas que uno tiene en el corazón. ¿Qué más dice? Que trae malos pensamientos, robos, homicidios, iniquidad, un montón de cosas que hoy el Señor, a través del vino, las va a arrastrar y las va a quitar de su vida.')],
+ [dict(t=294, txt='¿Cuántos saben que Dios es bueno? Qué lindo saber quién sale al encuentro por uno. ¿Habrá algún problema más grande que Dios?'),
+  dict(t=2616, txt='Hoy el Señor se compromete contigo a darte un corazón nuevo. ¿Por qué un corazón nuevo? Porque del corazón salen los malos pensamientos.'),
+  dict(t=4615, txt='Este es el pan que murió, pero te dio vida a ti. Así que cómelo con toda confianza, porque es mi cuerpo.')],
+ ['«Cada Santa Cena se va instalando el nuevo pacto en tu corazón.» ¿Qué cambio concreto ha traído ese pacto a tu vida desde que lo recibiste?',
+  'El predicador dice que antes de tomar la copa hay que pedir perdón al Señor. ¿De qué quieres arrepentirte hoy para tomarla con el corazón limpio?',
+  'Un corazón nuevo es como un odre nuevo. ¿Qué cosa vieja del corazón le pedirías al Señor que arrastre y quite?'],
+ inicio=291)

@@ -821,5 +821,5 @@ function tick(t){if(!run)return;if(t>nx){burst();nx=t+2600+Math.random()*2800}x.
 for(var i=R.length-1;i>=0;i--){var r=R[i];r.l++;var k=r.l/r.m;if(k>=1){R.splice(i,1);continue}x.beginPath();x.arc(r.x,r.y,4+k*30,0,7);x.strokeStyle='rgba('+r.c+','+(.35*(1-k))+')';x.lineWidth=1;x.stroke()}
 for(var j=P.length-1;j>=0;j--){var p=P[j];p.l++;if(p.l>p.m){P.splice(j,1);continue}p.vx*=.972;p.vy=p.vy*.972+.012;p.x+=p.vx;p.y+=p.vy;var f=1-p.l/p.m,g=x.createRadialGradient(p.x,p.y,0,p.x,p.y,5);g.addColorStop(0,'rgba('+p.c+','+(.85*f)+')');g.addColorStop(1,'rgba('+p.c+',0)');x.fillStyle=g;x.fillRect(p.x-5,p.y-5,10,10)}
 requestAnimationFrame(tick)}
-size();addEventListener('resize',size);new IntersectionObserver(function(e){var v=e[0].isIntersecting;if(v&&!run){run=true;nx=0;requestAnimationFrame(tick)}else if(!v){run=false}},{threshold:.15}).observe(s)})();</script></body>
+size();addEventListener('resize',size);new IntersectionObserver(function(e){var v=e[0].isIntersecting;if(v&&!run){run=true;nx=0;requestAnimationFrame(tick)}else if(!v){run=false}},{threshold:.15}).observe(s)})();</script><script src="/app-link.js" defer></script></body>
 </html>

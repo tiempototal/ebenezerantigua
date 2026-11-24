@@ -1,0 +1,12 @@
+import sys; sys.path.insert(0, '_tools'); from spec import enrich
+enrich('la-bendicion-para-los-hijos', 'A',
+ [dict(t=1041, e=1093, titulo='La honra dirigida a los padres', txt='Por lo menos ocho veces en la Biblia aparece, en síntesis, la honra dirigida a los padres. Y siempre hemos dicho que el orden de los factores en la Biblia sí altera el producto: lo que aparece acá es primero el padre y después la madre. Por ejemplo, Proverbios 30:11, donde habla acerca de las generaciones: «Hay quienes maldicen a su padre y no bendicen a su madre.»'),
+  dict(t=2106, e=2200, titulo='La diferencia entre un pastor y un padre', txt='Se necesitan unos gramos de humildad. Porque, ¿cuál es la diferencia entre un pastor y un padre? Veámoslo en funciones. Una oveja se porta mal: lo más que hace el pastor, si se extravió, es ir a recogerla, recuperarla y volverla a meter en el redil. La oveja no tiene que hacer mucho para ser alimentada: solamente estar en el redil. Las ovejas solamente son atendidas; si tienen problemas, el pastor va al rescate y las agarra. Pero, ¿qué pasa con un hijo cuando es mal portado?'),
+  dict(t=4251, e=4298, titulo='Una necesidad de papá', txt='Realmente, dígame si usted no tiene una necesidad de papá. La tenemos. Aquí hay hermanos que no conocieron a su papá, aquí hay hermanos que tuvieron una mala relación con su papá y por eso les cuesta acercarse conmigo y no me aceptan como padre. Pero cuando se rompe eso, ya se acerca la ovejita y necesita la bendición de un papá. «Bendígame como mi papá.» Yo no lo miraba antes así, pero ahora sí le doy una bendición que viene del cielo.')],
+ [dict(t=1407, txt='No se puede fundamentar una doctrina sin ver todo el contexto bíblico, de Génesis hasta Apocalipsis. La Biblia dice: «La suma de tu palabra es verdad.»'),
+  dict(t=2803, txt='Carta a Timoteo, verdadero hijo en la fe. ¿Quién era el padre espiritual de Timoteo?'),
+  dict(t=3503, txt='Tenemos de tarea alegrar a los padres. […] Con que sea obediente, con que su hijo se esfuerce, se supere, ¿no se siente usted más feliz?')],
+ ['Proverbios 30:11 habla de quienes maldicen a su padre y no bendicen a su madre. ¿A quién necesitas honrar hoy con una palabra o un gesto?',
+  'El pastor dice que a un hijo se le espera crecimiento, no solo cuidado. ¿Qué paso de madurez te está pidiendo Dios?',
+  '¿Tienes alguna herida con un padre o una figura de autoridad que te impide recibir bendición? ¿Qué te gustaría decirle a Dios sobre eso?'],
+ inicio=112)

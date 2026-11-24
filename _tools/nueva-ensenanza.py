@@ -179,6 +179,12 @@ def pager(base_rel, n, total):  # base_rel: ruta de la 1.ª página desde la act
     out += ''.join((f'<span class="cur" aria-current="page">{k}</span>' if k == n else f'<a href="{href(k)}">{k}</a>') for k in range(1, total + 1))
     if n < total: out += f'<a rel="next" href="{href(n+1)}">Más antiguas →</a>'
     return out + '</nav>'
+HS_CSS = ('<style id="hs">.hero.hs{padding:1.5rem 0 1.3rem}.hero.hs .hg{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,540px);gap:2rem 3rem;align-items:center}'
+          '.hero.hs .hgr .lead.sm{display:block;color:#f3e6d2!important;background:none!important;border:0!important;box-shadow:none!important;padding:0!important;margin:0 0 .9rem!important;max-width:none!important;font:400 .92rem/1.5 inherit;font-family:inherit}'
+          '.hero.hs .sbar{margin:0}.hero.hs .sbar label{color:#f0cf7a}.hero.hs .sbar input{flex:1 1 100%;max-width:none;height:2.7rem}.hero.hs .sbar .sc{color:#f3e6d2}.hero.hs .sbar .sc:empty{display:none}'
+          '.hero.hs .meta{flex-wrap:nowrap;white-space:nowrap}.hero.hs+.art.idx{padding-top:0}.hero.hs+.art.idx #slist>.eg:first-child{margin-top:1.3rem}'
+          '@media(max-width:900px){.hero.hs .hg{grid-template-columns:1fr;gap:1rem}.hero.hs .meta{flex-wrap:wrap;white-space:normal}}</style>')
+
 def list_page(items, n, total, dirp, ext, h1, eyebrow, lead, crumbs, extra, title, desc):
     """dirp: carpeta de la 1.ª página (p.ej. 'ensenanzas'); ext: niveles extra de profundidad de ESTA página respecto de ensenanzas/ ."""
     url = f'https://ebenezerantigua.com/{dirp}/' + ('' if n == 1 else f'pagina/{n}/')
@@ -212,7 +218,7 @@ def list_page(items, n, total, dirp, ext, h1, eyebrow, lead, crumbs, extra, titl
           f'<div class="meta"><span>{len(items)} publicado{"s" if len(items)!=1 else ""} · video, resumen y versículos de cada uno</span>' + (f'<span>·</span><span><a class="pl" href="{root}predicadores/">Ver por predicador</a></span>' if dirp == 'ensenanzas' else '') + '</div>')
     busc = ('<form class="sbar" role="search" onsubmit="return false"><label for="q">Buscar en todas las enseñanzas</label><input id="q" type="search" placeholder="Busca por tema, predicador o serie…" autocomplete="off" enterkeyhint="search"><span class="sc" id="sc" aria-live="polite"></span></form>') if dirp == 'ensenanzas' else ''
     if dirp == 'ensenanzas':
-        hero = ('<main><section class="hero sm hs"><div class="w wide"><div class="hg"><div class="hgl">' + hl + '</div><div class="hgr">'
+        hero = (HS_CSS + '<main><section class="hero sm hs"><div class="w wide"><div class="hg"><div class="hgl">' + hl + '</div><div class="hgr">'
                 + (f'<p class="lead sm">{lead}</p>' if n == 1 else '') + busc + '</div></div></div></section>\n')
         sres = '<div class="eg" id="sres" hidden></div>'
         lead_html = ''

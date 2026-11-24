@@ -183,3 +183,6 @@ article .sum-l p{margin:0;line-height:1.55;font-size:.98rem;color:#3b2a1d}
 .hero.hs + .art.idx{padding-top:0}.hero.hs + .art.idx>section>.eg:first-child,.hero.hs + .art.idx #slist>.eg:first-child{margin-top:1.3rem}
 .hero.hs .meta{flex-wrap:nowrap;white-space:nowrap}.hero.hs .hgr .lead.sm{font-family:inherit}
 @media(max-width:900px){.hero.hs .meta{flex-wrap:wrap;white-space:normal}}
+/* v4: botón Ver en vivo legible en hover/clic; 2 columnas de prédicas en móvil */
+.nav nav a.live:hover,.nav nav a.live:focus,.nav nav a.live:active,.nav nav a.live:focus-visible{color:#2a1d14;filter:brightness(1.07)}
+@media(max-width:600px){.art.idx .eg{grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem;margin:1.1rem 0 1.8rem}.art.idx .eg .ec{border-radius:14px;padding-bottom:.8rem;gap:.2rem}.art.idx .eg .ec .ect{margin-bottom:.6rem}.art.idx .eg .ec small,.art.idx .eg .ec b,.art.idx .eg .ec .ew,.art.idx .eg .ec .ex{padding:0 .7rem}.art.idx .eg .ec small{font-size:.58rem;letter-spacing:.12em}.art.idx .eg .ec b{font-size:1.02rem;line-height:1.18}.art.idx .eg .ec .ew{font-size:.72rem}.art.idx .eg .ec .ex{font-size:.76rem;line-height:1.4;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.art.idx .eg .ec.pc{grid-column:1/-1}.art.idx .cats .eg{grid-template-columns:1fr}}

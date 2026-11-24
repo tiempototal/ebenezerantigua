@@ -333,7 +333,7 @@ HS_CSS = ('<style id="hs">.hero.hs{padding:1.5rem 0 1.3rem}.hero.hs .hg{display:
           '.hero.hs .hgr .lead.sm{display:block;color:rgba(243,230,210,.72)!important;background:none!important;border:0!important;box-shadow:none!important;padding:0!important;margin:0 0 .8rem!important;max-width:none!important;font-size:.78rem!important;line-height:1.45!important;font-family:inherit}'
           '.hero.hs .sbar{margin:0}.hero.hs .sbar label{color:#f0cf7a}.hero.hs .sbar input{flex:1 1 100%;max-width:none;height:2.7rem}.hero.hs .sbar .sc{color:#f3e6d2}.hero.hs .sbar .sc:empty{display:none}'
           '.hero.hs .meta{flex-wrap:nowrap;white-space:nowrap}.hero.hs+.art.idx{padding-top:0}.hero.hs+.art.idx #slist>.eg:first-child{margin-top:1.3rem}'
-          '@media(max-width:900px){.hero.hs .hg{grid-template-columns:1fr;gap:1rem}.hero.hs .meta{flex-wrap:wrap;white-space:normal}}</style>')
+          '@media(max-width:900px){.hero.hs .hg{grid-template-columns:1fr;gap:1rem}.hero.hs .meta{flex-wrap:wrap;white-space:normal}.hero.hs .meta .mt{white-space:nowrap;font-size:clamp(.6rem,3.25vw,.85rem)}.hero.hs .meta .sp{display:none}}</style>')
 
 PAV_CSS = ('.ec.pc.pw{display:flex;flex-direction:row;align-items:center;text-align:left;gap:1.1rem;padding:1.1rem 1.2rem}.pav{flex:none;width:84px;height:84px;border-radius:50%;overflow:hidden;border:3px solid rgba(226,182,89,.75);background:#3b1220;display:block}'
            '.pav img{width:100%;height:100%;object-fit:cover;display:block}.pav.ini{display:grid;place-items:center;font-family:Georgia,serif;font-size:1.7rem;color:#f0cf7a}.ptx{display:block;min-width:0}.ptx>*{display:block;margin-left:0;padding-left:0!important;padding-right:0!important}.ec.pc.pw .ptx b{display:block;font-size:1.35rem}'
@@ -368,7 +368,7 @@ def list_page(items, n, total, dirp, ext, h1, eyebrow, lead, crumbs, extra, titl
     pre = shift(pre, e); post = shift(IDX_POST, e)
     bcs = f'<a href="{root}">Inicio</a>' + ''.join(f'<a href="{c[2](e)}">{c[0]}</a>' for c in crumbs[:-1]) + f'<span>{crumbs[-1][0]}</span>'
     hl = (f'<nav class="bc" aria-label="Migas de pan">{bcs}</nav><div class="eyebrow">{eyebrow}</div><h1>{h1}{f" — página {n}" if n > 1 else ""}</h1>'
-          f'<div class="meta"><span>{len(items)} publicado{"s" if len(items)!=1 else ""} · video, resumen y versículos de cada uno</span>' + (f'<span>·</span><span><a class="pl" href="{root}predicadores/">Ver por predicador</a></span>' if dirp == 'ensenanzas' else '') + '</div>')
+          f'<div class="meta"><span class="mt">{len(items)} publicado{"s" if len(items)!=1 else ""} · video, resumen y versículos de cada uno</span>' + (f'<span class="sp">·</span><span><a class="pl" href="{root}predicadores/">Ver por predicador</a></span>' if dirp == 'ensenanzas' else '') + '</div>')
     busc = ('<form class="sbar" role="search" onsubmit="return false"><label for="q">Buscar en todas las enseñanzas</label><input id="q" type="search" placeholder="Busca por tema, predicador o serie…" autocomplete="off" enterkeyhint="search"><span class="sc" id="sc" aria-live="polite"></span></form>') if dirp == 'ensenanzas' else ''
     if dirp == 'ensenanzas':
         hero = (HS_CSS + '<main><section class="hero sm hs"><div class="w wide"><div class="hg"><div class="hgl">' + hl + '</div><div class="hgr">'
@@ -399,7 +399,7 @@ def write_list(items, dirp, ext, h1, eyebrow, lead, crumbs, extra, title, desc):
 
 def main_extra(e, root):
     out = ''
-    cats = [(c, bycat(c)) for c in CATS if bycat(c)]
+    cats = [(c, bycat(c)) for c in CATS if bycat(c) and c != 'discipulado']  # Discipulados tiene su enlace propio en el footer
     if cats:
         out += '<section class="cats"><h2>Más contenido</h2><div class="eg">' + ''.join(
             f'<a class="ec" href="{root}ensenanzas/{CATS[c]["slug"]}/"><small>Categoría</small><b>{CATS[c]["label"]}</b><span class="ew">{len(l)} publicado{"s" if len(l)!=1 else ""}</span><span class="ex">{CATS[c]["lead"]}</span></a>' for c, l in cats) + '</div></section>'
@@ -419,8 +419,8 @@ tots = {'ensenanza': tot_main}
 for c, ci in CATS.items():
     lst = bycat(c)
     if not lst: continue
-    tots[c] = write_list(lst, f'ensenanzas/{ci["slug"]}', 1, ci['label'], f'Enseñanzas · {ci["label"]}', ci['lead'],
-        [('Enseñanzas', E_URL, lambda e: '../' * (e) + ('' if e == 0 else '')), (ci['label'], E_URL + ci['slug'] + '/', None)], lambda e, root: '',
+    tots[c] = write_list(lst, f'ensenanzas/{ci["slug"]}', 1, ci['label'], (f'Enseñanzas · {ci["label"]}' if c != 'discipulado' else 'Discipulado de Servidores'), ci['lead'],
+        ([('Enseñanzas', E_URL, lambda e: '../' * (e) + ('' if e == 0 else '')), (ci['label'], E_URL + ci['slug'] + '/', None)] if c != 'discipulado' else [(ci['label'], E_URL + ci['slug'] + '/', None)]), lambda e, root: '',
         f'{ci["label"]}: resúmenes y videos | Ebenezer Antigua', f'{ci["lead"]} Ebenezer Antigua, Jocotenango, Antigua Guatemala.')
 
 # ---------- índice de búsqueda (todas las categorías; sin fechas) ----------

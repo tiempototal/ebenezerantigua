@@ -9,4 +9,4 @@ enrich('las-siete-deficiencias-del-pueblo-de-dios', 'C',
  ['¿En qué área de tu vida necesitas ser más sincero, con Dios, con tu familia y con tu iglesia, y decir sin excusas «me equivoqué»?',
   '¿Qué deficiencia, un carácter duro, el orgullo o una costumbre, sigues sin querer soltar? ¿Qué paso darías esta semana para avanzar y no quedarte estancado?',
   'Naamán tuvo que humillarse y obedecer aunque no entendía: ¿en qué debes «meterte al Jordán» hoy? Y la próxima vez que tomes la Santa Cena, ¿cómo la tomarás?'],
- inicio=691)
+ inicio=686)
